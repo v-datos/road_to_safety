@@ -1,0 +1,14 @@
+# The inherited archive is large and contains duplicate raw downloads.
+/Collisions/
+/data/derived/
+/data/raw/
+/reports/*
+!/reports/.gitkeep
+/.DS_Store
+**/.DS_Store
+**/.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+*.egg-info/

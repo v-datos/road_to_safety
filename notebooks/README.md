@@ -1,0 +1,24 @@
+# Notebooks
+
+`01_dataset_validation.ipynb` inspects existing collision build outputs, independently checks keys and selected counts, and displays bounded reconciliation and quality tables. It does not rerun the dataset build or calculate casualty totals.
+
+From the repository root:
+
+```bash
+uv sync --extra notebook
+.venv/bin/python -m truck_collisions.build
+.venv/bin/python - <<'PYTHON'
+import nbformat
+from nbclient import NotebookClient
+path = "notebooks/01_dataset_validation.ipynb"
+notebook = nbformat.read(path, as_version=4)
+NotebookClient(notebook, timeout=300, kernel_name="python3", resources={"metadata": {"path": "."}}).execute()
+nbformat.write(notebook, path)
+PYTHON
+```
+
+Use the same Python environment for the build and notebook. The notebook locates the repository root automatically. Saved outputs are retained so readers can inspect the executed checks without rerunning them. Passing notebook assertions covers structural checks and internal consistency; unresolved differences with published counts remain visible.
+
+`02_descriptive_trends.ipynb` reruns the descriptive analysis, checks its annual tractor counts against a separate event query, and embeds its figures and sensitivity tables. Install both extras with `uv sync --extra notebook --extra analysis`, then use the execution command above with the second notebook's path. It reads the existing collision dataset; rebuilding the raw sources is unnecessary when those files have not changed. The notebook reports the historical 2012–2021 decade and the available 2016–2021 segment, while retaining the unfulfilled 2016–2025 target.
+
+`03_casualty_analysis.ipynb` reads the person-level casualty build, reruns the casualty analysis, independently checks group sums and selected change/share formulas, and displays the annual harm and group figures. Run `python -m truck_collisions.build_casualties` first, then execute this notebook with both extras installed. Its record-resolution scenarios are not confidence intervals or bounds on actual casualties; unknown outcomes and unresolved published benchmark differences remain explicit. Full methods are in `docs/casualty_contract.md` and `docs/casualty_validation.md`.

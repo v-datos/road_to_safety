@@ -1,0 +1,65 @@
+# Canadian truck collision analysis
+
+Research question: Did collisions involving road tractors (the closest NCDB category to semis) increase over the latest comparable decade, and which measured factors are associated with changes?
+
+This is a new analysis project. The pre-existing `Collisions/` directory is a 4.3 GB legacy research archive. It remains in place and is excluded from Git because it contains large raw datasets and duplicate copies. See [the inventory](docs/data_inventory.md) before using any of its files.
+
+## Project layout
+
+```text
+Collisions/             Legacy inputs and references; leave original files unchanged
+data/derived/           Reproducible intermediate tables (ignored by Git)
+data/raw/ncdb/          Official 2018–2021 originals and dictionary (ignored by Git)
+data/sources.json       Input selection, source URLs, coverage and checksums
+data/reference/         Published collision benchmarks
+docs/data_inventory.md  File inventory, provenance, and known quality issues
+docs/analysis_plan.md   Research definitions, methods, and acceptance checks
+docs/research_questions.md  Published precedents and prioritized questions
+docs/website_database_review.md  Supplied websites and live NCDB tool findings
+docs/dataset_contract.md  Dataset grain, columns, flags and rebuild commands
+docs/dataset_validation.md  Current validation findings and unresolved issues
+docs/casualty_contract.md  Person identities, outcomes and group assignment rules
+docs/casualty_validation.md  Person record checks and occupant benchmark differences
+src/truck_collisions/   Data preparation and analysis code
+notebooks/              Exploratory work and presentation notebooks
+tests/                  Focused checks for data grain and metric calculations
+reports/                Final tables, figures, and written findings
+```
+
+The first build covers **1999–2021** from public NCDB microdata. The observed collision tables preserve quality flags; a stricter tractor subset is available for sensitivity checks. The dataset has unresolved external benchmark differences, especially 2019, and several internally conflicting events. Read [the validation findings](docs/dataset_validation.md) before interpreting a trend. The intended 2016–2025 research period remains incomplete.
+
+## Reproduce the dataset
+
+```bash
+uv sync --extra notebook
+PYTHONPATH=src .venv/bin/python -m truck_collisions.download
+PYTHONPATH=src .venv/bin/python -m truck_collisions.build
+PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
+```
+
+The build writes `data/derived/ncdb/collisions.parquet`, `road_tractor_collisions.parquet` and `.csv`, `road_tractor_collisions_strict.parquet`, annual counts and validation evidence. The [dataset contract](docs/dataset_contract.md) defines every field and inclusion rule. [The notebook](notebooks/01_dataset_validation.ipynb) independently checks the saved outputs.
+
+The [analysis plan](docs/analysis_plan.md) sets the research definitions and remaining gates; the [research questions](docs/research_questions.md) document worthwhile analyses and future studies; the [website review](docs/website_database_review.md) records national and provincial source coverage.
+
+## First descriptive analysis
+
+[The first findings](docs/descriptive_trends.md) compare event frequency and fatal share, with 2019, 2020 and strict-record sensitivities. The [executed notebook](notebooks/02_descriptive_trends.ipynb) and full report under `reports/trends/` reproduce the results.
+
+```bash
+uv sync --extra notebook --extra analysis
+PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib \
+  .venv/bin/python -m truck_collisions.analyze_trends
+```
+
+## Who is harmed?
+
+The [casualty findings](docs/casualty_findings.md) count deaths and injuries across **all people in tractor-involved events**, with annual results for 1999–2021 and group comparisons for the historical 2012–2021 decade. The [person contract](docs/casualty_contract.md) explains duplicate, dummy, unidentified and conflicting records; the [validation](docs/casualty_validation.md) documents checks and unresolved published benchmark differences. Record-resolution scenarios preserve uncertainty without inventing identities or imputing missing outcomes. These are descriptive results from the observed release, not a fully reconciled national casualty series.
+
+```bash
+PYTHONPATH=src .venv/bin/python -m truck_collisions.build_casualties
+PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib \
+  .venv/bin/python -m truck_collisions.analyze_casualties
+PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
+```
+
+The pipeline writes person keys, retained record alternatives, unresolved/dummy records, annual group counts and quality evidence under `data/derived/casualties/`. The analysis writes tables and figures under `reports/casualties/`; [the executed notebook](notebooks/03_casualty_analysis.ipynb) provides a reviewable companion.

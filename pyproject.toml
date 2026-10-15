@@ -1,0 +1,20 @@
+[project]
+name = "truck-collisions-canada"
+version = "0.1.0"
+description = "Reproducible preparation of Canada's public NCDB collision records"
+requires-python = ">=3.11"
+dependencies = ["duckdb==1.5.6", "openpyxl==3.1.5"]
+
+[project.optional-dependencies]
+notebook = ["nbformat>=5,<6", "nbclient>=0.10,<1", "ipykernel>=6,<8"]
+analysis = ["matplotlib>=3.10,<4"]
+
+[project.scripts]
+build-collisions = "truck_collisions.build:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
