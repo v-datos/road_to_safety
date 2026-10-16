@@ -38,4 +38,4 @@ Reproduce with `PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib .venv/bin
 
 ## Next analytical gate
 
-The documented source-repair and downstream integrity checks are complete. Weather and configuration comparisons have not started; the next task can begin with missingness and code-consistency checks on this rebuilt release. Person harm uses the separate validated casualty pipeline and scenarios; exposure compatibility remains necessary for risk estimates. Missing national event years remain explicit.
+The source-repair, missingness audit, [condition comparisons](conditions_findings.md) and [configuration decomposition](configuration_decomposition.md) are complete. See [current status](project_status.md) for the exposure-compatibility priority. Person harm uses the separate validated casualty pipeline and scenarios; exposure compatibility remains necessary for risk estimates. Missing national event years remain explicit.

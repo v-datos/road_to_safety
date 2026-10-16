@@ -2,6 +2,8 @@
 
 Completed **2026-10-15**, using the rebuilt 1999–2021 event release after source repair commit `e50bc6a`. This is a field-quality assessment, not an analysis of weather effects, crash causes or exposure-adjusted risk. The source and production tables are unchanged.
 
+The subsequent [descriptive condition comparisons](conditions_findings.md) are now complete and carry forward these quality qualifications. This document records the preceding readiness assessment.
+
 ## Decision
 
 **Proceed with descriptive weather, surface, configuration and time comparisons for 2012–2021, retaining unknown and residual categories explicitly.** The dictionary-domain and availability checks found no malformed codes in those condition fields. Readiness is conditional: one supplied dictionary does not prove identical reporting or classification practice across jurisdictions and years.
@@ -117,4 +119,4 @@ No tractor transition during **2012–2021** triggers these predeclared threshol
 
 Run `PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib .venv/bin/python -m truck_collisions.audit_conditions` after the event build. The codebook, dictionary, selected source manifest, input event/conflict files and audit module are fingerprinted. The notebook recomputes primary field-year status counts from direct event queries, checks cohort/severity arithmetic, and verifies selected joint coverage independently. No production dataset is rewritten.
 
-**Next step:** descriptive 2012–2021 weather/surface and configuration/time comparisons with separate unknown and Q/QQ categories, explicit denominators, fatal/injury strata, and the no-recorded-tractor comparator. Retain the existing strict-event and source/period sensitivities. Begin with single-field and small justified cross-tabulations before considering a multivariable model.
+**Completed successors:** [descriptive comparisons](conditions_findings.md) and [configuration decomposition](configuration_decomposition.md) retain separate unknown/other categories, explicit denominators and strict/period sensitivities. The next priority is [exposure compatibility](project_status.md).

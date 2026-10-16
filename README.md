@@ -2,7 +2,7 @@
 
 Research question: Did collisions involving road tractors (the closest NCDB category to semis) increase over the latest comparable decade, and which measured factors are associated with changes?
 
-This is a new analysis project. The pre-existing `Collisions/` directory is a 4.3 GB legacy research archive. It remains in place and is excluded from Git because it contains large raw datasets and duplicate copies. See [the inventory](docs/data_inventory.md) before using any of its files.
+This repository contains the validated historical analysis and its reproducible pipelines. The pre-existing `Collisions/` directory is a 4.3 GB legacy research archive. It remains in place and is excluded from Git because it contains large raw datasets and duplicate copies. See [the inventory](docs/data_inventory.md) before using any of its files.
 
 ## Project layout
 
@@ -75,3 +75,26 @@ PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib \
 ```
 
 Results and input/code fingerprints are under `reports/conditions_quality/`. The audit leaves production data unchanged. Descriptive 2012–2021 comparisons can proceed with explicit unknown/other categories; the 1999 configuration distribution and any multivariable complete-case restriction require qualification.
+
+## Descriptive condition comparisons
+
+[The condition findings](docs/conditions_findings.md) compare recorded weather, surface, configuration, road setting and time patterns for tractor-involved and no-recorded-tractor events during 2012–2021. Full category tables retain unknown and Q/QQ other, both cohorts, fatal/injury strata, all-event denominators, and labelled named-only sensitivities. Conditional fatal-event shares are separate from composition shares and person deaths.
+
+```bash
+PYTHONPATH=src .venv/bin/python -m truck_collisions.analyze_conditions
+PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib \
+  .venv/bin/python -m truck_collisions.report_conditions
+```
+
+Tables, figures and the full report are under `reports/conditions/`. The [executed notebook](notebooks/05_descriptive_conditions.ipynb) reruns the work; [independent review](docs/conditions_review.md) checks all seven statistical exports against direct event queries. These are descriptive collision patterns, not exposure-adjusted risks or causal effects.
+
+## Configuration decomposition and current status
+
+[Current project status](docs/project_status.md) maps the eight original questions, completed work, unresolved limitations and next priority. The [configuration decomposition](docs/configuration_decomposition.md) separates mix changes from changes within configurations, with [independent review](docs/decomposition_review.md) and an [executed notebook](notebooks/06_configuration_decomposition.ipynb).
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib \
+  .venv/bin/python -m truck_collisions.decompose_configuration
+```
+
+Full-precision tables, allocation sensitivities and two PNG/SVG figures are regenerated under `reports/decomposition/`. The optional frozen source baseline is evaluated when present; its absence is recorded in the summary. Production data and preserved originals are not rewritten.

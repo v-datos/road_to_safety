@@ -48,7 +48,7 @@ All 16 project tests pass, including source-selection, cross-release linkage and
 
 Published tractor-occupant benchmarks only partly reconcile. For example, this classification yields 30 tractor deaths and 812 injuries for 2021, while official publications report different occupant totals. Publication vintages also disagree with each other. These differences remain explicit; the data are not changed to fit a benchmark. The 2019 collision benchmark discrepancy is substantially reduced to two injury events, with a separate two-injury-event difference in 2013. Public national 2022–2025 microdata remain unlocated in the reviewed sources; verified newer aggregates are kept separate in [the availability assessment](data_availability.md). These are descriptive findings for the observed public release, not definitive current national casualty totals.
 
-The next analytical step is to profile missingness and compare weather, road surface, crash configuration and time-of-day patterns, including suitable non-tractor comparison events. Any casualty-based comparisons should carry forward these person scenarios and group uncertainties. Exposure denominators and stronger designs are needed for claims about driving risk, policy effects or causes.
+The [condition quality audit](conditions_quality.md), [descriptive comparisons](conditions_findings.md) and [configuration decomposition](configuration_decomposition.md) are complete. The next priority is the exposure-compatibility audit; see [current status](project_status.md). Any casualty-based comparisons should carry forward these person scenarios and group uncertainties. Exposure denominators and stronger designs are needed for claims about driving risk, policy effects or causes.
 
 ## Full deliverables
 

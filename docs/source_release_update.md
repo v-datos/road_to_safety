@@ -105,4 +105,4 @@ PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 
 The comparison command requires the preserved local baseline. Notebook execution instructions are in [notebooks/README.md](../notebooks/README.md). Candidate validation can be repeated with `python -m truck_collisions.validate_source_revision`; historical candidate source choices and evidence are in [the release audit](source_release_audit.md).
 
-**Steps 1–6 are complete.** Weather, road-surface, configuration and time comparisons have not started. The next task can begin with missingness and code-consistency checks on the rebuilt release, retaining person scenarios and unknown categories. Exposure compatibility is still required before interpreting counts as driving risk.
+**Steps 1–6 are complete.** At the source-repair phase, condition comparisons had not started. The subsequent audit, comparisons and decomposition are now complete; see [current status](project_status.md). Person scenarios and unknown categories remain necessary, and exposure compatibility is still required before interpreting counts as driving risk.
