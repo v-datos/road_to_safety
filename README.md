@@ -64,3 +64,14 @@ PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 ```
 
 The pipeline writes person keys, retained record alternatives, unresolved/dummy records, annual group counts and quality evidence under `data/derived/casualties/`. The analysis writes tables and figures under `reports/casualties/`; [the executed notebook](notebooks/03_casualty_analysis.ipynb) provides a reviewable companion.
+
+## Condition-field readiness
+
+[The quality assessment](docs/conditions_quality.md) profiles eleven collision fields by year, cohort, severity and observed/strict subset before weather or configuration comparisons. It separates unknown and invalid values from Q/QQ residual categories and measures joint-field sample loss. The [executed quality notebook](notebooks/04_conditions_quality.ipynb) independently checks the primary field-year counts and selected joint coverage.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib \
+  .venv/bin/python -m truck_collisions.audit_conditions
+```
+
+Results and input/code fingerprints are under `reports/conditions_quality/`. The audit leaves production data unchanged. Descriptive 2012–2021 comparisons can proceed with explicit unknown/other categories; the 1999 configuration distribution and any multivariable complete-case restriction require qualification.

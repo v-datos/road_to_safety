@@ -1,5 +1,7 @@
 # Reference benchmarks and availability
 
+`collision_codebook.json` is a field-domain reference, not a numerical benchmark. It transcribes the eleven collision attributes from English pages 1–6 of the supplied NCDB dictionary, pins the PDF checksum, and separates unknown, unavailable, residual other and top-coded values. The condition-quality audit uses it without recoding production data. One dictionary does not establish invariant historical or jurisdictional coding practice; see `docs/conditions_quality.md`.
+
 Reviewed **2026-10-15**. References keep their original counting unit, population and source release. The production collision and casualty pipelines continue to read the existing files below; their schemas and values were preserved during the source-version repair.
 
 | File | Counting unit and scope | Permitted use |
