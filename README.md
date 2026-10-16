@@ -9,9 +9,10 @@ This is a new analysis project. The pre-existing `Collisions/` directory is a 4.
 ```text
 Collisions/             Legacy inputs and references; leave original files unchanged
 data/derived/           Reproducible intermediate tables (ignored by Git)
-data/raw/ncdb/          Official 2018–2021 originals and dictionary (ignored by Git)
+data/raw/ncdb/          Official annual originals and dictionary (ignored by Git)
 data/sources.json       Input selection, source URLs, coverage and checksums
-data/reference/         Published collision benchmarks
+data/source_releases/   Preserved source selections, baseline hashes and provenance
+data/reference/         Benchmarks separated by unit, source and release
 docs/data_inventory.md  File inventory, provenance, and known quality issues
 docs/analysis_plan.md   Research definitions, methods, and acceptance checks
 docs/research_questions.md  Published precedents and prioritized questions
@@ -26,7 +27,7 @@ tests/                  Focused checks for data grain and metric calculations
 reports/                Final tables, figures, and written findings
 ```
 
-The first build covers **1999–2021** from public NCDB microdata. The observed collision tables preserve quality flags; a stricter tractor subset is available for sensitivity checks. The dataset has unresolved external benchmark differences, especially 2019, and several internally conflicting events. Read [the validation findings](docs/dataset_validation.md) before interpreting a trend. The intended 2016–2025 research period remains incomplete.
+The build covers **1999–2021** from public NCDB microdata. The observed collision tables preserve quality flags; a stricter tractor subset is available for sensitivity checks. The [source-version repair](docs/source_release_update.md) replaces selected historical inputs after collision and casualty validation and preserves the earlier baseline. Residual published benchmark differences and internally conflicting records remain explicit. Read [the validation findings](docs/dataset_validation.md) before interpreting a trend. The intended 2016–2025 research period remains incomplete; [the availability assessment](docs/data_availability.md) separates newer aggregates from missing public event records.
 
 ## Reproduce the dataset
 

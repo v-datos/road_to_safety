@@ -1,0 +1,347 @@
+{
+  "created_at_utc": "2026-10-15T16:28:27.571508+00:00",
+  "git_commit": "c7baeb39d896d28e4d852716e77e9af603f497a2",
+  "purpose": "Immutable pre source-version-update baseline; raw originals retained at original paths and pinned in sources.json",
+  "files": [
+    {
+      "path": "data/derived/casualties/annual_counts.csv",
+      "size_bytes": 4301,
+      "sha256": "59eb475d5a2d6cb8e26b12bdd0342c31c54ec2552895a29fdac93d8bc52c6282"
+    },
+    {
+      "path": "data/derived/casualties/annual_group_counts.csv",
+      "size_bytes": 25437,
+      "sha256": "b63b1b3373020f9a659c9ebeac72b66ef2bfd1adb15ac2993dc0647e32bf82e1"
+    },
+    {
+      "path": "data/derived/casualties/annual_group_counts.parquet",
+      "size_bytes": 10447,
+      "sha256": "47ba432fdbefe3caab67205e44209346eacdbf183843285a82f092af880f73f1"
+    },
+    {
+      "path": "data/derived/casualties/code_profile.csv",
+      "size_bytes": 558716,
+      "sha256": "e713134d816e86838f27ef422ca0231f2bdc178426000ae7799ffbbeeed9befd"
+    },
+    {
+      "path": "data/derived/casualties/conflicting_person_keys.parquet",
+      "size_bytes": 5768,
+      "sha256": "b8c4d88d19d473b17eb6865061ea8db7177bf6472d2bc03bacbd28b9254f9e72"
+    },
+    {
+      "path": "data/derived/casualties/occupant_benchmark_comparison.csv",
+      "size_bytes": 9840,
+      "sha256": "d728c079474f15face61a48b07f3450514cb0d4b730b443d6a0db09347bae146"
+    },
+    {
+      "path": "data/derived/casualties/person_units.parquet",
+      "size_bytes": 588896,
+      "sha256": "7a07ac0687d47f3d84def7338bed7d5501244895d4a77af61496d9500e9dd8a7"
+    },
+    {
+      "path": "data/derived/casualties/positive_tractor_position_profile.csv",
+      "size_bytes": 5133,
+      "sha256": "2bdf12140851ad5c735a7fceacc11fb88a813879608f8600ebcd2c7503b95306"
+    },
+    {
+      "path": "data/derived/casualties/quality_by_year.csv",
+      "size_bytes": 661,
+      "sha256": "b58e9e7e738b465b844def9a265d8b10530d37c70de7639c146ac80730ffe7bd"
+    },
+    {
+      "path": "data/derived/casualties/record_alternatives.parquet",
+      "size_bytes": 1580569,
+      "sha256": "5c26e23b31e7db7c83cfea5c767b18e85ed3caedf5265b06685257879913818d"
+    },
+    {
+      "path": "data/derived/casualties/source_manifest.json",
+      "size_bytes": 2896,
+      "sha256": "2df2022ced2ed6fa842ad5d40185655938b2280981c1326c5cf5dcf698e2b43a"
+    },
+    {
+      "path": "data/derived/casualties/unresolved_and_dummy_records.parquet",
+      "size_bytes": 13227,
+      "sha256": "ee202324cac508a44941130e65368eca12091292fcab2bc8d363c1c0938f22ce"
+    },
+    {
+      "path": "data/derived/casualties/validation.json",
+      "size_bytes": 1839,
+      "sha256": "6c7556bfe0492ad7e101cadd325e77ab5cb488501a711ca6e50a0b023a669aae"
+    },
+    {
+      "path": "data/derived/ncdb/annual_counts.csv",
+      "size_bytes": 1940,
+      "sha256": "47cc2e01907c58c9524b5ab9c89db96527a56462e5336412b6a60a6d0f036a65"
+    },
+    {
+      "path": "data/derived/ncdb/collision_attribute_conflicts.parquet",
+      "size_bytes": 877,
+      "sha256": "30ffab617203f773ffbe0f7fc683bb6bde77690269c4506780424a30baa858a5"
+    },
+    {
+      "path": "data/derived/ncdb/collision_code_profile.csv",
+      "size_bytes": 65403,
+      "sha256": "d589451fae5f07ffe66373063a68d88225f06fc12ce9dc986535d57eb0619dac"
+    },
+    {
+      "path": "data/derived/ncdb/collisions.parquet",
+      "size_bytes": 14716229,
+      "sha256": "a1b6265b43a7287ae17249a405074018cd889d5de2ef03892268e8317517b31f"
+    },
+    {
+      "path": "data/derived/ncdb/excluded_tractor_collisions.parquet",
+      "size_bytes": 5729,
+      "sha256": "cd6e5f50a251e969d2b160c491ae2f417d4b9a7e2c99adde8c3eab4a68f6ac12"
+    },
+    {
+      "path": "data/derived/ncdb/invalid_key_records.parquet",
+      "size_bytes": 514,
+      "sha256": "92bfdbe861f2e780574fdafaa590404d20f169a7113ce0f0c7df097fed1ea0ad"
+    },
+    {
+      "path": "data/derived/ncdb/person_attribute_conflicts.parquet",
+      "size_bytes": 4508,
+      "sha256": "4e08b5780b3d2481e06a2305c15af2c57b4e5eab575af2555bf957fae31874f9"
+    },
+    {
+      "path": "data/derived/ncdb/quality_by_year.csv",
+      "size_bytes": 2049,
+      "sha256": "efb9868b53bc333ffdd26fa40146605bdec0f683680ad09b97c650fb97a6d502"
+    },
+    {
+      "path": "data/derived/ncdb/reconciliation.csv",
+      "size_bytes": 2663,
+      "sha256": "dda05b0137f26f2bcf429aea0d62fb4f317def6c4165b75418db6a0ce75945cd"
+    },
+    {
+      "path": "data/derived/ncdb/road_tractor_collisions.csv",
+      "size_bytes": 12901977,
+      "sha256": "c40630523c54c4696bdeb56b8239a65b2dc0d020e1551bbe70d3258a3cbb33d5"
+    },
+    {
+      "path": "data/derived/ncdb/road_tractor_collisions.parquet",
+      "size_bytes": 660706,
+      "sha256": "85c1084195c51d48e87242975e6af46b2057dbbed4b9fa83b869de36a8bc00c8"
+    },
+    {
+      "path": "data/derived/ncdb/road_tractor_collisions_strict.parquet",
+      "size_bytes": 656736,
+      "sha256": "8cf277cc3c192154f55e8a73d89cb871176f96fc808623a034cff94ac35666a5"
+    },
+    {
+      "path": "data/derived/ncdb/source_manifest.json",
+      "size_bytes": 2896,
+      "sha256": "2df2022ced2ed6fa842ad5d40185655938b2280981c1326c5cf5dcf698e2b43a"
+    },
+    {
+      "path": "data/derived/ncdb/special_vehicle_codes.csv",
+      "size_bytes": 9200,
+      "sha256": "97ec9dabd3a1c80d4e423ace1a50576c06836c897808fd4fdb9d7ebfd749e1b0"
+    },
+    {
+      "path": "data/derived/ncdb/validation.json",
+      "size_bytes": 17425,
+      "sha256": "b53695877783a394fed601d0fd11632dee583a35e80944f9d9e0bcb559b0b47d"
+    },
+    {
+      "path": "data/derived/ncdb/vehicle_type_conflicts.parquet",
+      "size_bytes": 3071,
+      "sha256": "a4c359993a12bb065002796162d882370d4e6a24c109f546b50908f2385f7793"
+    },
+    {
+      "path": "data/derived/ncdb/vehicle_type_profile.csv",
+      "size_bytes": 16906,
+      "sha256": "b616e5bdbf75352f61f2fb6940bc315c61a5c558d042e26eb312d17fd1c7b166"
+    },
+    {
+      "path": "notebooks/01_dataset_validation.ipynb",
+      "size_bytes": 23901,
+      "sha256": "23d062868f912e60c2637b9ad04c3f53e5d61b232f8cc693c756d5de6afa0bdf"
+    },
+    {
+      "path": "notebooks/02_descriptive_trends.ipynb",
+      "size_bytes": 599413,
+      "sha256": "73af5e192804248ba859f0f9f472d90776c770be2bceffe3d429e07b8e725007"
+    },
+    {
+      "path": "notebooks/03_casualty_analysis.ipynb",
+      "size_bytes": 709353,
+      "sha256": "003ea9098391632406dd87f52788842256311dfbf068146250ae050c42368915"
+    },
+    {
+      "path": "notebooks/README.md",
+      "size_bytes": 2200,
+      "sha256": "af28e172dfc2a2fbe2211864840a21844e2f8ae45d373a404c6ef2ea32a16a6f"
+    },
+    {
+      "path": "project_c7baeb3.tar",
+      "size_bytes": 1966080,
+      "sha256": "d14b5792096d60ad7627a49d4bfe1d8e577d96aac2add3268ffae977ab3cccf8"
+    },
+    {
+      "path": "reports/.gitkeep",
+      "size_bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "reports/casualties/annual_counts.csv",
+      "size_bytes": 4348,
+      "sha256": "e92796b4f3fdef891580f6e4b569aafeb89b8d0402528aca702db2023612ef51"
+    },
+    {
+      "path": "reports/casualties/annual_group_counts.csv",
+      "size_bytes": 25760,
+      "sha256": "991d1ce48836a745ced16f2c1725e70ac5436a8bfa3bb7ee522c661796dc27ca"
+    },
+    {
+      "path": "reports/casualties/annual_group_shares.csv",
+      "size_bytes": 84106,
+      "sha256": "db573695bf9eb3952194242d10d5a73eb4f9df5b2d0a0b3eff29b1a6f706269f"
+    },
+    {
+      "path": "reports/casualties/annual_harm.png",
+      "size_bytes": 180725,
+      "sha256": "a5b437d5e0a331d2080ec37780a5bd88184e656a861f0a3f25f98cc740392fc6"
+    },
+    {
+      "path": "reports/casualties/annual_harm.svg",
+      "size_bytes": 32044,
+      "sha256": "03b2f9c98ac76bfc1c9e42c1e01a8feaf9ee18b130681b20fc7b6a06c5cd4b34"
+    },
+    {
+      "path": "reports/casualties/findings.md",
+      "size_bytes": 14806,
+      "sha256": "b14a9b3708b61ddb106812029880b867788b7b2b26b94c112da0c1e19e0683d7"
+    },
+    {
+      "path": "reports/casualties/group_harm_trends.png",
+      "size_bytes": 186760,
+      "sha256": "aa586516b6529c722045a51818cf7efd2dd9c11af2b77918b3102316d9bb4e25"
+    },
+    {
+      "path": "reports/casualties/group_harm_trends.svg",
+      "size_bytes": 34131,
+      "sha256": "c44ed2550c3304e231320d6ddd3864c518a8fd81af45ef9f4595cb6c3ece90cd"
+    },
+    {
+      "path": "reports/casualties/harm_per_collision.csv",
+      "size_bytes": 4425,
+      "sha256": "5fff2c294ba1513ff75d325c9a508380d419c9862962199eab0ef7af04cc0d9d"
+    },
+    {
+      "path": "reports/casualties/harm_shares.png",
+      "size_bytes": 144740,
+      "sha256": "b6621a207cd50870a772711199b3cd55aa59e7def8e18e8161f654c21345d576"
+    },
+    {
+      "path": "reports/casualties/harm_shares.svg",
+      "size_bytes": 23781,
+      "sha256": "4c3c3fc6c31a89d2f68d7c600455ecbe33859f4931e028cf848938ed54c00c11"
+    },
+    {
+      "path": "reports/casualties/occupant_benchmark_comparison.csv",
+      "size_bytes": 9871,
+      "sha256": "af564fd54f55529eab0b693d10b58577ae04535bd72ae30aacb62bf50d43c898"
+    },
+    {
+      "path": "reports/casualties/period_changes.csv",
+      "size_bytes": 30837,
+      "sha256": "8fb8ddc074139b0e987558f917d4ad1c1c61c16dc4174dd027fa09b911cc3e2b"
+    },
+    {
+      "path": "reports/casualties/pooled_group_shares.csv",
+      "size_bytes": 12494,
+      "sha256": "3339b1cd1b85c3dafa5276d8145529c3881a38481eac525e363bf460ec77c398"
+    },
+    {
+      "path": "reports/casualties/pooled_sensitivity.csv",
+      "size_bytes": 3119,
+      "sha256": "2db13698e33f372dd959cc702aaabec8621b761e8a33adc890ff1313f7ab2dca"
+    },
+    {
+      "path": "reports/casualties/strict_event_sensitivity.csv",
+      "size_bytes": 1601,
+      "sha256": "d21b65ec4d7af69c186e1ccec62e2ac0d2af4ee43b7bfe217efd9eef8b286cf0"
+    },
+    {
+      "path": "reports/casualties/summary.json",
+      "size_bytes": 5603,
+      "sha256": "c5ccae072c9274bbbe6ea707ca2ca929ab91910c41abe15b6928cef60ae98286"
+    },
+    {
+      "path": "reports/trends/annual_counts.csv",
+      "size_bytes": 16805,
+      "sha256": "d530e0badeb98a4a0fc1f2d41fe007c410fb100741dc006efc4d2f21969a1eab"
+    },
+    {
+      "path": "reports/trends/benchmark_comparison.csv",
+      "size_bytes": 1066,
+      "sha256": "216a9a0e47648a399767bdf7766cf153cd6b91ab10253ccf9888f2547f2e6ee6"
+    },
+    {
+      "path": "reports/trends/benchmark_period_changes.csv",
+      "size_bytes": 1738,
+      "sha256": "aad69c854e5bb6928a92a8010274564a69378d808862be6540d6329ba650e7cc"
+    },
+    {
+      "path": "reports/trends/fatal_share.png",
+      "size_bytes": 133840,
+      "sha256": "67d37c129959a0a412a581329bf093504453565d302296498804fcdcb2c99451"
+    },
+    {
+      "path": "reports/trends/fatal_share.svg",
+      "size_bytes": 13276,
+      "sha256": "09e31345c3a08e8a3b350273738f100e868c3af122da64bc9a80402b1212daa6"
+    },
+    {
+      "path": "reports/trends/findings.md",
+      "size_bytes": 13093,
+      "sha256": "e17d6545fcb1c152004b330dcc836e204dd6ac0a665cce25a13949116587cb23"
+    },
+    {
+      "path": "reports/trends/indexed_comparison.png",
+      "size_bytes": 154700,
+      "sha256": "018d425f8436050508ff57d8346170fe803e632d288f05c1a2802dad6d564596"
+    },
+    {
+      "path": "reports/trends/indexed_comparison.svg",
+      "size_bytes": 28390,
+      "sha256": "1cbcb107e47b5ffad026f86c34d8c1e660d5c75679aa797a97dac950f9e1b3e8"
+    },
+    {
+      "path": "reports/trends/period_changes.csv",
+      "size_bytes": 11625,
+      "sha256": "864020d3dc2b24535fe484a9ff7a0443c732d0a891eed8f045e370eb69f01ba3"
+    },
+    {
+      "path": "reports/trends/pooled_periods.csv",
+      "size_bytes": 5930,
+      "sha256": "724e56b55b54ac5831b62227355cfb49f3aeb823fde7e00db901b2a3ebc43c65"
+    },
+    {
+      "path": "reports/trends/strict_sensitivity.csv",
+      "size_bytes": 8190,
+      "sha256": "bfc692ebcaab05070b9259bb3a65d28d20f93122860d04ee9813bf2b778ec233"
+    },
+    {
+      "path": "reports/trends/summary.json",
+      "size_bytes": 34902,
+      "sha256": "8a636643d2bd6a4acbb74dd1e56ad3767cd8358765b3dc88961a567e0e37ef74"
+    },
+    {
+      "path": "reports/trends/tractor_counts.png",
+      "size_bytes": 148794,
+      "sha256": "54dd0329f30d2a09527f84cf3b5a9f180abb524d3708c7b064c175fb2a0c2746"
+    },
+    {
+      "path": "reports/trends/tractor_counts.svg",
+      "size_bytes": 32283,
+      "sha256": "f1f0ba3da9e7509016998a533a4ca0bec2c4d93f54dd2ad6dd87c69abd5c7d45"
+    },
+    {
+      "path": "sources.json",
+      "size_bytes": 2755,
+      "sha256": "cb5ea3721b83e6c3d99065f41a1c62f6a54294213fcb9a423b91b7dce562726e"
+    }
+  ]
+}

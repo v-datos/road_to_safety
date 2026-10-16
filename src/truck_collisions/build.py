@@ -79,6 +79,28 @@ def export(connection, query, path):
     connection.execute(f"COPY ({query}) TO {quote(path)} ({options})")
 
 
+def selected_years(source):
+    """Validate the selected subset separately from the physical file coverage."""
+    expected = list(range(source['first_year'], source['last_year'] + 1))
+    selected = source.get('selected_years', expected)
+    if (not isinstance(selected, list) or not selected
+            or any(type(year) is not int or year not in expected for year in selected)
+            or len(set(selected)) != len(selected)):
+        raise ValueError(f"Invalid selected_years for {source['id']}: {selected}")
+    return sorted(selected)
+
+
+def select_source_records(connection, source, query):
+    """Check complete physical year coverage before applying source selection."""
+    selected = selected_years(source)
+    connection.execute(f'CREATE OR REPLACE TEMP VIEW source_records AS {query}')
+    years = connection.execute('SELECT DISTINCT try_cast(C_YEAR AS INTEGER) FROM source_records ORDER BY 1').fetchall()
+    expected = list(range(source['first_year'], source['last_year'] + 1))
+    if [row[0] for row in years] != expected:
+        raise ValueError(f"Year coverage mismatch for {source['id']}: {years}")
+    return 'SELECT * FROM source_records WHERE try_cast(C_YEAR AS INTEGER) IN (' + ','.join(map(str, selected)) + ')'
+
+
 def build_dataset(root, sources, output):
     root, output = Path(root), Path(output)
     if len({source['id'] for source in sources}) != len(sources):
@@ -107,12 +129,9 @@ def build_dataset(root, sources, output):
                         value = f"CASE WHEN regexp_full_match({value}, '[0-9]') THEN '0'||{value} ELSE {value} END"
                     expressions.append(f'{value} AS "{name}"')
                 query = f"SELECT {quote(source['id'])} AS source_id, {', '.join(expressions)} FROM read_csv({quote(path)}, header=true, all_varchar=true, strict_mode=true)"
+                query = select_source_records(connection, source, query)
                 verb = "CREATE TABLE records AS" if not manifest else "INSERT INTO records"
                 connection.execute(f"{verb} {query}")
-                years = connection.execute("SELECT DISTINCT try_cast(C_YEAR AS INTEGER) FROM records WHERE source_id=? ORDER BY 1", [source["id"]]).fetchall()
-                expected = list(range(source["first_year"], source["last_year"] + 1))
-                if [row[0] for row in years] != expected:
-                    raise ValueError(f"Year coverage mismatch for {source['id']}: {years}")
                 manifest.append({**source, "sha256": checksum, "size_bytes": original.stat().st_size})
                 print(f"Loaded {source['id']}", flush=True)
 
@@ -263,6 +282,7 @@ def build_dataset(root, sources, output):
             "created_at_utc": datetime.now(timezone.utc).isoformat(),
             "duckdb_version": duckdb.__version__,
             "pipeline_sha256": sha256(Path(__file__)),
+            "benchmark_reference_sha256": sha256(benchmark),
             "status": "structurally_valid_external_reconciliation_open",
             "scope": "Public NCDB fatal and injury collisions; road tractor V_TYPE=08 with or without semitrailer",
             "checks": checks,

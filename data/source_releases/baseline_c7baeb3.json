@@ -1,0 +1,60 @@
+[
+  {
+    "id": "ncdb_1999_2017_legacy",
+    "path": "Collisions/NCDB_1999_to_2017.csv",
+    "encoding": "utf-8-sig",
+    "first_year": 1999,
+    "last_year": 2017,
+    "url": "https://opendatatc.blob.core.windows.net/opendatatc/NCDB_1999_to_2017.csv",
+    "provenance": "Inherited Transport Canada extract; original download date unknown. Current checksum recorded by build.",
+    "sha256": "8693b723732e59ecc0a0494c1d99e76d980dd047e6129307132f8d7dfd84b8d2"
+  },
+  {
+    "id": "ncdb_2018_official",
+    "path": "data/raw/ncdb/y_2018_en.xlsx",
+    "sheet": "in",
+    "first_year": 2018,
+    "last_year": 2018,
+    "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/bf937c33-6fc2-4010-8036-d91d4e1a6285/download/y_2018_en.xlsx",
+    "sha256": "1ca01fa57a216d9d7187f0926cb4910dcff256517738639727e7a7a9d6bc2db1",
+    "downloaded_at_utc": "2026-10-15T05:46:30.304273+00:00",
+    "metadata_last_modified": "2023-06-06T13:11:00.730630",
+    "metadata_modified": "2025-01-17T22:20:27.173771"
+  },
+  {
+    "id": "ncdb_2019_official",
+    "path": "data/raw/ncdb/2019_dataset_en.csv",
+    "encoding": "utf-8-sig",
+    "first_year": 2019,
+    "last_year": 2019,
+    "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/1e2a6aa0-c35f-4736-984a-71f2eac1c1dc/download/2019_dataset_en.csv",
+    "sha256": "d1d4fcc176b387281dadbf02b9e32890174e7e9e07f05961c54e5e7c4487a87c",
+    "downloaded_at_utc": "2026-10-15T05:46:30.142663+00:00",
+    "metadata_last_modified": "2022-11-02T17:04:28.200282",
+    "metadata_modified": "2025-10-30T12:21:24.798919"
+  },
+  {
+    "id": "ncdb_2020_official",
+    "path": "data/raw/ncdb/y_2020.csv",
+    "encoding": "utf-8-sig",
+    "first_year": 2020,
+    "last_year": 2020,
+    "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/2164b2a7-a580-4708-bdac-8ab0c1304bc2/download/y_2020.csv",
+    "sha256": "2c81d99278819c28f99c02bfec319fb99c94b02734418300306e86a68ec3f83b",
+    "downloaded_at_utc": "2026-10-15T05:46:30.426178+00:00",
+    "metadata_last_modified": "2025-01-17T22:13:55.126630",
+    "metadata_modified": "2025-01-17T22:40:26.987680"
+  },
+  {
+    "id": "ncdb_2021_official_fr",
+    "path": "data/raw/ncdb/y_2021-fr.csv",
+    "encoding": "cp1252",
+    "first_year": 2021,
+    "last_year": 2021,
+    "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/f964d00f-6bba-44be-ae79-85f574d04a31/download/y_2021-fr.csv",
+    "sha256": "024a2d24cdaf6e30ec018433836075b83c626e7f8e189d14a46ea9d99b3d8dbb",
+    "downloaded_at_utc": "2026-10-15T05:46:31.419792+00:00",
+    "metadata_last_modified": "2025-01-17T22:37:44.859500",
+    "metadata_modified": "2025-01-17T22:43:13.927833"
+  }
+]

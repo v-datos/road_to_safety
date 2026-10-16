@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ncdb_2014_official_xlsx",
+    "path": "data/raw/ncdb/y_2014_en.xlsx",
+    "first_year": 2014,
+    "last_year": 2014,
+    "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/ea6471b8-2924-419b-9ade-baa8d68441ab/download/y_2014_en.xlsx",
+    "sha256": "0cb8e40972533c630bddc17f39a0dec2dc7a0f78d83c359615584c5bd61cf14a",
+    "resource_id": "ea6471b8-2924-419b-9ade-baa8d68441ab",
+    "metadata_last_modified": "2023-06-02T18:51:12.822306",
+    "metadata_created": "2023-06-02T19:23:53.340499",
+    "accessed_date": "2026-10-15",
+    "provenance": "Official annual workbook; catalogue resource vintage known; substantive content differs from inherited extract. Collision and person structural validation passed; observed/strict uncertainty retained. See docs/source_release_audit.md."
+  },
+  {
+    "id": "ncdb_2015_official_xlsx",
+    "path": "data/raw/ncdb/y_2015_en.xlsx",
+    "first_year": 2015,
+    "last_year": 2015,
+    "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/cbee1eb5-c853-47fa-b807-0cee9ecd286d/download/y_2015_en.xlsx",
+    "sha256": "cec54236b1eb71c3a5751f772bacdad3f584723b8c3f52a5eea47f62504d049a",
+    "resource_id": "cbee1eb5-c853-47fa-b807-0cee9ecd286d",
+    "metadata_last_modified": "2023-06-05T14:38:11.999362",
+    "metadata_created": "2023-06-05T14:57:49.094094",
+    "accessed_date": "2026-10-15",
+    "provenance": "Official annual workbook; catalogue resource vintage known; substantive content differs from inherited extract. Collision and person structural validation passed; observed/strict uncertainty retained. See docs/source_release_audit.md."
+  },
+  {
+    "id": "ncdb_2016_official_xlsx",
+    "path": "data/raw/ncdb/y_2016_en.xlsx",
+    "first_year": 2016,
+    "last_year": 2016,
+    "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/552280a5-f030-41c5-ac7d-649e42f2cb50/download/y_2016_en.xlsx",
+    "sha256": "c67c0bba5a7e37d2a72e6f2c3824e54638c65960affc92da02d72c5d7bc5fe8f",
+    "resource_id": "552280a5-f030-41c5-ac7d-649e42f2cb50",
+    "metadata_last_modified": "2023-06-05T15:10:49.865008",
+    "metadata_created": "2023-06-05T15:27:42.140487",
+    "accessed_date": "2026-10-15",
+    "provenance": "Official annual workbook; catalogue resource vintage known; substantive content differs from inherited extract. Collision and person structural validation passed; observed/strict uncertainty retained. See docs/source_release_audit.md."
+  },
+  {
+    "id": "ncdb_2017_official_xlsx",
+    "path": "data/raw/ncdb/y_2017_en.xlsx",
+    "first_year": 2017,
+    "last_year": 2017,
+    "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/1e384c9e-6af2-40b3-9457-719fbce819c0/download/y_2017_en.xlsx",
+    "sha256": "93f467f3a7f775b1a46e48cfc6a677a8393923b7e18f33f29e29de22fc93d727",
+    "resource_id": "1e384c9e-6af2-40b3-9457-719fbce819c0",
+    "metadata_last_modified": "2023-06-06T13:06:06.168072",
+    "metadata_created": "2023-06-06T13:21:13.546733",
+    "accessed_date": "2026-10-15",
+    "provenance": "Official annual workbook; catalogue resource vintage known; substantive content differs from inherited extract. Collision and person structural validation passed; observed/strict uncertainty retained. See docs/source_release_audit.md."
+  }
+]

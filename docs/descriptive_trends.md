@@ -1,53 +1,41 @@
-# First descriptive trend analysis
+# Descriptive collision trends after the source-version update
 
-Completed 2026-10-15. The analysis describes the public NCDB release covering 1999–2021. **It does not answer the intended 2016–2025 question.** The historical decade is 2012–2021; the available part of the target period is 2016–2021.
+Updated 2026-10-15 from the rebuilt production event table. Available event records cover **1999–2021**; the historical comparison decade is **2012–2021** and the observed portion of the intended 2016–2025 study is **2016–2021**. These periods do not answer the missing 2022–2025 national event question.
 
 ## Findings
 
 | Road-tractor measure | 2012 | 2021 | Change |
 | --- | ---: | ---: | ---: |
-| Fatal or injury collision events | 3,300 | 2,276 | −31.03% |
-| Fatal collision events | 197 | 169 | −14.21% |
-| Injury collision events | 3,103 | 2,107 | −32.10% |
-| Fatal share of casualty collisions | 5.97% | 7.43% | +1.46 percentage points |
+| Fatal or injury collision events | 3,300 | 2,276 | -31.03% |
+| Fatal collision events | 197 | 169 | -14.21% |
+| Injury collision events | 3,103 | 2,107 | -32.10% |
+| Fatal share among casualty events | 5.97% | 7.43% | +1.46 percentage points |
 
-For 2016–2021, casualty events fell from 3,009 to 2,276 (−24.36%), fatal events from 193 to 169 (−12.44%), and fatal share rose from 6.41% to 7.43%. These are observed release counts; the small 2016 published benchmark difference is retained in the full sensitivity table.
+The 2012 and 2021 endpoint counts are unchanged by the source repair. Fewer reported casualty events and a larger fatal share coexist because injury events declined faster. This does not establish increased driving risk or the cause of the change. People killed per event is a different measure, covered in [the separate casualty analysis](casualty_findings.md).
 
-Both fatal and injury events fell in the historical endpoint comparison. The higher fatal share arises because injury events fell faster. It does not establish more people killed per event, higher risk per kilometre, or the reasons for the change.
+For 2016–2021, tractor events changed from **3,010 to 2,276 (-24.39%)**. Fatal events changed from 193 to 169 (-12.44%). The validated 2016 source adds one injury event relative to the previous baseline.
 
-Fatal share also rose for heavy unit truck events (3.68%→4.27%) and collisions without recorded tractors (1.36%→1.79%). The pattern is therefore not unique to tractors. These comparison groups overlap: a collision can involve types 07 and 08, and the no-recorded-tractor group includes heavy trucks, other vehicles and unknown types. It is not a car-only comparison.
+## Period and source sensitivity
 
-## Period and data-quality sensitivity
-
-- **2020:** the observed tractor count fell 26.09% from 2019 to 2020 and rebounded 7.26% in 2021, remaining 20.72% below the observed 2019 count. The pre-2020 comparison, 2012–2019, shows a smaller 13.00% casualty-event decline. Do not interpret the 2021 endpoint as an undisturbed long-run trend or infer a causal pandemic effect.
-- **Strict filtering:** the main 2012–2021 and 2016–2021 patterns survive removal of flagged events. The tiny 2020–2021 fatal-share change reverses direction under strict filtering, so that one-year direction is not emphasized.
-- **2019 benchmark:** observed 2019 counts are 192 fatal and 2,679 injury events; the separately published Transport Canada table has 196 and 2,581. The nearly flat 2016–2019 fatal-event direction changes under that alternative. The full report keeps both series separate, without modifying event records.
-- **Unknown vehicle types:** the exported known-type comparator sensitivity removes events with an unspecified type. This cannot guarantee complete national ascertainment or turn the comparator into passenger cars.
-
-The analysis uses no fitted model, p-value or sampling confidence interval. These are complete observed counts within this release; source completeness, revisions, classification and exposure are the material uncertainties. No person casualty totals or exposure-adjusted rates are calculated.
+- **Pre-2020:** the rebuilt 2012–2019 casualty count changes by -15.91%. Fatal counts change from 197 to 196. From 2016 to 2019 fatal events change from 193 to 196 (+1.55%). The earlier CSV-based near-flat decline is superseded.
+- **Disruption and rebound:** events change by -23.53% during 2019–2020, then +7.26% during 2020–2021. The 2021 count is -17.98% relative to 2019. Timing alone does not establish a causal pandemic effect.
+- **Source repair:** annual 2014–2017 and 2019 inputs were validated and replaced as complete releases. The original source selection and results remain preserved. Source choice is supported by documented provenance and collision/person validation; aggregate benchmark proximity is corroborating evidence, not a correction rule.
+- **Residual benchmarks:** 2013 has 3,148 injury tractor events versus 3,150 published; 2019 has 196 fatal and 2,579 injury events versus 196 and 2,581 published. Other benchmarked years now match both severity totals. These remaining differences are not filled or assigned an unproven explanation.
+- **Strict filtering:** observed events retain source-quality flags; the stricter sensitivity excludes 11 tractor events. It is an alternative cohort, not a corrected national series. The small 2020–2021 fatal-share movement remains sensitive to this filtering.
+- **Comparisons:** heavy unit truck and tractor event groups can overlap. The no-recorded-tractor group includes other vehicles and unknown types; it is not a car-only population. Unknown-type sensitivity does not establish complete tractor ascertainment.
 
 ## Deliverables and verification
 
-- [Full findings and methods](../reports/trends/findings.md)
-- [Executed analysis notebook](../notebooks/02_descriptive_trends.ipynb)
-- [Annual group and subset counts](../reports/trends/annual_counts.csv)
-- [Period comparisons](../reports/trends/period_changes.csv)
-- [Strict sensitivity](../reports/trends/strict_sensitivity.csv)
-- [Published benchmark comparison](../reports/trends/benchmark_comparison.csv)
-- [Machine-readable summary and provenance](../reports/trends/summary.json)
+- [Full regenerated report and annual tables](../reports/trends/findings.md).
+- [Executed trend notebook](../notebooks/02_descriptive_trends.ipynb).
+- [Source repair, baseline and change audit](source_release_update.md).
+- [Current dataset validation](dataset_validation.md).
+- [Recent-year availability and separate aggregate vintages](data_availability.md).
 
-The three figures are available as PNG and SVG under `reports/trends/`: `tractor_counts`, `fatal_share` and `indexed_comparison`. Their input series are exported in CSV. The analyst verified unique event keys, all 23 years, severity arithmetic and agreement with the dataset build. An independent statistical reviewer reproduced all **184 annual group/subset rows** directly from the collision Parquet table. The notebook reruns the analysis and independently checks observed tractor annual totals; all six code cells execute successfully. Final standalone figures were visually inspected for readable labels, scales and legends.
+The analysis recomputes unique event keys, complete 23-year coverage, severity arithmetic, overlap/complement definitions and observed/strict counts against the production build. It uses no fitted model, p-value, sampling confidence interval or exposure-adjusted rate. All three scientific figures and their underlying tables are regenerated from the selected release.
 
-Reproduce from the repository root:
+Reproduce with `PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib .venv/bin/python -m truck_collisions.analyze_trends` after rebuilding the collision table. Input and code fingerprints are in `reports/trends/summary.json`.
 
-```bash
-uv sync --extra notebook --extra analysis
-PYTHONPATH=src MPLCONFIGDIR=/tmp/collisions-matplotlib \
-  .venv/bin/python -m truck_collisions.analyze_trends
-```
+## Next analytical gate
 
-Raw and derived collision data are unchanged. The analysis module is `src/truck_collisions/analyze_trends.py`. Generated reports and figures are ignored by Git and recreated by this command; this document and the executed notebook preserve the project handoff.
-
-## Next analytical gates
-
-Validate person identities and casualty counts before answering who dies in tractor-involved collisions. Review the modeled tractor-trailer kilometre estimates before estimating exposure rates. Then compare crash configuration, weather, surface and time patterns with appropriate missingness checks. The source gap for 2022–2025 and the unresolved 2019 publication difference remain open.
+The documented source-repair and downstream integrity checks are complete. Weather and configuration comparisons have not started; the next task can begin with missingness and code-consistency checks on this rebuilt release. Person harm uses the separate validated casualty pipeline and scenarios; exposure compatibility remains necessary for risk estimates. Missing national event years remain explicit.

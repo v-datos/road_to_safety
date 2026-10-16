@@ -12,7 +12,7 @@ import tempfile
 
 import duckdb
 
-from .build import COLUMNS, TWO_DIGIT, prepare_csv, quote, sha256, export
+from .build import COLUMNS, TWO_DIGIT, prepare_csv, quote, sha256, export, selected_years, select_source_records
 
 GROUPS = ('tractor_occupant', 'other_motor_vehicle_occupant', 'pedestrian',
           'cyclist', 'motorcyclist', 'other_or_unknown', 'ambiguous')
@@ -144,6 +144,11 @@ def write_records(connection, rows, path):
 
 def build_dataset(root, sources, output, event_path=None):
     root, output = Path(root), Path(output)
+    if len({source['id'] for source in sources}) != len(sources):
+        raise ValueError('Source IDs must be unique')
+    selected = {(source['id'], year) for source in sources for year in selected_years(source)}
+    if len(selected) != len({year for _, year in selected}):
+        raise ValueError('Overlapping source years')
     event_path = Path(event_path) if event_path else root / 'data/derived/ncdb/road_tractor_collisions.parquet'
     output.mkdir(parents=True, exist_ok=True)
     stage = output / 'staging.duckdb'
@@ -153,6 +158,10 @@ def build_dataset(root, sources, output, event_path=None):
     connection.execute("SET memory_limit='2GB'")
     connection.execute('SET threads=2')
     connection.execute(f'CREATE TABLE events AS SELECT * FROM read_parquet({quote(event_path)})')
+    event_sources = connection.execute('SELECT DISTINCT source_id,C_YEAR FROM events').fetchall()
+    if any(pair not in selected for pair in event_sources):
+        connection.close()
+        raise ValueError('Event source/year not selected by the supplied source releases')
     manifest = []
     with tempfile.TemporaryDirectory(prefix='person-ncdb-', dir=output) as temporary:
         for i, source in enumerate(sources):
@@ -168,6 +177,7 @@ def build_dataset(root, sources, output, event_path=None):
                     value = f"CASE WHEN regexp_full_match({value},'[0-9]') THEN '0'||{value} ELSE {value} END"
                 expressions.append(f'{value} AS "{name}"')
             query = f"SELECT {quote(source['id'])} source_id,{','.join(expressions)} FROM read_csv({quote(path)},header=true,all_varchar=true,strict_mode=true)"
+            query = select_source_records(connection, source, query)
             connection.execute(('CREATE TABLE records AS ' if i == 0 else 'INSERT INTO records ') + f'SELECT r.* FROM ({query}) r JOIN events e ON try_cast(r.C_YEAR AS INTEGER)=e.C_YEAR AND r.C_CASE=e.C_CASE AND r.source_id=e.source_id')
             manifest.append({**source, 'sha256': checksum, 'size_bytes': original.stat().st_size})
             print('Loaded tractor-event people:', source['id'], flush=True)
@@ -266,7 +276,7 @@ def build_dataset(root, sources, output, event_path=None):
     # Synthetic identity is never used. Validate only documented invariants.
     assert event_rows_match == 0 and consistency == (0, 0) and fatal_missing == 0
     assert sum(u['input_record_rows'] for u in units) + sum(r['record_multiplicity'] for r in unresolved) == len(records)
-    assert len(grouped) == 23 * 2 * len(GROUPS)
+    assert len(grouped) == len({e['C_YEAR'] for e in events}) * 2 * len(GROUPS)
     validation = dict(built_at_utc=datetime.now(timezone.utc).isoformat(), status='validated_source_record_scenarios_external_reconciliation_partial',
                       pipeline_sha256=sha256(Path(__file__)), event_dataset_sha256=sha256(event_path),
                       dictionary_sha256=sha256(root/'Collisions/data_dictionary.pdf'),

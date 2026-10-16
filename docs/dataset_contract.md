@@ -2,13 +2,13 @@
 
 ## Scope and sources
 
-The build reads the inherited NCDB 1999–2017 CSV and freshly acquired official 2018–2021 files. It does not read the truncated `test99_to_2019*` files, duplicate copies, old aggregate exports, UK data, or notebook outputs. Each year is assigned exactly one source in `data/sources.json`. The build rejects overlapping source years and unexpected column schemas. The raw files are immutable inputs; source paths, URLs, coverage, SHA256 hashes and download dates remain traceable.
+The build selects **nine immutable source files**: the inherited NCDB 1999–2017 CSV supplies only **1999–2013**, six official annual English XLSX files supply **2014–2019**, the official English CSV supplies **2020**, and the official French CSV supplies **2021**. The inherited file remains physically unchanged and retains physical coverage `first_year=1999,last_year=2017`; `selected_years=1999–2013` determines which of its rows enter the analysis. It does not read the truncated `test99_to_2019*` files, duplicate copies, old aggregate exports, UK data, or notebook outputs. Each year is assigned exactly one source in `data/sources.json`. The build verifies the physical year coverage, validates each optional `selected_years` list, applies that selection, and rejects overlapping selected source years and unexpected column schemas. The raw files are immutable inputs; source paths, URLs, coverage, SHA256 hashes and download dates remain traceable.
 
 NCDB's public records cover **fatal and injury collisions on public roads**. They do not cover property-damage-only collisions. Coverage of all years in a source does not prove full agreement with revised national statistics. The intended research period remains 2016–2025, and 2022–2025 remain outside the current microdata dataset.
 
 ## Grain and selection
 
-- Primary key: `(C_YEAR, C_CASE)`; year is an integer and case ID remains text. Case IDs are not assumed unique across years.
+- **Source-scoped event key:** `(source_id,C_YEAR,C_CASE)`; year is an integer and case ID remains text. The selected dataset also has unique `(C_YEAR,C_CASE)` because exactly one release supplies each year. Case IDs are not assumed unique across years, stable between releases, or linkable between CSV and XLSX vintages. Always include `source_id` in joins involving source records, vehicles or people; never repair records by joining case IDs across releases.
 - `collisions.parquet` contains one row per observed collision, including any structurally flagged events.
 - `road_tractor_collisions.parquet` and `.csv` contain every collision with a recorded `V_TYPE=08`, retaining flags. `road_tractor_collisions_strict.parquet` additionally requires `is_analysis_candidate=true` and is a sensitivity subset, not a corrected national series.
 - Code 08 means road tractor **with or without semitrailer**. Code 07 heavy unit truck is stored as a separate presence flag.
@@ -19,7 +19,7 @@ NCDB's public records cover **fatal and injury collisions on public roads**. The
 
 | Columns | Meaning |
 | --- | --- |
-| `C_YEAR`, `C_CASE` | Event key, preserving the public release's case ID. |
+| `C_YEAR`, `C_CASE` | Event identifiers within `source_id`, preserving the public release's case ID. |
 | `C_MNTH`, `C_WDAY`, `C_HOUR`, `C_SEV`, `C_VEHS`, `C_CONF`, `C_RCFG`, `C_WTHR`, `C_RSUR`, `C_RALN`, `C_TRAF` | Original collision codes. Consult the source dictionary; special codes remain strings. If rows disagree on one of these fields, its value is null and the conflict is exported. `C_SEV=1` is fatal, `2` injury. |
 | `source_id` | Join to the source manifest and `data/sources.json`. |
 | `is_road_tractor`, `is_heavy_unit_truck` | At least one record has vehicle type 08 or 07, respectively. This establishes recorded involvement, not fault. |
@@ -37,7 +37,7 @@ NCDB's public records cover **fatal and injury collisions on public roads**. The
 
 ## Normalization and exclusions
 
-One-digit numeric codes in dictionary fields of width two are zero-padded. Longer codes are never truncated. Unknown/not-applicable/other codes (`U`, `N`, `Q`, `X` variants) and the 2020 source's `*`/`**` are preserved. The French 2021 header names are mapped explicitly to the English canonical column names after CP1252 decoding; coded values are unchanged. The 2018 workbook is read from its `in` sheet and converted only in temporary staging.
+One-digit numeric codes in dictionary fields of width two are zero-padded. Longer codes are never truncated. Unknown/not-applicable/other codes (`U`, `N`, `Q`, `X` variants) and the 2020 source's `*`/`**` are preserved. The French 2021 header names are mapped explicitly to the English canonical column names after CP1252 decoding; coded values are unchanged. Annual workbooks are converted only in temporary staging; the explicitly configured `in` sheet is used for 2018 and 2019. No original workbook or legacy CSV is rewritten.
 
 Exact duplicate normalized records are collapsed before attribute checks. Because identical unknown-person rows could represent different people, this operation is used only for event construction and record diagnostics. **No person casualty totals are produced by this build.** Person keys with known IDs can conflict; NN dummy parked-vehicle people and UU unidentified people must not be treated as identified human beings.
 
@@ -45,7 +45,7 @@ Missing or invalid event keys are exported to `invalid_key_records.parquet`. Con
 
 ## Validation layers
 
-1. **Input and grain:** source checksum, schema, actual year coverage, nonoverlapping sources, valid case/year and unique output event key.
+1. **Input and grain:** source checksum, schema, physical year coverage, valid selected-year coverage, nonoverlapping selected sources, valid case/year and unique output event key.
 2. **Internal consistency:** collision fields, known-vehicle types, person-attribute conflicts, reported/observed vehicle counts, and event/person fatality consistency.
 3. **External reconciliation:** each **unfiltered observed** 2012–2021 tractor fatal/injury count compared separately with Transport Canada's published Table 1. Strict candidate counts and exclusions appear alongside them, so intentional filtering is not mistaken for a source discrepancy. Exact equality, unresolved difference and no benchmark are explicit statuses; no tolerance is silently accepted.
 
@@ -65,3 +65,7 @@ PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
 The download command fetches missing files only and verifies pinned hashes. If an official file has changed, it stops for a source-version review. The inherited historical source's original acquisition date is unknown; its hash is recorded and pinned after inspection.
 
 Outputs are under `data/derived/ncdb/`: the collision Parquet table, tractor subset in Parquet/CSV, annual counts, external reconciliation, quality by year, collision-code profile, source manifest, issue tables and `validation.json`. See `notebooks/01_dataset_validation.ipynb` for a runnable audit companion. Raw and derived datasets are excluded from Git; code, manifests, reference counts and methods are versioned.
+
+## Source-version updates
+
+The 2014–2017 annual workbooks and the alternate 2019 XLSX replace substantively different earlier inputs after separate event and person validation. The 2012–2013 annual XLSX normalized record multisets matched the inherited source exactly; those selected inherited years remain. See [source release audit](source_release_audit.md) and [source revision validation](source_revision_validation.md). These choices use direct source provenance and validation, not manual adjustment to published counts. The baseline release and outputs are preserved separately. Distinct official publication counting units and vintages remain separate reference series.

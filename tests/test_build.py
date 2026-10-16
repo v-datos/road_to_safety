@@ -6,6 +6,7 @@ from pathlib import Path
 import duckdb
 
 from truck_collisions.build import COLUMNS, FRENCH_HEADERS, build_dataset
+from truck_collisions.build_casualties import build_dataset as build_casualties
 from openpyxl import Workbook
 
 
@@ -17,6 +18,76 @@ def record(case, **changes):
 
 
 class CollisionBuildTests(unittest.TestCase):
+    def test_selected_legacy_years_and_replacement_keep_release_person_identity(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / 'data/reference').mkdir(parents=True)
+            (root / 'data/reference/tractor_collision_benchmark.csv').write_text(
+                'year,fatal_collisions,injury_collisions\n2013,0,1\n2014,0,1\n')
+            (root / 'Collisions').mkdir()
+            (root / 'Collisions/data_dictionary.pdf').write_bytes(b'fixture dictionary')
+            sources = [dict(id='legacy', path='legacy.csv', first_year=2013, last_year=2014, selected_years=[2013]),
+                       dict(id='replacement', path='replacement.csv', first_year=2014, last_year=2014)]
+            for source in sources:
+                rows = []
+                for year in range(source['first_year'], source['last_year'] + 1):
+                    rows.extend([record('1', C_YEAR=str(year), V_TYPE='08', P_ISEV='2' if source['id'] == 'replacement' else '1'),
+                                 record('1', C_YEAR=str(year), V_TYPE='08', P_ID='UU', P_ISEV='U'),
+                                 record('1', C_YEAR=str(year), V_TYPE='08', P_ID='NN', P_ISEV='N')])
+                with (root / source['path']).open('w', newline='') as handle:
+                    writer = csv.DictWriter(handle, fieldnames=COLUMNS)
+                    writer.writeheader()
+                    writer.writerows(rows)
+            build_dataset(root, sources, root / 'events')
+            build_casualties(root, sources, root / 'people', root / 'events/road_tractor_collisions.parquet')
+            con = duckdb.connect()
+            rows = con.execute('SELECT source_id,C_YEAR,injuries_min FROM read_parquet(?) ORDER BY C_YEAR',
+                               [str(root / 'people/person_units.parquet')]).fetchall()
+            self.assertEqual(rows, [('legacy', 2013, 0), ('replacement', 2014, 1)])
+            self.assertEqual(con.execute('SELECT sum(input_record_rows) FROM read_parquet(?)',
+                                        [str(root / 'events/collisions.parquet')]).fetchone()[0], 6)
+            con.close()
+
+    def test_invalid_selected_years_are_rejected(self):
+        for selection in [[], [2019, 2019], [2020], ['2019'], [True], None]:
+            with self.subTest(selection=selection), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                with (root / 'input.csv').open('w', newline='') as handle:
+                    writer = csv.DictWriter(handle, fieldnames=COLUMNS)
+                    writer.writeheader()
+                    writer.writerow(record('1', V_TYPE='08'))
+                source = dict(id='input', path='input.csv', first_year=2019, last_year=2019, selected_years=selection)
+                with self.assertRaisesRegex(ValueError, 'Invalid selected_years'):
+                    build_dataset(root, [source], root / 'events')
+                with self.assertRaisesRegex(ValueError, 'Invalid selected_years'):
+                    build_casualties(root, [source], root / 'people')
+
+    def test_selection_cannot_hide_missing_physical_year(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            with (root / 'input.csv').open('w', newline='') as handle:
+                writer = csv.DictWriter(handle, fieldnames=COLUMNS)
+                writer.writeheader()
+                writer.writerow(record('1', V_TYPE='08'))
+            source = dict(id='input', path='input.csv', first_year=2019, last_year=2020, selected_years=[2019])
+            with self.assertRaisesRegex(ValueError, 'Year coverage mismatch'):
+                build_dataset(root, [source], root / 'events')
+            con = duckdb.connect()
+            con.execute("COPY (SELECT 'input' source_id,2019 C_YEAR,'1' C_CASE) TO ? (FORMAT PARQUET)", [str(root / 'events.parquet')])
+            con.close()
+            with self.assertRaisesRegex(ValueError, 'Year coverage mismatch'):
+                build_casualties(root, [source], root / 'people', root / 'events.parquet')
+
+    def test_casualty_builder_rejects_events_from_unselected_release(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            con = duckdb.connect()
+            con.execute("COPY (SELECT 'old_release' source_id,2019 C_YEAR,'1' C_CASE) TO ? (FORMAT PARQUET)", [str(root / 'events.parquet')])
+            con.close()
+            source = dict(id='replacement', path='unused.csv', first_year=2019, last_year=2019)
+            with self.assertRaisesRegex(ValueError, 'Event source/year not selected'):
+                build_casualties(root, [source], root / 'people', root / 'events.parquet')
+
     def test_event_grain_codes_ambiguity_and_cross_year_keys(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

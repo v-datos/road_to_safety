@@ -1,5 +1,7 @@
 # Official NCDB acquisition record
 
+> **Initial acquisition log with subsequent source update.** This document preserves the first downloads. The active selection now uses validated annual 2014–2019 workbooks and selected legacy 1999–2013 records; the old 2019 CSV remains preserved. Additional resource IDs, exact URLs, metadata and SHA256 hashes are recorded in `data/sources.json`, [the release inventory](../data/reference/source_release_inventory.csv), and [the source repair](source_release_update.md). No earlier raw file was overwritten.
+
 Retrieved 2026-10-15 UTC (2026-10-14 in America/Edmonton). Official originals are preserved in `data/raw/ncdb/`; files in `Collisions/` were not changed.
 
 ## Source and version

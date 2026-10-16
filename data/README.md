@@ -1,5 +1,7 @@
 # Data staging
 
-The inherited source files in `../Collisions/` are unchanged. Official 2018–2021 originals are in `raw/ncdb/`, along with acquisition metadata and a dictionary. `sources.json` selects exactly one input for each year and pins its checksum. `reference/` contains the published tractor-trailer collision benchmark and its source citation.
+The inherited source files in `../Collisions/` are unchanged. Official annual originals are in `raw/ncdb/`, along with acquisition metadata and a dictionary. `sources.json` selects exactly one release per year and pins its checksum: legacy years 1999–2013, annual Excel files 2014–2019, English CSV 2020, and French CSV 2021. Full physical coverage of a multi-year source is validated before applying `selected_years`. `source_releases/` preserves the baseline selection, snapshot hashes and source-choice records. `reference/` separates collision, vehicle, occupant, national and provincial benchmark scopes and records recent-year availability.
 
 `derived/ncdb/` contains one-row-per-collision Parquet tables, the observed tractor subset in Parquet/CSV, a strict sensitivity subset, source hashes and quality/reconciliation tables. Raw and derived files are ignored by Git. See [the dataset contract](../docs/dataset_contract.md), [validation findings](../docs/dataset_validation.md), and [acquisition notes](../docs/ncdb_acquisition.md).
+
+`derived/casualties/` contains recorded-person keys, record alternatives, unresolved/dummy records, annual group counts and quality evidence. `derived/baselines/pre_source_revision_20261015/` preserves outputs before the source repair. Candidate builds remain separate from production. See [the source repair record](../docs/source_release_update.md).

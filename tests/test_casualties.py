@@ -88,6 +88,15 @@ class CasualtyResolutionTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'parent event'):
             self.resolve([record(C_CASE='orphan')])
 
+    def test_person_keys_do_not_merge_across_source_releases(self):
+        rows = [record(), record(source_id='alternate_release', P_ISEV='2')]
+        parents = [event(), {**event(), 'source_id': 'alternate_release'}]
+        units, _, _, _ = self.resolve(rows, parents)
+        self.assertEqual(len(units), 2)
+        self.assertFalse(any(u['severity_conflict'] for u in units))
+        self.assertEqual(sum(u['deaths_min'] for u in units), 1)
+        self.assertEqual(sum(u['injuries_min'] for u in units), 1)
+
 
 if __name__ == '__main__':
     unittest.main()

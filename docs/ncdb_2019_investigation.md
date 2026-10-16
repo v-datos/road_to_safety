@@ -1,5 +1,7 @@
 # Investigation of the 2019 NCDB benchmark difference
 
+> **Historical CSV investigation, superseded for active source selection.** The later source audit validated the alternate official 2019 XLSX, yielding 196 fatal and 2,579 injury tractor collisions. See [the source repair](source_release_update.md), [candidate validation](source_revision_validation.md) and current [dataset validation](dataset_validation.md). The CSV counts below document the preserved baseline, not current production. The remaining two injury-event difference is unresolved.
+
 Verified 2026-10-14. This investigation distinguishes checks on the supplied records from agreement with published statistics. Passing structural checks does not establish that the public extract reproduces the latest national totals.
 
 ## Fresh source compared with local file
@@ -26,7 +28,7 @@ Source vintage is a plausible contributor, but the specific explanation remains 
 
 The public [data dictionary](https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/21eb7966-38da-4814-a80e-521bce6c4c27/download/data_dictionary.pdf) defines 08 as a road tractor with or without a semitrailer. An earlier [Transport Canada commercial vehicle report](https://tc.canada.ca/sites/default/files/2022-01/commercial-vehicle-safety-canada-2012-2018.pdf), footnote 4, uses the same definition for tractor-trailers. There is no verified evidence here that excluding tractors without trailers would reconcile the difference; the public extract cannot identify trailer attachment separately.
 
-Transport Canada's [road safety program evaluation](https://tc.canada.ca/en/corporate-services/transparency/corporate-management-reporting/evaluation-reports/evaluation-road-safety-programs) documents reporting delays and the use of estimates. That explains why different official vintages can exist, but does not prove the cause of this particular difference. Seek clarification from `NCDB-BNDC@tc.gc.ca`, the contact on the [NCDB FAQ](https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-5-0). Do not adjust the extracted records to force agreement.
+Transport Canada's [road safety program evaluation](https://tc.canada.ca/en/corporate-services/transparency/corporate-management-reporting/evaluation-reports/evaluation-road-safety-programs) documents reporting delays and the use of estimates. That explains why different official vintages can exist, but does not prove the cause of this particular difference. The current project uses public sources only and does not contact custodians. Do not adjust extracted records to force agreement.
 
 ## Integrity findings and recommended handling
 
