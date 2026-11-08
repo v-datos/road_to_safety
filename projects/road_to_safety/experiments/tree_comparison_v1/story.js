@@ -199,3 +199,80 @@ rateMetric.addEventListener("change", showRates);
 trend();
 timing();
 showRates();
+
+const operationalView = document.getElementById("operational-view");
+function renderOperational() {
+  if (!operationalView || !data.operational) return;
+  const view = operationalView.value;
+  const op = data.operational;
+  const plot = document.getElementById("operational-bars");
+  const reading = document.getElementById("operational-reading");
+  plot.replaceChildren();
+  let bars = [];
+  if (view === "corridors") {
+    const rows = op.corridor_top.slice(0, 10);
+    reading.textContent = "Spadina Ave · 13.98 EB KSI per 100M VKT (40 of 43 KSI crashes involve Vulnerable Road Users)";
+    bars = rows.map(r => ({label: r.LINEAR_NAME_FULL, val: r.eb_ksi_per_100m_vkt, text: `${r.eb_ksi_per_100m_vkt.toFixed(2)}`}));
+    updateTable("operational-table",
+      ["Corridor", "Length (km)", "Mean AADT", "KSI Crashes", "Fatal", "VRU KSI", "Observed KSI / 100M VKT", "EB KSI / 100M VKT", "PSI Excess KSI"],
+      rows.map(r => [r.corridor_name, r.monitored_length_km.toFixed(2), integer.format(Math.round(r.mean_aadt)),
+        integer.format(r.ksi_crashes), integer.format(r.fatal_crashes), integer.format(r.vru_ksi_crashes),
+        r.observed_ksi_per_100m_vkt.toFixed(2), r.eb_ksi_per_100m_vkt.toFixed(2),
+        (r.psi_excess_ksi >= 0 ? "+" : "") + r.psi_excess_ksi.toFixed(2)]));
+  } else if (view === "road_classes") {
+    const rows = op.corridor_classes.slice(0, 7);
+    reading.textContent = "Major Arterials · 5.35 KSI per 100M VKT (12.6x higher per-VKT rate than Expressways at 0.42)";
+    bars = rows.map(r => ({label: r.road_class, val: r.ksi_per_100m_vkt, text: `${r.ksi_per_100m_vkt.toFixed(2)}`}));
+    updateTable("operational-table",
+      ["Road Class", "Monitored Segments", "Length (km)", "Mean AADT", "KSI Crashes", "Fatal", "VRU KSI", "KSI / 100M VKT", "Fatal / 100M VKT", "VRU KSI / 100M VKT"],
+      rows.map(r => [r.road_class, integer.format(r.monitored_segments), r.monitored_length_km.toFixed(1),
+        integer.format(Math.round(r.mean_aadt)), integer.format(r.ksi_crashes), integer.format(r.fatal_crashes),
+        integer.format(r.vru_ksi_crashes), r.ksi_per_100m_vkt.toFixed(3), r.fatal_per_100m_vkt.toFixed(3),
+        r.vru_ksi_per_100m_vkt.toFixed(3)]));
+  } else if (view === "typology") {
+    const rows = op.typology_or.slice(0, 10);
+    reading.textContent = "M2 Full Typology · ROC-AUC 0.7628 (+6.70 pp vs M0) · PR-AUC 7.47% (+80.0% lift)";
+    bars = rows.map(r => ({label: r.feature.replace(/^has_/, ""), val: r.odds_ratio, text: `${r.odds_ratio.toFixed(2)}x`}));
+    updateTable("operational-table",
+      ["Typology Factor", "Group", "Collisions (1999–2021)", "Fatal Collisions", "Unadjusted Fatal %", "Adjusted Odds Ratio"],
+      rows.map(r => [r.label, r.feature_group, integer.format(r.collisions_all_years),
+        integer.format(r.fatal_collisions_all_years), `${r.unadjusted_fatality_rate_pct.toFixed(2)}%`, `${r.odds_ratio.toFixed(2)}x`]));
+  } else if (view === "triage") {
+    const rows = op.triage_bands;
+    reading.textContent = "Band 1 Critical (Top 1.10% of Crashes) · 14.27% Fatality Rate (14.24x Relative Risk vs Routine)";
+    bars = rows.map(r => ({label: r.band.replace(/_/g, " ").slice(0, 16), val: r.within_band_fatality_rate_pct, text: `${r.within_band_fatality_rate_pct.toFixed(2)}%`}));
+    updateTable("operational-table",
+      ["Risk Band (2020–2021 Test)", "Collisions", "Share of Crashes", "Fatal Crashes", "Share of Fatals", "Within-Band Fatal %", "Relative Risk vs Routine"],
+      rows.map(r => [r.band, integer.format(r.collisions), `${r.share_of_all_collisions_pct.toFixed(2)}%`,
+        integer.format(r.fatal_collisions), `${r.share_of_all_fatals_pct.toFixed(2)}%`,
+        `${r.within_band_fatality_rate_pct.toFixed(2)}%`, `${r.relative_risk_vs_routine.toFixed(2)}x`]));
+  } else if (view === "monitoring") {
+    const rows = op.monitoring_drift;
+    reading.textContent = "Prospective Governance · 2017–2019 GREEN (O/E 0.96–1.01) · 2020–2021 Pandemic Shift RED (O/E 1.20–1.22)";
+    bars = rows.map(r => ({label: String(r.release).slice(0, 14), val: r.m2_oe_ratio, text: `${r.m2_oe_ratio.toFixed(2)} (${r.alert_status})`}));
+    updateTable("operational-table",
+      ["Release / Cohort", "Collisions", "Observed Fatal %", "M2 Pred Fatal %", "M2 O/E Ratio", "Max Covariate PSI", "Alert Status", "Governance Action"],
+      rows.map(r => [r.release, integer.format(r.collisions), `${r.observed_fatality_pct.toFixed(3)}%`,
+        `${r.m2_mean_pred_pct.toFixed(3)}%`, r.m2_oe_ratio.toFixed(3),
+        `${r.max_covariate_psi.toFixed(5)} (${r.max_psi_feature})`, r.alert_status, r.recommended_action]));
+  }
+  const maxVal = Math.max(...bars.map(b => b.val), 0.01);
+  for (const item of bars) {
+    const li = document.createElement("li");
+    const lbl = document.createElement("span");
+    lbl.textContent = item.label;
+    const track = document.createElement("span");
+    track.className = "bar-track";
+    const fill = document.createElement("span");
+    fill.style.width = `${Math.min(100, 100 * item.val / maxVal)}%`;
+    track.append(fill);
+    const valNode = document.createElement("strong");
+    valNode.textContent = item.text;
+    li.append(lbl, track, valNode);
+    plot.append(li);
+  }
+}
+if (operationalView) {
+  operationalView.addEventListener("change", renderOperational);
+  renderOperational();
+}

@@ -4,9 +4,9 @@ Independent analysis projects are organized under `projects/`.
 
 | Project | Scope | Status |
 | --- | --- | --- |
-| [Truck collisions](projects/trucks/README.md) | Canadian road-tractor collision trends, casualties, conditions and exposure | Existing analysis and reproducible pipelines; public records cover 1999–2021 |
-| [Bicycle collisions](projects/bicycles/README.md) | Canadian bicycle-involved collisions and bicyclist casualties | First descriptive report, 2010–2023; linked detail through 2021 |
-| [Road to Safety](projects/road_to_safety/README.md) | All-road-user collision severity, risk factors, spatial/temporal patterns, corridor exposure SPFs and operational triage | Portfolio + 4-phase operational decision-support action plan complete (69/69 tests passing) |
+| [Truck collisions](projects/trucks/README.md) | Canadian road-tractor collision trends, casualties, conditions, Table 10 modeled VKT sensitivity (2015–2021) and vehicle-age (`V_YEAR`) severity audit | Complete through Question 7 + 9 executed notebooks (36/36 tests passing) |
+| [Bicycle collisions](projects/bicycles/README.md) | Canadian bicycle-involved collisions, bicyclist casualties, heavy-freight lethality and Toronto corridor VKT exposure linkage | Descriptive report (2010–2023), corridor synthesis + 3 executed notebooks (10/10 tests passing) |
+| [Road to Safety](projects/road_to_safety/README.md) | All-road-user collision severity, risk factors, spatial/temporal patterns, corridor exposure SPFs and operational triage | Refreshed portfolio + 4-phase operational decision-support action plan complete (69/69 tests passing) |
 
 Each project owns its data, source code, tests, notebooks, reports and documentation. See [the project organization guide](projects/README.md) when adding another analysis.
 

@@ -65,7 +65,7 @@ def build(draft=False):
         for row in evidence["policies"])
     narrative = f"""
 <nav aria-label="Story sections"><a href="#trend">National trend</a><a href="#when">When</a>
-<a href="#roads">Conditions</a><a href="#where">Where</a><a href="#prediction">Severity</a><a href="#actions">Actions</a></nav>
+<a href="#roads">Conditions</a><a href="#where">Where</a><a href="#prediction">Severity</a><a href="#operational">Operational Toolkit</a><a href="#actions">Actions</a></nav>
 <section id="trend"><div class="kicker">01 · Canada in view</div><h2>Road casualties over two decades</h2>
 <p>Transport Canada recorded 2,050 road fatalities and 130,551 injuries in 2024. Explore annual published totals since 2005.</p>
 <div class="controls"><label>People <select id="annual-metric"><option value="fatalities">Killed</option>
@@ -112,11 +112,24 @@ def build(draft=False):
 <p>{escape(summary)}</p>
 <p class="note">The model estimates fatal severity among recorded collisions with casualties. Predicting whether a crash will happen requires traffic exposure and observations of uneventful travel. The tested years were previously examined.</p>
 <details><summary>Model results and reliability</summary>{model_panel(evidence)}</details></section>
-<section id="actions"><div class="kicker">06 · Practical next steps</div><h2>Where local evidence can guide action</h2>{recommendations}
+<section id="operational"><div class="kicker">06 · Operational Decision-Support Toolkit (Phases 1–4)</div><h2>Corridor exposure rates, road-user typologies, 3-tier triage and drift monitoring</h2>
+<p>Explore the four operational extensions: Toronto Centreline + AADT corridor safety performance functions (Crash / 100M VKT), person/vehicle typology severity drivers (<code>P_USER</code> and <code>V_TYPE</code>), cost-utility 3-tier operational triage, and prospective 2022+ NCDB drift monitoring.</p>
+<div class="controls"><label>Operational view <select id="operational-view">
+<option value="corridors">Phase 1 · Top Empirical Bayes Priority Corridors (Toronto KSI / 100M VKT)</option>
+<option value="road_classes">Phase 1 · Exposure-Normalized Rates by Functional Road Class</option>
+<option value="typology">Phase 2 · Road-User &amp; Vehicle Typology Adjusted Odds Ratios (M2)</option>
+<option value="triage">Phase 3 · 3-Tier Operational Triage &amp; Mutually Exclusive Risk Bands (2020–2021)</option>
+<option value="monitoring">Phase 4 · Prospective 2022+ NCDB Calibration &amp; Covariate Drift Monitor</option>
+</select></label></div>
+<p id="operational-reading" class="reading" aria-live="polite"></p>
+<ol class="bar-list" id="operational-bars" aria-label="Operational decision-support comparison"></ol>
+{empty_table('operational-table','Operational decision-support evidence table')}
+</section>
+<section id="actions"><div class="kicker">07 · Practical next steps</div><h2>Where local evidence can guide action</h2>{recommendations}
 <p>{crosslinks}</p>
 <p><a href="{TC}">Transport Canada statistics</a> · <a href="{NCDB}">NCDB public data</a> · <a href="{STATCAN}">Statistics Canada boundaries</a></p></section>
 <noscript><p>Enable JavaScript for the controls. The technical report and policy brief include static figures and tables.</p></noscript>"""
-    public_evidence = {key: evidence[key] for key in ("annual", "temporal", "conditions", "conditions_by_year", "geography")}
+    public_evidence = {key: evidence.get(key) for key in ("annual", "temporal", "conditions", "conditions_by_year", "geography", "operational")}
     public_evidence["temporal"].pop("weekday_hour")
     payload = json.dumps(public_evidence, ensure_ascii=False, separators=(",", ":")).replace("<", "\\u003c")
     script = f'<script type="application/json" id="evidence">{payload}</script><script>{(HERE / "story.js").read_text()}</script>'

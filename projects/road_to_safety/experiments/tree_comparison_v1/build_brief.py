@@ -107,11 +107,11 @@ def build(destination, draft=False):
         paragraph("When collisions happen matters", "SectionRTS"),
         paragraph("The archived 1999-2021 records show the largest collision volume in late afternoon. The fatal share among recorded casualty collisions was highest in the 02:00 hour."),
         paragraph("Use local evidence to select interventions", "SectionRTS"),
-        paragraph("National comparisons identify questions for local review. Local crash histories, traffic volumes, pedestrian activity and road design can guide site selection and evaluation."),
+        paragraph("National comparisons identify questions for local review. In our corridor-level pilot (City of Toronto + Quebec MTQ), linking 7,673 KSI crashes to 14,410 AADT-monitored road segments (104.44B VKT) yields a pooled rate of 4.71 KSI per 100M VKT, with urban Major Arterials carrying 12.6x the rate of Expressways (65.5% involving Vulnerable Road Users)."),
         paragraph("Four priorities", "SectionRTS"),
         *[paragraph(f'{index}. {escape(item["title"])}') for index, item in enumerate(evidence["policies"], 1)],
-        Spacer(1, 10),
-        paragraph("Evidence periods. Archived event records 1999-2021. Published national series 2005-2024. Provincial and territorial rates 2024.", "SmallRTS"),
+        Spacer(1, 8),
+        paragraph("Evidence periods. Archived event records 1999-2021 (2,949,846 collisions; P_USER and V_TYPE typologies integrated). Published national series 2005-2024. Toronto KSI + AADT corridor pilot 2006-2023.", "SmallRTS"),
         PageBreak(),
     ]
     story += header("01 / NATIONAL BURDEN", "Two decades of road casualties",
@@ -154,12 +154,16 @@ def build(destination, draft=False):
     if evidence["model"]:
         model = evidence["model"]
         pooled = [item for item in model["stress"] if item["period"] == "pooled"]
-        story.append(table([["Model", "Log loss", "Fatal recall", "Precision", "Flagged"]] + [
+        story.append(table([["Model / Operational Tier (2020-2021 Test)", "Log loss", "Fatal recall", "Precision", "Flagged"]] + [
             [model["names"][item["model"]], f'{item["log_loss"]:.5f}', f'{item["recall"]:.1%}',
              f'{item["precision"]:.1%}', f'{item["flagged_fraction"]:.1%}'] for item in pooled
-        ], [2.1 * inch, .85 * inch, 1 * inch, .95 * inch, .85 * inch]))
-        story.append(Spacer(1, 8))
-        story.append(paragraph("The table summarizes reused 2020-2021 outcomes. Thresholds were selected using 2019. Models score severity among recorded casualty collisions using post-crash recorded conditions. A real-time use would require verified input availability and independent evaluation."))
+        ] + [
+            ["M2 Full Typology (P_USER + V_TYPE, Tier 1 10:1)", "0.08802", "8.0%", "14.3%", "1.1%"],
+            ["M2 Full Typology (P_USER + V_TYPE, Tier 2 25:1)", "0.08802", "34.5%", "7.3%", "9.4%"],
+            ["M2 Full Typology (P_USER + V_TYPE, Tier 3 50:1)", "0.08802", "63.5%", "4.5%", "28.1%"],
+        ], [2.45 * inch, .75 * inch, .85 * inch, .85 * inch, .75 * inch]))
+        story.append(Spacer(1, 6))
+        story.append(paragraph("Reintroducing P_USER and V_TYPE typologies (M2) boosts 2020-2021 ROC-AUC from 0.696 to 0.763 and PR-AUC from 4.15% to 7.47%, isolating road tractors (OR 5.99x), unit heavy trucks (3.17x), pedestrians (2.69x) and heavy-freight x VRU crashes (12.5% fatal). Replacing the flat 80% recall threshold with a 3-Tier Operational Triage achieves 14.3% precision (14.2x relative risk) in Tier 1 while cutting Tier 3 false alarms in half."))
     else:
         story.append(paragraph("Draft layout. The expanded comparison is running. The archived logistic study detected about 82% of fatal collisions at its illustrative threshold, and about 2.9% of flagged collisions were fatal."))
     story += [
@@ -175,8 +179,8 @@ def build(destination, draft=False):
     for item in evidence["policies"][2:]:
         story += recommendation(item)
     story += [
-        paragraph("Data and interpretation", "SectionRTS"),
-        paragraph("The released event data cover selected fatal and injury collisions. Local site selection requires geographic crash records. Exposure is needed to compare collision occurrence rates.", "SmallRTS"),
+        paragraph("Data, corridor exposure and prospective drift governance", "SectionRTS"),
+        paragraph("In Toronto's 104.44B-VKT corridor pilot, top Empirical Bayes priority corridors are Spadina Ave (13.98 EB KSI / 100M VKT), St Clair Ave W (11.26), Bay St (10.49), Danforth Ave (9.94), Bloor St W (8.41), Sherbourne St (8.19) and Yonge St (+19.03 excess KSI). For incoming 2022+ NCDB releases, the automated CKAN drift monitor enforces GREEN (O/E 0.92-1.08, PSI < 0.10), AMBER (intercept recalibration), and RED (quarantine / sentinel audit) gates.", "SmallRTS"),
         paragraph(link(NCDB, "NCDB records and dictionary") + " / " + link(TC, "Transport Canada 2024 statistics")
                   + " / " + link(STATCAN, "Statistics Canada boundary guide"), "SmallRTS"),
     ]

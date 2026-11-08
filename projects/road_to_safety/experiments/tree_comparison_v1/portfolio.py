@@ -90,6 +90,19 @@ def collect(draft):
     evidence["model"] = {"selection": selection, "stress": rows(stress[stress.group.eq("all")]),
                          "development": rows(development), "importance": rows(summary), "names": NAMES,
                          "validation": receipt}
+    evidence["operational"] = {
+        "corridor_summary": rows(read_csv(tables / "corridor_pilot_summary.csv")),
+        "corridor_classes": rows(read_csv(tables / "corridor_pilot_by_road_class.csv")),
+        "corridor_top": rows(read_csv(tables / "corridor_pilot_top_corridors.csv").head(15)),
+        "typology_summary": rows(read_csv(tables / "typology_model_summary.csv")),
+        "typology_or": rows(read_csv(tables / "typology_odds_ratios.csv")),
+        "typology_subgroups": rows(read_csv(tables / "typology_subgroup_performance.csv")),
+        "triage_tiers": rows(read_csv(tables / "triage_tiered_operating_points.csv")),
+        "triage_bands": rows(read_csv(tables / "triage_mutually_exclusive_bands.csv")),
+        "triage_context": rows(read_csv(tables / "triage_context_specific_curves.csv")),
+        "monitoring_drift": rows(read_csv(tables / "monitoring_annual_drift_summary.csv")),
+        "monitoring_catalog": rows(read_csv(tables / "monitoring_catalog_status.csv")),
+    }
     return evidence
 
 
@@ -207,6 +220,187 @@ def evidence_download(path, label):
             f'{escape(label)}</a>')
 
 
+def operational_panel(evidence):
+    op = evidence.get("operational")
+    if not op:
+        return ""
+    csum = op["corridor_summary"][0]
+    class_rows = [
+        [
+            r["road_class"],
+            f'{r["monitored_segments"]:,}',
+            f'{r["monitored_length_km"]:.1f}',
+            f'{r["mean_aadt"]:,.0f}',
+            f'{r["ksi_crashes"]:,}',
+            f'{r["fatal_crashes"]:,}',
+            f'{r["vru_ksi_crashes"]:,}',
+            f'{r["ksi_per_100m_vkt"]:.3f}',
+            f'{r["fatal_per_100m_vkt"]:.3f}',
+            f'{r["vru_ksi_per_100m_vkt"]:.3f}',
+        ]
+        for r in op["corridor_classes"][:7]
+    ]
+    top_corridor_rows = [
+        [
+            r["corridor_name"],
+            f'{r["monitored_length_km"]:.2f}',
+            f'{r["mean_aadt"]:,.0f}',
+            f'{r["ksi_crashes"]:,}',
+            f'{r["fatal_crashes"]:,}',
+            f'{r["vru_ksi_crashes"]:,}',
+            f'{r["observed_ksi_per_100m_vkt"]:.2f}',
+            f'{r["eb_ksi_per_100m_vkt"]:.2f}',
+            f'{r["psi_excess_ksi"]:+.2f}',
+        ]
+        for r in op["corridor_top"][:10]
+    ]
+    typ_rows = [
+        [
+            r["split"],
+            r["model"],
+            f'{r["n"]:,}',
+            f'{r["fatal"]:,}',
+            f'{r["roc_auc"]:.4f}',
+            f'{r["pr_auc"]:.2%}',
+            f'{r["log_loss"]:.5f}',
+            f'{r["brier_score"]:.5f}',
+            f'{r["oe_ratio"]:.3f}',
+        ]
+        for r in op["typology_summary"]
+        if r["split"] in ("validation_2017_2019", "test_2020_2021_uncal")
+    ]
+    or_rows = [
+        [
+            r["label"],
+            r["feature_group"],
+            f'{r["collisions_all_years"]:,}',
+            f'{r["fatal_collisions_all_years"]:,}',
+            f'{r["unadjusted_fatality_rate_pct"]:.2f}%',
+            f'{r["odds_ratio"]:.2f}x',
+        ]
+        for r in op["typology_or"][:10]
+    ]
+    tier_rows = [
+        [
+            r["tier_label"],
+            f'{r["threshold"]:.5f}',
+            f'{r["alert_rate_pct"]:.2f}% ({r["alert_count"]:,})',
+            f'{r["precision_pct"]:.2f}%',
+            f'{r["recall_pct"]:.2f}% ({r["tp"]:,})',
+            f'{r["fp_per_tp"]:.2f}',
+            f'{r["net_benefit_per_10k"]:+.2f}',
+        ]
+        for r in op["triage_tiers"]
+        if r["split"] == "test_2020_2021"
+    ]
+    band_rows = [
+        [
+            r["band"],
+            f'{r["collisions"]:,}',
+            f'{r["share_of_all_collisions_pct"]:.2f}%',
+            f'{r["fatal_collisions"]:,}',
+            f'{r["share_of_all_fatals_pct"]:.2f}%',
+            f'{r["within_band_fatality_rate_pct"]:.2f}%',
+            f'{r["relative_risk_vs_routine"]:.2f}x',
+        ]
+        for r in op["triage_bands"]
+    ]
+    drift_rows = [
+        [
+            r["release"],
+            f'{r["collisions"]:,}',
+            f'{r["observed_fatality_pct"]:.3f}%',
+            f'{r["m2_mean_pred_pct"]:.3f}%',
+            f'{r["m2_oe_ratio"]:.3f}',
+            f'{r["max_covariate_psi"]:.5f} ({r["max_psi_feature"]})',
+            r["alert_status"],
+            r["recommended_action"],
+        ]
+        for r in op["monitoring_drift"]
+    ]
+    return (
+        '<h3>Phase 1 · Corridor-level spatial and exposure linkage (Crash / 100M VKT)</h3>'
+        f'<p>Linking {csum["total_ksi_collisions"]:,} City of Toronto Killed or Seriously Injured (KSI) collision events '
+        f'(2006–2023; {csum["fatal_ksi_collisions"]:,} fatal) to {csum["total_road_segments"]:,} Centreline road segments '
+        f'({csum["total_road_network_km"]:,.1f} km) and 45,043 AADT traffic count studies yields {csum["exposure_monitored_segments"]:,} '
+        f'exposure-monitored segments ({csum["exposure_monitored_km"]:,.1f} km; 104.44 billion VKT), alongside '
+        f'{csum["quebec_mtq_sections"]:,} Quebec MTQ highway sections. Overall, {csum["snapped_Within_50m_pct"]:.2f}% of valid-coordinate '
+        f'collisions snap within 50 m (median distance {csum["median_snap_distance_m"]:.2f} m). The pooled rate is '
+        f'<strong>{csum["pooled_ksi_per_100m_vkt"]:.3f} KSI per 100M VKT</strong> ({csum["pooled_fatal_per_100m_vkt"]:.3f} fatal per 100M VKT; '
+        f'Negative Binomial overdispersion α = {csum["nb2_overdispersion_alpha"]:.4f}). Urban Major Arterials (5.352 KSI / 100M VKT; '
+        'NB2 rate ratio 6.31x vs Local) carry more than 12 times the per-VKT KSI rate of Expressways (0.423 KSI / 100M VKT), '
+        'with Vulnerable Road Users accounting for 65.5% of Major Arterial KSI collisions.</p>'
+        + html_table(
+            ["Road class", "Monitored segments", "Length (km)", "Mean AADT", "KSI crashes", "Fatal", "VRU KSI",
+             "KSI / 100M VKT", "Fatal / 100M VKT", "VRU KSI / 100M VKT"],
+            class_rows,
+            "Toronto exposure-monitored road classes (2006–2023, 104.44B cumulative VKT)",
+        )
+        + embedded_image("corridor_pilot_rates_by_class.png", "Collision occurrence rates (KSI / 100M VKT) by functional road class")
+        + embedded_image("corridor_pilot_spf_eb.png", "Safety performance functions by road class and top Empirical Bayes corridors")
+        + '<details><summary>Top 10 Empirical Bayes (EB) priority corridors (≥2 km monitored length)</summary>'
+        + html_table(
+            ["Corridor", "Monitored km", "Mean AADT", "KSI crashes", "Fatal", "VRU KSI",
+             "Observed KSI / 100M VKT", "EB KSI / 100M VKT", "PSI excess KSI"],
+            top_corridor_rows,
+            "Empirical Bayes shrinkage rankings controlling for regression-to-the-mean",
+        )
+        + '</details>'
+        + '<h3>Phase 2 · Road-user (P_USER) and vehicle (V_TYPE) typology severity models</h3>'
+        + '<p>Reintroducing person-level road-user (<code>P_USER</code>) and vehicle-level (<code>V_TYPE</code>) indicators across all '
+        '2,949,846 canonical NCDB collisions (1999–2021; 47,793 fatal collisions conserved 1:1) substantially improves out-of-time '
+        '2020–2021 discrimination and subgroup calibration: <strong>ROC-AUC increases from 0.6958 to 0.7628 (+6.70 pp)</strong>, '
+        '<strong>PR-AUC increases from 4.15% to 7.47% (+80.0% relative lift)</strong>, and log loss drops from 0.09276 to 0.08802 (-5.11%). '
+        'Controlling for all eight environmental and roadway condition fields, the strongest fatal severity multipliers are '
+        '<strong>road tractors (OR = 5.99x)</strong>, <strong>off-road/special vehicles (OR = 4.86x)</strong>, '
+        '<strong>unit heavy trucks (OR = 3.17x)</strong>, <strong>pedestrians (OR = 2.69x)</strong>, and the '
+        '<strong>heavy-freight × VRU interaction (OR = 2.54x; 12.46% unadjusted fatality rate)</strong>.</p>'
+        + html_table(
+            ["Split", "Model specification", "Collisions", "Fatal", "ROC-AUC", "PR-AUC", "Log loss", "Brier", "O/E ratio"],
+            typ_rows,
+            "Nested model comparison across validation (2017–2019) and out-of-time test (2020–2021)",
+        )
+        + html_table(
+            ["Typology factor", "Group", "Collisions (1999–2021)", "Fatal collisions", "Unadjusted fatal %", "Adjusted odds ratio"],
+            or_rows,
+            "Top 10 adjusted fatal collision odds ratios from M2_full_typology (trained 1999–2019)",
+        )
+        + embedded_image("typology_model_comparison.png", "Rolling chronological discrimination lift from P_USER and V_TYPE typologies")
+        + embedded_image("typology_odds_and_subgroups.png", "Adjusted odds ratios and out-of-time subgroup calibration recovery")
+        + '<h3>Phase 3 · Operational threshold tuning, cost-utility curves and 3-tier triage</h3>'
+        + '<p>Moving beyond the flat 80% recall heuristic (which flags 55.94% of test collisions at 2.89% precision), '
+        'Vickers–Elkin decision curve analysis defines a <strong>3-Tier Operational Triage Architecture</strong> calibrated on 2017–2019 '
+        'validation data and evaluated out-of-time on 2020–2021: <strong>Tier 1 Critical Dispatch (10:1 cost ratio)</strong> flags 1.10% '
+        'of collisions at <strong>14.27% precision (14.24x relative risk vs routine)</strong>; <strong>Tier 2 Priority Response (25:1)</strong> '
+        'flags 9.38% of collisions and captures 34.46% of all fatal crashes at 7.26% precision; and <strong>Tier 3 Systemic Watchlist (50:1)</strong> '
+        'flags 28.06% (half the legacy alert volume) while capturing 63.50% of all fatal collisions.</p>'
+        + html_table(
+            ["Triage tier / policy", "Cutoff (τ)", "Flagged share (count)", "Precision (PPV)", "Fatal recall (TP)", "FP / TP", "Net benefit / 10k"],
+            tier_rows,
+            "Out-of-time 2020–2021 test evaluation of the 3-Tier Operational Triage vs flat 80% recall baseline",
+        )
+        + html_table(
+            ["Mutually exclusive risk band", "Collisions", "Share of crashes", "Fatal crashes", "Share of fatals", "Within-band fatal %", "Relative risk vs Band 4"],
+            band_rows,
+            "Mutually exclusive risk stratification on 2020–2021 test collisions (n = 163,580; 3,230 fatal)",
+        )
+        + embedded_image("triage_cost_utility_and_pr.png", "Precision-recall operating points and Vickers-Elkin net benefit curves")
+        + embedded_image("triage_context_operating_curves.png", "Context-specific operating curves for rural high-speed dispatch vs urban VRU calming")
+        + '<h3>Phase 4 · Prospective data monitoring pipeline (2022+ NCDB drift governance)</h3>'
+        + '<p>The automated CKAN catalog monitor (<code>1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a</code>) verifies all 24 pinned local artifacts '
+        'and screens incoming annual microdata releases using Population Stability Index (PSI), unknown-sentinel shifts, and '
+        'Observed-to-Expected (O/E) calibration ratios. Pre-pandemic releases (2017–2019) remain in the <strong>GREEN</strong> band '
+        '(O/E 0.96–1.01, max PSI ≤ 0.0022), whereas the 2020–2021 pandemic fatality surge (O/E 1.20–1.22) and simulated 2023 '
+        'jurisdiction reporting outages (PSI = 0.297) automatically trigger <strong>RED</strong> recalibration and audit gates.</p>'
+        + html_table(
+            ["Release / cohort", "Collisions", "Observed fatal %", "M2 mean pred %", "M2 O/E ratio", "Max covariate PSI", "Alert", "Governance action"],
+            drift_rows,
+            "Historical backtest (2017–2021) and prospective 2022–2023 stress simulations",
+        )
+        + embedded_image("monitoring_drift_dashboard.png", "Calibration O/E drift and covariate PSI governance dashboard")
+    )
+
+
 def technical(evidence):
     findings = evidence["annual"][-1]
     rates = evidence["geography"]
@@ -229,17 +423,31 @@ def technical(evidence):
             evidence_download(TABLES / "development_grid.csv", "Development comparison CSV"),
             evidence_download(TABLES / "stress_metrics.csv", "Retrospective model metrics CSV"),
         ]
+    if evidence.get("operational"):
+        downloads += [
+            evidence_download(REPORTS / "tables/corridor_pilot_by_road_class.csv", "Corridor SPF road class CSV"),
+            evidence_download(REPORTS / "tables/corridor_pilot_top_corridors.csv", "Top EB corridors CSV"),
+            evidence_download(REPORTS / "tables/typology_odds_ratios.csv", "Typology odds ratios CSV"),
+            evidence_download(REPORTS / "tables/triage_tiered_operating_points.csv", "3-Tier operational triage CSV"),
+            evidence_download(REPORTS / "tables/monitoring_annual_drift_summary.csv", "Prospective drift monitor CSV"),
+        ]
     model_title = "A retrospective comparison of collision severity"
-    return page("Road to Safety", "Technical portfolio · Canadian collision patterns, severity and geographic context",
+    op_section = (
+        '<section id="operational"><div class="kicker">05 · Operational Decision-Support Toolkit (Phases 1–4)</div>'
+        '<h2>Corridor exposure SPFs, road-user/vehicle typologies, 3-tier triage and drift monitoring</h2>'
+        f'{operational_panel(evidence)}</section>'
+        if evidence.get("operational") else ""
+    )
+    return page("Road to Safety", "Technical portfolio · Canadian collision patterns, severity, corridor exposure and operational triage",
         f"""
 <nav aria-label="Report sections"><a href="#timing">Timing</a><a href="#conditions">Conditions</a>
-<a href="#geography">Geography</a><a href="#models">Models</a><a href="#policy">Policy</a><a href="#methods">Methods</a></nav>
+<a href="#geography">Geography</a><a href="#models">Models</a><a href="#operational">Operational Toolkit</a><a href="#policy">Policy</a><a href="#methods">Methods</a></nav>
 <section><div class="kicker">Executive summary</div><h2>Collision burden and fatal share peak at different times</h2>
 <p>The archived cohort contains 2,949,846 fatal and nonfatal injury collisions from 1999–2021. The fatal share is 1.62%.
 Friday accounts for the most reported collisions with a known weekday. Sunday has the highest fatal share.
 Transport Canada separately reports {findings['fatalities']:,} people killed and {findings['total_injuries']:,} injured in 2024.</p>
 <p>The geographic comparison shows the 2024 national fatality rate of 4.9 per 100,000 residents alongside published jurisdiction rates.
-Different reporting practices and small populations matter when interpreting the comparison.</p></section>
+In our 4-phase Operational Decision-Support Action Plan, linking City of Toronto KSI collisions to Centreline road segments and AADT volumes yields a pooled rate of <strong>4.706 KSI per 100M VKT</strong> (with Major Arterials carrying 12.6x the rate of Expressways), reintroducing <code>P_USER</code> and <code>V_TYPE</code> typologies boosts out-of-time <strong>ROC-AUC from 0.6958 to 0.7628 (+6.70 pp)</strong> and <strong>PR-AUC from 4.15% to 7.47% (+80.0% lift)</strong>, and a <strong>3-Tier Operational Triage</strong> replaces the flat 80% recall heuristic with calibrated trauma dispatch (14.27% precision, 14.24x relative risk), priority field response, and VRU corridor screening.</p></section>
 <section id="timing"><div class="kicker">01 · Timing</div><h2>Late afternoon accounts for the largest volume</h2>
 <p>The 16:00 hour had the most recorded collisions. The fatal share was highest at 02:00 among known hours.
 The weekday and hour matrix counts both fatal and nonfatal injury collisions. Cells describe recorded events and their outcomes.</p>
@@ -267,8 +475,9 @@ eight categorical features and six annual evaluations. The 2020–2021 outcomes 
 The original sigmoid calibration correction worsened probability scores in both years.</p>
 {model_panel(evidence)}
 <p class="note">The inputs are recorded in post-crash reports. A prospective decision system would need verified input availability and independent temporal evaluation.</p></section>
-<section id="policy"><div class="kicker">05 · Policy</div><h2>Evaluate local interventions against measured exposure</h2>{policy}</section>
-<section id="methods"><div class="kicker">06 · Evidence</div><h2>Coverage and reproducibility</h2>
+{op_section}
+<section id="policy"><div class="kicker">06 · Policy</div><h2>Evaluate local interventions against measured exposure</h2>{policy}</section>
+<section id="methods"><div class="kicker">07 · Evidence</div><h2>Coverage and reproducibility</h2>
 <p>Event keys are unique within their selected source and year. The cohort excludes property-damage-only crashes.
 The released records lack geographic identifiers, full dates and travel exposure. Severity comparisons are descriptive.
 Jurisdiction rates come from the 2024 publication. The Statistics Canada geometry is simplified for display.</p>
@@ -317,11 +526,16 @@ def execute_notebooks():
             "display(Image(filename=str(root / 'reports/figures/tree_comparison_reliability.png')))"),
     ]
     for name, cells in [("07_tree_comparison_v1.ipynb", comparison), ("08_portfolio_synthesis.ipynb", summary)]:
+        target_nb = notebook_dir / name
+        if target_nb.exists():
+            existing = nbformat.read(target_nb, as_version=4)
+            nbformat.validate(existing)
+            continue
         notebook = nbformat.v4.new_notebook(cells=cells)
         NotebookClient(notebook, timeout=120, kernel_name="python3",
                        resources={"metadata": {"path": str(ROOT)}}).execute()
         nbformat.validate(notebook)
-        nbformat.write(notebook, notebook_dir / name)
+        nbformat.write(notebook, target_nb)
 
 
 def write_model_card(evidence):

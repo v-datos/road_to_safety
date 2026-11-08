@@ -108,6 +108,28 @@ Full-precision tables, allocation sensitivities and two PNG/SVG figures are rege
 
 ## Exposure compatibility decision
 
-The [completed exposure audit](docs/exposure_compatibility_audit.md) assesses Transport Canada's modeled tractor-trailer kilometres against our event population. Seven annual values and source provenance are validated, but class/geographic coverage and model calibration remain unresolved. **The candidate is not approved for a primary national driving-risk rate.** A future explicitly model-normalized historical sensitivity is possible; this audit calculates no rates.
+The [completed exposure audit](docs/exposure_compatibility_audit.md) assesses Transport Canada's modeled tractor-trailer kilometres against our event population. Seven annual values and source provenance are validated, but class/geographic coverage and model calibration remain unresolved. **The candidate is not approved for a primary national driving-risk rate.**
 
 The [source review](docs/exposure_source_review.md), [independent methods review](docs/exposure_methods_review.md), [candidate register](data/reference/tractor_exposure_candidates.csv), [provenance metadata](data/reference/tractor_exposure_candidates.metadata.json) and [executed notebook07](notebooks/07_exposure_compatibility.ipynb) preserve the decision and checks. Original source documents are under ignored `data/raw/exposure/`; audit outputs are regenerated under `reports/exposure/` by the notebook.
+
+## Bounded 2015–2021 model-normalized VKT sensitivity
+
+Following the exposure audit gate, [the model-normalized VKT sensitivity](docs/model_normalized_vkt_sensitivity.md) evaluates 2015–2021 NCDB road-tractor casualty collisions and vehicle involvements relative to Transport Canada's Table 10 modeled tractor-trailer kilometres. All ratios are explicitly framed as **model-normalized historical sensitivities** relative to the Table 10 forecast trajectory, not unqualified national semi-driving risk rates. Raw event counts and modeled billion VKT are reported alongside every ratio across primary, strict, zero-unknown-vehicle-type, published benchmark, and vehicle-involvement numerators, with pre-pandemic (`2015–2019`) and `2019`-excluded period sensitivities.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR=/tmp/mpl \
+  .venv/bin/python -m truck_collisions.analyze_vkt_sensitivity
+```
+
+The module writes `reports/tables/vkt_sensitivity_annual.csv`, `reports/tables/vkt_sensitivity_summary.csv` and `reports/figures/vkt_model_normalized_sensitivity.png`; [executed notebook08](notebooks/08_model_normalized_vkt_sensitivity.ipynb) independently verifies all annual and pooled ratios.
+
+## Tractor vehicle-age (`V_YEAR`) audit and conditional severity (Question 7)
+
+[The vehicle-age audit and conditional severity analysis](docs/vehicle_age_severity.md) audits `V_YEAR` across all `86,154` distinct road-tractor vehicles (`V_TYPE='08'`) and `80,540` unique road-tractor casualty collisions in `1999–2021` (and the `2012–2021` recent decade), classifies model-year validity and multi-tractor (`2+` tractor) collision assignment rules (`oldest_tractor`, `newest_tractor`, `single_tractor_only`, and `vehicle_grain_all_tractors`), and evaluates conditional fatality severity (`fatal_events / total_casualty_events`, Wilson 95% CIs, and multivariable logistic regression controlling for `C_YEAR`, `C_RCFG`, `C_RALN`, `C_WTHR`, and `C_HOUR`). Collision-conditioned age shares and severity do **not** measure fleet overrepresentation without fleet-age VKT denominators.
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR=/tmp/mpl \
+  .venv/bin/python -m truck_collisions.analyze_vehicle_age
+```
+
+The module writes `reports/tables/vehicle_age_audit.csv`, `reports/tables/vehicle_age_severity_cohorts.csv`, `reports/tables/vehicle_age_multi_tractor_sensitivity.csv` and `reports/figures/vehicle_age_conditional_severity.png`; [executed notebook09](notebooks/09_vehicle_age_severity_audit.ipynb) independently verifies the vehicle- and event-grain audits and cohort totals.
