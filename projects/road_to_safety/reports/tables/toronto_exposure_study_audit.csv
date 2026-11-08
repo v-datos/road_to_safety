@@ -1,0 +1,14 @@
+metric,value,notes
+study_year_min,1993,Earliest valid short-duration traffic count year
+study_year_max,2026,Latest valid short-duration traffic count year
+study_year_span,1993-2026,Overall calendar year span of short-term volume count studies
+total_volume_studies,45043,Total valid traffic volume studies (count_duration >= 24h and avg_daily_vol > 0)
+studies_post_2023,1882,Studies conducted post-2023 (after 2006-2023 collision observation window)
+studies_window_2006_2023,24047,Studies conducted strictly within 2006-2023 collision period
+studies_pre_2006,19114,Studies conducted prior to 2006
+monitored_segments_total,14410,Unique Centreline road segments with >= 1 valid count study
+segments_with_studies_only_post_2023,615,Segments whose count studies occurred exclusively after 2023
+segments_with_single_year_count,6273,Segments with traffic counts observed in only 1 calendar year (43.5%)
+segments_with_multi_year_counts,8137,Segments with traffic counts observed in >= 2 distinct calendar years (56.5%)
+median_study_duration_hours,72.0,Median duration of short-term count studies (typically 72h / 3 days)
+exposure_screening_proxy_caveat,AADT-proxy exposure screening estimate,FHWA TMG caveat: short-duration 72h counts without seasonal adjustment factors; screening proxy only

@@ -19,11 +19,20 @@
 ## Phase 1: Corridor-Level Pilot Linkage (Spatial + Exposure)
 
 ### 1.1 Methodology & Spatial-Exposure Reconciliation
-National NCDB microdata intentionally omit municipal street names, coordinates, and traffic volume denominators. To build true accident occurrence rate models ($\text{Crash} / \text{VKT}$), Phase 1 links three official open datasets for the **City of Toronto (2006–2023, 18-year study window)** alongside a provincial highway exposure comparator from **Transports et Mobilité durable Québec (MTQ)**:
+National NCDB microdata intentionally omit municipal street names, coordinates, and traffic volume denominators. To build exposure-proxy screening models ($\text{Crash} / 10^8\text{ VKT}$), Phase 1 links three official open datasets for the **City of Toronto (2006–2023, 18-year study window)** alongside a provincial highway exposure comparator from **Transports et Mobilité durable Québec (MTQ)**:
 1. **Collision Numerators (`toronto_ksi_4326.csv`)**: `18,957` person-level records collapsed by `collision_id` into **`7,673` unique Killed or Seriously Injured (KSI) collision events** (`1,073` fatal collisions, `6,600` serious non-fatal injury collisions). `7,672` events carry valid WGS84 coordinates.
 2. **Road Network Inventory (`toronto_centreline_4326.csv`)**: `50,083` motor-vehicle and active-corridor road segments totaling **`6,474.72` centreline km** across 12 road classes.
-3. **AADT Volume Denominators (`toronto_svc_summary.csv`)**: `45,043` short-term and permanent traffic count studies mapped 100% by `CENTRELINE_ID` to **`14,410` unique monitored road segments (`2,338.33 km`)**, representing **`1,044.446` units of $10^8\text{ VKT}$ (104.44 billion vehicle-kilometres traveled)** over the 18-year period.
-4. **Hybrid Spatial + Street-Name Snapping**: Using a local equirectangular projection ($\varphi_0 = 43.70^\circ\text{N}$) and `scipy.spatial.cKDTree` vertex/midpoint indexing, each collision is evaluated against candidate segments within `50 m`, prioritizing segments whose `LINEAR_NAME_FULL` shares a normalized street token with `stname1` or `stname2`. **`7,669` of `7,672` valid-coordinate collisions (`99.95%`)** snap within `50 m`, with a **median perpendicular snap distance of `1.74 m`** and **`7,559` (`98.53%`)** verified by both spatial proximity and street name.
+3. **AADT Volume Denominators (`toronto_svc_summary.csv`)**: `45,043` short-term traffic volume studies mapped 100% by `CENTRELINE_ID` to **`14,410` unique monitored road segments (`2,338.33 km`)**, representing **`1,044.446` units of $10^8\text{ VKT}$ (104.44 billion vehicle-kilometres traveled)** as an **exposure-proxy screening estimate** over the 18-year period.
+4. **Exposure Denominator Audit & FHWA Caveats ([`toronto_exposure_study_audit.csv`](../reports/tables/toronto_exposure_study_audit.csv))**:
+   - Short-term count studies span 1993–2026 with a **median duration of 72.0 hours** (typically 3-day counts).
+   - `1,882` studies were conducted post-2023, and `615` segments have counts recorded exclusively after the 2006–2023 collision period.
+   - `6,273` of `14,410` monitored segments (`43.5%`) rely on counts from only one calendar year, while `8,137` (`56.5%`) are multi-year verified ($\ge 2$ distinct years).
+   - Under FHWA Traffic Monitoring Guide (TMG) standards, extrapolating 72-hour counts without local seasonal or day-of-week expansion factors serves as an **exposure screening proxy**, not a continuous longitudinal travel audit.
+5. **Exposure Ranking Sensitivity ([`corridor_ranking_sensitivity.csv`](../reports/tables/corridor_ranking_sensitivity.csv))**:
+   - Comparing corridor Empirical Bayes (EB) rankings under the **Primary specification** vs. **Collision-window constrained (2006–2023 only)** yields a Spearman rank correlation of **$\rho = 0.9816$** ($p = 2.10 \times 10^{-69}$, $n=96$ qualifying corridors).
+   - Comparing Primary vs. **Multi-year verified ($\ge 2$ calendar years)** yields **$\rho = 0.9800$** ($p = 2.37 \times 10^{-61}$, $n=87$ corridors).
+   - These results confirm that while absolute exposure figures are screening proxies, relative corridor risk prioritization and EB hotspot identifications are remarkably robust.
+6. **Hybrid Spatial + Street-Name Snapping**: Using a local equirectangular projection ($\varphi_0 = 43.70^\circ\text{N}$) and `scipy.spatial.cKDTree` vertex/midpoint indexing, each collision is evaluated against candidate segments within `50 m`, prioritizing segments whose `LINEAR_NAME_FULL` shares a normalized street token with `stname1` or `stname2`. **`7,669` of `7,672` valid-coordinate collisions (`99.95%`)** snap within `50 m`, with a **median perpendicular snap distance of `1.74 m`** and **`7,559` (`98.53%`)** verified by both spatial proximity and street name.
 
 ### 1.2 Exposure-Normalized Occurrence Rates by Functional Road Class
 From [`reports/tables/corridor_pilot_by_road_class.csv`](../reports/tables/corridor_pilot_by_road_class.csv):
@@ -59,7 +68,9 @@ Visualizations: [`reports/figures/corridor_pilot_spf_and_corridors.png`](../repo
 ### 2.1 Collision-Grain Extraction & Conservation
 Previously, `P_USER` and `V_TYPE` were excluded from the primary severity model because they reside at the person/vehicle level in the raw NCDB files. [`typology_severity.py`](../src/road_to_safety/typology_severity.py) scans all 23 selected raw NCDB releases (1999–2021; `7,729,886` source rows), normalizes English and French (`y_2021-fr.csv`, `cp1252`) schemas, and aggregates binary involvement flags per collision key `(source_id, C_YEAR, C_CASE)` into [`data/derived/typology_severity/collision_typologies.parquet`](../data/derived/typology_severity/collision_typologies.parquet), conserving **`2,949,846` collisions and `47,793` fatal collisions (100.00% exact match)**.
 
-### 2.2 Nested Model Comparison (Validation 2017–2019 & Out-of-Time Test 2020–2021)
+### 2.2 Nested Model Comparison & Non-Overlapping Rolling Calibration
+Rolling chronological folds (2014–2021) in [`reports/tables/typology_rolling_folds.csv`](../reports/tables/typology_rolling_folds.csv) enforce strictly non-overlapping training and calibration partitions: for evaluation year $t$, calibration uses $t - 1$ (or pre-pandemic 2019 for $t \ge 2020$) and training strictly uses prior years ($\le \text{cal\_year} - 1$), avoiding any training/calibration leakage. Intercept recalibration shifts are keyed by `(model_name, train_cutoff, cal_year)` guaranteeing distinct cache storage.
+
 From [`reports/tables/typology_model_summary.csv`](../reports/tables/typology_model_summary.csv):
 
 | Split | Model Specification | ROC-AUC | PR-AUC (%) | Log-Loss | Brier Score | O/E Ratio |
@@ -110,14 +121,20 @@ When partitioned into **mutually exclusive risk bands** on 2020–2021 test coll
 - **Band 3 (`0.0182 <= p < 0.0362`, `18.69%` of crashes)**: **3.07% fatality rate** (**`3.06x`** relative risk vs. Routine Band 4).
 - **Band 4 (`p < 0.0182`, `71.94%` of crashes)**: **1.00% fatality rate** (`1.00x` baseline routine risk).
 
-### 3.2 Context-Specific Operating Curves (Rural High-Speed Dispatch vs. Urban VRU Calming)
+### 3.2 Context-Specific Operating Curves (Non-Intersection Uncontrolled/Freight Scenario vs. Urban VRU Calming)
 From [`reports/tables/triage_context_specific_curves.csv`](../reports/tables/triage_context_specific_curves.csv):
-- **High-Risk Rural / Non-Intersection Dispatch Context (`n=50,624` test collisions, `1,859` fatals, `3.67%` base fatality rate)**:
-  - At `10:1` cost ratio ($\tau = 0.0906$): flags `2.70%` of rural collisions with **17.07% precision** and **12.53% recall** (`4.86` FP/TP).
-  - At `25:1` cost ratio ($\tau = 0.0381$): flags `22.25%` of rural collisions with **8.30% precision** and **50.30% recall**.
-- **Urban Intersection & VRU Traffic Calming Context (`n=102,487` test collisions, `1,575` fatals, `1.54%` base fatality rate)**:
-  - At `25:1` cost ratio ($\tau = 0.0362$): flags `5.19%` of urban/VRU collisions with **7.46% precision** (`4.85x` lift over base rate) and **25.21% recall**, isolating pedestrian/cyclist intersections with heavy-vehicle turning or high-speed arterial exposure.
-  - At `50:1` cost ratio ($\tau = 0.0177$): flags `24.16%` of urban/VRU collisions and captures **59.43% of all urban/VRU fatalities**.
+
+> [!NOTE]
+> **Retrospective Research Scope & Operational Boundaries**:
+> Subgroup analyses such as `non_intersection_uncontrolled_or_freight` represent retrospective research scenarios, NOT an operational dispatch protocol. In NCDB microdata, predictors like post-crash roadway alignment (`C_RALN`), configuration (`C_RCFG`), and multi-vehicle freight typologies are ascertained post-investigation and are not proven to be reliably available at 911 emergency call intake.
+
+- **Non-Intersection Uncontrolled or Freight Scenario (`non_intersection_uncontrolled_or_freight`; `n=59,138` test collisions, `1,884` fatals, `3.19%` base fatality rate)**:
+  - Factual definition: Non-intersection (`C_RCFG=1`) collisions that are uncontrolled (`C_TRAF=18`), on non-level/curved alignments (`C_RALN \in {2..6}`), or involve heavy freight.
+  - At `10:1` cost ratio ($\tau = 0.0860$): flags `2.50%` of collisions (`1,478`) with **14.28% precision** and **11.20% recall** (`6.00` FP/TP).
+  - At `25:1` cost ratio ($\tau = 0.0348$): flags `20.47%` of collisions (`12,106`) with **7.20% precision** and **46.23% recall** (`12.90` FP/TP).
+- **Urban Intersection & VRU Traffic Calming Context (`urban_intersection_vru`; `n=90,636` test collisions, `1,609` fatals, `1.78%` base fatality rate)**:
+  - At `25:1` cost ratio ($\tau = 0.0423$): flags `5.56%` of urban/VRU collisions (`5,037`) with **9.89% precision** (`5.56x` lift over base rate) and **30.95% recall**, isolating pedestrian/cyclist intersections with heavy-vehicle turning or high-speed arterial exposure.
+  - At `50:1` cost ratio ($\tau = 0.0198$): flags `25.29%` of urban/VRU collisions (`22,923`) and captures **60.91% of all urban/VRU fatalities**.
 
 Visualizations: [`reports/figures/triage_cost_utility_and_pr.png`](../reports/figures/triage_cost_utility_and_pr.png) and [`reports/figures/triage_context_operating_curves.png`](../reports/figures/triage_context_operating_curves.png).
 
@@ -145,11 +162,20 @@ From [`reports/tables/monitoring_annual_drift_summary.csv`](../reports/tables/mo
 
 Visualization: [`reports/figures/monitoring_drift_dashboard.png`](../reports/figures/monitoring_drift_dashboard.png).
 
+### 4.3 Prospective Release Schema Validator & Ingestion Workflow
+[`monitor_prospective.py`](../src/road_to_safety/monitor_prospective.py) implements the production intake validator:
+- `validate_release_schema(df, expected_schema=None)`: Validates mandatory NCDB columns (`C_YEAR`, `C_CASE`, `C_SEV`, `C_MNTH`, `C_WDAY`, `C_HOUR`, `C_RCFG`, `C_WTHR`, `C_RSUR`, `C_RALN`, `C_TRAF`, `V_ID`, `V_TYPE`, `P_ID`, `P_USER`), domain codes against `explore.DICTIONARY_DOMAINS`, non-null requirements, and key integrity. Returns status (`valid`, `anomalies_detected`, `invalid_schema`) with error counts and column profile summaries.
+- `ingest_and_score_release(csv_path, model_weights=None, ...)`: Demonstrates the bounded new-release workflow: validate schema $\to$ capture receipt (SHA-256 fingerprint, timestamps, row counts) $\to$ score prospective records with calibrated model weights.
+- **Operational Status & Boundaries**:
+  - *Implemented*: Open Canada CKAN metadata monitor, SHA-256 integrity verification of 1999–2021 releases, schema validation function, covariate PSI & calibration O/E drift calculation, synthetic release simulation.
+  - *Research / Simulated*: 2022–2023 synthetic stress batches (post-pandemic normalization & reporting outage stress tests).
+  - *Pending*: Live Transport Canada 2022+ release ingestion (awaiting Transport Canada publication).
+
 ---
 
 ## Reproducibility Commands
 
-Run all four operational phases and the 69-test verification suite from `projects/road_to_safety`:
+Run all four operational phases and the 71-test verification suite from `projects/road_to_safety`:
 
 ```bash
 MPLCONFIGDIR=/tmp/mpl .venv/bin/python -m road_to_safety.corridor_pilot

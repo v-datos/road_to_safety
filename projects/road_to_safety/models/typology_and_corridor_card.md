@@ -23,7 +23,7 @@ This card documents the two complementary operational model families developed t
      - `8` dictionary-validated environmental, temporal, and roadway condition predictors (`C_MNTH`, `C_WDAY`, `C_HOUR`, `C_RCFG`, `C_WTHR`, `C_RSUR`, `C_RALN`, `C_TRAF`).
      - `5` road-user involvement flags from `P_USER` (`has_pedestrian`, `has_bicyclist`, `has_motorcyclist`, `has_passenger`, `has_unknown_user`).
      - `11` vehicle typology and interaction flags from `V_TYPE` and `V_ID` (`has_light_duty`, `has_light_truck_van`, `has_heavy_truck`, `has_road_tractor`, `has_bus`, `has_motorcycle_moped`, `has_bicycle_vehicle`, `has_special_offroad`, `has_unknown_vehicle`, `multi_vehicle`, `heavy_freight_x_vru`).
-   - **Estimator**: L2-regularized logistic regression (`C=1.0`, `lbfgs`, natural prevalence) with optional prior-year log-odds intercept recalibration (`M2_full_typology_recal`).
+   - **Estimator**: L2-regularized logistic regression (`C=1.0`, `lbfgs`, natural prevalence) with optional prior-year log-odds intercept recalibration (`M2_full_typology_recal`). Rolling chronological evaluation strictly enforces non-overlapping training and calibration sets (`train_cutoff = cal_year - 1`) with multi-key cache validity `(model_name, train_cutoff, cal_year)` preventing stale delta reuse across differing calibration years.
 
 ---
 
@@ -56,8 +56,15 @@ This card documents the two complementary operational model families developed t
 - **Intended Use**:
   - **Corridor SPF + EB Rankings**: Network screening for municipal Vision Zero capital allocation (protected bike lanes, leading pedestrian intervals, arterial speed reduction, and transit stop protection).
   - **Tiered Severity Triage**: Decision support for differentiating critical trauma dispatch (Tier 1), priority enforcement/EMS staging (Tier 2), and systemic VRU corridor audits (Tier 3).
-- **Limitations**:
+  - **Context-Specific Operating Curves**: Retrospective scenario analysis contrasting non-intersection uncontrolled or freight collisions (`non_intersection_uncontrolled_or_freight`) with urban intersection/VRU collisions (`urban_intersection_vru`).
+- **Limitations & Retrospective Operational Boundaries**:
   - National NCDB collisions record conditional post-crash severity given an injury or fatal collision; they do not include property-damage-only (PDO) collisions or uninvolved traffic exposure.
   - Pandemic traffic shifts in 2020–2021 elevated national fatality prevalence from `1.53%` (2017–2018) to `1.97%` (2020–2021), inducing an Observed/Expected ($\text{O/E}$) ratio of `1.21` across all pre-pandemic models.
+  - Subgroup analyses like `non_intersection_uncontrolled_or_freight` represent retrospective research scenarios, NOT operational dispatch protocols. Features like post-crash road alignment (`C_RALN`), configuration (`C_RCFG`), and involved vehicle typologies are ascertained post-investigation and are not proven to be available at emergency call intake.
 - **Prospective Governance (`monitor_prospective.py`)**:
-  - Every new NCDB annual release (`2022+`) must pass automated schema, sentinel, covariate PSI ($\text{GREEN} < 0.10$, $\text{AMBER} \in [0.10, 0.25)$, $\text{RED} \ge 0.25$), and $\text{O/E}$ calibration checks before updating production thresholds.
+  - Automated Release Ingestion & Schema Validation: Incoming annual microdata is validated via `validate_release_schema` against 15 mandatory NCDB columns, `explore.DICTIONARY_DOMAINS` code sets, non-null assertions, and key integrity. Bounded ingestion helper `ingest_and_score_release` captures SHA-256 integrity receipts before prospective scoring.
+  - Drift Surveillance: Every release must pass covariate PSI ($\text{GREEN} < 0.10$, $\text{AMBER} \in [0.10, 0.25)$, $\text{RED} \ge 0.25$), sentinel shift, and $\text{O/E}$ calibration checks before updating production thresholds.
+  - Implementation Boundaries:
+    - *Implemented*: CKAN metadata monitor, SHA-256 verification of 1999–2021 releases, schema validation function, covariate PSI & calibration O/E drift calculation, synthetic release simulation.
+    - *Research / Simulated*: 2022–2023 synthetic stress batches.
+    - *Pending*: Live Transport Canada 2022+ release ingestion (awaiting Transport Canada publication).

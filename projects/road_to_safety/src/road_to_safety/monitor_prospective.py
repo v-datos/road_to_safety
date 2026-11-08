@@ -1,16 +1,19 @@
 """Phase 4: Prospective Data Monitoring Pipeline (2022+ NCDB Ingestion & Out-of-Sample Drift).
 
-Provides:
-  1. Open Government CKAN Catalog Scraper & Release Monitor (`check_ckan_catalog`) that checks
-     Transport Canada's NCDB package (`1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a`) for newly published
-     post-2021 microdata releases (`2022+`) and verifies SHA-256 / URL integrity of 1999-2021 releases.
-  2. Automated Schema, Sentinel & Domain Validator (`validate_release_schema`) for incoming annual
-     collision microdata.
-  3. Covariate Drift (Population Stability Index [PSI] & Jensen-Shannon Divergence [JSD]) and
-     Predictive Calibration Drift (O/E ratio, log-odds intercept shift, ECE, ROC-AUC, PR-AUC)
-     for both M0 (Conditions Only) and M2 (Full Road-User + Vehicle Typology).
-  4. Historical backtest (2017-2021) + Prospective 2022-2023 synthetic release stress test
-     verifying GREEN / AMBER / RED operational governance triggers.
+Operational Status & Architecture:
+  - Implemented:
+      1. Open Government CKAN Catalog Scraper & Release Monitor (`check_ckan_catalog`) checking
+         Transport Canada's NCDB package (`1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a`).
+      2. SHA-256 integrity verification of 1999-2021 releases and URL catalog tracking.
+      3. Automated Schema, Sentinel & Domain Validator (`validate_release_schema`) for incoming
+         prospective annual collision microdata.
+      4. Bounded new-release ingestion and scoring helper (`ingest_and_score_release`).
+      5. Covariate PSI/JSD & calibration O/E drift calculation (M0 vs. M2).
+      6. Synthetic release simulation verifying GREEN / AMBER / RED governance triggers.
+  - Research / Simulated:
+      2022-2023 synthetic stress batches (simulating post-pandemic rebound and sentinel dropouts).
+  - Pending:
+      Live Transport Canada 2022+ release ingestion (awaiting Transport Canada publication).
 """
 from __future__ import annotations
 
@@ -31,7 +34,7 @@ import pandas as pd
 from scipy.special import expit
 from sklearn.metrics import average_precision_score, brier_score_loss, log_loss, roc_auc_score
 
-from .explore import sha256
+from .explore import DICTIONARY_DOMAINS, sha256
 from .typology_severity import P_USER_FEATURES, V_TYPE_FEATURES, compute_ece, fit_intercept_shift
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -41,6 +44,201 @@ CKAN_API_URL = f"https://open.canada.ca/data/api/3/action/package_show?id={CKAN_
 CONDITION_FEATURES = [
     "C_MNTH", "C_WDAY", "C_HOUR", "C_RCFG", "C_WTHR", "C_RSUR", "C_RALN", "C_TRAF"
 ]
+
+MANDATORY_NCDB_COLUMNS = [
+    "C_YEAR", "C_CASE", "C_SEV", "C_MNTH", "C_WDAY", "C_HOUR",
+    "C_RCFG", "C_WTHR", "C_RSUR", "C_RALN", "C_TRAF",
+    "V_ID", "V_TYPE", "P_ID", "P_USER",
+]
+
+
+def validate_release_schema(
+    df: pd.DataFrame, expected_schema: dict | None = None
+) -> dict:
+    """Validate incoming annual collision microdata release against NCDB standards.
+
+    Checks:
+      - Mandatory NCDB columns: C_YEAR, C_CASE, C_SEV, C_MNTH, C_WDAY, C_HOUR,
+        C_RCFG, C_WTHR, C_RSUR, C_RALN, C_TRAF, V_ID, V_TYPE, P_ID, P_USER.
+      - Domain codes against explore.DICTIONARY_DOMAINS.
+      - Corrupted keys, missing/null values, and schema anomalies.
+
+    Returns:
+      Validation report dict with status ('valid', 'anomalies_detected', 'invalid_schema'),
+      error counts, and column summary.
+    """
+    if expected_schema is None:
+        mandatory_cols = MANDATORY_NCDB_COLUMNS
+        domains = DICTIONARY_DOMAINS
+    else:
+        mandatory_cols = expected_schema.get("mandatory_columns", MANDATORY_NCDB_COLUMNS)
+        domains = expected_schema.get("domains", DICTIONARY_DOMAINS)
+
+    missing_cols = [c for c in mandatory_cols if c not in df.columns]
+    column_summary = {}
+    for col in df.columns:
+        column_summary[col] = {
+            "dtype": str(df[col].dtype),
+            "total_count": len(df),
+            "null_count": int(df[col].isna().sum()),
+            "unique_count": int(df[col].nunique(dropna=True)),
+        }
+
+    null_counts = {
+        col: int(df[col].isna().sum())
+        for col in mandatory_cols
+        if col in df.columns and df[col].isna().any()
+    }
+    total_nulls = sum(null_counts.values())
+
+    # Key corruption detection
+    corrupted_keys = 0
+    key_errors = []
+    if "C_YEAR" in df.columns:
+        year_s = df["C_YEAR"].astype(str).str.strip()
+        invalid_year = ~year_s.str.match(r"^(1999|20\d\d)$")
+        cy_count = int(invalid_year.sum())
+        if cy_count > 0:
+            corrupted_keys += cy_count
+            key_errors.append(f"C_YEAR invalid count: {cy_count}")
+    if "C_CASE" in df.columns:
+        case_s = df["C_CASE"].astype(str).str.strip()
+        invalid_case = ~case_s.str.match(r"^[0-9]+$") | (case_s == "0")
+        cc_count = int(invalid_case.sum())
+        if cc_count > 0:
+            corrupted_keys += cc_count
+            key_errors.append(f"C_CASE invalid count: {cc_count}")
+    for id_col in ["V_ID", "P_ID"]:
+        if id_col in df.columns:
+            id_s = df[id_col].astype(str).str.strip()
+            invalid_id = id_s.isna() | (id_s == "") | (id_s == "nan")
+            id_count = int(invalid_id.sum())
+            if id_count > 0:
+                corrupted_keys += id_count
+                key_errors.append(f"{id_col} empty/null count: {id_count}")
+
+    # Domain code validation against DICTIONARY_DOMAINS
+    out_of_domain_details = {}
+    total_out_of_domain = 0
+    for col in mandatory_cols:
+        if col in df.columns and col in domains:
+            allowed = domains[col]
+            val_s = df[col].astype(str).str.strip()
+            invalid_mask = (~val_s.isin(allowed)) & df[col].notna()
+            inv_cnt = int(invalid_mask.sum())
+            if inv_cnt > 0:
+                total_out_of_domain += inv_cnt
+                sample_inv = list(df.loc[invalid_mask, col].astype(str).unique()[:5])
+                out_of_domain_details[col] = {
+                    "invalid_count": inv_cnt,
+                    "sample_invalid_codes": sample_inv,
+                }
+
+    error_counts = {
+        "missing_mandatory_columns": len(missing_cols),
+        "null_values": total_nulls,
+        "corrupted_keys": corrupted_keys,
+        "out_of_domain_codes": total_out_of_domain,
+    }
+
+    if missing_cols or len(df) == 0:
+        status = "invalid_schema"
+    elif total_nulls > 0 or corrupted_keys > 0 or total_out_of_domain > 0:
+        status = "anomalies_detected"
+    else:
+        status = "valid"
+
+    return {
+        "status": status,
+        "total_rows": len(df),
+        "total_columns": len(df.columns),
+        "missing_mandatory_columns": missing_cols,
+        "error_counts": error_counts,
+        "key_errors": key_errors,
+        "out_of_domain_details": out_of_domain_details,
+        "column_summary": column_summary,
+    }
+
+
+def ingest_and_score_release(
+    csv_path: Path,
+    model_weights: dict | None = None,
+    out_dir: Path | None = None,
+    recalibration_delta: float = 0.0,
+    expected_schema: dict | None = None,
+    encoding: str = "utf-8",
+) -> tuple[dict, pd.DataFrame]:
+    """Bounded prospective ingestion workflow.
+
+    Demonstrates the production sequence:
+      1. Validate schema against NCDB dictionary standards.
+      2. Capture receipt (SHA-256 fingerprint, timestamps, validation status).
+      3. Score prospective records with calibrated model weights.
+    """
+    csv_path = Path(csv_path)
+    if not csv_path.exists():
+        raise FileNotFoundError(f"Prospective release file not found: {csv_path}")
+
+    file_sha256 = sha256(csv_path)
+
+    try:
+        df = pd.read_csv(csv_path, dtype=str, encoding=encoding)
+    except UnicodeDecodeError:
+        df = pd.read_csv(csv_path, dtype=str, encoding="latin1")
+
+    validation = validate_release_schema(df, expected_schema=expected_schema)
+    if validation["status"] == "invalid_schema":
+        receipt = {
+            "ingested_at_utc": datetime.now(timezone.utc).isoformat(),
+            "csv_path": str(csv_path),
+            "sha256": file_sha256,
+            "status": "REJECTED_INVALID_SCHEMA",
+            "validation": validation,
+        }
+        return receipt, df
+
+    # Scoring prospective records
+    scored_df = df.copy()
+    if model_weights is not None:
+        intercept = float(model_weights.get("intercept", -4.0))
+        coefs = model_weights.get("coefficients", {})
+        logits = np.full(len(scored_df), intercept, dtype=float)
+        for feat, w in coefs.items():
+            if feat in scored_df.columns:
+                val = pd.to_numeric(scored_df[feat], errors="coerce").fillna(0.0).to_numpy()
+                logits += val * float(w)
+        p_raw = expit(logits)
+        p_recal = expit(logits + recalibration_delta)
+        scored_df["p_severity_uncal"] = p_raw
+        scored_df["p_severity_recal"] = p_recal
+    elif (PROJECT_ROOT / "reports/tables/typology_odds_ratios.csv").exists():
+        or_df = pd.read_csv(PROJECT_ROOT / "reports/tables/typology_odds_ratios.csv")
+        coef_map = dict(zip(or_df["feature"], or_df["coefficient_log_odds"]))
+        logits = np.full(len(scored_df), -4.17, dtype=float)
+        for feat, beta in coef_map.items():
+            if feat in scored_df.columns:
+                val = pd.to_numeric(scored_df[feat], errors="coerce").fillna(0.0).to_numpy()
+                logits += val * float(beta)
+        scored_df["p_severity_uncal"] = expit(logits)
+        scored_df["p_severity_recal"] = expit(logits + recalibration_delta)
+
+    receipt = {
+        "ingested_at_utc": datetime.now(timezone.utc).isoformat(),
+        "csv_path": str(csv_path),
+        "sha256": file_sha256,
+        "rows_ingested": len(df),
+        "status": "INGESTED_AND_SCORED" if "p_severity_uncal" in scored_df.columns else "INGESTED_VALIDATED",
+        "validation": validation,
+    }
+
+    if out_dir is not None:
+        out_dir = Path(out_dir)
+        out_dir.mkdir(parents=True, exist_ok=True)
+        receipt_path = out_dir / f"{csv_path.stem}_ingestion_receipt.json"
+        receipt_path.write_text(json.dumps(receipt, indent=2) + "\n")
+
+    return receipt, scored_df
+
 
 
 def check_ckan_catalog(root: Path, online: bool = False) -> dict:

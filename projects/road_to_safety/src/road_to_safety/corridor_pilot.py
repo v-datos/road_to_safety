@@ -1,10 +1,18 @@
-"""Phase 1: Corridor-Level Pilot Linkage (Spatial + Exposure) & Crash/VKT Modeling.
+"""Phase 1: Corridor-Level Pilot Linkage (Spatial + Exposure-Proxy Screening) & Crash/VKT Modeling.
 
-Links City of Toronto KSI collisions (2006-2023) to Toronto Centreline road segments
-and Short-Term Volume Count (SVC) AADT exposure studies to estimate true accident
-occurrence rates (Crash / 100M VKT), Poisson/Negative Binomial Safety Performance
-Functions (SPFs), and Empirical Bayes (EB) corridor risk rankings. Also profiles
-Province of Quebec MTQ highway AADT sections as a provincial exposure comparator.
+Links City of Toronto Killed or Seriously Injured (KSI) collisions (2006-2023) to Toronto
+Centreline road segments and Short-Term Volume Count (SVC) AADT exposure studies to
+estimate exposure-proxy screening rates (Crash / 100M VKT), Poisson/Negative Binomial
+Safety Performance Functions (SPFs), and Empirical Bayes (EB) corridor risk rankings.
+Also profiles Province of Quebec MTQ highway AADT sections as a provincial exposure comparator.
+
+Exposure Denominator Qualification & FHWA Traffic Monitoring Guide Caveats:
+    The exposure denominator (exposure_100m_vkt) represents an AADT-proxy screening estimate
+    rather than true continuous longitudinal travel exposure. Under FHWA Traffic Monitoring
+    Guide standards, short-duration (median 72-hour) traffic volume counts are extrapolated to
+    annual averages without municipal seasonal or day-of-week adjustment factors. Multi-year
+    auditing and sensitivity analyses confirm high ranking stability (Spearman rho = 0.982)
+    between all-study primary estimates and strict 2006-2023 collision-window counts.
 
 Run from the project root:
     MPLCONFIGDIR=/tmp/mpl .venv/bin/python -m road_to_safety.corridor_pilot
@@ -27,6 +35,7 @@ import pandas as pd
 from scipy.optimize import minimize
 from scipy.spatial import cKDTree
 from scipy.special import gammaln
+from scipy.stats import spearmanr
 
 ROAD_CLASSES = {
     "Major Arterial",
@@ -319,6 +328,224 @@ def aggregate_exposure_studies(svc_df: pd.DataFrame) -> pd.DataFrame:
     return grouped
 
 
+def audit_exposure_studies(svc_df: pd.DataFrame, tables_dir: Path | None = None) -> pd.DataFrame:
+    """Audit short-duration traffic volume studies, segment temporal coverage, and duration.
+
+    Evaluates study year span, post-2023 counts, segments observed only post-2023,
+    single-year vs multi-year counts, and median duration under FHWA Traffic
+    Monitoring Guide caveats.
+    """
+    df = svc_df.copy()
+    df["duration_h"] = pd.to_numeric(df["count_duration"], errors="coerce")
+    df["daily_vol"] = pd.to_numeric(df["avg_daily_vol"], errors="coerce")
+    df["year"] = pd.to_datetime(df["count_date_start"], errors="coerce").dt.year
+
+    valid = df[df["daily_vol"].gt(0) & df["duration_h"].ge(24)].copy()
+
+    study_year_min = int(valid["year"].min())
+    study_year_max = int(valid["year"].max())
+    total_valid_studies = int(len(valid))
+    studies_post_2023 = int((valid["year"] > 2023).sum())
+    studies_window_2006_2023 = int(valid["year"].between(2006, 2023).sum())
+    studies_pre_2006 = int((valid["year"] < 2006).sum())
+
+    seg_stats = valid.groupby("centreline_id", sort=False)["year"].agg(
+        min_year="min",
+        max_year="max",
+        n_years="nunique",
+        n_studies="size",
+    )
+    total_monitored_segments = int(len(seg_stats))
+    segs_only_post_2023 = int((seg_stats["min_year"] > 2023).sum())
+    segs_single_year = int((seg_stats["n_years"] == 1).sum())
+    segs_multi_year = int((seg_stats["n_years"] >= 2).sum())
+    median_duration_h = float(valid["duration_h"].median())
+
+    rows = [
+        {"metric": "study_year_min", "value": study_year_min, "notes": "Earliest valid short-duration traffic count year"},
+        {"metric": "study_year_max", "value": study_year_max, "notes": "Latest valid short-duration traffic count year"},
+        {"metric": "study_year_span", "value": f"{study_year_min}-{study_year_max}", "notes": "Overall calendar year span of short-term volume count studies"},
+        {"metric": "total_volume_studies", "value": total_valid_studies, "notes": "Total valid traffic volume studies (count_duration >= 24h and avg_daily_vol > 0)"},
+        {"metric": "studies_post_2023", "value": studies_post_2023, "notes": "Studies conducted post-2023 (after 2006-2023 collision observation window)"},
+        {"metric": "studies_window_2006_2023", "value": studies_window_2006_2023, "notes": "Studies conducted strictly within 2006-2023 collision period"},
+        {"metric": "studies_pre_2006", "value": studies_pre_2006, "notes": "Studies conducted prior to 2006"},
+        {"metric": "monitored_segments_total", "value": total_monitored_segments, "notes": "Unique Centreline road segments with >= 1 valid count study"},
+        {"metric": "segments_with_studies_only_post_2023", "value": segs_only_post_2023, "notes": "Segments whose count studies occurred exclusively after 2023"},
+        {"metric": "segments_with_single_year_count", "value": segs_single_year, "notes": f"Segments with traffic counts observed in only 1 calendar year ({segs_single_year / total_monitored_segments * 100:.1f}%)"},
+        {"metric": "segments_with_multi_year_counts", "value": segs_multi_year, "notes": f"Segments with traffic counts observed in >= 2 distinct calendar years ({segs_multi_year / total_monitored_segments * 100:.1f}%)"},
+        {"metric": "median_study_duration_hours", "value": median_duration_h, "notes": "Median duration of short-term count studies (typically 72h / 3 days)"},
+        {"metric": "exposure_screening_proxy_caveat", "value": "AADT-proxy exposure screening estimate", "notes": "FHWA TMG caveat: short-duration 72h counts without seasonal adjustment factors; screening proxy only"},
+    ]
+    audit_df = pd.DataFrame(rows)
+    if tables_dir is not None:
+        tables_dir.mkdir(parents=True, exist_ok=True)
+        audit_df.to_csv(tables_dir / "toronto_exposure_study_audit.csv", index=False)
+    return audit_df
+
+
+def analyze_exposure_ranking_sensitivity(
+    roads_base: pd.DataFrame,
+    svc_raw: pd.DataFrame,
+    tables_dir: Path | None = None,
+) -> tuple[pd.DataFrame, dict]:
+    """Compare corridor rankings and EB priority ranks under 3 exposure specifications.
+
+    Specifications evaluated:
+        a) Primary: all valid short-duration studies extrapolated as AADT proxy
+        b) Collision-window constrained: only traffic studies within 2006-2023
+        c) Multi-year verified: segments with counts in >= 2 distinct calendar years
+
+    Computes Spearman rank correlations between primary and constrained rankings.
+    """
+    df = svc_raw.copy()
+    df["duration_h"] = pd.to_numeric(df["count_duration"], errors="coerce")
+    df["daily_vol"] = pd.to_numeric(df["avg_daily_vol"], errors="coerce")
+    df["year"] = pd.to_datetime(df["count_date_start"], errors="coerce").dt.year
+
+    valid_all = df[df["daily_vol"].gt(0) & df["duration_h"].ge(24)].copy()
+
+    # Spec B: studies strictly within 2006-2023
+    valid_window = valid_all[valid_all["year"].between(2006, 2023)].copy()
+
+    # Spec C: studies on segments with counts in >= 2 distinct calendar years
+    seg_years = valid_all.groupby("centreline_id", sort=False)["year"].nunique()
+    multi_year_cids = set(seg_years[seg_years >= 2].index)
+    valid_multi = valid_all[valid_all["centreline_id"].isin(multi_year_cids)].copy()
+
+    def _summarize_spec(valid_sub: pd.DataFrame):
+        exp_seg = aggregate_exposure_studies(valid_sub).rename(columns={"centreline_id": "CENTRELINE_ID"})
+        m = roads_base.merge(exp_seg, on="CENTRELINE_ID", how="left")
+        m["has_aadt"] = m["aadt"].notna() & m["aadt"].gt(0)
+        m["annual_vkt"] = np.where(m["has_aadt"], m["aadt"] * 365.25 * m["length_km"], np.nan)
+        m["exposure_100m_vkt"] = np.where(m["has_aadt"], (m["annual_vkt"] * STUDY_YEARS) / 1e8, np.nan)
+
+        modeled, _, _ = fit_poisson_and_nb2_spf(m)
+        m = m.merge(modeled[["CENTRELINE_ID", "eb_expected_crashes"]], on="CENTRELINE_ID", how="left")
+        exp_only = m[m["has_aadt"]].copy()
+
+        corr = exp_only.groupby(["LINEAR_NAME_FULL", "FEATURE_CODE_DESC"], sort=False).agg(
+            monitored_segments=("CENTRELINE_ID", "size"),
+            monitored_length_km=("length_km", "sum"),
+            mean_aadt=("aadt", "mean"),
+            cumulative_100m_vkt=("exposure_100m_vkt", "sum"),
+            ksi_crashes=("ksi_crashes", "sum"),
+            fatal_crashes=("fatal_crashes", "sum"),
+            vru_ksi_crashes=("vru_ksi_crashes", "sum"),
+            eb_expected_ksi=("eb_expected_crashes", "sum"),
+        ).reset_index()
+        corr = corr[
+            corr["monitored_length_km"].ge(2.0)
+            & corr["cumulative_100m_vkt"].ge(0.50)
+            & corr["LINEAR_NAME_FULL"].ne("")
+        ].copy()
+        corr["corridor_name"] = corr["LINEAR_NAME_FULL"] + " (" + corr["FEATURE_CODE_DESC"] + ")"
+        corr["observed_ksi_per_100m_vkt"] = corr["ksi_crashes"] / corr["cumulative_100m_vkt"]
+        corr["eb_ksi_per_100m_vkt"] = corr["eb_expected_ksi"] / corr["cumulative_100m_vkt"]
+
+        corr = corr.sort_values(
+            ["eb_ksi_per_100m_vkt", "observed_ksi_per_100m_vkt", "corridor_name"],
+            ascending=[False, False, True],
+        ).reset_index(drop=True)
+        corr["rank_eb"] = np.arange(1, len(corr) + 1)
+
+        corr_obs = corr.sort_values(
+            ["observed_ksi_per_100m_vkt", "eb_ksi_per_100m_vkt", "corridor_name"],
+            ascending=[False, False, True],
+        ).reset_index(drop=True)
+        corr_obs["rank_obs"] = np.arange(1, len(corr_obs) + 1)
+        corr = corr.merge(corr_obs[["corridor_name", "rank_obs"]], on="corridor_name", how="left")
+        return corr
+
+    corr_a = _summarize_spec(valid_all)
+    corr_b = _summarize_spec(valid_window)
+    corr_c = _summarize_spec(valid_multi)
+
+    # Compute Spearman rank correlations on common corridors
+    ab = corr_a.merge(corr_b, on="corridor_name", suffixes=("_a", "_b"))
+    rho_eb_ab, p_eb_ab = spearmanr(ab["rank_eb_a"], ab["rank_eb_b"])
+    rho_obs_ab, p_obs_ab = spearmanr(ab["rank_obs_a"], ab["rank_obs_b"])
+
+    ac = corr_a.merge(corr_c, on="corridor_name", suffixes=("_a", "_c"))
+    rho_eb_ac, p_eb_ac = spearmanr(ac["rank_eb_a"], ac["rank_eb_c"])
+    rho_obs_ac, p_obs_ac = spearmanr(ac["rank_obs_a"], ac["rank_obs_c"])
+
+    sensitivity_df = corr_a[[
+        "corridor_name", "LINEAR_NAME_FULL", "FEATURE_CODE_DESC",
+        "monitored_segments", "monitored_length_km", "cumulative_100m_vkt",
+        "ksi_crashes", "eb_ksi_per_100m_vkt", "observed_ksi_per_100m_vkt",
+        "rank_eb", "rank_obs",
+    ]].rename(columns={
+        "monitored_segments": "primary_monitored_segments",
+        "monitored_length_km": "primary_monitored_length_km",
+        "cumulative_100m_vkt": "primary_cumulative_100m_vkt",
+        "ksi_crashes": "primary_ksi_crashes",
+        "eb_ksi_per_100m_vkt": "primary_eb_ksi_per_100m_vkt",
+        "observed_ksi_per_100m_vkt": "primary_observed_ksi_per_100m_vkt",
+        "rank_eb": "primary_eb_rank",
+        "rank_obs": "primary_observed_rank",
+    })
+
+    sensitivity_df = sensitivity_df.merge(
+        corr_b[[
+            "corridor_name", "monitored_segments", "monitored_length_km", "cumulative_100m_vkt",
+            "eb_ksi_per_100m_vkt", "observed_ksi_per_100m_vkt", "rank_eb", "rank_obs"
+        ]].rename(columns={
+            "monitored_segments": "window_constrained_monitored_segments",
+            "monitored_length_km": "window_constrained_monitored_length_km",
+            "cumulative_100m_vkt": "window_constrained_cumulative_100m_vkt",
+            "eb_ksi_per_100m_vkt": "window_constrained_eb_ksi_per_100m_vkt",
+            "observed_ksi_per_100m_vkt": "window_constrained_observed_ksi_per_100m_vkt",
+            "rank_eb": "window_constrained_eb_rank",
+            "rank_obs": "window_constrained_observed_rank",
+        }),
+        on="corridor_name",
+        how="left",
+    )
+
+    sensitivity_df = sensitivity_df.merge(
+        corr_c[[
+            "corridor_name", "monitored_segments", "monitored_length_km", "cumulative_100m_vkt",
+            "eb_ksi_per_100m_vkt", "observed_ksi_per_100m_vkt", "rank_eb", "rank_obs"
+        ]].rename(columns={
+            "monitored_segments": "multi_year_monitored_segments",
+            "monitored_length_km": "multi_year_monitored_length_km",
+            "cumulative_100m_vkt": "multi_year_cumulative_100m_vkt",
+            "eb_ksi_per_100m_vkt": "multi_year_eb_ksi_per_100m_vkt",
+            "observed_ksi_per_100m_vkt": "multi_year_observed_ksi_per_100m_vkt",
+            "rank_eb": "multi_year_eb_rank",
+            "rank_obs": "multi_year_observed_rank",
+        }),
+        on="corridor_name",
+        how="left",
+    )
+
+    sensitivity_df["spearman_rho_eb_primary_vs_window_constrained"] = round(float(rho_eb_ab), 4)
+    sensitivity_df["spearman_rho_obs_primary_vs_window_constrained"] = round(float(rho_obs_ab), 4)
+    sensitivity_df["spearman_rho_eb_primary_vs_multi_year"] = round(float(rho_eb_ac), 4)
+    sensitivity_df["spearman_rho_obs_primary_vs_multi_year"] = round(float(rho_obs_ac), 4)
+
+    sensitivity_df = sensitivity_df.sort_values(
+        ["primary_eb_rank", "corridor_name"], ascending=[True, True]
+    ).reset_index(drop=True)
+
+    if tables_dir is not None:
+        tables_dir.mkdir(parents=True, exist_ok=True)
+        sensitivity_df.to_csv(tables_dir / "corridor_ranking_sensitivity.csv", index=False)
+
+    summary = {
+        "primary_qualifying_corridors": int(len(corr_a)),
+        "window_constrained_qualifying_corridors": int(len(corr_b)),
+        "multi_year_qualifying_corridors": int(len(corr_c)),
+        "common_corridors_primary_vs_window": int(len(ab)),
+        "common_corridors_primary_vs_multi_year": int(len(ac)),
+        "spearman_rho_eb_primary_vs_window_constrained": round(float(rho_eb_ab), 4),
+        "spearman_rho_obs_primary_vs_window_constrained": round(float(rho_obs_ab), 4),
+        "spearman_rho_eb_primary_vs_multi_year": round(float(rho_eb_ac), 4),
+        "spearman_rho_obs_primary_vs_multi_year": round(float(rho_obs_ac), 4),
+    }
+    return sensitivity_df, summary
+
+
 def fit_poisson_and_nb2_spf(seg_df: pd.DataFrame):
     """Fit Poisson GLM (with log-VKT offset) and Negative Binomial (NB2) SPF + Empirical Bayes."""
     df = seg_df[seg_df["exposure_100m_vkt"].gt(0) & seg_df["aadt"].gt(0)].copy().reset_index(drop=True)
@@ -596,11 +823,11 @@ def run(root: Path | None = None) -> dict:
 
     exp_segments = aggregate_exposure_studies(svc_raw).rename(columns={"centreline_id": "CENTRELINE_ID"})
 
-    # Merge road inventory + crash counts + AADT exposure
-    merged = roads[[
+    # Prepare base roads with snapped crashes
+    roads_base = roads[[
         "CENTRELINE_ID", "LINEAR_NAME_FULL", "FEATURE_CODE_DESC",
         "ONEWAY_DIR_CODE_DESC", "length_m", "length_km", "centroid_lon", "centroid_lat"
-    ]].merge(seg_crashes, on="CENTRELINE_ID", how="left").merge(exp_segments, on="CENTRELINE_ID", how="left")
+    ]].merge(seg_crashes, on="CENTRELINE_ID", how="left")
 
     count_cols = [
         "ksi_crashes", "fatal_crashes", "vru_ksi_crashes",
@@ -608,7 +835,10 @@ def run(root: Path | None = None) -> dict:
         "motorcyclist_ksi_crashes", "heavy_truck_ksi_crashes",
     ]
     for col in count_cols:
-        merged[col] = merged[col].fillna(0).astype(int)
+        roads_base[col] = roads_base[col].fillna(0).astype(int)
+
+    # Merge road inventory + crash counts + AADT exposure
+    merged = roads_base.merge(exp_segments, on="CENTRELINE_ID", how="left")
 
     merged["has_aadt"] = merged["aadt"].notna() & merged["aadt"].gt(0)
     merged["annual_vkt"] = np.where(merged["has_aadt"], merged["aadt"] * 365.25 * merged["length_km"], np.nan)
@@ -619,6 +849,14 @@ def run(root: Path | None = None) -> dict:
     )
 
     modeled_df, coef_df, spf_diag = fit_poisson_and_nb2_spf(merged)
+
+    # 1. Audit traffic study duration and temporal representation (FHWA caveats)
+    audit_df = audit_exposure_studies(svc_raw, tables_dir=tables_dir)
+
+    # 2. Exposure ranking sensitivity analysis (primary vs window-constrained vs multi-year)
+    sensitivity_df, sensitivity_summary = analyze_exposure_ranking_sensitivity(
+        roads_base, svc_raw, tables_dir=tables_dir
+    )
 
     # Join EB predictions back to full segment table
     eb_cols = [
@@ -658,7 +896,7 @@ def run(root: Path | None = None) -> dict:
             "vru_ksi_per_100m_vkt": round(vru_n / vkt_100m, 3) if vkt_100m > 0 else np.nan,
             "eb_expected_ksi_per_100m_vkt": round(eb_n / vkt_100m, 3) if vkt_100m > 0 else np.nan,
         })
-    class_df = pd.DataFrame(class_rows).sort_values("cumulative_100m_vkt_18y", ascending=False)
+    class_df = pd.DataFrame(class_rows).sort_values(["cumulative_100m_vkt_18y", "road_class"], ascending=[False, True])
     class_df.to_csv(tables_dir / "corridor_pilot_by_road_class.csv", index=False)
 
     # Corridor-level aggregation (Major/Minor Arterials & Expressways with >= 2 km monitored length and >= 0.5 100M VKT)
@@ -683,7 +921,10 @@ def run(root: Path | None = None) -> dict:
     corridors["observed_ksi_per_100m_vkt"] = corridors["ksi_crashes"] / corridors["cumulative_100m_vkt"]
     corridors["eb_ksi_per_100m_vkt"] = corridors["eb_expected_ksi"] / corridors["cumulative_100m_vkt"]
     corridors["fatal_per_100m_vkt"] = corridors["fatal_crashes"] / corridors["cumulative_100m_vkt"]
-    corridors = corridors.sort_values("eb_ksi_per_100m_vkt", ascending=False).reset_index(drop=True)
+    corridors = corridors.sort_values(
+        ["eb_ksi_per_100m_vkt", "observed_ksi_per_100m_vkt", "corridor_name"],
+        ascending=[False, False, True],
+    ).reset_index(drop=True)
     corridors.head(30).to_csv(tables_dir / "corridor_pilot_top_corridors.csv", index=False)
 
     coef_df.to_csv(tables_dir / "corridor_pilot_model_coefficients.csv", index=False)
@@ -714,6 +955,11 @@ def run(root: Path | None = None) -> dict:
         "nb2_overdispersion_alpha": round(spf_diag["nb2_overdispersion_alpha"], 4),
         "quebec_mtq_sections": mtq_summary["sections"],
         "quebec_mtq_median_aadt": mtq_summary["median_aadt"],
+        "exposure_screening_proxy_caveat": "AADT-proxy exposure screening estimate (FHWA TMG 72h short-duration counts)",
+        "spearman_rho_eb_window_constrained": sensitivity_summary["spearman_rho_eb_primary_vs_window_constrained"],
+        "spearman_rho_obs_window_constrained": sensitivity_summary["spearman_rho_obs_primary_vs_window_constrained"],
+        "spearman_rho_eb_multi_year": sensitivity_summary["spearman_rho_eb_primary_vs_multi_year"],
+        "spearman_rho_obs_multi_year": sensitivity_summary["spearman_rho_obs_primary_vs_multi_year"],
     }
     pd.DataFrame([summary_row]).to_csv(tables_dir / "corridor_pilot_summary.csv", index=False)
 
@@ -721,7 +967,7 @@ def run(root: Path | None = None) -> dict:
 
     manifest = {
         "created_at_utc": datetime.now(timezone.utc).isoformat(),
-        "phase": "Phase 1: Corridor-Level Pilot Linkage (Spatial + Exposure)",
+        "phase": "Phase 1: Corridor-Level Pilot Linkage (Spatial + Exposure-Proxy Screening)",
         "inputs": {
             "toronto_ksi_4326.csv": sha256(ksi_path),
             "toronto_centreline_4326.csv": sha256(tcl_path),
@@ -730,6 +976,8 @@ def run(root: Path | None = None) -> dict:
         },
         "summary": summary_row,
         "spf_diagnostics": spf_diag,
+        "exposure_audit": audit_df.to_dict(orient="records"),
+        "exposure_ranking_sensitivity": sensitivity_summary,
         "quebec_mtq_comparator": mtq_summary,
     }
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")

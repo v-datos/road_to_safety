@@ -4,7 +4,12 @@ version = "0.1.0"
 description = "Analysis of Canada's public NCDB bicycle collision records"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = ["duckdb==1.5.6", "openpyxl==3.1.5"]
+dependencies = [
+    "duckdb==1.5.6",
+    "openpyxl==3.1.5",
+    "matplotlib>=3.8.0",
+    "scipy>=1.11.0",
+]
 
 [build-system]
 requires = ["setuptools>=68"]

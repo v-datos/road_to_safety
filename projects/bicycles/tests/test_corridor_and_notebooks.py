@@ -84,6 +84,36 @@ class CorridorAndNotebooksTests(unittest.TestCase):
         self.assertEqual(by_group["Road tractor"]["fatal_collisions"], 41)
         self.assertGreater(by_group["Road tractor"]["lethality_multiplier_vs_light_duty"], 18.0)
 
+    def test_corridor_exposure_deterministic_tie_breaking_and_order_stability(self):
+        corridors_csv = ROOT / "reports/tables/toronto_top_cyclist_ksi_corridors.csv"
+        class_csv = ROOT / "reports/tables/toronto_cyclist_corridor_exposure_by_class.csv"
+
+        # Run 1
+        run_corridor_exposure_link(ROOT)
+        content_corr_1 = corridors_csv.read_bytes()
+        content_class_1 = class_csv.read_bytes()
+
+        # Run 2
+        run_corridor_exposure_link(ROOT)
+        content_corr_2 = corridors_csv.read_bytes()
+        content_class_2 = class_csv.read_bytes()
+
+        self.assertEqual(content_corr_1, content_corr_2, "Corridors table output is not bit-for-bit deterministic across runs")
+        self.assertEqual(content_class_1, content_class_2, "Class table output is not bit-for-bit deterministic across runs")
+
+        # Verify no hardcoded machine paths in corridor_rows
+        with corridors_csv.open() as stream:
+            corr_rows = list(csv.DictReader(stream))
+        for r in corr_rows:
+            for v in r.values():
+                self.assertNotIn("/Applications/miniconda3", str(v))
+
+        # Check deterministic tie-breaking: each rank column has unique values per partition
+        ranks_ksi = [int(r["rank_by_cyclist_ksi"]) for r in corr_rows if r["rank_by_cyclist_ksi"]]
+        self.assertEqual(len(ranks_ksi), len(set(ranks_ksi)), "Ties in rank_by_cyclist_ksi must be deterministically resolved")
+        ranks_rate = [int(r["rank_by_cyclist_rate"]) for r in corr_rows if r["rank_by_cyclist_rate"]]
+        self.assertEqual(len(ranks_rate), len(set(ranks_rate)), "Ties in rank_by_cyclist_rate must be deterministically resolved")
+
     def test_three_companion_notebooks_exist_and_have_executed_outputs(self):
         expected_notebooks = [
             "01_bicycle_dataset_and_online_validation.ipynb",

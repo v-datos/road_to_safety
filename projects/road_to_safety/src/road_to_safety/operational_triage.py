@@ -6,8 +6,14 @@ Moves beyond the flat 80% validation recall heuristic by evaluating:
   2. A 3-Tier Operational Triage Architecture (Tier 1 Critical Dispatch, Tier 2 Priority Response,
      Tier 3 Systemic VRU/Corridor Screening) calibrated on 2017-2019 validation data and evaluated
      out-of-time on 2020-2021 test data.
-  3. Context-specific operating curves for High-Risk Rural/Non-Intersection Dispatch vs.
+  3. Context-specific operating curves for Non-Intersection Uncontrolled or Freight Scenario vs.
      Urban Intersection & Vulnerable Road User (VRU) Traffic Calming.
+
+Retrospective Scope & Operational Boundary Note:
+  Subgroup analyses such as 'non_intersection_uncontrolled_or_freight' represent retrospective
+  research evaluation scenarios, NOT an operational dispatch protocol. Predictors like
+  post-crash roadway alignment (C_RALN), configuration (C_RCFG), and involved vehicle typologies
+  are ascertained post-investigation and are not proven to be available at emergency call intake.
 """
 from __future__ import annotations
 
@@ -200,12 +206,12 @@ def render_figures(
     fig.savefig(figures_dir / "triage_cost_utility_and_pr.png", dpi=180)
     plt.close(fig)
 
-    # Figure 2: Context-Specific Operating Curves (Rural/Non-Intersection Dispatch vs Urban VRU Traffic Calming)
+    # Figure 2: Context-Specific Operating Curves (Non-Intersection Uncontrolled/Freight vs Urban VRU Traffic Calming)
     fig, axes = plt.subplots(1, 2, figsize=(13.2, 5.2), layout="constrained")
     ctx_test = context_df[context_df["split"] == "test_2020_2021"].copy()
 
     for idx, (ctx_code, ctx_title) in enumerate([
-        ("rural_high_speed_dispatch", "A. High-Risk Rural / Non-Intersection Dispatch Context"),
+        ("non_intersection_uncontrolled_or_freight", "A. Non-Intersection Uncontrolled or Freight Scenario (Research)"),
         ("urban_intersection_vru", "B. Urban Intersection & VRU Traffic Calming Context"),
     ]):
         sub = ctx_test[ctx_test["context"] == ctx_code].sort_values("cost_ratio_fn_fp")
@@ -422,10 +428,13 @@ def run(root: Path | None = None) -> dict:
     tiers_df.to_csv(tables_dir / "triage_tiered_operating_points.csv", index=False)
 
     # 3. Context-Specific Operating Curves:
-    #    Context A: High-Risk Rural / Non-Intersection & Uncontrolled / Grade-Curve Corridors
+    #    Context A: Non-Intersection Uncontrolled or Freight Scenario (Retrospective Research Scenario)
     #    Context B: Urban Intersection & Vulnerable Road User (VRU) Traffic Calming
+    # Note: Subgroup A is constructed from non-intersection (C_RCFG='1'), uncontrolled (C_TRAF='18'),
+    # roadway alignment (C_RALN), and freight typologies. This is a retrospective research scenario,
+    # NOT an operational dispatch protocol; these features are not proven to be available at emergency intake.
     def get_context_masks(d: pd.DataFrame) -> dict[str, np.ndarray]:
-        rural_dispatch = (
+        non_intersection_freight_uncontrolled = (
             d["C_RCFG"].eq("1")
             & (
                 d["C_TRAF"].eq("18")
@@ -438,7 +447,7 @@ def run(root: Path | None = None) -> dict:
             | d["has_vru"].eq(1)
         ).to_numpy()
         return {
-            "rural_high_speed_dispatch": rural_dispatch,
+            "non_intersection_uncontrolled_or_freight": non_intersection_freight_uncontrolled,
             "urban_intersection_vru": urban_vru,
         }
 
@@ -446,7 +455,7 @@ def run(root: Path | None = None) -> dict:
     test_ctx = get_context_masks(test_df)
 
     context_rows = []
-    for ctx_code in ["rural_high_speed_dispatch", "urban_intersection_vru"]:
+    for ctx_code in ["non_intersection_uncontrolled_or_freight", "urban_intersection_vru"]:
         vm = val_ctx[ctx_code]
         tm = test_ctx[ctx_code]
         for r in [5, 10, 15, 20, 25, 35, 50, 75]:

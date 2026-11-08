@@ -28,11 +28,11 @@ def _ensure_matplotlib():
     os.environ.setdefault("MPLCONFIGDIR", "/tmp/mpl")
     try:
         import matplotlib
-    except ModuleNotFoundError:
-        conda_site = "/Applications/miniconda3/lib/python3.13/site-packages"
-        if Path(conda_site).exists() and conda_site not in sys.path:
-            sys.path.append(conda_site)
-        import matplotlib
+    except ModuleNotFoundError as err:
+        raise ImportError(
+            "matplotlib is required for rendering corridor exposure figures. "
+            "Please ensure matplotlib is installed in your python environment."
+        ) from err
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     return plt
@@ -145,7 +145,7 @@ def compute_toronto_cyclist_exposure(
     FROM read_parquet('{p_str}')
     GROUP BY FEATURE_CODE_DESC
     HAVING count(*) FILTER (WHERE has_aadt) > 0
-    ORDER BY cumulative_100m_vkt_18y DESC
+    ORDER BY cumulative_100m_vkt_18y DESC, road_class ASC
     """
     class_cols = [d[0] for d in con.execute(f"DESCRIBE ({class_query})").fetchall()]
     class_rows = [dict(zip(class_cols, r)) for r in con.execute(class_query).fetchall()]
@@ -190,16 +190,18 @@ def compute_toronto_cyclist_exposure(
             CASE WHEN monitored_length_km >= 2.0 AND cumulative_100m_vkt >= 0.5
                  THEN row_number() OVER (
                      PARTITION BY (monitored_length_km >= 2.0 AND cumulative_100m_vkt >= 0.5)
-                     ORDER BY cyclist_ksi_crashes DESC, cyclist_ksi_per_100m_vkt DESC
+                     ORDER BY cyclist_ksi_crashes DESC, cyclist_ksi_per_100m_vkt DESC, corridor_name ASC
                  )
                  ELSE NULL END AS rank_by_cyclist_ksi,
             CASE WHEN monitored_length_km >= 2.0 AND cumulative_100m_vkt >= 0.5 AND cyclist_ksi_crashes >= 3
                  THEN row_number() OVER (
                      PARTITION BY (monitored_length_km >= 2.0 AND cumulative_100m_vkt >= 0.5 AND cyclist_ksi_crashes >= 3)
-                     ORDER BY cyclist_ksi_per_100m_vkt DESC, cyclist_ksi_crashes DESC
+                     ORDER BY cyclist_ksi_per_100m_vkt DESC, cyclist_ksi_crashes DESC, corridor_name ASC
                  )
                  ELSE NULL END AS rank_by_cyclist_rate,
-            row_number() OVER (ORDER BY network_cyclist_ksi_crashes DESC, network_cyclist_ksi_per_km DESC) AS rank_by_network_cyclist_ksi
+            row_number() OVER (
+                ORDER BY network_cyclist_ksi_crashes DESC, network_cyclist_ksi_per_km DESC, corridor_name ASC
+            ) AS rank_by_network_cyclist_ksi
         FROM base
     )
     SELECT
@@ -237,7 +239,8 @@ def compute_toronto_cyclist_exposure(
              ELSE 2 END,
         coalesce(rank_by_cyclist_ksi, 999),
         coalesce(rank_by_cyclist_rate, 999),
-        network_cyclist_ksi_crashes DESC
+        network_cyclist_ksi_crashes DESC,
+        corridor_name ASC
     """
     corr_cols = [d[0] for d in con.execute(f"DESCRIBE ({corridor_query})").fetchall()]
     corridor_rows = [dict(zip(corr_cols, r)) for r in con.execute(corridor_query).fetchall()]

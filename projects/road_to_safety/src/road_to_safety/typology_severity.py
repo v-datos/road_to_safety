@@ -356,6 +356,59 @@ def fit_intercept_shift(logits: np.ndarray, y: np.ndarray) -> float:
     return 0.5 * (lo + hi)
 
 
+def compute_rolling_calibration_step(
+    model_name: str,
+    X_mat: Any,
+    y: np.ndarray,
+    year: np.ndarray,
+    train_cutoff: int,
+    cal_year: int,
+    fitted_models: dict[tuple[str, int], LogisticRegression],
+    fitted_deltas: dict[tuple[str, int, int], float],
+) -> tuple[LogisticRegression, float]:
+    """Fit base model and estimate calibration intercept shift with cache validity.
+
+    Enforces that training (year <= train_cutoff) and calibration (year == cal_year)
+    periods are strictly disjoint.
+    Base models are cached by (model_name, train_cutoff).
+    Calibration intercept shifts are cached by (model_name, train_cutoff, cal_year).
+    """
+    train_mask = year <= train_cutoff
+    cal_mask = year == cal_year
+    if np.any(train_mask & cal_mask):
+        raise ValueError(
+            f"Training and calibration sets must be strictly disjoint! "
+            f"train_cutoff={train_cutoff} overlaps with cal_year={cal_year}"
+        )
+
+    model_key = (model_name, train_cutoff)
+    if model_key not in fitted_models:
+        clf = LogisticRegression(
+            C=1.0,
+            penalty="l2",
+            solver="lbfgs",
+            max_iter=300,
+            tol=1e-4,
+            random_state=2026,
+        )
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", ConvergenceWarning)
+            clf.fit(X_mat[train_mask], y[train_mask])
+        fitted_models[model_key] = clf
+    else:
+        clf = fitted_models[model_key]
+
+    cache_key = (model_name, train_cutoff, cal_year)
+    if cache_key not in fitted_deltas:
+        cal_logits = clf.decision_function(X_mat[cal_mask])
+        delta = fit_intercept_shift(cal_logits, y[cal_mask])
+        fitted_deltas[cache_key] = delta
+    else:
+        delta = fitted_deltas[cache_key]
+
+    return clf, delta
+
+
 def render_figures(
     summary_df: pd.DataFrame,
     fold_df: pd.DataFrame,
@@ -520,32 +573,22 @@ def run(root: Path | None = None, workers: int = 4, rebuild: bool = False) -> di
         fitted_pre_pandemic_cal_delta = {}
 
         for t in eval_years:
-            train_cutoff = min(t - 1, 2018) if t >= 2019 else (t - 2)
             cal_year = min(t - 1, 2019)
-            train_mask = year <= train_cutoff
-            cal_mask = year == cal_year
+            train_cutoff = cal_year - 1
             eval_mask = year == t
 
             for model_name, X_mat in model_matrices.items():
-                cache_key = (model_name, train_cutoff)
-                if cache_key not in fitted_pre_pandemic_models:
-                    clf = LogisticRegression(
-                        C=1.0,
-                        penalty="l2",
-                        solver="lbfgs",
-                        max_iter=300,
-                        tol=1e-4,
-                        random_state=2026,
-                    )
-                    with warnings.catch_warnings():
-                        warnings.simplefilter("ignore", ConvergenceWarning)
-                        clf.fit(X_mat[train_mask], y[train_mask])
-                    fitted_pre_pandemic_models[cache_key] = clf
-                    cal_logits = clf.decision_function(X_mat[cal_mask])
-                    fitted_pre_pandemic_cal_delta[cache_key] = fit_intercept_shift(cal_logits, y[cal_mask])
+                clf, delta = compute_rolling_calibration_step(
+                    model_name=model_name,
+                    X_mat=X_mat,
+                    y=y,
+                    year=year,
+                    train_cutoff=train_cutoff,
+                    cal_year=cal_year,
+                    fitted_models=fitted_pre_pandemic_models,
+                    fitted_deltas=fitted_pre_pandemic_cal_delta,
+                )
 
-                clf = fitted_pre_pandemic_models[cache_key]
-                delta = fitted_pre_pandemic_cal_delta[cache_key]
                 eval_logits = clf.decision_function(X_mat[eval_mask])
                 p_uncal = expit(eval_logits)
                 p_recal = expit(eval_logits + delta)
