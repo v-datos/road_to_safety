@@ -1,0 +1,473 @@
+                                          Dictionnaire des données
+
+Débit de circulation
+
+
+                              Attribut
+#             Attribut        tronqué                  Description                    Exemple de valeur    Type
+                            (shapefile)
+
+                                          Numéro identifiant de la section de
+1    ide_sectn_trafc        ide_sectn_                                            23360                    Nombre
+                                          trafic
+                                          Numéro de section de trafic (numéro
+2    num_sectn_trafc        num_sectn_    identique pour les deux côtés des       0002050000               Texte
+                                          routes en chaussées séparées)
+3    des_debut_sous_route   des_debut_    Description de début de la sous-route   route 171                Texte
+4    des_fin_sous_route     des_fin_so    Description de fin de la sous-route     route 116                Texte
+                                          RTSS et chaînage de début (en mètre)
+5    rtss_debut_chaing      rtss_debut                                            00020-06-020-000D (0)    Texte
+                                          de la section de trafic
+                                          RTSS et chaînage de fin (en mètre) de
+6    rtss_fin_chaing        rtss_fin_c                                            00020-06-020-000D (6097) Texte
+                                          la section de trafic
+                                          Valeurs agrégées de : l’année en        2021 DJMA:50000 /
+7    annee_en_cours         annee_en_c    cours + DJMA + DJMH + DJME + % de       DJME:60000 / DJMH:41000 Texte
+                                          véhicules lourds + la 30e heure         / %cam:16.57 / 30e h:
+                                          Valeurs agrégées de : l’année 2 +       2020 DJMA:45000 /
+8    annee2                 annee2        DJMA + DJMH + DJME + % de               DJME:55000 / DJMH:44000 Texte
+                                          véhicules lourds                        / %cam:17.68
+                                          Valeurs agrégées de : l’année 2 +       2019 DJMA:56000 /
+9    annee3                 annee3        DJMA + DJMH + DJME + % de               DJME:64000 / DJMH:49000 Texte
+                                          véhicules lourds                        / %cam:13.62
+                                          Valeurs agrégées de : l’année 2 +       2018 DJMA:56000 /
+10   annee4                 annee4        DJMA + DJMH + DJME + % de               DJME:63000 / DJMH:50000 Texte
+                                          véhicules lourds                        / %cam:14.36
+                                          Valeurs agrégées de : l’année 2 +       2017 DJMA:57000 /
+11   annee5                 annee5        DJMA + DJMH + DJME + % de               DJME:66000 / DJMH:50000 Texte
+                                          véhicules lourds                        / %cam:13.83
+                                          Valeurs agrégées de : l’année 2 +       2016 DJMA:56000 /
+12   annee6                 annee6        DJMA + DJMH + DJME + % de               DJME:64000 / DJMH:49000 Texte
+                                          véhicules lourds                        / %cam:13.76
+                                          Valeurs agrégées de : l’année 2 +       2015 DJMA:54000 /
+13   annee7                 annee7        DJMA + DJMH + DJME + % de               DJME:62000 / DJMH:47000 Texte
+                                          véhicules lourds                        / %cam:12.9
+                                          Valeurs agrégées de : l’année 2 +       2014 DJMA:52000 /
+14   annee8                 annee8        DJMA + DJMH + DJME + % de               DJME:59000 / DJMH:45000 Texte
+                                          véhicules lourds                        / %cam:15.4
+
+
+
+
+                                                                                                                   1
+                                          Valeurs agrégées de : l’année 2 +       2013 DJMA:51000 /
+15   annee9                  annee9       DJMA + DJMH + DJME + % de               DJME:58000 / DJMH:45000 Texte
+                                          véhicules lourds                        / %cam:15.34
+                                          Valeurs agrégées de : l’année 2 +       2012 DJMA:50000 /
+16   annee10                 annee10      DJMA + DJMH + DJME + % de               DJME:57000 / DJMH:45000 Texte
+                                          véhicules lourds                        / %cam:13.19
+17   dat_debut_sectn_trafc   dat_debut    Date de début de la section de trafic   20190215                Date
+                                          RTSS de début
+                                          RTSS : identifiant de segments de
+                                          routes du système de référence
+                                          linéaire du réseau routier MTQ formé
+18   rtss_debut              rtss_deb                                             00020-06-020-000D       Texte
+                                          de 14 caractères
+                                          alphanumériques (Route [99999],
+                                          Tronçon [99], Section [999], Sous-
+                                          route [9x9x])
+19   val_chang_debut         chang_deb    Chaînage de début (en mètre)            0                       Nombre
+                                          RTSS de fin
+                                          RTSS : identifiant de segments de
+                                          routes du système de référence
+                                          linéaire du réseau routier MTQ formé
+20   rtss_fin                rtss_fin                                             00020-06-020-000D       Texte
+                                          de 14 caractères
+                                          alphanumériques (Route [99999],
+                                          Tronçon [99], Section [999], Sous-
+                                          route [9x9x])
+21   val_chang_fin           chang_fin    Chaînage de fin (mètre)                 6097                    Nombre
+                                          Année 1 DJMA (année en cours du
+22   djma_annee_1            djma_ann_1                                           2021                    Nombre
+                                          DJMA)
+23   val_djma_annee_1        val_djma_1   DJMA de l’année 1 (année en cours)      50000                   Nombre
+24   djma_annee_2            djma_ann_2   Année 2 du DJMA                         2020                    Nombre
+25   val_djma_annee_2        val_djma_2   DJMA (historique année 2)               45000                   Nombre
+26   djma_annee_3            djma_ann_3   Année 3 du DJMA                         2019                    Nombre
+27   val_djma_annee_3        val_djma_3   DJMA (historique année 3)               56000                   Nombre
+28   djma_annee_4            djma_ann_4   Année 4 du DJMA                         2018                    Nombre
+29   val_djma_annee_4        val_djma_4   DJMA (historique année 4)               56000                   Nombre
+30   djma_annee_5            djma_ann_5   Année 5 du DJMA                         2017                    Nombre
+31   val_djma_annee_5        val_djma_5   DJMA (historique année 5)               57000                   Nombre
+32   djma_annee_6            djma_ann_6   Année 6 du DJMA                         2016                    Nombre
+33   val_djma_annee_6        val_djma_6   DJMA (historique année 6)               56000                   Nombre
+34   djma_annee_7            djma_ann_7   Année 7 du DJMA                         2015                    Nombre
+35   val_djma_annee_7        val_djma_7   DJMA (historique année 7)               54000                   Nombre
+36   djma_annee_8            djma_ann_8   Année 8 du DJMA                         2014                    Nombre
+37   val_djma_annee_8        val_djma_8   DJMA (historique année 8)               52000                   Nombre
+38   djma_annee_9            djma_ann_9   Année 9 du DJMA                         2013                    Nombre
+39   val_djma_annee_9        val_djma_9   DJMA (historique année 9)               51000                   Nombre
+
+
+                                                                                                                  2
+40   djma_annee_10       djma_ann_10 Année 10 du DJMA                       2012    Nombre
+41   val_djma_annee_10   val_djma_10   DJMA (historique année 10)           50000   Nombre
+                                       Année 1 DJME (année en cours du
+42   djme_annee_1        djme_ann_1                                         2021    Nombre
+                                       DJME)
+43   val_djme_annee_1    val_djme_1    DJME de l’année 1 (année en cours)   60000   Nombre
+44   djme_annee_2        djme_ann_2    Année 2 du DJME                      2020    Nombre
+45   val_djme_annee_2    val_djme_2    DJME (historique année 2)            55000   Nombre
+46   djme_annee_3        djme_ann_3    Année 3 du DJME                      2019    Nombre
+47   val_djme_annee_3    val_djme_3    DJME (historique année 3)            64000   Nombre
+48   djme_annee_4        djme_ann_4    Année 4 du DJME                      2018    Nombre
+49   val_djme_annee_4    val_djme_4    DJME (historique année 4)            63000   Nombre
+50   djme_annee_5        djme_ann_5    Année 5 du DJME                      2017    Nombre
+51   val_djme_annee_5    val_djme_5    DJME (historique année 5)            66000   Nombre
+52   djme_annee_6        djme_ann_6    Année 6 du DJME                      2016    Nombre
+53   val_djme_annee_6    val_djme_6    DJME (historique année 6)            64000   Nombre
+54   djme_annee_7        djme_ann_7    Année 7 du DJME                      2015    Nombre
+55   val_djme_annee_7    val_djme_7    DJME (historique année 7)            62000   Nombre
+56   djme_annee_8        djme_ann_8    Année 8 du DJME                      2014    Nombre
+57   val_djme_annee_8    val_djme_8    DJME (historique année 8)            59000   Nombre
+58   djme_annee_9        djme_ann_9    Année 9 du DJME                      2013    Nombre
+59   val_djme_annee_9    val_djme_9    DJME (historique année 9)            58000   Nombre
+60   djme_annee_10       djme_ann_10 Année 10 du DJME                       2012    Nombre
+61   val_djme_annee_10   val_djme_10   DJME (historique année 10)           57000   Nombre
+                                       Année 1 DJMH (année en cours du
+62   djmh_annee_1        djmh_ann_1                                         2021    Nombre
+                                       DJMH)
+63   val_djmh_annee_1    val_djmh_1    DJMH de l’année 1 (année en cours)   41000   Nombre
+64   djmh_annee_2        djmh_ann_2    Année 2 du DJMH                      2020    Nombre
+65   val_djmh_annee_2    val_djmh_2    DJMH (historique année 2)            44000   Nombre
+66   djmh_annee_3        djmh_ann_3    Année 3 du DJMH                      2019    Nombre
+67   val_djmh_annee_3    val_djmh_3    DJMH (historique année 3)            49000   Nombre
+68   djmh_annee_4        djmh_ann_4    Année 4 du DJMH                      2018    Nombre
+69   val_djmh_annee_4    val_djmh_4    DJME (historique année 4)            50000   Nombre
+70   djmh_annee_5        djmh_ann_5    Année 5 du DJMH                      2017    Nombre
+71   val_djmh_annee_5    val_djmh_5    DJMH (historique année 5)            50000   Nombre
+72   djmh_annee_6        djmh_ann_6    Année 6 du DJMH                      2016    Nombre
+73   val_djmh_annee_6    val_djmh_6    DJMH (historique année 6)            49000   Nombre
+74   djmh_annee_7        djmh_ann_7    Année 7 du DJMH                      2015    Nombre
+75   val_djmh_annee_7    val_djmh_7    DJMH (historique année 7)            47000   Nombre
+76   djmh_annee_8        djmh_ann_8    Année 8 du DJMH                      2014    Nombre
+77   val_djmh_annee_8    val_djmh_8    DJMH (historique année 8)            45000   Nombre
+
+
+                                                                                        3
+78   djmh_annee_9        djmh_ann_9    Année 9 du DJMH                        2013    Nombre
+79   val_djmh_annee_9    val_djmh_9    DJMH (historique année 9)              45000   Nombre
+80   djmh_annee_10       djmh_ann_10 Année 10 du DJMH                         2012    Nombre
+81   val_djmh_annee_10   val_djmh_10   DJMH (historique année 10)             45000   Nombre
+                                       Année 1 Pourcentage (%) de
+82   cam_annee_1         cam_annee1    véhicules lourds (année en cours du    2021    Nombre
+                                       (%) de véhicules lourds)
+                                       Pourcentage (%) de véhicules lourds
+83   val_cam_annee_1     val_cam__1                                           16,57   Nombre
+                                       de l’année 1 (année en cours)
+84   cam_annee_2         cam_annee2    Année 2 du % de véhicules lourds       2020    Nombre
+                                       % de véhicules lourds (historique
+85   val_cam_annee_2     val_cam__2                                           17,68   Nombre
+                                       année 2)
+86   cam_annee_3         cam_anne3     Année 3 du % de véhicules lourds       2019    Nombre
+                                       % de véhicules lourds (historique
+87   val_cam_annee_3     val_cam__3                                           13,62   Nombre
+                                       année 3)
+88   cam_annee_4         cam_anne4     Année 4 du % de véhicules lourds       2018    Nombre
+                                       % de véhicules lourds (historique
+89   val_cam_annee_4     val_cam__4                                           14,36   Nombre
+                                       année 4)
+90   cam_annee_5         cam_anne5     Année 5 du % de véhicules lourds       2017    Nombre
+                                       % de véhicules lourds (historique
+91   val_cam_annee_5     val_cam__5                                           13,83   Nombre
+                                       année 5)
+92   cam_annee_6         cam_anne6     Année 6 du % de véhicules lourds       2016    Nombre
+                                       % de véhicules lourds (historique
+93   val_cam_annee_6     val_cam__6                                           13,76   Nombre
+                                       année 6)
+94   cam_annee_7         cam_anne7     Année 7 du % de véhicules lourds       2015    Nombre
+                                       % de véhicules lourds (historique
+95   val_cam_annee_7     val_cam__7                                           12,9    Nombre
+                                       année 7)
+96   cam_annee_8         cam_anne8     Année 8 du % de véhicules lourds       2014    Nombre
+                                       % de véhicules lourds (historique
+97   val_cam_annee_8     val_cam__8                                           15,4    Nombre
+                                       année 8)
+98   cam_annee_9         cam_anne9     Année 9 du % de véhicules lourds       2013    Nombre
+                                       % de véhicules lourds (historique
+99   val_cam_annee_9     val_cam__9                                           15,34   Nombre
+                                       année 9)
+100 cam_annee_10         cam_anne10    Année 10 du % de véhicules lourds      2012    Nombre
+                                       % de véhicules lourds (historique
+101 val_cam_annee_10     val_cam_10                                           13,19   Nombre
+                                       année 10)
+                                       Heure de design. Estimation du débit
+102 val_30e_heure        val_30e_he    horaire maximal « normal » pour        5521    Nombre
+                                       l’année
+                                       O = Oui, N = Non
+                                       Indexation à un fichier de données      O
+103 index_agreg          index_agre                                                   Texte
+                                       historiques agrégées.                   N
+
+
+
+
+                                                                                              4
+                                      Lien disponible dans le tableau
+                                      d’information d’une entité en
+                                      interrogeant la carte interactive : lien
+                                      vers un fichier PDF téléchargeable,
+                                      ex. :
+                                      0002050000_agreg.pdf
+                                      O = Oui, N = Non
+                                      Indexation à un fichier de données de
+                                      rapport annuel sur les sites
+                                      permanents de collecte de données.
+
+                                      Lien disponible dans le tableau
+                                      d’information d’une entité en               O
+104 index_sectn          index_sect                                                                        Texte
+                                      interrogeant la carte interactive : lien    N
+                                      vers un fichier PDF et un XLS
+                                      téléchargeable, ex. :
+                                      0002050000_2021.xlsx
+                                      0002050000_2021.pdf
+                                      0002050000_2020.xlsx
+                                      0002050000_2020.pdf, etc.
+                                      O = Oui, N = Non
+                                      Indexation à un fichier de données
+                                      horaires : horaire moyen par jour de
+                                      la semaine.
+                                                                                  O
+105 index_donnees        index_donn   Lien disponible dans le tableau                                      Texte
+                                                                                  N
+                                      d’information d’une entité en
+                                      interrogeant la carte interactive : lien
+                                      vers un fichier XLS téléchargeable,
+                                      ex. : 0002050000-2021-donnees.xlsx
+                                      0002050000-2020-donnees.xlsx, etc.
+                                                                                 <a
+                                      URL d'indexation à un fichier de
+                                                                                 href=https://ws.mapserver
+                                      données historiques agrégées.
+                                                                                 .transports.gouv.qc.ca/don
+                                                                                 nees/geomatique/CIR/Debi
+106 url_index_agregees   n/a          Lien disponible dans le tableau                                       Texte
+                                                                                 tCirculation/0002050000_a
+                                      d’information d’une entité en
+                                                                                 greg.pdf
+                                      interrogeant la carte interactive : lien
+                                                                                 target=\"_blank\">000205
+                                      vers un fichier PDF téléchargeable.
+                                                                                 0000_agreg.pdf</a> <br>
+                                                                                 <a
+                                                                                 href=https://ws.mapserver
+                                      URL d’indexation à un fichier de           .transports.gouv.qc.ca/don
+                                      données de rapport annuel sur les          nees/geomatique/CIR/Debi
+                                      sites permanents de collecte de            tCirculation/0002050000_2
+                                      données.                                   021.xlsx
+107 url_index_section    n/a                                                                                Texte
+                                                                                 target=\"_blank\">000205
+                                      Lien disponible dans le tableau            0000_2021.xlsx</a> <br>
+                                      d’information d’une entité en              <a
+                                      interrogeant la carte interactive.         href=https://ws.mapserver
+                                                                                 .transports.gouv.qc.ca/…
+                                                                                 etc. … </a>
+
+                                                                                                                    5
+                                                                                         <a
+                                                                                         href=https://ws.mapserver
+                                                URL d'indexation à un fichier de         .transports.gouv.qc.ca/don
+                                                données horaires : horaire moyen par nees/geomatique/CIR/Debi
+                                                jour de la semaine.                      tCirculation/0002050000-
+                                                                                         2021-donnees.xlsx
+108 url_index_donnees          n/a                                                                                  Texte
+                                                Lien disponible dans le tableau          target=\"_blank\">000205
+                                                d’information d’une entité en            0000-2021-
+                                                interrogeant la carte interactive : lien donnees.xlsx</a> <br> <a
+                                                vers un fichier XLS téléchargeable.      href=https://ws.mapserver
+                                                                                         .transports.gouv.qc.ca//…
+                                                                                         etc. … </a>
+109 objectid                   objectid         Identifiant unique                      6823                            Nombre
+
+
+
+
+            Complément explicatif sur les fichiers *.xls téléchargeables via la carte interactive
+
+  Des fichiers de données historiques agrégées sont également disponibles en téléchargement via la carte interactive. Les
+    fichiers historiques sont accessibles en interrogeant une section de trafic à la carte par un clic (les liens des fichiers
+                                 s’affichent dans le tableau descriptif qui se déploie au clic).
+
+
+
+Rapport annuel (sur les sites permanents de collecte) :
+Onglets :
+histo                       Historique des années antérieures
+
+                            Numéro de section de trafic (numéro identique pour les deux côtés des routes en chaussées
+SECTN
+                            séparées).
+                             11 : la chaussée identifiée par la direction du sens croissant des RTSS-chaînage (direction 1).
+                             12 : la chaussée identifiée par la direction du sens décroissant des RTSS-chaînage (direction 2).
+                             13 : total des deux chaussées (total des deux directions).
+
+                            La norme indique que les RTSS-chaînage sont croissants de l’ouest vers l’est pour les routes
+VOIE
+                            paires, et du sud vers le nord pour les routes impaires.
+                            Cette norme liée à l’orientation générale d’une route (Sud -> Nord, Ouest -> Est) comporte
+                            quelques cas d’exception, notamment pour la portion de la fin de route 132 dont le RTSS-
+                            chaînage devient croissant de l’est vers l’ouest dans la Baie des chaleurs en Gaspésie (la route
+                            132 longe tout le pourtour de la péninsule gaspésienne).
+ANNEE                       L’année du comptage.
+DJMA                        Débit journalier moyen annuel.
+DJME                        Débit journalier moyen estival.
+DJMH                        Débit journalier moyen hivernal.
+POURC                       Pourcentage (%) de véhicules lourds.
+JR_MAX                      Débit journalier maximal.
+HRE_1                       Débit horaire maximal.
+HRE_10                      10e plus gros débit horaire.
+
+                                                                                                                                 6
+HRE_30     30e plus gros débit horaire.
+HRE_100    100e plus gros débit horaire.
+
+djmm       Débit journalier moyen mensuel
+
+           Numéro de section de trafic (numéro identique pour les deux côtés des routes en chaussées
+SECTN
+           séparées).
+ANNEE      L’année du comptage.
+            11 : la chaussée identifiée par la direction du sens croissant des RTSS-chaînage (direction 1).
+            12 : la chaussée identifiée par la direction du sens décroissant des RTSS-chaînage (direction 2).
+            13 : total des deux chaussées (total des deux directions).
+
+           La norme indique que les RTSS-chaînage sont croissants de l’ouest vers l’est pour les routes
+VOIE
+           paires, et du sud vers le nord pour les routes impaires.
+           Cette norme liée à l’orientation générale d’une route (Sud -> Nord, Ouest -> Est) comporte
+           quelques cas d’exception, notamment pour la portion de la fin de route 132 dont le RTSS-
+           chaînage devient croissant de l’est vers l’ouest dans la Baie des chaleurs en Gaspésie (la route
+           132 longe tout le pourtour de la péninsule gaspésienne).
+MO         Mois du comptage.
+HRE_MAX    Débit horaire maximal du mois.
+JR_MAX     Débit journalier maximal du mois.
+DJMM       Débit journalier moyen mensuel.
+TOT_MOIS   Débit total maximal.
+
+horaire    Répartition horaire journalière
+
+           Numéro de section de trafic (numéro identique pour les deux côtés des routes en chaussées
+SECTN
+           séparées).
+ANNEE      L’année du comptage.
+            11 : la chaussée identifiée par la direction du sens croissant des RTSS-chaînage (direction 1).
+            12 : la chaussée identifiée par la direction du sens décroissant des RTSS-chaînage (direction 2).
+            13 : total des deux chaussées (total des deux directions).
+
+           La norme indique que les RTSS-chaînage sont croissants de l’ouest vers l’est pour les routes
+VOIE
+           paires, et du sud vers le nord pour les routes impaires.
+           Cette norme liée à l’orientation générale d’une route (Sud -> Nord, Ouest -> Est) comporte
+           quelques cas d’exception, notamment pour la portion de la fin de route 132 dont le RTSS-
+           chaînage devient croissant de l’est vers l’ouest dans la Baie des chaleurs en Gaspésie (la route
+           132 longe tout le pourtour de la péninsule gaspésienne).
+HRE        Heure du comptage
+DIMANCHE   Moyenne des débits horaires du dimanche pour l’heure.
+SAMEDI     Moyenne des débits horaires du samedi pour l’heure.
+OUVRABLE   Moyenne des débits horaires des jours ouvrables (lundi au vendredi) pour l’heure.
+
+fact84     Moyenne des débits journaliers par jour de semaine par mois
+
+           Numéro de section de trafic (numéro identique pour les deux côtés des routes en chaussées
+SECTN
+           séparées).
+            11 : la chaussée identifiée par la direction du sens croissant des RTSS-chaînage (direction 1).
+            12 : la chaussée identifiée par la direction du sens décroissant des RTSS-chaînage (direction 2).
+VOIE
+            13 : total des deux chaussées (total des deux directions).
+
+
+
+
+                                                                                                              7
+                          La norme indique que les RTSS-chaînage sont croissants de l’ouest vers l’est pour les routes
+                          paires, et du sud vers le nord pour les routes impaires.
+                          Cette norme liée à l’orientation générale d’une route (Sud -> Nord, Ouest -> Est) comporte
+                          quelques cas d’exception, notamment pour la portion de la fin de route 132 dont le RTSS-
+                          chaînage devient croissant de l’est vers l’ouest dans la Baie des chaleurs en Gaspésie (la route
+                          132 longe tout le pourtour de la péninsule gaspésienne).
+ANNEE                     L’année du comptage.
+MOIS                      Mois du comptage.
+DIMANCHE, LUNDI, etc.     Débit moyen du jour de la semaine pour le mois.
+MOYEN                     Moyenne des débits journaliers moyens pour le mois.
+
+fact84_cam                Moyenne des débits journaliers par jour de semaine par mois pour les véhicules lourds
+
+                          Numéro de section de trafic (numéro identique pour les deux côtés des routes en chaussées
+SECTN
+                          séparées).
+                           11 : la chaussée identifiée par la direction du sens croissant des RTSS-chaînage (direction 1).
+                           12 : la chaussée identifiée par la direction du sens décroissant des RTSS-chaînage (direction 2).
+                           13 : total des deux chaussées (total des deux directions).
+
+                          La norme indique que les RTSS-chaînage sont croissants de l’ouest vers l’est pour les routes
+VOIE
+                          paires, et du sud vers le nord pour les routes impaires.
+                          Cette norme liée à l’orientation générale d’une route (Sud -> Nord, Ouest -> Est) comporte
+                          quelques cas d’exception, notamment pour la portion de la fin de route 132 dont le RTSS-
+                          chaînage devient croissant de l’est vers l’ouest dans la Baie des chaleurs en Gaspésie (la route
+                          132 longe tout le pourtour de la péninsule gaspésienne).
+ANNEE                     L’année du comptage.
+MOIS                      Mois du comptage.
+TYPE                      Type de véhicule lourd.
+Dimanche, lundi, etc.     Moyenne des débits horaires par jour de semaine par mois pour les véhicules lourds.
+
+hre_pointes               Débit horaire par date / heure / voie
+
+                          Numéro de section de trafic (numéro identique pour les deux côtés des routes en chaussées
+SECTN
+                          séparées).
+JOUR                      Jour du comptage.
+DATEA                     Date du comptage.
+HEURE                     Heure du comptage.
+VOIE_13                   Débit horaire pour la date/heure pour le total des voies (total des deux directions).
+VOIE_11                   Débit horaire pour la date/heure pour la voie 11 (direction 1).
+VOIE_12                   Débit horaire pour la date/heure pour la voie 12 (direction 2).
+
+
+Données horaires (moyenne horaire par jour de semaine par mois)
+Onglets :
+_9999999999_9999_entete      Numéro de la section de trafic, l’année
+
+                             Numéro de section de trafic (numéro identique pour les deux côtés des routes en chaussées
+section
+                             séparées).
+nom                          Odonyme associé à la section de trafic.
+type                         Type de route.
+debut                        Description de début de la sous-route.
+fin                          Description de fin de la sous-route.
+
+                                                                                                                             8
+dg                             Direction générale (aujourd’hui renommée Sous-ministériat aux territoires).
+dt                             Direction territoriale (aujourd’hui renommée Direction générale).
+cs                             Centre de services.
+municipalite                   Nom de la municipalité.
+
+_9999999999_9999               Numéro de la section de trafic, l’année
+
+                               Numéro de section de trafic (numéro identique pour les deux côtés des routes en chaussées
+SECTION
+                               séparées).
+NOM                            Odonyme associé à la section de trafic.
+ANNEE                          L’année du comptage.
+MOIS                           Le mois (01 étant janvier, 02 étant février, etc.).
+JOUR                           Le jour (1 étant dimanche, 2 étant lundi, etc.).
+HEURE                          L’heure du comptage.
+DIR_1                          Nombre de véhicules comptés pour la direction 1 (voie 11).
+DIR_2                          Nombre de véhicules comptés pour la direction 2 (voie 12).
+TOTAL                          Nombre de véhicules comptés pour le total des voies (total des deux directions).
+
+
+
+Direction de la géomatique : geomatique@transports.gouv.qc.ca
+Ministère des Transports et de la Mobilité durable
+Date de mise à jour du dictionnaire de données : 2024-12-10
+Source : CIR - Système d'information sur la circulation routière (traitements des fichiers de données effectués par la
+         Direction des chaussées, Direction générale du laboratoire des chaussées)
+
+
+
+
+                                                                                                                           9
+

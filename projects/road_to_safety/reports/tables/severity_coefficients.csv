@@ -1,0 +1,117 @@
+feature,code,label,reference_code,reference_label,is_reference,train_count,train_unobserved,coefficient,odds_ratio,interpretation
+C_MNTH,1,January,1,January,True,211820,False,0.0,1.0,reference
+C_MNTH,2,February,1,January,False,178784,False,-0.037250831157392424,0.9634344456615916,conditional association; regularized
+C_MNTH,3,March,1,January,False,173399,False,-0.037061173360078616,0.9636171858449146,conditional association; regularized
+C_MNTH,4,April,1,January,False,164720,False,0.03244093414526642,1.0329728779160814,conditional association; regularized
+C_MNTH,5,May,1,January,False,196280,False,0.039702620177653115,1.0405013040866253,conditional association; regularized
+C_MNTH,6,June,1,January,False,217738,False,0.027582527727646643,1.0279664473416947,conditional association; regularized
+C_MNTH,7,July,1,January,False,220996,False,0.1137760882933311,1.1205012034562885,conditional association; regularized
+C_MNTH,8,August,1,January,False,223244,False,0.12451761523357549,1.1326019713327982,conditional association; regularized
+C_MNTH,9,September,1,January,False,215622,False,0.12028533130937413,1.1278186076337071,conditional association; regularized
+C_MNTH,10,October,1,January,False,217336,False,0.11265953432792165,1.119250801594807,conditional association; regularized
+C_MNTH,11,November,1,January,False,215378,False,0.0788011088627478,1.0819891026252884,conditional association; regularized
+C_MNTH,12,December,1,January,False,220468,False,0.10608092756905252,1.1119118571891258,conditional association; regularized
+C_MNTH,UU,Unknown,1,January,False,105,False,0.21472133214906336,1.2395164354525205,conditional association; regularized
+C_MNTH,XX,Jurisdiction unavailable,1,January,False,0,True,0.0,1.0,not estimated: absent in training
+C_WDAY,1,Monday,1,Monday,True,335654,False,0.0,1.0,reference
+C_WDAY,2,Tuesday,1,Monday,False,353285,False,-0.04980920797209192,0.951410928805857,conditional association; regularized
+C_WDAY,3,Wednesday,1,Monday,False,356547,False,-0.03995693383597931,0.9608308175588973,conditional association; regularized
+C_WDAY,4,Thursday,1,Monday,False,373896,False,0.004857407135952114,1.0048692234624836,conditional association; regularized
+C_WDAY,5,Friday,1,Monday,False,414381,False,0.020339190289700965,1.0205474411085778,conditional association; regularized
+C_WDAY,6,Saturday,1,Monday,False,341228,False,0.1379006707229944,1.147861528355701,conditional association; regularized
+C_WDAY,7,Sunday,1,Monday,False,280380,False,0.1655231535250816,1.1800102838008715,conditional association; regularized
+C_WDAY,U,Unknown,1,Monday,False,519,False,-0.22224898122311987,0.8007159762706038,conditional association; regularized
+C_WDAY,X,Jurisdiction unavailable,1,Monday,False,0,True,0.0,1.0,not estimated: absent in training
+C_HOUR,0,00:00–00:59,12,12:00–12:59,False,40102,False,0.7847122681540685,2.191776206182685,conditional association; regularized
+C_HOUR,1,01:00–01:59,12,12:00–12:59,False,34835,False,0.8921198865026654,2.440297325275792,conditional association; regularized
+C_HOUR,2,02:00–02:59,12,12:00–12:59,False,35951,False,0.907530709969288,2.4781955882355433,conditional association; regularized
+C_HOUR,3,03:00–03:59,12,12:00–12:59,False,31251,False,0.8653536625926543,2.3758461853341504,conditional association; regularized
+C_HOUR,4,04:00–04:59,12,12:00–12:59,False,21839,False,0.8339073877069458,2.3022971553691107,conditional association; regularized
+C_HOUR,5,05:00–05:59,12,12:00–12:59,False,25698,False,0.8359128063792047,2.3069188577487747,conditional association; regularized
+C_HOUR,6,06:00–06:59,12,12:00–12:59,False,55233,False,0.5419585505507143,1.7193710417522987,conditional association; regularized
+C_HOUR,7,07:00–07:59,12,12:00–12:59,False,99400,False,0.156897546170525,1.1698757495101884,conditional association; regularized
+C_HOUR,8,08:00–08:59,12,12:00–12:59,False,133616,False,-0.13234739805711743,0.8760366087949735,conditional association; regularized
+C_HOUR,9,09:00–09:59,12,12:00–12:59,False,101888,False,0.1878074065024424,1.206601109442566,conditional association; regularized
+C_HOUR,10,10:00–10:59,12,12:00–12:59,False,107066,False,0.18365860882415155,1.2016055355393267,conditional association; regularized
+C_HOUR,11,11:00–11:59,12,12:00–12:59,False,124693,False,0.09697267800585606,1.101830269009596,conditional association; regularized
+C_HOUR,12,12:00–12:59,12,12:00–12:59,True,148474,False,0.0,1.0,reference
+C_HOUR,13,13:00–13:59,12,12:00–12:59,False,146662,False,0.04454120303722344,1.0455480555784122,conditional association; regularized
+C_HOUR,14,14:00–14:59,12,12:00–12:59,False,158702,False,0.0889689325155434,1.093046697587539,conditional association; regularized
+C_HOUR,15,15:00–15:59,12,12:00–12:59,False,194639,False,-0.015697037754317564,0.9844255186473831,conditional association; regularized
+C_HOUR,16,16:00–16:59,12,12:00–12:59,False,206874,False,-0.04736194302656474,0.9537421347965794,conditional association; regularized
+C_HOUR,17,17:00–17:59,12,12:00–12:59,False,198571,False,0.0014072158771074321,1.0014082064699747,conditional association; regularized
+C_HOUR,18,18:00–18:59,12,12:00–12:59,False,149936,False,0.22973345971665715,1.258264587030059,conditional association; regularized
+C_HOUR,19,19:00–19:59,12,12:00–12:59,False,113959,False,0.35731362591747623,1.4294841228278672,conditional association; regularized
+C_HOUR,20,20:00–20:59,12,12:00–12:59,False,89882,False,0.5099346679856614,1.6651824016715409,conditional association; regularized
+C_HOUR,21,21:00–21:59,12,12:00–12:59,False,84568,False,0.5089236736912164,1.6634997624768735,conditional association; regularized
+C_HOUR,22,22:00–22:59,12,12:00–12:59,False,69734,False,0.5989820060075473,1.8202648382194593,conditional association; regularized
+C_HOUR,23,23:00–23:59,12,12:00–12:59,False,55359,False,0.6740426686422955,1.9621536453289936,conditional association; regularized
+C_HOUR,UU,Unknown,12,12:00–12:59,False,26958,False,0.4719444261707666,1.6031082903845955,conditional association; regularized
+C_HOUR,XX,Jurisdiction unavailable,12,12:00–12:59,False,0,True,0.0,1.0,not estimated: absent in training
+C_RCFG,1,Non-intersection,1,Non-intersection,True,955655,False,0.0,1.0,reference
+C_RCFG,2,Intersection of public roadways,1,Non-intersection,False,1065676,False,-0.3756612235674501,0.6868349771362127,conditional association; regularized
+C_RCFG,3,Intersection with private entrance/exit,1,Non-intersection,False,111226,False,-0.7217579724354248,0.4858973106164687,conditional association; regularized
+C_RCFG,4,Railroad level crossing,1,Non-intersection,False,10228,False,0.45079169541639946,1.569554302683271,conditional association; regularized
+C_RCFG,5,"Bridge, overpass, viaduct",1,Non-intersection,False,20592,False,-0.0641300798297352,0.9378829919356354,conditional association; regularized
+C_RCFG,6,Tunnel or underpass,1,Non-intersection,False,2588,False,0.010653273905973995,1.0107102220769264,conditional association; regularized
+C_RCFG,7,Passing or climbing lane,1,Non-intersection,False,433,False,0.9655461356088909,2.626221537990791,conditional association; regularized
+C_RCFG,8,Ramp,1,Non-intersection,False,5613,False,-1.206180754177979,0.29933834576287394,conditional association; regularized
+C_RCFG,9,Traffic circle,1,Non-intersection,False,926,False,-1.1378157138000478,0.32051836159319935,conditional association; regularized
+C_RCFG,10,Freeway express lane,1,Non-intersection,False,174,False,0.06776884940707888,1.0701179214960026,conditional association; regularized
+C_RCFG,11,Freeway collector lane,1,Non-intersection,False,0,True,0.0,1.0,not estimated: absent in training
+C_RCFG,12,Freeway transfer lane,1,Non-intersection,False,0,True,0.0,1.0,not estimated: absent in training
+C_RCFG,QQ,Other,1,Non-intersection,False,75755,False,-0.1508293149995878,0.8599944742898485,conditional association; regularized
+C_RCFG,UU,Unknown,1,Non-intersection,False,207024,False,-0.06510020266570321,0.9369735714238199,conditional association; regularized
+C_RCFG,XX,Jurisdiction unavailable,1,Non-intersection,False,0,True,0.0,1.0,not estimated: absent in training
+C_WTHR,1,Clear and sunny,1,Clear and sunny,True,1687792,False,0.0,1.0,reference
+C_WTHR,2,"Overcast, no precipitation",1,Clear and sunny,False,264822,False,0.11348527300469195,1.120175391953164,conditional association; regularized
+C_WTHR,3,Raining,1,Clear and sunny,False,243429,False,-0.056117403347762995,0.9454281329465879,conditional association; regularized
+C_WTHR,4,Snowing (excluding drifting snow),1,Clear and sunny,False,156676,False,0.05307693287265432,1.0545107685414556,conditional association; regularized
+C_WTHR,5,"Freezing rain, sleet, hail",1,Clear and sunny,False,14289,False,0.1563118375216185,1.169190743792024,conditional association; regularized
+C_WTHR,6,Visibility limitation,1,Clear and sunny,False,37259,False,0.5023562897783502,1.652610716308543,conditional association; regularized
+C_WTHR,7,Strong wind,1,Clear and sunny,False,7480,False,0.611815700658809,1.8437761068603349,conditional association; regularized
+C_WTHR,Q,Other,1,Clear and sunny,False,5840,False,0.40343106229519576,1.4969520321845073,conditional association; regularized
+C_WTHR,U,Unknown,1,Clear and sunny,False,38303,False,-0.0523040550913652,0.9490402624455877,conditional association; regularized
+C_WTHR,X,Jurisdiction unavailable,1,Clear and sunny,False,0,True,0.0,1.0,not estimated: absent in training
+C_RSUR,1,"Dry, normal",1,"Dry, normal",True,1589961,False,0.0,1.0,reference
+C_RSUR,2,Wet,1,"Dry, normal",False,437775,False,-0.20077604777219657,0.8180956253776208,conditional association; regularized
+C_RSUR,3,"Snow (fresh, loose)",1,"Dry, normal",False,118028,False,-0.5134674487232966,0.5984169969547722,conditional association; regularized
+C_RSUR,4,"Slush, wet snow",1,"Dry, normal",False,34213,False,-0.35980903206589765,0.6978095726001952,conditional association; regularized
+C_RSUR,5,Icy (including packed snow),1,"Dry, normal",False,152958,False,-0.5239647321643442,0.592168099726432,conditional association; regularized
+C_RSUR,6,Sand/gravel/dirt debris,1,"Dry, normal",False,14531,False,0.24859436258227513,1.2822218104219287,conditional association; regularized
+C_RSUR,7,Muddy,1,"Dry, normal",False,3106,False,0.4006039937187298,1.4927260225579848,conditional association; regularized
+C_RSUR,8,Oil (including spilled/applied liquid),1,"Dry, normal",False,727,False,-1.4437616422096102,0.23603819538280177,conditional association; regularized
+C_RSUR,9,Flooded,1,"Dry, normal",False,157,False,0.3300081746144762,1.3909794991384545,conditional association; regularized
+C_RSUR,Q,Other,1,"Dry, normal",False,71797,False,0.03803465855578097,1.0387672344267511,conditional association; regularized
+C_RSUR,U,Unknown,1,"Dry, normal",False,32637,False,-0.01693979563987805,0.9832028759531208,conditional association; regularized
+C_RSUR,X,Jurisdiction unavailable,1,"Dry, normal",False,0,True,0.0,1.0,not estimated: absent in training
+C_RALN,1,Straight and level,1,Straight and level,True,1702454,False,0.0,1.0,reference
+C_RALN,2,Straight with gradient,1,Straight and level,False,235711,False,0.33670300096233413,1.400323107356964,conditional association; regularized
+C_RALN,3,Curved and level,1,Straight and level,False,190106,False,0.5368479833084783,1.7106064954067455,conditional association; regularized
+C_RALN,4,Curved with gradient,1,Straight and level,False,112969,False,0.6511885955404134,1.9178189859361137,conditional association; regularized
+C_RALN,5,Top of hill or gradient,1,Straight and level,False,18490,False,0.4617554440116033,1.5868571803424596,conditional association; regularized
+C_RALN,6,Bottom of hill or gradient,1,Straight and level,False,13946,False,0.5400956003424929,1.7161709208705118,conditional association; regularized
+C_RALN,Q,Other,1,Straight and level,False,13686,False,-0.21305840146891653,0.808108941089136,conditional association; regularized
+C_RALN,U,Unknown,1,Straight and level,False,168528,False,-0.5528260180604562,0.5753216414973069,conditional association; regularized
+C_RALN,X,Jurisdiction unavailable,1,Straight and level,False,0,True,0.0,1.0,not estimated: absent in training
+C_TRAF,1,Traffic signals operational,18,No control present,False,610827,False,-1.0691512740905618,0.34329976121019107,conditional association; regularized
+C_TRAF,2,Traffic signals flashing,18,No control present,False,7383,False,0.04995230191388009,1.051220953952592,conditional association; regularized
+C_TRAF,3,Stop sign,18,No control present,False,259645,False,-0.216503630472688,0.8053296111902061,conditional association; regularized
+C_TRAF,4,Yield sign,18,No control present,False,37103,False,-1.1637507789057036,0.31231256588920275,conditional association; regularized
+C_TRAF,5,Warning sign,18,No control present,False,2152,False,0.17504970626392713,1.1913054304828412,conditional association; regularized
+C_TRAF,6,Pedestrian crosswalk,18,No control present,False,18948,False,-0.5050023584022066,0.6035041521198381,conditional association; regularized
+C_TRAF,7,Police officer,18,No control present,False,807,False,-0.38671504657937256,0.6792846318302456,conditional association; regularized
+C_TRAF,8,School guard/flagman,18,No control present,False,9190,False,-0.8844268527316891,0.4129507870808576,conditional association; regularized
+C_TRAF,9,School crossing,18,No control present,False,251,False,-0.7986862806154281,0.4499196441964145,conditional association; regularized
+C_TRAF,10,Reduced speed zone,18,No control present,False,1235,False,0.538620904631738,1.713641956159605,conditional association; regularized
+C_TRAF,11,No passing zone sign,18,No control present,False,1602,False,0.29604756071277394,1.3445341023116493,conditional association; regularized
+C_TRAF,12,Road markings,18,No control present,False,1249,False,0.5080419571098752,1.662033673585664,conditional association; regularized
+C_TRAF,13,"Stopped school bus, signals flashing",18,No control present,False,1424,False,-0.7846347417006684,0.4562863337222014,conditional association; regularized
+C_TRAF,14,"Stopped school bus, signals not flashing",18,No control present,False,0,True,0.0,1.0,not estimated: absent in training
+C_TRAF,15,Railway signals/gates,18,No control present,False,1751,False,0.5161338743578544,1.6755372738600791,conditional association; regularized
+C_TRAF,16,Railway signs only,18,No control present,False,519,False,1.1401210783073548,3.127146971927372,conditional association; regularized
+C_TRAF,17,Control device not specified,18,No control present,False,1573,False,-0.005906121227346182,0.994111285620785,conditional association; regularized
+C_TRAF,18,No control present,18,No control present,True,1358203,False,0.0,1.0,reference
+C_TRAF,QQ,Other,18,No control present,False,34680,False,-0.15006125060248254,0.8606552591574389,conditional association; regularized
+C_TRAF,UU,Unknown,18,No control present,False,107348,False,-0.3934069665000941,0.674754089391398,conditional association; regularized
+C_TRAF,XX,Jurisdiction unavailable,18,No control present,False,0,True,0.0,1.0,not estimated: absent in training

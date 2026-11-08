@@ -1,0 +1,29 @@
+{
+  "left_input_sha256": "9a58d303011a5d1d1407f67e223e75c29ba4b95e445b40bf6ff1617280b887c8",
+  "right_input_sha256": "c2f777bf3cb5a7d0ea479386a3a328f859f4d6c4748ac36494c5840bcb3d90dd",
+  "join": "toronto traffic count centreline_id = current TCL CENTRELINE_ID",
+  "left_rows": 45043,
+  "right_rows": 64398,
+  "right_keys_unique": true,
+  "left_matched_rows": 45043,
+  "left_unmatched_rows": 0,
+  "left_matched_unique_ids": 14410,
+  "left_unmatched_unique_ids": 0,
+  "output_rows": 45043,
+  "row_expansion": 0,
+  "matched_feature_types": {
+    "Major Arterial": 19446,
+    "Local": 10887,
+    "Collector": 6504,
+    "Minor Arterial": 5976,
+    "Expressway Ramp": 1202,
+    "Laneway": 468,
+    "Major Arterial Ramp": 169,
+    "Expressway": 154,
+    "Pending": 120,
+    "Other": 105,
+    "Collector Ramp": 7,
+    "Other Ramp": 5
+  },
+  "caveat": "Exact current-road identifier join only; historical ID validity, geometry/version, road type and the collision spatial/time link are not validated."
+}

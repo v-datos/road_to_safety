@@ -1,0 +1,129 @@
+{
+  "status": "acquired_and_audited_with_documented_limits",
+  "created_date": "2026-10-17",
+  "dataset_selection": {
+    "choice": "user_supplied_official_source_route",
+    "status": "collision_dataset_prepared_and_independently_validated",
+    "population": "all_road_users",
+    "years": "all_verified_available_years_with_source_specific_coverage",
+    "model_sequence": [
+      "severity",
+      "occurrence_with_additional_data"
+    ],
+    "selected_record_years": {
+      "first": 1999,
+      "last": 2021
+    },
+    "selected_annual_files": 23
+  },
+  "sources": [
+    {
+      "id": "ncdb_online",
+      "title": "National Collision Database Online",
+      "url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?c=100-0-0&l=en",
+      "role": "National aggregate condition, time and road-user tables",
+      "status": "selector_year_domain_audited_native_export_not_acquired",
+      "provided_by_user": true,
+      "access_note": "Official HTML/form route reached selector; bounded table requests returned archived application errors. Native export was not acquired.",
+      "verified_related_urls": [
+        "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/",
+        "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?c=100-5-0&l=en",
+        "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?c=100-1-0&l=en"
+      ],
+      "limitation": "National aggregate queries exclude collision location; failed responses are evidence, not numeric tables.",
+      "reviewed_date": "2026-10-17",
+      "verified_query_years": {
+        "first": 1999,
+        "last": 2023
+      }
+    },
+    {
+      "id": "motor_vehicle_casualties_dashboard",
+      "title": "Motor Vehicle Casualties Dashboard",
+      "url": "https://tc.canada.ca/en/road-transportation/statistics-data/2025/motor-vehicle-casualties-dashboard",
+      "provided_by_user": true,
+      "role": "Aggregate fatalities/injuries and temporal/demographic context",
+      "status": "official_html_acquired_and_extracted_with_partition_discrepancy",
+      "observed_text_years": {
+        "first": 2014,
+        "last": 2023
+      },
+      "limitation": "Archived text injury road-user margin is 1000 below annual total; native Power BI export/live state unverified.",
+      "reviewed_date": "2026-10-17"
+    },
+    {
+      "id": "transport_canada_statistics",
+      "title": "Transport Canada — Statistics and data",
+      "url": "https://tc.canada.ca/en/road-transportation/statistics-data",
+      "role": "Official publication and benchmark discovery",
+      "status": "official_index_archived_linked_publication_acquired",
+      "provided_by_user": true,
+      "reviewed_date": "2026-10-17"
+    },
+    {
+      "id": "collision_statistics_2024",
+      "title": "Canadian Motor Vehicle Traffic Collision Statistics: 2024",
+      "url": "https://tc.canada.ca/en/road-transportation/statistics-data/canadian-motor-vehicle-traffic-collision-statistics/2024/canadian-motor-vehicle-traffic-collision-statistics-2024",
+      "provided_by_user": false,
+      "discovered_via": "transport_canada_statistics",
+      "role": "National benchmarks, provincial/territorial map candidate and exposure context",
+      "status": "html_tables_acquired_and_source_linked_extracts_verified",
+      "observed_national_collision_series_years": {
+        "first": 2005,
+        "last": 2024
+      },
+      "observed_geographic_rate_year": 2024,
+      "limitation": "Review qualifications in docs/source_review.md; published rates are not event-level training observations.",
+      "reviewed_date": "2026-10-17"
+    },
+    {
+      "id": "ncdb_public_records",
+      "title": "National Collision Database — Open Government",
+      "url": "https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a",
+      "role": "Candidate official record releases and dictionary for severity training",
+      "status": "23_annual_files_acquired_and_full_file_audited",
+      "provided_by_user": false,
+      "reviewed_date": "2026-10-17",
+      "manifest_path": "data/sources.json",
+      "limitation": "No 2022+ annual records in catalog snapshot; current publication totals differ from preserved record releases."
+    },
+    {
+      "id": "ncdb_dictionary",
+      "title": "National Collision Database — Data Dictionary",
+      "url": "https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/21eb7966-38da-4814-a80e-521bce6c4c27",
+      "role": "Candidate definitions to match against selected record releases",
+      "status": "official_bilingual_pdf_acquired_and_reviewed",
+      "provided_by_user": false,
+      "reviewed_date": "2026-10-17",
+      "local_path": "data/raw/ncdb/data_dictionary.pdf",
+      "limitation": "Dictionary omits observed C_CASE field and 2020 asterisk code meanings."
+    }
+  ],
+  "unresolved_source_needs": [
+    "Resolve differences between preserved record releases and newer publication counts before claiming a reconciled national series",
+    "Obtain authoritative documentation for C_CASE semantics and 2020 asterisk codes",
+    "Resolve the dashboard text road-user injury partition discrepancy and publication percentage discrepancy",
+    "Acquire geographic boundaries and validate joins/comparability for province-territory rate maps",
+    "Obtain geocoded/full-date events for local hotspots or external-weather joins",
+    "Obtain matched exposure and complete non-crash observations for occurrence modeling",
+    "Revisit native NCDB Online export and live Power BI verification when an accessible route is available"
+  ],
+  "audit_artifacts": {
+    "source_inventory": "docs/source_inventory.md",
+    "quality_assessment": "docs/data_quality_assessment.md",
+    "consolidated_asset_inventory": "data/reference/verified_source_inventory.csv",
+    "record_manifest": "data/sources.json",
+    "aggregate_registry": "data/reference/aggregate_sources.json",
+    "executed_notebook": "notebooks/01_source_and_quality_audit.ipynb",
+    "benchmark_comparison": "reports/tables/source_benchmark_comparison.csv"
+  },
+  "preparation_artifacts": {
+    "dataset": "data/derived/collisions.parquet",
+    "exceptions": "data/derived/preparation_exceptions.parquet",
+    "manifest": "data/derived/preparation_manifest.json",
+    "validation_receipt": "data/derived/prepared_validation.json",
+    "validation_report": "docs/preparation_validation.md",
+    "modeling_contract": "data/reference/modeling_contract.json",
+    "notebook": "notebooks/02_collision_dataset_validation.ipynb"
+  }
+}

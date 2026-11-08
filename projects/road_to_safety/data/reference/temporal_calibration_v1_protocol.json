@@ -1,0 +1,495 @@
+{
+  "version": "1.0.0",
+  "experiment_id": "temporal_calibration_v1",
+  "status": "frozen_before_any_experiment_fit",
+  "frozen_at_utc": "2026-10-18T21:27:24.265691+00:00",
+  "question": "Can recent-year calibration improve retrospective annual fatal-versus-injury collision probability scores relative to an unchanged expanding-history logistic model?",
+  "population": "All severity-eligible candidate collisions in selected official NCDB 1999\u20132021 annual releases; no feature-completeness exclusion; conditional on recorded fatal/injury collision.",
+  "unit_key": [
+    "source_id",
+    "C_YEAR",
+    "C_CASE"
+  ],
+  "target": "is_fatal",
+  "eligibility": "severity_eligible=true and binary unchanged is_fatal; all supported feature states retained; restrict fitting and evaluation to 1999\u20132019.",
+  "input_fingerprints": {
+    "data/derived/collisions.parquet": "32b62f217040e2a4ca30d76faabf495e13cbe77ed7aef732f0e413ba3a34f0de",
+    "data/reference/modeling_contract.json": "51b47f05f4e335e9c6392ca8290bc241f97a2ff7e1b91eac704eaa95d64ba927",
+    "data/reference/severity_protocol.json": "7684a32e919a0b73f57ed55e7c1c796c4cb5a73c1a62cdeb76a1ff8889259491",
+    "data/derived/prepared_validation.json": "369cd3c337003aa59a18054969b6de45e08962cfd369f70eae2f9a81c70bb33f",
+    "data/derived/severity_manifest.json": "d080cc69c582f748441c5492a537bfb032efc48cc2c00f4b548896e65acc42d7",
+    "data/derived/severity_validation.json": "da87be177f53fd564f65bb1606da86b7fb573997a829e375f6a371e26a83951e",
+    "src/road_to_safety/fit_severity.py": "a117826333712dabd2e9dc0a708653a6a0e56c95c881315a64bdf4099fded7f7",
+    "uv.lock": "bb9a34f74eabd6afe3e0c24cbb9a091760b342a5ae46c69e531b4070229d7333",
+    "reports/tables/severity_metrics.csv": "322f08d227c9219c19c56d0cb9488e7a913c2a9fbcb96ad1b2d0857124ff1830",
+    "reports/tables/severity_calibration.csv": "04c36ab774f304c1c0be73672ca3c5c784cf323c881f85f9625b1f5a35d44232",
+    "reports/tables/severity_coefficients.csv": "ac3f597a43f52d5223cbb19bdc677f84dc4f6934317d519a00a3b0cc80d07a02",
+    "reports/tables/severity_training_levels.csv": "c03901cde631b8b60cc7fd3b68d7621218aebe0c151f427ef810044df5fb5ae6",
+    "reports/tables/severity_feature_distributions.csv": "aad6d4bf5103a9774df57b8e935ccc92250c6c7bef449d103105a80bae8ebf49",
+    "reports/figures/severity_annual_performance.png": "9d7c445e850d2f2106ad00246f0beec06fa49ff1954e9e8d5924b0897054089c",
+    "reports/figures/severity_calibration.png": "62537d9c9785e25260202f1eebb286b34dd6aa6f71dbc38d5d36ef85664c7681",
+    "reports/figures/severity_precision_recall.png": "1bf829822937ee5ea161798de390fa2a9fd29a2c3fa306b2b0d740576aca0e7a",
+    "reports/figures/severity_coefficients.png": "6dac737bca87635440c652458f4377d2d1835ad984426039dc0dbfc58628dd54",
+    "data/derived/severity_predictions.parquet": "d03980548296d36d171c1380aba591cfccb060301883482aaa2209a24605bcbb",
+    "data/derived/severity_model.json": "9243632bbffc9c26d7096c1fbf6a267e51d08a74d00a949f149bfd01fa1da22a"
+  },
+  "upstream_status_required": {
+    "data/derived/prepared_validation.json": "passed",
+    "data/derived/severity_validation.json": "passed"
+  },
+  "folds": [
+    {
+      "evaluation_year": 2014,
+      "train": {
+        "start_year": 1999,
+        "end_year": 2011
+      },
+      "calibration": {
+        "start_year": 2012,
+        "end_year": 2013
+      },
+      "evaluation": {
+        "start_year": 2014,
+        "end_year": 2014
+      }
+    },
+    {
+      "evaluation_year": 2015,
+      "train": {
+        "start_year": 1999,
+        "end_year": 2012
+      },
+      "calibration": {
+        "start_year": 2013,
+        "end_year": 2014
+      },
+      "evaluation": {
+        "start_year": 2015,
+        "end_year": 2015
+      }
+    },
+    {
+      "evaluation_year": 2016,
+      "train": {
+        "start_year": 1999,
+        "end_year": 2013
+      },
+      "calibration": {
+        "start_year": 2014,
+        "end_year": 2015
+      },
+      "evaluation": {
+        "start_year": 2016,
+        "end_year": 2016
+      }
+    },
+    {
+      "evaluation_year": 2017,
+      "train": {
+        "start_year": 1999,
+        "end_year": 2014
+      },
+      "calibration": {
+        "start_year": 2015,
+        "end_year": 2016
+      },
+      "evaluation": {
+        "start_year": 2017,
+        "end_year": 2017
+      }
+    },
+    {
+      "evaluation_year": 2018,
+      "train": {
+        "start_year": 1999,
+        "end_year": 2015
+      },
+      "calibration": {
+        "start_year": 2016,
+        "end_year": 2017
+      },
+      "evaluation": {
+        "start_year": 2018,
+        "end_year": 2018
+      }
+    },
+    {
+      "evaluation_year": 2019,
+      "train": {
+        "start_year": 1999,
+        "end_year": 2016
+      },
+      "calibration": {
+        "start_year": 2017,
+        "end_year": 2018
+      },
+      "evaluation": {
+        "start_year": 2019,
+        "end_year": 2019
+      }
+    }
+  ],
+  "chronology": "Within each fold train, calibration and evaluation candidate keys are disjoint. Earlier evaluation years can enter training/calibration of later folds; six folds are statistically dependent. Every evaluation collision appears once across folds.",
+  "features": [
+    "C_MNTH",
+    "C_WDAY",
+    "C_HOUR",
+    "C_RCFG",
+    "C_WTHR",
+    "C_RSUR",
+    "C_RALN",
+    "C_TRAF"
+  ],
+  "categorical_domains": {
+    "C_MNTH": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "UU",
+      "XX"
+    ],
+    "C_WDAY": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "U",
+      "X"
+    ],
+    "C_HOUR": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "UU",
+      "XX"
+    ],
+    "C_RCFG": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "QQ",
+      "UU",
+      "XX"
+    ],
+    "C_WTHR": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "Q",
+      "U",
+      "X"
+    ],
+    "C_RSUR": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "Q",
+      "U",
+      "X"
+    ],
+    "C_RALN": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "Q",
+      "U",
+      "X"
+    ],
+    "C_TRAF": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "QQ",
+      "UU",
+      "XX"
+    ]
+  },
+  "reference_levels": {
+    "C_MNTH": "1",
+    "C_WDAY": "1",
+    "C_HOUR": "12",
+    "C_RCFG": "1",
+    "C_WTHR": "1",
+    "C_RSUR": "1",
+    "C_RALN": "1",
+    "C_TRAF": "18"
+  },
+  "encoding": {
+    "method": "dictionary-fixed one-hot encoding; drop exactly the declared reference per feature; sparse float64 matrix",
+    "category_order": "exactly categorical_domains order",
+    "data_learned_vocabulary": false,
+    "out_of_domain": "Reject the run before fitting or scoring, including null, blank, conflicting or undocumented codes; preserve immutable prepared inputs for investigation.",
+    "sentinels": "Preserve dictionary-supported unknown U/UU, other Q/QQ and unavailable X/XX as distinct levels; no imputation, pooling or complete-case deletion.",
+    "train_unobserved": "Keep supported dictionary column; training-zero columns have neutral zero coefficient and are flagged in coefficient and score-support evidence. Report test/validation occurrence separately; a neutral coefficient is lack of training evidence, not demonstrated absence of association."
+  },
+  "base_logistic_regression": {
+    "penalty": "l2",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 1000,
+    "tol": 1e-07,
+    "random_state": 2026,
+    "fit_intercept": true,
+    "class_weight": null,
+    "sample_weight": null,
+    "resampling": false,
+    "hyperparameter_search": false,
+    "calibration_fit": false
+  },
+  "base_fit_policy": "Fit one new base logistic model and constant training prevalence per fold using training labels only, identical frozen design and settings to original baseline. No pooled-fold model fitting or class weighting. Use decision_function logit z directly; do not recover z from clipped probabilities.",
+  "candidates": {
+    "unchanged": {
+      "probability": "expit(z)",
+      "parameters": [],
+      "fitting": "No calibration adjustment."
+    },
+    "intercept_only": {
+      "probability": "expit(z + delta)",
+      "parameters": [
+        "delta"
+      ],
+      "initial": [
+        0.0
+      ],
+      "bounds": [
+        [
+          null,
+          null
+        ]
+      ]
+    },
+    "sigmoid": {
+      "probability": "expit(a*z + b)",
+      "parameters": [
+        "a",
+        "b"
+      ],
+      "initial": [
+        1.0,
+        0.0
+      ],
+      "bounds": [
+        [
+          1e-06,
+          null
+        ],
+        [
+          null,
+          null
+        ]
+      ],
+      "positive_slope": "Strictly increasing transformation; a >= 1e-6 preserves theoretical ranking. Numerical ties can affect reported ranking scores."
+    }
+  },
+  "calibration_fit": {
+    "data": "Exactly the two declared calibration years per fold, labels and base logits only; never evaluation labels. Equal collision weight; no weighting, resampling, penalty or smoothing.",
+    "objective": "Mean of logaddexp(0,eta)-y*eta using float64. eta=z+delta or a*z+b. Analytic mean gradients: mean(expit(eta)-y) for intercept; [mean((expit(eta)-y)*z), mean(expit(eta)-y)] for sigmoid.",
+    "optimizer": "scipy.optimize.minimize L-BFGS-B",
+    "options": {
+      "maxiter": 1000,
+      "maxls": 50,
+      "ftol": 1e-14,
+      "gtol": 1e-09
+    },
+    "acceptance": {
+      "optimizer_success": true,
+      "finite_parameters_and_objective": true,
+      "iterations_below_maxiter": true,
+      "maximum_absolute_projected_gradient": 1e-06,
+      "projected_gradient_definition": "Interior/unbounded parameter: raw derivative; parameter at its lower bound (within 1e-10): min(raw derivative,0). Positive derivative at lower slope bound satisfies minimization KKT."
+    },
+    "failure_policy": "Fail and report the run; do not substitute an optimizer, loosen tolerances, change bounds or silently drop a fold. Any change requires a new protocol version before rerun."
+  },
+  "prevalence_comparator": {
+    "probability": "Training fatal count divided by training collision count, constant for both calibration and evaluation rows in that fold.",
+    "selection_candidate": false
+  },
+  "metrics": {
+    "positive_class": 1,
+    "primary": "Unweighted arithmetic mean of six evaluation-year binary natural-log log losses (macro by year), each computed per collision with float64-epsilon probability clipping.",
+    "secondary": [
+      "brier_score",
+      "average_precision",
+      "roc_auc",
+      "mean_predicted_probability",
+      "observed_fatal_proportion",
+      "mean_prediction_minus_observed",
+      "observed_expected_ratio"
+    ],
+    "brier_score": "mean((y-p)^2); lower is better",
+    "average_precision": "Recall-step weighted precision, not trapezoidal PR area; higher is better.",
+    "roc_auc": "Probability ranking AUC; higher is better. Undefined one-class ranking measures are null.",
+    "observed_expected_ratio": "sum(y)/sum(p); null if sum(p)=0. Values above 1 indicate aggregate underprediction.",
+    "aggregation": "Report six annual rows per candidate and comparator. Macro mean and sample standard deviation (ddof=1) across years for defined numeric metrics; sample SD is descriptive, never a confidence interval. Also report pooled evaluation scores, clearly labeled collision-weighted; pooled ranking need not equal macro ranking or be unchanged by fold-specific monotone transforms.",
+    "calibration_partition_metrics": "Report calibration-year pooled scores per fold as in-sample calibration diagnostics, never method-selection evidence."
+  },
+  "reliability": {
+    "schemes": {
+      "fixed_10": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "low_probability": [
+        0,
+        0.005,
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1
+      ]
+    },
+    "intervals": "[lower,upper), final bin includes 1.0",
+    "outputs": [
+      "count",
+      "fatal_count",
+      "mean_predicted_probability",
+      "observed_fatal_proportion",
+      "sparse"
+    ],
+    "empty_bins": "Retain with count 0 and null averages.",
+    "ece": "Weighted absolute bin difference, sum((n_bin/n)*abs(observed-mean_prediction)); descriptive/bin-dependent, not a selection criterion."
+  },
+  "sparse_rule": {
+    "count_below": 100,
+    "fatal_count_below": 5,
+    "operator": "OR",
+    "action": "Flag and retain; no stable subgroup ranking or mechanistic interpretation."
+  },
+  "support_reporting": {
+    "partitions": [
+      "train",
+      "calibration",
+      "evaluation"
+    ],
+    "outputs": [
+      "candidate_collision_count",
+      "fatal_count",
+      "nonfatal_count",
+      "fatal_prevalence",
+      "feature_category_counts",
+      "training_unobserved_levels_and_evaluation_incidence"
+    ],
+    "quality_groups": "Per evaluation year, each feature separately: stated, unknown U/UU, other Q/QQ, unavailable X/XX; retain zero-support groups with undefined/null rates. Other is not missing. Also collision-level any-unknown and any-other availability groups (flags can overlap), with absence/presence denominators explicitly labeled.",
+    "quality_metrics": "Candidate/comparator probability and ranking scores with group n/fatal count and sparse flag. Empty or one-class groups have undefined ranking metrics, never silently zeroed."
+  },
+  "selection": {
+    "evidence": "Six annual evaluation scores only; this is developmental method selection on already-inspected historical years, not independent testing.",
+    "tolerance": 1e-10,
+    "eligible_recommendation": "Relative to unchanged: macro log_loss improvement strictly greater than 1e-10, at least four of six evaluation years with log_loss improvement strictly greater than 1e-10, and macro Brier no greater than unchanged plus 1e-10.",
+    "rule": "Among eligible calibrated methods choose lowest macro log_loss; methods within 1e-10 of the minimum are ties, resolved in complexity order unchanged, intercept_only, sigmoid. If no calibrated method is eligible retain unchanged. Report raw score ranking independently of this recommendation.",
+    "complexity_order": [
+      "unchanged",
+      "intercept_only",
+      "sigmoid"
+    ],
+    "production_decision": false
+  },
+  "prohibitions": [
+    "No 2020\u20132021 scoring, calibration, selection, threshold changes or fresh-test claims. Previously evaluated years are not pristine holdouts.",
+    "No threshold search or operational threshold recommendation.",
+    "No new predictors, interactions, tree challengers, hyperparameter searches or group-specific calibration.",
+    "No model-score/parameter confidence intervals promised; fold-to-fold sample SD is not uncertainty coverage.",
+    "No accident-occurrence, individual mortality, causal effect or deployment-readiness claim."
+  ],
+  "acceptance": [
+    "Frozen input fingerprints and upstream passed receipts verified before fitting and unchanged at completion.",
+    "Exact six chronological folds and all eligible collision keys, target, domains and reference levels independently checked.",
+    "Training-only prevalence and converged training-only logistic coefficients reconstructed independently.",
+    "Calibration parameters, objectives, projected gradients, positive slope and two-year-only fitting independently verified.",
+    "Finite probabilities in [0,1]; eval coverage and every annual score, calibration bin and recommendation reconciled independently.",
+    "Preserve original baseline artifacts byte-for-byte."
+  ],
+  "limitations": [
+    "All six evaluation years were previously inspected during descriptive analysis and prior baseline development; this is a new frozen developmental experiment, not pristine external validation.",
+    "Source and reporting changes can alter observed case mix; annual changes do not identify a causal mechanism.",
+    "Candidate collisions represent recorded fatal/injury collisions with release-scoped identities.",
+    "No exposure denominator, prospective feature-availability verification or independent contemporary event dataset.",
+    "Expanded historical training windows overlap and share calibration/evaluation history across folds; six annual scores are dependent."
+  ],
+  "amendment_policy": "Do not edit this protocol after any fit. New post-freeze methodological choices require a separately versioned file and explicit disclosure of results already inspected."
+}

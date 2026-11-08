@@ -1,0 +1,20 @@
+[project]
+name = "road-to-safety-tree-comparison-v1"
+version = "1.0.0"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+  "duckdb==1.5.3",
+  "pandas==2.3.3",
+  "matplotlib==3.10.8",
+  "scikit-learn==1.7.2",
+  "lightgbm==4.6.0",
+  "joblib==1.5.2",
+  "nbformat==5.10.4",
+  "nbclient==0.10.2",
+  "ipykernel==6.31.0",
+  "shapely==2.1.2",
+  "pyshp==2.3.1",
+  "pyproj==3.7.2",
+  "reportlab==4.4.5",
+  "pypdf==6.2.0",
+]

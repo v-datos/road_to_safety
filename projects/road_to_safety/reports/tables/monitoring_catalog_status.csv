@@ -1,0 +1,2 @@
+checked_at_utc,ckan_package_id,fetch_mode,catalog_metadata_modified,total_ckan_resources,known_monitored_years,verified_local_releases,mismatched_local_releases,new_untracked_resources_count,post_2021_microdata_releases_detected,post_2021_candidates,ingestion_status
+2026-11-08T00:15:43.264666+00:00,1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a,offline_snapshot,2025-12-17T16:11:47.651332,51,1999-2021 (23 annual releases),24,[],27,0,[],READY_WAITING_FOR_TC_2022_RELEASE

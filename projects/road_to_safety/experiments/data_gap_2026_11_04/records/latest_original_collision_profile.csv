@@ -1,0 +1,3 @@
+year,raw_rows,columns,candidate_collisions,fatal_collisions,injury_collisions,target_conflicts,invalid_or_unexpected_year_key_rows,feature_conflicting_collision_values,feature_out_of_domain_collision_values,has_province_field,has_coordinates,has_full_date,source_sha256
+2020,198745,23,79990,1602,78388,0,0,0,0,False,False,False,2c81d99278819c28f99c02bfec319fb99c94b02734418300306e86a68ec3f83b
+2021,204428,23,83590,1628,81962,0,0,0,0,False,False,False,024a2d24cdaf6e30ec018433836075b83c626e7f8e189d14a46ea9d99b3d8dbb

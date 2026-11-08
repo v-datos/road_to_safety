@@ -1,0 +1,5 @@
+band,collisions,share_of_all_collisions_pct,fatal_collisions,share_of_all_fatals_pct,within_band_fatality_rate_pct,relative_risk_vs_routine
+Band_1_Critical_gte_T1,1801,1.101,257,7.957,14.27,14.24
+Band_2_Priority_T2_to_T1,13536,8.275,856,26.502,6.324,6.31
+Band_3_Watchlist_T3_to_T2,30566,18.686,938,29.04,3.069,3.06
+Band_4_Routine_lt_T3,117677,71.939,1179,36.502,1.002,1.0

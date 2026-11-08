@@ -1,0 +1,41 @@
+{
+  "reviewed_on": "2026-11-04",
+  "recommendations": [
+    {
+      "title": "Design and evaluate lower-speed local streets",
+      "observation": "Transport Canada recorded 335 pedestrian fatalities in 2024. This national count identifies a burden and provides context for local evaluation.",
+      "evidence": "A Toronto quasi-experiment observed fewer pedestrian collisions after local limits fell from 40 to 30 km/h. The change relative to comparator streets was statistically uncertain.",
+      "action": "Municipal road authorities can test lower posted speeds and street designs that support them on suitable local streets with pedestrian activity.",
+      "evaluation": "Measure operating speeds and pedestrian injury collisions against comparable streets. Track pedestrian exposure and changes in traffic volume.",
+      "source_label": "Fridman et al., Toronto quasi-experiment (2020)",
+      "url": "https://link.springer.com/article/10.1186/s12889-019-8139-5"
+    },
+    {
+      "title": "Audit rural corridors for roadway departures",
+      "observation": "The published 2024 table classifies 956 fatal collisions as rural and 855 as urban. The archived records also show a larger fatal share on curves with gradients than on straight and level roads.",
+      "evidence": "The FHWA implementation guidance identifies centerline and shoulder rumble strips as treatments for specific roadway-departure crash types.",
+      "action": "Provincial and territorial road authorities can use local crash records to select appropriate corridors and assess centerline or shoulder rumble strips. Review shoulder width, cycling access, pavement and nearby residences before installation.",
+      "evaluation": "Compare target fatal and injury crashes per vehicle-kilometre against similar untreated corridors over multiple years.",
+      "source_label": "FHWA rumble strip implementation guidance",
+      "url": "https://highways.fhwa.dot.gov/safety/rwd/keep-vehicles-road/rumble-strips/rumble-strip-implementation-guide-addressing-noise"
+    },
+    {
+      "title": "Audit visibility at crossings after dark",
+      "observation": "Among reported casualty collisions with a stated hour, the fatal share is highest from 02:00 to 02:59. The national records lack site lighting and nighttime travel exposure for this comparison.",
+      "evidence": "FHWA lighting guidance recommends considering nighttime crash history, traffic and pedestrian activity when deciding where to improve crossing visibility.",
+      "action": "Municipal and provincial engineers can audit crossings and intersections with documented nighttime conflicts. Assess lighting, markings, glare and sight distance together.",
+      "evaluation": "Verify lighting performance and compare nighttime injury collisions at treated and comparable untreated sites, tracking pedestrian and vehicle volumes.",
+      "source_label": "FHWA proven safety countermeasure on lighting",
+      "url": "https://highways.fhwa.dot.gov/safety/proven-safety-countermeasures/lighting"
+    },
+    {
+      "title": "Link local exposure and collision reporting",
+      "observation": "The archived collision releases lack location and exposure. Publication notes identify preliminary figures, estimates and differences in reporting practice.",
+      "evidence": "Canada's Road Safety Strategy 2035 and Beyond prioritizes collection, integration and timely sharing of high-quality data.",
+      "action": "Transport ministries, police and municipal data teams can agree on a versioned road segment key, coverage fields and harmonized outcome definitions. Preserve confidentiality through controlled access and aggregated releases.",
+      "evaluation": "Track geocoding completeness, matched exposure coverage, reporting delay and the share of severe outcomes with a verified definition.",
+      "source_label": "CCMTA Road Safety Strategy 2035 and Beyond",
+      "url": "https://www.ccmta.ca/road-safety-strategy-2026/en/strategy"
+    }
+  ]
+}

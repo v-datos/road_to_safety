@@ -1,0 +1,19 @@
+split,subgroup,subgroup_label,n,fatal,observed_fatality_rate_pct,m0_mean_pred_pct,m1_mean_pred_pct,m2_mean_pred_pct,m0_roc_auc,m2_roc_auc,m0_pr_auc,m2_pr_auc,m0_log_loss,m2_log_loss
+validation_2017_2019,all_collisions,All Collisions,330376,5072,1.535,1.566,1.561,1.55,0.6945,0.7692,0.0338,0.0616,0.07565,0.07166
+validation_2017_2019,pedestrian,Pedestrian Involved,34483,989,2.868,1.238,2.57,2.658,0.6822,0.7163,0.0764,0.1063,0.13149,0.11994
+validation_2017_2019,bicyclist,Bicyclist Involved,14940,128,0.857,1.235,0.748,0.815,0.6901,0.7852,0.0308,0.0648,0.04781,0.04394
+validation_2017_2019,motorcyclist,Motorcyclist Involved,16591,594,3.58,2.026,3.058,3.11,0.5987,0.6341,0.0551,0.0874,0.15864,0.14994
+validation_2017_2019,any_vru,Any Vulnerable Road User (VRU),65313,1689,2.586,1.435,2.261,2.335,0.667,0.7307,0.058,0.0952,0.11917,0.1101
+validation_2017_2019,heavy_truck,Unit Heavy Truck (>4536 kg),11172,379,3.392,1.602,1.492,3.756,0.5971,0.6989,0.0469,0.0851,0.15566,0.14083
+validation_2017_2019,road_tractor,Road Tractor / Semi-Trailer,8943,602,6.732,2.05,1.834,6.961,0.5677,0.6347,0.0852,0.1432,0.28341,0.23861
+validation_2017_2019,heavy_freight_x_vru,Heavy Freight x VRU Collision,1472,193,13.111,1.527,2.652,12.628,0.6158,0.6494,0.2339,0.2652,0.55864,0.3797
+validation_2017_2019,motor_vehicle_only_light,"Motor-Vehicle Only (No VRU, No Heavy Freight)",246770,2625,1.064,1.581,1.376,1.131,0.732,0.753,0.0282,0.0344,0.05624,0.05445
+test_2020_2021,all_collisions,All Collisions,163580,3230,1.975,1.609,1.62,1.632,0.6958,0.7628,0.0415,0.0747,0.09276,0.08802
+test_2020_2021,pedestrian,Pedestrian Involved,17381,621,3.573,1.27,2.664,2.738,0.6903,0.7276,0.0984,0.1347,0.15954,0.14154
+test_2020_2021,bicyclist,Bicyclist Involved,8885,98,1.103,1.257,0.764,0.831,0.681,0.7576,0.0359,0.0475,0.05847,0.05638
+test_2020_2021,motorcyclist,Motorcyclist Involved,10144,467,4.604,2.064,3.12,3.2,0.5878,0.6292,0.0701,0.113,0.19869,0.18354
+test_2020_2021,any_vru,Any Vulnerable Road User (VRU),35977,1169,3.249,1.487,2.305,2.381,0.6689,0.7281,0.0703,0.1172,0.14557,0.13245
+test_2020_2021,heavy_truck,Unit Heavy Truck (>4536 kg),6025,252,4.183,1.626,1.536,3.833,0.6017,0.6869,0.0592,0.1127,0.18776,0.16493
+test_2020_2021,road_tractor,Road Tractor / Semi-Trailer,4398,327,7.435,2.069,1.857,7.094,0.5618,0.6306,0.0897,0.1717,0.31206,0.25456
+test_2020_2021,heavy_freight_x_vru,Heavy Freight x VRU Collision,853,132,15.475,1.559,2.732,12.821,0.618,0.6803,0.2601,0.3329,0.65564,0.41214
+test_2020_2021,motor_vehicle_only_light,"Motor-Vehicle Only (No VRU, No Heavy Freight)",118207,1628,1.377,1.628,1.415,1.189,0.7361,0.7546,0.0347,0.0444,0.06811,0.06699

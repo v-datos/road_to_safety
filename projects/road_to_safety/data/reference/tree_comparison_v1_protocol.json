@@ -1,0 +1,290 @@
+{
+  "experiment": "tree_comparison_v1",
+  "inputs": {
+    "data/derived/collisions.parquet": "32b62f217040e2a4ca30d76faabf495e13cbe77ed7aef732f0e413ba3a34f0de",
+    "data/reference/modeling_contract.json": "51b47f05f4e335e9c6392ca8290bc241f97a2ff7e1b91eac704eaa95d64ba927",
+    "experiments/tree_comparison_v1/uv.lock": "cd1df91dd24d9d84d76d5a869437b4e6afa0d820a6b6cf3dbdb4410124385529",
+    "experiments/tree_comparison_v1/run.py": "afd2d684f1db7e86bc1e04db13b6996bcd377c2e630fdba6f68246e0f2c514b2",
+    "src/road_to_safety/fit_severity.py": "a117826333712dabd2e9dc0a708653a6a0e56c95c881315a64bdf4099fded7f7",
+    "data/reference/severity_protocol.json": "7684a32e919a0b73f57ed55e7c1c796c4cb5a73c1a62cdeb76a1ff8889259491"
+  },
+  "folds": [
+    {
+      "train_start": 1999,
+      "train_end": 2013,
+      "evaluation": 2014
+    },
+    {
+      "train_start": 1999,
+      "train_end": 2014,
+      "evaluation": 2015
+    },
+    {
+      "train_start": 1999,
+      "train_end": 2015,
+      "evaluation": 2016
+    },
+    {
+      "train_start": 1999,
+      "train_end": 2016,
+      "evaluation": 2017
+    },
+    {
+      "train_start": 1999,
+      "train_end": 2017,
+      "evaluation": 2018
+    },
+    {
+      "train_start": 1999,
+      "train_end": 2018,
+      "evaluation": 2019
+    }
+  ],
+  "configurations": {
+    "prevalence": {},
+    "logistic": {
+      "C": 1.0,
+      "solver": "lbfgs",
+      "max_iter": 1000,
+      "tol": 1e-07,
+      "fit_intercept": true,
+      "random_state": 2026
+    },
+    "rf_01": {
+      "n_estimators": 300,
+      "bootstrap": true,
+      "max_depth": 8,
+      "min_samples_leaf": 200,
+      "max_features": "sqrt",
+      "random_state": 2026,
+      "n_jobs": 8
+    },
+    "rf_02": {
+      "n_estimators": 300,
+      "bootstrap": true,
+      "max_depth": 8,
+      "min_samples_leaf": 200,
+      "max_features": 0.5,
+      "random_state": 2026,
+      "n_jobs": 8
+    },
+    "rf_03": {
+      "n_estimators": 300,
+      "bootstrap": true,
+      "max_depth": 8,
+      "min_samples_leaf": 50,
+      "max_features": "sqrt",
+      "random_state": 2026,
+      "n_jobs": 8
+    },
+    "rf_04": {
+      "n_estimators": 300,
+      "bootstrap": true,
+      "max_depth": 8,
+      "min_samples_leaf": 50,
+      "max_features": 0.5,
+      "random_state": 2026,
+      "n_jobs": 8
+    },
+    "rf_05": {
+      "n_estimators": 300,
+      "bootstrap": true,
+      "max_depth": 16,
+      "min_samples_leaf": 200,
+      "max_features": "sqrt",
+      "random_state": 2026,
+      "n_jobs": 8
+    },
+    "rf_06": {
+      "n_estimators": 300,
+      "bootstrap": true,
+      "max_depth": 16,
+      "min_samples_leaf": 200,
+      "max_features": 0.5,
+      "random_state": 2026,
+      "n_jobs": 8
+    },
+    "rf_07": {
+      "n_estimators": 300,
+      "bootstrap": true,
+      "max_depth": 16,
+      "min_samples_leaf": 50,
+      "max_features": "sqrt",
+      "random_state": 2026,
+      "n_jobs": 8
+    },
+    "rf_08": {
+      "n_estimators": 300,
+      "bootstrap": true,
+      "max_depth": 16,
+      "min_samples_leaf": 50,
+      "max_features": 0.5,
+      "random_state": 2026,
+      "n_jobs": 8
+    },
+    "lgbm_01": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 15,
+      "min_child_samples": 500,
+      "reg_lambda": 1,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_02": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 15,
+      "min_child_samples": 500,
+      "reg_lambda": 0,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_03": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 15,
+      "min_child_samples": 100,
+      "reg_lambda": 1,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_04": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 15,
+      "min_child_samples": 100,
+      "reg_lambda": 0,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_05": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 31,
+      "min_child_samples": 500,
+      "reg_lambda": 1,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_06": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 31,
+      "min_child_samples": 500,
+      "reg_lambda": 0,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_07": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 31,
+      "min_child_samples": 100,
+      "reg_lambda": 1,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_08": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 31,
+      "min_child_samples": 100,
+      "reg_lambda": 0,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_09": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 63,
+      "min_child_samples": 500,
+      "reg_lambda": 1,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_10": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 63,
+      "min_child_samples": 500,
+      "reg_lambda": 0,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_11": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 63,
+      "min_child_samples": 100,
+      "reg_lambda": 1,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    },
+    "lgbm_12": {
+      "n_estimators": 500,
+      "learning_rate": 0.03,
+      "objective": "binary",
+      "num_leaves": 63,
+      "min_child_samples": 100,
+      "reg_lambda": 0,
+      "random_state": 2026,
+      "deterministic": true,
+      "force_col_wise": true,
+      "n_jobs": 8,
+      "verbosity": -1
+    }
+  },
+  "selection_tolerance": 1e-10,
+  "threshold_year": 2019,
+  "minimum_recall": 0.8,
+  "stress_years": [
+    2020,
+    2021
+  ],
+  "permutation_repeats": 5
+}

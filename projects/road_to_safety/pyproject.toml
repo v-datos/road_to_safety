@@ -1,0 +1,24 @@
+[project]
+name = "road-to-safety-canada"
+version = "0.1.0"
+description = "Canadian traffic collision severity, risk factors and road safety analysis"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb==1.5.3",
+    "matplotlib==3.10.8",
+    "openpyxl==3.1.5",
+    "pandas==2.3.3",
+    "python-calamine==0.9.0",
+    "scikit-learn==1.7.2",
+]
+
+[project.optional-dependencies]
+notebook = ["nbformat==5.10.4", "nbclient==0.10.2", "ipykernel==6.31.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]

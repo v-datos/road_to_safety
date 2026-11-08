@@ -1,0 +1,30 @@
+{
+  "source": "Transport Canada NCDB Online",
+  "entry_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+  "retrieved_local_date": "2026-10-15",
+  "displayed_source_vintage": "August 12, 2025",
+  "years": [
+    2022,
+    2023
+  ],
+  "filters": {
+    "Vehicle Type": "Truck tractor",
+    "Collision Sev": [
+      "Total",
+      "Fatal collisions",
+      "Injury collisions"
+    ]
+  },
+  "offered_measures": [
+    "Number of vehicles",
+    "Number of injured",
+    "Number of fatalities"
+  ],
+  "acquisition": "Transcribed from verified live displayed table; native CSV export reached 387-byte download page but browser download timed out. This is not the native downloaded file.",
+  "limits": [
+    "Not unique collision counts; a collision can involve multiple tractors.",
+    "Casualties are occupants of the selected vehicle type, not all people in tractor-involved collisions.",
+    "Year selector ends at 2023; no 2024 or 2025 option in this tool.",
+    "Does not supply collision IDs or linked event records."
+  ]
+}

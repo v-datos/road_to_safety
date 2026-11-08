@@ -1,0 +1,3 @@
+population,log_loss_difference,brier_difference,absolute_aggregate_gap_difference,log_loss_improved,brier_not_worse,absolute_aggregate_gap_not_worse,year_gate_passed
+2020,8.748888263626631e-05,4.995502000077617e-06,0.0003376787319720846,False,False,False,False
+2021,7.222043402078937e-05,3.553889768873053e-06,0.00033357897587154434,False,False,False,False

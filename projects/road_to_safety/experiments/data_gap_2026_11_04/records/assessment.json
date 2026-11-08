@@ -1,0 +1,22 @@
+{
+  "original_asset_hashes_verified": 34,
+  "catalog_resource_count": 51,
+  "catalog_metadata_modified": "2025-12-17T16:11:47.651332",
+  "catalog_added_resources": 0,
+  "catalog_removed_resources": 0,
+  "catalog_changed_resource_fields": 0,
+  "post2021_named_resources": 0,
+  "latest_named_record_year": 2021,
+  "latest_originals_identical_to_frozen": true,
+  "native_export_year_min": 1999,
+  "native_export_year_max": 2023,
+  "native_export_total": 3138099,
+  "native_export_total_reconciles": true,
+  "native_online_vs_prepared_mismatch_years": 16,
+  "native_online_vs_publication_mismatch_years": 4,
+  "publication_year_min": 2005,
+  "publication_year_max": 2024,
+  "jurisdiction_rows_including_canada": 14,
+  "new_post2021_national_microdata_acquired": false,
+  "assessment": "No post-2021 national collision record release located in audited official catalog and Transport Canada routes. Native Online count CSV successfully acquired but cannot extend record-level validation."
+}

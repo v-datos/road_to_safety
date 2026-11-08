@@ -1,0 +1,92 @@
+[
+  {
+    "requested_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-1-0",
+    "request_method": "GET",
+    "request_scope": "Number of collisions only; all selected years, no other filters",
+    "acquired_at_utc": "2026-11-05T05:28:26.535359+00:00",
+    "http_status": 200,
+    "headers": {
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Thu, 05 Nov 2026 05:28:26 GMT",
+      "Content-Length": "38184"
+    },
+    "size_bytes": 38184,
+    "sha256": "f1f5ff47725d8aff264400f936c152649f498fd7b6f56a3afba6957c6ac71cdb",
+    "local_path": "data/raw/data_gap_2026_11_04/records/corrected_query_start.html",
+    "html_title": "Step 1: Select variables - National Collision Database Online 1.0 - Transport Canada - Transport Canada",
+    "source_application_error": false,
+    "client_validation_error": false
+  },
+  {
+    "requested_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+    "request_method": "POST",
+    "request_scope": "Number of collisions only; all selected years, no other filters",
+    "acquired_at_utc": "2026-11-05T05:28:26.970447+00:00",
+    "http_status": 200,
+    "headers": {
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Thu, 05 Nov 2026 05:28:26 GMT",
+      "Content-Length": "26581"
+    },
+    "size_bytes": 26581,
+    "sha256": "72d49ac9dd27f893d6573dee819bfe628543ed79812b8c3f791805784ed106d7",
+    "local_path": "data/raw/data_gap_2026_11_04/records/corrected_query_measures.html",
+    "html_title": "Step 2: Select items - National Collision Database Online 1.0 - Transport Canada - Transport Canada",
+    "source_application_error": false,
+    "client_validation_error": false
+  },
+  {
+    "requested_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+    "request_method": "POST",
+    "request_scope": "Number of collisions only; all selected years, no other filters",
+    "acquired_at_utc": "2026-11-05T05:28:27.342758+00:00",
+    "http_status": 200,
+    "headers": {
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Thu, 05 Nov 2026 05:28:26 GMT",
+      "Content-Length": "36850"
+    },
+    "size_bytes": 36850,
+    "sha256": "34e7289950549d443612968130a6d46ac9b39431b5b3e0bba6fae08c77134c25",
+    "local_path": "data/raw/data_gap_2026_11_04/records/corrected_query_years.html",
+    "html_title": "Step 2: Select items - National Collision Database Online 1.0 - Transport Canada - Transport Canada",
+    "source_application_error": false,
+    "client_validation_error": false
+  },
+  {
+    "requested_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+    "request_method": "POST",
+    "request_scope": "Number of collisions only; all selected years, no other filters",
+    "acquired_at_utc": "2026-11-05T05:28:27.746046+00:00",
+    "http_status": 200,
+    "headers": {
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Thu, 05 Nov 2026 05:28:28 GMT",
+      "Content-Length": "30491"
+    },
+    "size_bytes": 30491,
+    "sha256": "fdedf2bd16d4afa09d58b50098fd484c924b7dfb844b418788eb79f21992b4e1",
+    "local_path": "data/raw/data_gap_2026_11_04/records/corrected_query_layout.html",
+    "html_title": "Step 3: Set table layout - National Collision Database Online 1.0 - Transport Canada - Transport Canada",
+    "source_application_error": false,
+    "client_validation_error": false
+  },
+  {
+    "requested_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+    "request_method": "POST",
+    "request_scope": "Number of collisions only; all selected years, no other filters",
+    "acquired_at_utc": "2026-11-05T05:28:28.808762+00:00",
+    "http_status": 200,
+    "headers": {
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Thu, 05 Nov 2026 05:28:28 GMT",
+      "Content-Length": "34473"
+    },
+    "size_bytes": 34473,
+    "sha256": "1bfe5f52a2d9cf69207b7b38a0f6ef5c6a00b25ac2a36e70ec958d041398d0c8",
+    "local_path": "data/raw/data_gap_2026_11_04/records/corrected_query_result.html",
+    "html_title": "Step 4: View table - National Collision Database Online 1.0 - Transport Canada - Transport Canada",
+    "source_application_error": false,
+    "client_validation_error": false
+  }
+]

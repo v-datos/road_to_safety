@@ -1,0 +1,1102 @@
+{
+  "version": "1.0.0",
+  "experiment_id": "calibration_stress_v1",
+  "status": "frozen_before_new_stress_scoring",
+  "frozen_at_utc": "2026-10-20T14:09:04.783615+00:00",
+  "client_date": "2026-10-20",
+  "client_timezone": "America/Edmonton",
+  "question": "Does the saved development-selected sigmoid correction transfer to 2020 and 2021 probability scores without any refitting or method search?",
+  "evidence_status": "Reused retrospective stress test. Both years were inspected in descriptive analysis and evaluated by the original severity baseline. This stress test was chosen after their known underprediction; it is not independent or pristine validation.",
+  "population": "All severity-eligible candidate collisions in selected official NCDB 1999\u20132021 annual releases; no feature-completeness exclusion; conditional on recorded fatal/injury collision.",
+  "unit_key": [
+    "source_id",
+    "C_YEAR",
+    "C_CASE"
+  ],
+  "target": "is_fatal",
+  "evaluation_years": [
+    2020,
+    2021
+  ],
+  "eligibility": "Every candidate collision in 2020 or 2021 must have severity_eligible=true and unchanged is_fatal in {0,1}; require exact source key coverage. Retain every supported categorical state; no feature-completeness exclusions. Reject conflicting, blank, null or out-of-domain feature values before scoring.",
+  "input_fingerprints": {
+    "data/derived/collisions.parquet": "32b62f217040e2a4ca30d76faabf495e13cbe77ed7aef732f0e413ba3a34f0de",
+    "data/derived/preparation_manifest.json": "7dd01a50b3271a6c238b3505bf1a7826256b85ca06163306d7bc241f5fc03bcf",
+    "data/derived/prepared_validation.json": "369cd3c337003aa59a18054969b6de45e08962cfd369f70eae2f9a81c70bb33f",
+    "data/derived/severity_manifest.json": "d080cc69c582f748441c5492a537bfb032efc48cc2c00f4b548896e65acc42d7",
+    "data/derived/severity_model.json": "9243632bbffc9c26d7096c1fbf6a267e51d08a74d00a949f149bfd01fa1da22a",
+    "data/derived/severity_predictions.parquet": "d03980548296d36d171c1380aba591cfccb060301883482aaa2209a24605bcbb",
+    "data/derived/severity_validation.json": "da87be177f53fd564f65bb1606da86b7fb573997a829e375f6a371e26a83951e",
+    "data/derived/temporal_calibration_v1/manifest.json": "b933fde2e22998776b8035cdf6cd14fed9bd4f69a4f2877abe5ba9a46d70e368",
+    "data/derived/temporal_calibration_v1/model_2014.json": "95a49089d75ffe901eb69c7dc59036d1771f94ffb1cb87dce91c4e5df7cc0cfb",
+    "data/derived/temporal_calibration_v1/model_2015.json": "7b6094259a4419301088402258ac3a83f8292c8aab7f91fae8bc0362711e529b",
+    "data/derived/temporal_calibration_v1/model_2016.json": "65115696142a44144d82fb0656bec2bf7be8f738e9b317830c73c1be2b4ccbba",
+    "data/derived/temporal_calibration_v1/model_2017.json": "578f0c3f106c25c9a7351fb5175a28412cad4a9136e5379086cb21eb0b9615e4",
+    "data/derived/temporal_calibration_v1/model_2018.json": "bd7fe976d9e06c50b3e08cbebf8b31f815efc9b5686183ed650d01a5b4136377",
+    "data/derived/temporal_calibration_v1/model_2019.json": "fb818a0a4ca49e1d2397bf74c1502d0db8dccfc7ef1281e1f15d0513f34e4d0c",
+    "data/derived/temporal_calibration_v1/predictions_2014.parquet": "a9b5964f7bee703209b55d4c795940603a024a617f46a23cbbc389b74b0356ac",
+    "data/derived/temporal_calibration_v1/predictions_2015.parquet": "c901e7a7472f29d01c38fda2949d2a5acf33374fca24345c1b301d864912337a",
+    "data/derived/temporal_calibration_v1/predictions_2016.parquet": "b431cc786fe15d7c639f702760fa806192ed4ea9b0faed168948380dae76d894",
+    "data/derived/temporal_calibration_v1/predictions_2017.parquet": "9b7e86ffdc2633140fe18069008fae2d4ace50992f1d66b81b94f0b7745c2e82",
+    "data/derived/temporal_calibration_v1/predictions_2018.parquet": "b300a60aa58db58e58af21c869f7c6b0b915c9bb5031befbc5783aaf237a6ef8",
+    "data/derived/temporal_calibration_v1/predictions_2019.parquet": "0349a836b2440ddc9eebc336433132c0c183ef48cc4e8e4972b7720b988f44eb",
+    "data/derived/temporal_calibration_v1/selection.json": "d37b3b000b9feb518abc5e6451482a4c807f8438558354de2d4f4001e41a7a92",
+    "data/derived/temporal_calibration_v1/validation.json": "842013801b6200dfab4c4ffcda11ddd01a768583a4a6666d078a1a4612eb57f4",
+    "data/reference/modeling_contract.json": "51b47f05f4e335e9c6392ca8290bc241f97a2ff7e1b91eac704eaa95d64ba927",
+    "data/reference/severity_protocol.json": "7684a32e919a0b73f57ed55e7c1c796c4cb5a73c1a62cdeb76a1ff8889259491",
+    "data/reference/temporal_calibration_v1_protocol.json": "756f5d52e79da6f6b63a5bfa576e1b814b6749165d3881a1aa34c76fc424ec73",
+    "data/source_catalog.json": "dfb740ae5aab5a1f4b3d50a3e1de15b6688d72ca92bef70f0c411b0e0e9d2b06",
+    "data/sources.json": "21f3a6e5b5f895fcfb3e12befd38982f8b543f297c41dcbfd4bcc4bc8a5b3dc7",
+    "docs/severity_modeling.md": "cf66553bf85e195871d0459c232dd2ffbd737b1f7f803831cf748e491b6eccc1",
+    "docs/severity_protocol.md": "ee46aa92fd6ca38b2214924f4ddeac734703399f192c9f68eb06ac6f9fb4895f",
+    "docs/temporal_calibration_v1_protocol.md": "e798968c1ade8ce0eb74052c3635223f0cea3123de238a61525c26ea5874ea00",
+    "docs/temporal_calibration_v1_results.md": "db4033f1544b857ecc3ae268884d221a1967ca350388dd1b7c755946c4830aaa",
+    "docs/temporal_calibration_v1_validation.md": "d40081ca4bf680a0f45904ccd0ec308f6c14ea5a5966fdd816939bafe1ec0aec",
+    "models/severity_model_card.md": "a919b622b2a4c348d73dfa1f3aa2cfa3456fc5be872aaa5c4dee90bbad210824",
+    "models/temporal_calibration_v1_card.md": "4ac95f35443ea3e160959e5f1a92b9af4f6298be2b7ade78b0dc632a9cd4585e",
+    "notebooks/04_chronological_severity_baselines.ipynb": "f629d1bf9f946c9a3488c4c7e333372f44215c60dbef709108d13e1971a0a0de",
+    "notebooks/05_temporal_robustness_calibration_v1.ipynb": "bcc79544fad9799ce9411a9be08503239443bbf7e0cd9427b3a651d3def3aee2",
+    "reports/figures/severity_annual_performance.png": "9d7c445e850d2f2106ad00246f0beec06fa49ff1954e9e8d5924b0897054089c",
+    "reports/figures/severity_calibration.png": "62537d9c9785e25260202f1eebb286b34dd6aa6f71dbc38d5d36ef85664c7681",
+    "reports/figures/severity_coefficients.png": "6dac737bca87635440c652458f4377d2d1835ad984426039dc0dbfc58628dd54",
+    "reports/figures/severity_precision_recall.png": "1bf829822937ee5ea161798de390fa2a9fd29a2c3fa306b2b0d740576aca0e7a",
+    "reports/figures/tcal_v1_annual_scores.png": "583ba69d4bcd02e2bb56b2b34732f15afc764dad2b3982662715b60bddb1e598",
+    "reports/figures/tcal_v1_reliability.png": "76c853d366100ba559c0b8ee03d446553519770b468785660f393b9e97af8652",
+    "reports/tables/severity_calibration.csv": "04c36ab774f304c1c0be73672ca3c5c784cf323c881f85f9625b1f5a35d44232",
+    "reports/tables/severity_coefficients.csv": "ac3f597a43f52d5223cbb19bdc677f84dc4f6934317d519a00a3b0cc80d07a02",
+    "reports/tables/severity_feature_distributions.csv": "aad6d4bf5103a9774df57b8e935ccc92250c6c7bef449d103105a80bae8ebf49",
+    "reports/tables/severity_metrics.csv": "322f08d227c9219c19c56d0cb9488e7a913c2a9fbcb96ad1b2d0857124ff1830",
+    "reports/tables/severity_training_levels.csv": "c03901cde631b8b60cc7fd3b68d7621218aebe0c151f427ef810044df5fb5ae6",
+    "reports/tables/tcal_v1_calibrators.csv": "f4930cc0bca62f547036cdf4ed742cd1cd79a4a8d4424144024d5ddc1ec35e5b",
+    "reports/tables/tcal_v1_ece.csv": "c6d0e9c9fd5dc185ba9b54b5f5aee9b8ec79e51f5ad0e384d6b0806d25634985",
+    "reports/tables/tcal_v1_level_support.csv": "d755d2e1f0621d53afe93be37fec62b26480c3c17192d5d5ef88fbf9df1119de",
+    "reports/tables/tcal_v1_macro.csv": "498465e0ca07afc594893a716297ce9e9bc8825d830890b39a24344feb8c9955",
+    "reports/tables/tcal_v1_membership.csv": "41a90228df5e11374661eca35ad2ada061baf8d2c45240c78daf229c4e33ce9e",
+    "reports/tables/tcal_v1_metrics.csv": "fd43e7e0e7be7660fee0f82ee0cbc2b4544ad2dbf8051eb10da4d925ed95c6f8",
+    "reports/tables/tcal_v1_pooled.csv": "056fb99c7bec0b606bfec8441825c021225193fd1cc2d12289fb3f2210df92f8",
+    "reports/tables/tcal_v1_reliability.csv": "e3162b7056926744e633c01af9d192beada790d0ad76b03b43786d8be99fd58b",
+    "reports/tables/tcal_v1_selection.csv": "30d613a8c2f25fefe0d14ddfe0e7f6399a2fff35e646c7a14f9ba5bf44d821e2",
+    "src/road_to_safety/explore.py": "a88658ec7a2b196e7ba69beaf10c04fb1a734657c0ecdebad18da95d140bdc8b",
+    "src/road_to_safety/fit_severity.py": "a117826333712dabd2e9dc0a708653a6a0e56c95c881315a64bdf4099fded7f7",
+    "src/road_to_safety/fit_temporal_calibration_v1.py": "b37d28bc60f2b24fc79adc0c8b33a13abdfef5b2517b4d8804027ebacf5b74cd",
+    "uv.lock": "bb9a34f74eabd6afe3e0c24cbb9a091760b342a5ae46c69e531b4070229d7333"
+  },
+  "upstream_status_required": {
+    "data/derived/prepared_validation.json": "passed",
+    "data/derived/severity_validation.json": "passed",
+    "data/derived/temporal_calibration_v1/validation.json": "passed"
+  },
+  "saved_model_path": "data/derived/temporal_calibration_v1/model_2019.json",
+  "saved_selection_path": "data/derived/temporal_calibration_v1/selection.json",
+  "selected_method": "sigmoid",
+  "base_training_years": [
+    1999,
+    2016
+  ],
+  "calibration_training_years": [
+    2017,
+    2018
+  ],
+  "parameter_policy": "Load all saved coefficients and intercept exactly; do not fit or reconstruct a newly trained estimator. Same 1999\u20132016 base fit as original severity baseline; sigmoid is from the final 2019 development fold, calibrated ONLY on 2017\u20132018. It is not a calibrator fitted on 2017\u20132019.",
+  "frozen_model_parameters": {
+    "features": [
+      "C_MNTH",
+      "C_WDAY",
+      "C_HOUR",
+      "C_RCFG",
+      "C_WTHR",
+      "C_RSUR",
+      "C_RALN",
+      "C_TRAF"
+    ],
+    "categories": {
+      "C_MNTH": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "UU",
+        "XX"
+      ],
+      "C_WDAY": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "U",
+        "X"
+      ],
+      "C_HOUR": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "UU",
+        "XX"
+      ],
+      "C_RCFG": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "QQ",
+        "UU",
+        "XX"
+      ],
+      "C_WTHR": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "Q",
+        "U",
+        "X"
+      ],
+      "C_RSUR": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "Q",
+        "U",
+        "X"
+      ],
+      "C_RALN": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "Q",
+        "U",
+        "X"
+      ],
+      "C_TRAF": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "QQ",
+        "UU",
+        "XX"
+      ]
+    },
+    "references": {
+      "C_MNTH": "1",
+      "C_WDAY": "1",
+      "C_HOUR": "12",
+      "C_RCFG": "1",
+      "C_WTHR": "1",
+      "C_RSUR": "1",
+      "C_RALN": "1",
+      "C_TRAF": "18"
+    },
+    "encoded_features": [
+      {
+        "feature": "C_MNTH",
+        "code": "2"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "3"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "4"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "5"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "6"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "7"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "8"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "9"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "10"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "11"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "12"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "UU"
+      },
+      {
+        "feature": "C_MNTH",
+        "code": "XX"
+      },
+      {
+        "feature": "C_WDAY",
+        "code": "2"
+      },
+      {
+        "feature": "C_WDAY",
+        "code": "3"
+      },
+      {
+        "feature": "C_WDAY",
+        "code": "4"
+      },
+      {
+        "feature": "C_WDAY",
+        "code": "5"
+      },
+      {
+        "feature": "C_WDAY",
+        "code": "6"
+      },
+      {
+        "feature": "C_WDAY",
+        "code": "7"
+      },
+      {
+        "feature": "C_WDAY",
+        "code": "U"
+      },
+      {
+        "feature": "C_WDAY",
+        "code": "X"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "0"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "1"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "2"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "3"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "4"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "5"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "6"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "7"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "8"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "9"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "10"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "11"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "13"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "14"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "15"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "16"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "17"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "18"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "19"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "20"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "21"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "22"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "23"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "UU"
+      },
+      {
+        "feature": "C_HOUR",
+        "code": "XX"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "2"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "3"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "4"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "5"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "6"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "7"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "8"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "9"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "10"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "11"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "12"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "QQ"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "UU"
+      },
+      {
+        "feature": "C_RCFG",
+        "code": "XX"
+      },
+      {
+        "feature": "C_WTHR",
+        "code": "2"
+      },
+      {
+        "feature": "C_WTHR",
+        "code": "3"
+      },
+      {
+        "feature": "C_WTHR",
+        "code": "4"
+      },
+      {
+        "feature": "C_WTHR",
+        "code": "5"
+      },
+      {
+        "feature": "C_WTHR",
+        "code": "6"
+      },
+      {
+        "feature": "C_WTHR",
+        "code": "7"
+      },
+      {
+        "feature": "C_WTHR",
+        "code": "Q"
+      },
+      {
+        "feature": "C_WTHR",
+        "code": "U"
+      },
+      {
+        "feature": "C_WTHR",
+        "code": "X"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "2"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "3"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "4"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "5"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "6"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "7"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "8"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "9"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "Q"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "U"
+      },
+      {
+        "feature": "C_RSUR",
+        "code": "X"
+      },
+      {
+        "feature": "C_RALN",
+        "code": "2"
+      },
+      {
+        "feature": "C_RALN",
+        "code": "3"
+      },
+      {
+        "feature": "C_RALN",
+        "code": "4"
+      },
+      {
+        "feature": "C_RALN",
+        "code": "5"
+      },
+      {
+        "feature": "C_RALN",
+        "code": "6"
+      },
+      {
+        "feature": "C_RALN",
+        "code": "Q"
+      },
+      {
+        "feature": "C_RALN",
+        "code": "U"
+      },
+      {
+        "feature": "C_RALN",
+        "code": "X"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "1"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "2"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "3"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "4"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "5"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "6"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "7"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "8"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "9"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "10"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "11"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "12"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "13"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "14"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "15"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "16"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "17"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "QQ"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "UU"
+      },
+      {
+        "feature": "C_TRAF",
+        "code": "XX"
+      }
+    ],
+    "coefficients": [
+      -0.037250831157392424,
+      -0.037061173360078616,
+      0.03244093414526642,
+      0.039702620177653115,
+      0.027582527727646643,
+      0.1137760882933311,
+      0.12451761523357549,
+      0.12028533130937413,
+      0.11265953432792165,
+      0.0788011088627478,
+      0.10608092756905252,
+      0.21472133214906336,
+      0.0,
+      -0.04980920797209192,
+      -0.03995693383597931,
+      0.004857407135952114,
+      0.020339190289700965,
+      0.1379006707229944,
+      0.1655231535250816,
+      -0.22224898122311987,
+      0.0,
+      0.7847122681540685,
+      0.8921198865026654,
+      0.907530709969288,
+      0.8653536625926543,
+      0.8339073877069458,
+      0.8359128063792047,
+      0.5419585505507143,
+      0.156897546170525,
+      -0.13234739805711743,
+      0.1878074065024424,
+      0.18365860882415155,
+      0.09697267800585606,
+      0.04454120303722344,
+      0.0889689325155434,
+      -0.015697037754317564,
+      -0.04736194302656474,
+      0.0014072158771074321,
+      0.22973345971665715,
+      0.35731362591747623,
+      0.5099346679856614,
+      0.5089236736912164,
+      0.5989820060075473,
+      0.6740426686422955,
+      0.4719444261707666,
+      0.0,
+      -0.3756612235674501,
+      -0.7217579724354248,
+      0.45079169541639946,
+      -0.0641300798297352,
+      0.010653273905973995,
+      0.9655461356088909,
+      -1.206180754177979,
+      -1.1378157138000478,
+      0.06776884940707888,
+      0.0,
+      0.0,
+      -0.1508293149995878,
+      -0.06510020266570321,
+      0.0,
+      0.11348527300469195,
+      -0.056117403347762995,
+      0.05307693287265432,
+      0.1563118375216185,
+      0.5023562897783502,
+      0.611815700658809,
+      0.40343106229519576,
+      -0.0523040550913652,
+      0.0,
+      -0.20077604777219657,
+      -0.5134674487232966,
+      -0.35980903206589765,
+      -0.5239647321643442,
+      0.24859436258227513,
+      0.4006039937187298,
+      -1.4437616422096102,
+      0.3300081746144762,
+      0.03803465855578097,
+      -0.01693979563987805,
+      0.0,
+      0.33670300096233413,
+      0.5368479833084783,
+      0.6511885955404134,
+      0.4617554440116033,
+      0.5400956003424929,
+      -0.21305840146891653,
+      -0.5528260180604562,
+      0.0,
+      -1.0691512740905618,
+      0.04995230191388009,
+      -0.216503630472688,
+      -1.1637507789057036,
+      0.17504970626392713,
+      -0.5050023584022066,
+      -0.38671504657937256,
+      -0.8844268527316891,
+      -0.7986862806154281,
+      0.538620904631738,
+      0.29604756071277394,
+      0.5080419571098752,
+      -0.7846347417006684,
+      0.0,
+      0.5161338743578544,
+      1.1401210783073548,
+      -0.005906121227346182,
+      -0.15006125060248254,
+      -0.3934069665000941,
+      0.0
+    ],
+    "intercept": -4.149527843473987,
+    "train_prevalence": 0.01608011759484342
+  },
+  "frozen_sigmoid_parameters": {
+    "slope": 0.9697790551002594,
+    "intercept": -0.1386345837431384
+  },
+  "features": [
+    "C_MNTH",
+    "C_WDAY",
+    "C_HOUR",
+    "C_RCFG",
+    "C_WTHR",
+    "C_RSUR",
+    "C_RALN",
+    "C_TRAF"
+  ],
+  "categorical_domains": {
+    "C_MNTH": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "UU",
+      "XX"
+    ],
+    "C_WDAY": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "U",
+      "X"
+    ],
+    "C_HOUR": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20",
+      "21",
+      "22",
+      "23",
+      "UU",
+      "XX"
+    ],
+    "C_RCFG": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "QQ",
+      "UU",
+      "XX"
+    ],
+    "C_WTHR": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "Q",
+      "U",
+      "X"
+    ],
+    "C_RSUR": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "Q",
+      "U",
+      "X"
+    ],
+    "C_RALN": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "Q",
+      "U",
+      "X"
+    ],
+    "C_TRAF": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "QQ",
+      "UU",
+      "XX"
+    ]
+  },
+  "reference_levels": {
+    "C_MNTH": "1",
+    "C_WDAY": "1",
+    "C_HOUR": "12",
+    "C_RCFG": "1",
+    "C_WTHR": "1",
+    "C_RSUR": "1",
+    "C_RALN": "1",
+    "C_TRAF": "18"
+  },
+  "encoding": {
+    "method": "dictionary-fixed one-hot encoding; drop exactly the declared reference per feature; sparse float64 matrix",
+    "category_order": "exactly categorical_domains order",
+    "data_learned_vocabulary": false,
+    "out_of_domain": "Reject the run before fitting or scoring, including null, blank, conflicting or undocumented codes; preserve immutable prepared inputs for investigation.",
+    "sentinels": "Preserve dictionary-supported unknown U/UU, other Q/QQ and unavailable X/XX as distinct levels; no imputation, pooling or complete-case deletion.",
+    "train_unobserved": "Keep supported dictionary column; training-zero columns have neutral zero coefficient and are flagged in coefficient and score-support evidence. Report test/validation occurrence separately; a neutral coefficient is lack of training evidence, not demonstrated absence of association."
+  },
+  "candidates": {
+    "unchanged": {
+      "probability": "expit(z)"
+    },
+    "sigmoid": {
+      "probability": "expit(a*z+b)",
+      "a": 0.9697790551002594,
+      "b": -0.1386345837431384
+    },
+    "prevalence": {
+      "probability": 0.01608011759484342,
+      "description": "Constant fatal proportion in saved 1999\u20132016 training data, not 2020\u20132021 prevalence."
+    }
+  },
+  "scoring": "Compute float64 z directly as saved intercept plus saved dictionary-fixed one-hot coefficients. No logit recovery from clipped predictions. Save keys, year, unchanged target, features or independently joinable keys, z and all three probabilities.",
+  "metrics": {
+    "positive_class": 1,
+    "primary": "Annual natural-log binary log loss, each of 2020 and 2021 separately; use float64-epsilon clipping. No method selection.",
+    "secondary": [
+      "brier_score",
+      "average_precision",
+      "roc_auc",
+      "mean_predicted_probability",
+      "observed_fatal_proportion",
+      "mean_prediction_minus_observed",
+      "observed_expected_ratio"
+    ],
+    "brier_score": "mean((y-p)^2); lower is better",
+    "average_precision": "Recall-step weighted precision, not trapezoidal PR area; higher is better.",
+    "roc_auc": "Probability ranking AUC; higher is better. Undefined one-class ranking measures are null.",
+    "observed_expected_ratio": "sum(y)/sum(p); null if sum(p)=0. Values above 1 indicate aggregate underprediction.",
+    "aggregation": "Report annual and collision-weighted pooled scores for each method; equal-weight macro mean of the two annual metrics is descriptive only. Macro ranking is arithmetic mean of defined annual metrics, not pooled ranking. No uncertainty or independence claim from two years.",
+    "calibration_partition_metrics": "No new calibration partition, calibration fitting or in-sample rescoring."
+  },
+  "reliability": {
+    "schemes": {
+      "fixed_10": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        1.0
+      ],
+      "low_probability": [
+        0,
+        0.005,
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.05,
+        0.1,
+        0.2,
+        0.3,
+        0.5,
+        1
+      ]
+    },
+    "intervals": "[lower,upper), final bin includes 1.0",
+    "outputs": [
+      "count",
+      "fatal_count",
+      "mean_predicted_probability",
+      "observed_fatal_proportion",
+      "sparse"
+    ],
+    "empty_bins": "Retain with count 0 and null averages.",
+    "ece": "Weighted absolute bin difference, sum((n_bin/n)*abs(observed-mean_prediction)); descriptive/bin-dependent, not a selection criterion."
+  },
+  "sparse_rule": {
+    "count_below": 100,
+    "fatal_count_below": 5,
+    "operator": "OR",
+    "action": "Flag and retain; no stable subgroup ranking or mechanistic interpretation."
+  },
+  "support_reporting": {
+    "partitions": [
+      "2020",
+      "2021",
+      "pooled_2020_2021"
+    ],
+    "feature_level_support": "Report every dictionary category including zero support, with n, fatal count and training-unobserved status from saved training support. A zero training coefficient for unsupported levels is not evidence of no association.",
+    "quality_groups": "For each feature separately: stated, unknown U/UU, other Q/QQ, unavailable X/XX, including zero groups. Also pure has_unknown, has_other and has_unavailable presence/absence flags across the eight features; flags overlap. No mutually exclusive priority recoding. Other is not missing.",
+    "quality_metrics": "All three methods probability and ranking scores with n, fatal count and sparse flag, separately each year and pooled. Empty groups: null scores; one-class ranking scores: null. Both flag states retained even if empty."
+  },
+  "differences": {
+    "reference": "unchanged",
+    "direction": "sigmoid minus unchanged; negative log-loss/Brier deltas favor sigmoid. Report actual annual, pooled and macro deltas.",
+    "prevalence": "Report comparator scores without using stress labels to modify its probability."
+  },
+  "descriptive_transfer_assessment": {
+    "tolerance": 1e-10,
+    "favorable_only_if": "For BOTH 2020 and 2021, sigmoid log_loss minus unchanged log_loss < -1e-10 AND sigmoid Brier <= unchanged Brier + 1e-10. Otherwise transfer is not demonstrated.",
+    "output_values": [
+      "favorable_descriptive_transfer",
+      "transfer_not_demonstrated"
+    ],
+    "interpretation": "This predeclared descriptive assessment cannot establish independent generalization, causal change, deployment readiness or justify replacing the baseline. Pooled improvement cannot override an annual failure.",
+    "new_method_selection": false,
+    "model_replacement": false
+  },
+  "prohibitions": [
+    "No fitting, recalibration, optimization, resampling, weighting, feature/domain/reference changes, model search, new candidate methods, threshold changes or threshold selection.",
+    "No intercept-only scoring: compare only unchanged, saved selected sigmoid and saved training-prevalence comparator.",
+    "Do not alter any original baseline or completed temporal-calibration artifacts, receipts or protocols. New artifacts live under calibration_stress_v1 names.",
+    "Do not label 2020\u20132021 pristine, independent, prospective, or fresh holdouts.",
+    "No confidence intervals, statistical-significance or causal/accident-occurrence/individual-mortality/operational-success claims."
+  ],
+  "acceptance": [
+    "Protocol frozen and hash delivered before builder authorized to score.",
+    "All frozen inputs and upstream passed receipts verified before and after scoring.",
+    "All source keys and binary targets exactly covered once, years and dictionary handling verified independently.",
+    "Scores independently reconstructed from saved immutable parameters and raw categorical source values; saved sigmoid parameters exact.",
+    "All annual, pooled, macro and quality scores, both reliability bin schemes, ECE and deltas independently reconciled; empty groups/bins retained.",
+    "Descriptive transfer assessment computed by the frozen annual rule; no new selection or baseline replacement.",
+    "Original baseline and completed temporal-calibration assets remain byte-for-byte unchanged."
+  ],
+  "limitations": [
+    "All six evaluation years were previously inspected during descriptive analysis and prior baseline development; this is a new frozen developmental experiment, not pristine external validation.",
+    "Source and reporting changes can alter observed case mix; annual changes do not identify a causal mechanism.",
+    "Candidate collisions represent recorded fatal/injury collisions with release-scoped identities.",
+    "No exposure denominator, prospective feature-availability verification or independent contemporary event dataset.",
+    "Expanded historical training windows overlap and share calibration/evaluation history across folds; six annual scores are dependent.",
+    "Saved sigmoid was estimated only in 2017\u20132018; later case mix and fatal prevalence can differ. These comparisons do not identify a drift mechanism.",
+    "Subgroup scores are descriptive; n<100 or fatal<5 is sparse and unsuitable for stable subgroup ranking."
+  ],
+  "amendment_policy": "Never overwrite this frozen protocol after new scores. Any methodological amendment requires a separately versioned protocol and disclosure of inspected results."
+}

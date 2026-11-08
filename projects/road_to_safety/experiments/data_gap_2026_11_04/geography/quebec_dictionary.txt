@@ -1,0 +1,313 @@
+Le tableau de la documentation des variables du jeu de données est présenté comme suit:
+
+VARIABLE: Nom de la variable utilisé au jeu de données.
+
+DESCRIPTION VARIABLE: Nom fonctionnel et/ou description détaillée de la variable.
+
+VALEUR POSSIBLE: Valeurs possibles que peut prendre la variable décrite sur le rapport d'accident, s'il y a lieu.
+
+DESCRIPTION VALEUR: Description des valeurs que peut prendre la variable, s'il y a lieu.
+
+EXPLICATION VALEUR: Explications supplémentaires des contenus des variables, s'il y a lieu.
+
+TYPE: Type de la variable: Num (numérique), Alph (alphanumérique).
+
+LONGUEUR: Nombre de caractères possibles pour la variable.
+
+
+
+
+                                                                                                                    1/7
+          VARIABLE               DESCRIPTION VARIABLE                              VALEUR POSSIBLE                                    DESCRIPTION VALEUR                                                           EXPLICATION VALEUR                              TYPE LONGUEUR
+                                                                                      (s'il y a lieu)                                     (s'il y a lieu)                                                              (s'il y a lieu)
+AN                   Année de l'accident (AAAA).                                                                                                                                                                                                                   Num      8
+NO_SEQ_COLL          Numéro séquentiel identifiant l'accident.                                                     Composé de l'année de l'accident et d'un numéro séquentiel.       Exemple: AAAA _ 999, où l'année et le numéro séquentiel sont séparés par un   Alph    15
+                                                                                                                                                                                     espace, une barre de soulignement et un espace.
+MS_ACCDN             Mois de l’accident.                                                    01                     Janvier                                                                                                                                         Alph     4
+                                                                                            02                     Février
+                                                                                            03                     Mars
+                                                                                            04                     Avril
+                                                                                            05                     Mai
+                                                                                            06                     Juin
+                                                                                            07                     Juillet
+                                                                                            08                     Août
+                                                                                            09                     Septembre
+                                                                                            10                     Octobre
+                                                                                            11                     Novembre
+                                                                                            12                     Décembre
+HR_ACCDN             Heure de l’accident.                                            00:00:00-03:59:00             Intervalle de 4 heures, contenant l'heure réelle de l'accident.                                                                                 Alph    20
+                                                                                     04:00:00-07:59:00
+                                                                                     08:00:00-11:59:00
+                                                                                     12:00:00-15:59:00
+                                                                                     16:00:00-19:59:00
+                                                                                     20:00:00-23:59:00
+                                                                                                                   Non précisé
+JR_SEMN_ACCDN        Jour de la semaine de la date de l’accident.                           SEM                    Lundi au vendredi                                                                                                                               Alph     4
+                                                                                            FDS                    Samedi ou dimanche
+GRAVITE              Gravité de l’accident:                               Mortel ou grave                          Au moins une victime décédée dans les 30 jours suivant            Modalité à utiliser pour obtenir les chiffres du bilan routier.               Alph    54
+                     Indique la gravité de l’accident en fonction de la                                            l'accident
+                     présence et de l'état des victimes.                                                           ou
+                                                                                                                   aucun décès et au moins une victime blessée gravement
+                                                                                                                   (blessures nécessitant l'hospitalisation, incluant celles pour
+                                                                                                                   lesquelles la personne demeure en observation à l'hôpital).
+
+                                                                          Léger                                    Seulement une ou plusieurs victimes blessées légèrement           Modalité à utiliser pour obtenir les chiffres du bilan routier.
+                                                                                                                   (blessures ne nécessitant pas l'hospitalisation ni la mise en
+                                                                                                                   observation de la personne, même si elles exigent des
+                                                                                                                   traitements chez un médecin ou dans un centre hospitalier).
+
+                                                                          Dommages matériels seulement             Aucune victime, et l’évaluation des dommages est supérieure Modalité à utiliser pour obtenir les chiffres du bilan routier.
+                                                                                                                   au seuil de rapportage (seuil de 2 000$ depuis mars 2010).
+
+                                                                          Dommages matériels inférieurs au seuil   Aucune victime, et l’évaluation des dommages est inférieure       Modalité à exclure pour obtenir les chiffres du bilan routier.
+                                                                          de rapportage                            ou égale au seuil de rapportage (seuil de
+                                                                                                                   2 000$ depuis mars 2010).
+NB_VICTIMES_TOTAL    Nombre total de victimes (décès, blessés graves et                      0                     Aucune victime est décédée ou n’a été blessée.                                                                                                  Num      8
+                     blessés légers) dans l'accident.                                        1                     1 victime est décédée ou a été blessée.
+                                                                                             2                     2 victimes sont décédées ou ont été blessées.
+                                                                                             9                     3 victimes ou plus sont décédées ou ont été blessées.
+
+
+
+
+                                                                                                                                                                                                                                                                                   2/7
+       VARIABLE                      DESCRIPTION VARIABLE                               VALEUR POSSIBLE                                DESCRIPTION VALEUR                                         EXPLICATION VALEUR                                    TYPE LONGUEUR
+                                                                                           (s'il y a lieu)                                    (s'il y a lieu)                                         (s'il y a lieu)
+NB_VEH_IMPLIQUES_ACCDN   Nombre de véhicules impliqués dans l'accident.                           1                 1 seul véhicule routier a été impliqué.                                                                                             Num      8
+                                                                                                  2                 2 véhicules routiers ont été impliqués.
+                                                                                                  9                 3 véhicules routiers ou plus ont été impliqués.
+                                                                                                                    Non précisé
+REG_ADM                  Région administrative du Québec:                      Bas-Saint-Laurent (01)               Bas-Saint-Laurent                                                                                                                   Alph    40
+                         La région administrative est déterminée à partir du   Saguenay―Lac-Saint-Jean (02)         Saguenay―Lac-Saint-Jean
+                         code de municipalité.                                 Capitale-Nationale (03)              Capitale-Nationale
+                                                                               Mauricie (04)                        Mauricie
+                                                                               Estrie (05)                          Estrie
+                                                                               Montréal (06)                        Montréal
+                                                                               Outaouais (07)                       Outaouais
+                                                                               Abitibi-Témiscamingue (08)           Abitibi-Témiscamingue
+                                                                               Côte-Nord (09)                       Côte-Nord
+                                                                               Nord-du-Québec (10)                  Nord-du-Québec
+                                                                               Gaspésie―Îles-de-la-Madeleine (11)   Gaspésie―Îles-de-la-Madeleine
+
+                                                                               Chaudière-Appalaches (12)            Chaudière-Appalaches
+                                                                               Laval (13)                           Laval
+                                                                               Lanaudière (14)                      Lanaudière
+                                                                               Laurentides (15)                     Laurentides
+                                                                               Montérégie (16)                      Montérégie
+                                                                               Centre-du-Québec (17)                Centre-du-Québec
+                                                                                                                    Non précisé
+VITESSE_AUTOR            Vitesse autorisée.                                                     <50                 Moins de 50 km/h                                  Vitesse permise, en kilomètres/heure, par l’autorité compétente sur la route où   Alph     8
+                                                                                                 50                 Vitesse permise en km/h                           est survenu l’accident. Pour un accident à une intersection, la vitesse la plus
+                                                                                                 60                                                                   élevée parmi celles des routes qui se croisent sera inscrite.
+                                                                                                 70
+                                                                                                 80
+                                                                                                 90
+                                                                                                100
+                                                                                                                    Non précisé
+
+
+
+
+                                                                                                                                                                                                                                                                        3/7
+       VARIABLE               DESCRIPTION VARIABLE                        VALEUR POSSIBLE                         DESCRIPTION VALEUR                                     EXPLICATION VALEUR                                   TYPE LONGUEUR
+                                                                             (s'il y a lieu)                             (s'il y a lieu)                                        (s'il y a lieu)
+CD_GENRE_ACCDN    Genre d’accident:                                            véhicule        Collision avec véhicule routier             Véhicule routier: automobile ou camion léger, camion, tracteur routier, véhicule- Alph      20
+                  Sert à indiquer la nature de l’accident et le premier                                                                    outil, véhicule d'équipement, autobus, minibus, taxi, véhicule d'urgence,
+                  fait physique (impact).                                                                                                  motocyclette, cyclomoteur, véhicule récréatif, motoneige, VHR, motocyclette
+                                                                                                                                           visée par la loi VHR.
+                                                                                piéton         Collision avec piéton                       Toute personne qui circule à pied, tire, pousse un objet ou se trouve sur ou dans
+                                                                                                                                           cet objet. Toute personne qui utilise un équipement qui n'est pas autorisé à
+                                                                                                                                           circuler sur un chemin public est assimilée à un piéton.
+                                                                                cycliste       Collision avec cycliste                     Toute personne qui circule à bicyclette (assistée ou non), en tricycle, en
+                                                                                                                                           monocycle ou en quadricycle.
+                                                                                animal         Collision avec animal                       Animal domestique ou sauvage.
+                                                                               objet fixe      Lampadaire                                  Support fixe servant à soutenir des équipements d'éclairage.
+                                                                                               Support/feu de signalisation                Support servant à soutenir de façon permanente des panneaux de signalisation
+                                                                                                                                           ou des feux de signalisation.
+                                                                                               Poteau (service public)                     Support fixe servant à soutenir des équipements d'utilité publique, autre qu'un
+                                                                                                                                           lampadaire ou un feu de signalisation.
+                                                                                               Arbre                                       Toute espèce d'arbres, excluant les haies.
+                                                                                               Section de glissière de sécurité            Section d'un dispositif de protection en tôle ondulée, en béton (New Jersey) ou en
+                                                                                                                                           acier, servant à retenir les véhicules routiers quittant la chaussée.
+
+                                                                                               Atténuateur d’impact                        Dispositif de sécurité installé devant des obstacles fixes le long d'une route pour
+                                                                                                                                           réduire les préjudices corporels et les dommages matériels, lorsqu'un véhicule
+                                                                                                                                           quitte la route devant l'obstacle.
+                                                                                               Extrémité de glissière de sécurité          Bout de la glissière, excluant les atténuateurs d’impact.
+                                                                                               Pilier (pont/tunnel)                        Partie d’une structure (pont, tunnel, viaduc) qui en supporte la charge.
+                                                                                               Amoncellement de neige                      Accumulation de neige.
+                                                                                               Bâtiment/édifice/mur                        Comprend, entre autres, toute construction servant à abriter des individus, des
+                                                                                                                                           animaux ou des choses.
+                                                                                               Bordure/trottoir                            Bande qui limite le bord de la chaussée ou l’accotement, ou chemin surélevé
+                                                                                                                                           longeant une rue et réservé aux piétons.
+                                                                                               Borne-fontaine                              Pièce d’équipement servant de point d’eau et généralement utilisée pour
+                                                                                                                                           combattre un incendie.
+                                                                                               Clôture/barrière                            Enceinte qui délimite un espace. Inclut aussi les haies.
+                                                                                               Fossé                                       Tranchée ou canal aménagé le long d’une route, servant à l’écoulement de l’eau.
+
+                                                                                               Paroi rocheuse                              Mur de roc longeant une route.
+                                                                                               Ponceau                                     Conduite de drainage, généralement en béton ou en métal, servant au passage
+                                                                                                                                           de l’eau sous une route, une entrée, un accès.
+                                                                                               Autre objet fixe                            Tout objet impliqué dans une collision, autre que ceux décrits précédemment.
+
+                                                                             sans collision    Capotage                                    Lorsqu’un véhicule a culbuté ou capoté.
+                                                                                               Renversement                                Lorsqu’un véhicule se retrouve sur un de ses côtés, sans avoir capoté.
+                                                                                               Submersion/cours d’eau                      Lorsqu’un véhicule a plongé dans l’eau ou qu’il se retrouve dans un cours d’eau
+                                                                                                                                           (ex.: rivière, lac).
+                                                                                               Feu/explosion                               Lorsqu’un véhicule a pris feu ou a explosé.
+                                                                                               Quitte la chaussée                          Lorsqu’un véhicule quitte la surface de roulement à la suite de la perte de
+                                                                                                                                           contrôle du conducteur.
+                                                                                               Autre                                       Tout événement sans collision, autre que ceux décrits précédemment.
+                                                                                 autre         Autre genre de collision                    Tout genre de collision, autre que ceux décrits précédemment.
+                                                                                                                                           Exemples: une collision avec un train, un obstacle temporaire ou un objet
+                                                                                                                                           projeté/détaché.
+                                                                                               Non précisé
+
+
+
+
+                                                                                                                                                                                                                                              4/7
+       VARIABLE               DESCRIPTION VARIABLE                      VALEUR POSSIBLE                         DESCRIPTION VALEUR                                    EXPLICATION VALEUR                                         TYPE LONGUEUR
+                                                                           (s'il y a lieu)                          (s'il y a lieu)                                         (s'il y a lieu)
+CD_ETAT_SURFC     État de la surface de roulement lors de l’accident.             11         Sèche                                       Surface qui n'a reçu aucun liquide ou aucun matériau nuisant à l'adhérence des          Alph     4
+                                                                                                                                         pneus.
+                                                                               12            Mouillée                                    Surface qui a reçu un liquide de nature à diminuer l’adhérence entre le véhicule
+                                                                                                                                         et la surface (autre qu’une substance huileuse ou graisseuse).
+
+                                                                               13            Accumulation d’eau (aquaplanage)            Surface où une pellicule d’eau entre la chaussée et les pneus entraîne la perte
+                                                                                                                                         complète d’adhérence d’un véhicule.
+                                                                               14            Sable, gravier sur la chaussée              Surface couverte de sable ou de gravier.
+                                                                               15            Gadoue/neige fondante                       Surface qui est couverte de neige mouillée ou de neige fondante.
+                                                                               16            Enneigée                                    Surface qui est couverte de neige.
+                                                                               17            Neige durcie                                Surface couverte de neige qui est compactée et qui a durci.
+                                                                               18            Glacée                                      Surface qui a perdu son adhérence à la suite de l’apparition de glace.
+                                                                               19            Boueuse                                     Surface d’un chemin de terre à la suite d’une pluie ou toute autre surface qui a
+                                                                                                                                         perdu de son adhérence par la présence de boue.
+                                                                               20            Huileuse                                    Présence d’huile ou de produit graisseux sur la chaussée.
+                                                                               99            Autre                                       Tout état de la surface, autre que ceux décrits précédemment.
+                                                                                             Non précisé
+CD_ECLRM          Éclairement:                                                  1            Jour et clarté                              Jour: Période comprise entre une demi-heure avant le lever du soleil et une demi- Alph           3
+                  Degré de clarté des lieux au moment de l’accident.                                                                     heure après son coucher.
+                  L’éclairement fait référence à deux périodes d’une                                                                     Clarté: Fait référence à la période comprise entre le lever du soleil et son
+                  journée, soit le jour et la nuit.                                                                                      coucher.
+                                                                                2            Jour et demi-obscurité                      Jour: Période comprise entre une demi-heure avant le lever du soleil et une demi-
+                                                                                                                                         heure après son coucher.
+                                                                                                                                         Demi-obscurité: Fait référence à la période entre la nuit et le lever du soleil et à la
+                                                                                                                                         période entre le coucher du soleil et la nuit.
+                                                                                3            Nuit et chemin éclairé                      Nuit: Période comprise entre une demi-heure après le coucher du soleil et une
+                                                                                                                                         demi-heure avant son lever.
+                                                                                                                                         Chemin éclairé: Chemin le long duquel sont installés des équipements
+                                                                                                                                         d’éclairage qui fonctionnaient au moment de l’accident.
+                                                                                4            Nuit et chemin non éclairé                  Nuit: Période comprise entre une demi-heure après le coucher du soleil et une
+                                                                                                                                         demi-heure avant son lever.
+                                                                                                                                         Chemin non éclairé: Chemin le long duquel, dans la région immédiate de
+                                                                                                                                         l’accident, aucun équipement d’éclairage n’est installé ou l’équipement en place
+                                                                                                                                         ne fonctionnait pas.
+                                                                                             Non précisé
+CD_ENVRN_ACCDN    Environnement:                                                1            Scolaire                                    Région immédiate d’un établissement d’enseignement.                                   Alph       3
+                  Activité dominante du secteur où l’accident s’est             2            Résidentiel                                 Secteur domiciliaire principalement.
+                  produit.                                                      3            Affaires / commercial                       Secteur où l’activité principale est d’ordre commercial, administratif ou d’affaires.
+
+                                                                                4            Industriel / manufacturier                  Secteur où l’activité principale est d’ordre industriel, manufacturier.
+                                                                                5            Rural                                       Secteur hors des limites des cités, villes et villages, sauf le secteur forestier.
+
+                                                                                6            Forestier                                   Secteur où l’activité principale est l’exploitation forestière ou forêt, même si on y
+                                                                                                                                         trouve quelques habitations.
+                                                                                9            Autre (ex. lac, récréatif, parc, camping)   Toute activité dominante du secteur, autre que celles mentionnées
+                                                                                                                                         précédemment.
+                                                                                             Non précisé
+CD_CATEG_ROUTE    Catégorie de route sur laquelle le premier fait               1            Chemin public                               Exemples: route numérotée, bretelle, collecteur d'autoroute, voie de service,      Alph          4
+                  physique (impact) s’est produit.                                                                                       artère principale, rue résidentielle, chemin, rang, ruelle.
+                                                                                2            Hors chemin public                          Exemples: terrain de stationnement, terrain privé, chemin privé, chemin forestier,
+                                                                                                                                         sentier balisé.
+                                                                                             Non précisé
+
+
+
+                                                                                                                                                                                                                                                 5/7
+       VARIABLE                  DESCRIPTION VARIABLE                         VALEUR POSSIBLE                        DESCRIPTION VALEUR                                                       EXPLICATION VALEUR                                      TYPE LONGUEUR
+                                                                                 (s'il y a lieu)                             (s'il y a lieu)                                                      (s'il y a lieu)
+CD_ASPCT_ROUTE       Aspect de la route sur le lieu de l’accident au                  Droit        Chaussée où la direction de la circulation est relativement                                                                                        Alph     8
+                     moment de l’impact et dans son entourage                                      droite.
+                     immédiat en fonction du champ de vision d’un                  Courbe          Chaussée où la direction de la circulation tourne vers la
+                     conducteur assis au volant de son véhicule.                                   gauche ou vers la droite.
+                                                                                                   Non précisé
+CD_LOCLN_ACCDN       Localisation longitudinale (le long de la route) du             12            En intersection (moins de 5 mètres)                           Intersection: Partie de la chaussée déterminée par la surface commune des        Alph         4
+                     premier fait physique (impact).                                               ou dans un carrefour giratoire                                routes qui se rencontrent ainsi que les surfaces excédentaires comprises dans un
+                                                                                                                                                                 rayon de 5 mètres autour de l’intersection.
+
+                                                                                                                                                                 Carrefour giratoire: Carrefour comportant trois branches ou plus, dans lequel
+                                                                                                                                                                 convergent les courants de circulation sur une chaussée à sens unique entourant
+                                                                                                                                                                 un îlot central ainsi que les surfaces excédentaires comprises dans un rayon de 5
+                                                                                                                                                                 mètres autour du carrefour.
+                                                                                     33            Près d’une intersection/carrefour giratoire                   À plus de 5 mètres, mais à moins de 100 mètres de l’intersection ou du carrefour.
+
+                                                                                     34            Entre intersections (100 mètres et +)                         À plus de 100 mètres de la surface commune des routes qui se rencontrent.
+
+                                                                                     40            Centre commercial                                             Partie carrossable, avec ou sans voies, appartenant à un centre commercial.
+
+                                                                                     69            Pont (au-dessus d’un cours d’eau)                             Structure permettant de traverser un cours d’eau.
+                                                                                                   Autre pont (viaduc)                                           Structure permettant de traverser une voie de circulation routière ou ferroviaire,
+                                                                                                                                                                 ou tout autre obstacle, autre qu’un cours d’eau.
+                                                                                                   Tunnel                                                        Galerie souterraine de grande section permettant le passage d’une voie de
+                                                                                                                                                                 communication.
+                                                                                                   Sous un pont ou un viaduc                                     En dessous d’une structure permettant de traverser des obstacles.
+                                                                                     99            Autres                                                        Toute localisation, autre que celles décrites précédemment.
+                                                                                                   Non précisé
+CD_CONFG_ROUTE       Configuration de la route:                                       1            Sens unique                                                   La circulation des véhicules est autorisée dans une direction seulement, indiquée Alph        4
+                     Caractéristiques des voies. Si l’accident a lieu à une                                                                                      par une flèche.
+                     intersection, la rue la plus importante de cette                23            Deux sens                                                     Les véhicules se déplacent dans les deux directions.
+                     intersection est décrite.                                       45            Séparée par aménagement                                       Les courants de circulation sont séparés par un aménagement physique.
+
+                                                                                      9            Autre                                                         Toute configuration, autre que celles mentionnées précédemment.
+                                                                                                                                                                 Exemples: balises, voie de virage à gauche dans les deux sens.
+                                                                                                   Non précisé
+CD_ZON_TRAVX_ROUTR   Indicateur si l'accident a eu lieu près ou dans une              O            Aux approches de la zone                                      Zone en amont des travaux où les conducteurs sont avisés des changements de Alph              3
+                     zone de travaux.                                                                                                                            voies, de la réduction de vitesse, des interdictions de passer, etc.
+
+                                                                                                   Dans la zone                                                  Zone où il y a des modifications de la configuration de la route ou de la vitesse
+                                                                                                                                                                 autorisée afin de permettre les travaux, ou dans laquelle il y a des travaux
+                                                                                                                                                                 mobiles.
+
+
+
+
+                                                                                                                                                                                                                                                                      6/7
+        VARIABLE                    DESCRIPTION VARIABLE                      VALEUR POSSIBLE                         DESCRIPTION VALEUR                                     EXPLICATION VALEUR                                    TYPE LONGUEUR
+                                                                                 (s'il y a lieu)                          (s'il y a lieu)                                          (s'il y a lieu)
+CD_COND_METEO           Conditions météorologiques:                                     11         Clair                                        Absence totale de nuages ou présence de nuages qui n’a pas pour effet              Alph     4
+                        Conditions atmosphériques présentes lors de                                                                             d’assombrir ou de rendre la vision moins distincte.
+                        l’accident.                                                  12            Couvert (nuageux/sombre)                     Ciel couvert de nuages sombres et épais ayant pour effet d’assombrir et de
+                                                                                                                                                rendre la vision moins distincte.
+                                                                                     13            Brouillard/brume                             « Fumée blanche opaque » formée de très petites gouttelettes d’eau en
+                                                                                                                                                suspension dans l’air.
+                                                                                     14            Pluie/bruine                                 Tombée régulière et continue de gouttelettes d’eau venant des nuages.
+                                                                                     15            Averse (pluie forte)                         Pluie soudaine et abondante.
+                                                                                     16            Vent fort (pas de poudrerie, pas de pluie)   Déplacement d’air qui a pour effet de rendre un véhicule moins stable sur la
+                                                                                                                                                route.
+                                                                                     17            Neige/grêle                                  Tombée de gouttelettes d’eau cristallisées sous forme de neige ou de grêle.
+
+                                                                                     18            Poudrerie/tempête de neige                   Neige chassée par le vent (souvent en rafales) ou chute de neige accompagnée
+                                                                                                                                                d’un vent violent.
+                                                                                     19            Verglas                                      Couche de glace, généralement très mince, qui se forme lorsque tombe une pluie
+                                                                                                                                                surfondue venant en contact avec des corps solides au-dessous de zéro degré
+                                                                                                                                                Celsius.
+                                                                                     99            Autre                                        Toute condition atmosphérique, autre que celles décrites précédemment.
+
+                                                                                                   Non précisé
+IND_AUTO_CAMION_LEGER   Indicateur d'au moins une automobile ou un camion             O            Oui                                                                                                                             Alph     3
+                        léger impliqué dans l'accident.                               N            Non
+IND_VEH_LOURD           Indicateur d'au moins un véhicule lourd impliqué              O            Oui                                          Véhicule lourd: camion lourd, tracteur routier, autobus, autobus scolaire, minibus, Alph    3
+                        dans l'accident.                                              N            Non                                          véhicule-outil ou d'équipement.
+IND_MOTO_CYCLO          Indicateur d'au moins une motocyclette ou un                  O            Oui                                                                                                                              Alph    3
+                        cyclomoteur impliqué dans l'accident.                         N            Non
+IND_VELO                Indicateur d'au moins une bicyclette impliquée dans           O            Oui                                                                                                                             Alph     3
+                        l'accident.                                                   N            Non
+IND_PIETON              Indicateur d'au moins une victime piéton (blessée             O            Oui                                                                                                                             Alph     3
+                        ou décédée) dans l'accident.                                  N            Non
+
+
+
+
+                                                                                                                                                                                                                                                   7/7
+

@@ -1,0 +1,6 @@
+code,collisions,eligible_collisions,fatal_collisions,injury_collisions,fatal_proportion,sparse_group,label,value_class
+DJF,734733,734733,10144,724589,0.013806375921593287,False,Winter (December–February),stated
+JJA,796187,796187,14446,781741,0.018143978738663153,False,Summer (June–August),stated
+MAM,635293,635293,9834,625459,0.01547947167684832,False,Spring (March–May),stated
+SON,783521,783521,13364,770157,0.01705633926850716,False,Autumn (September–November),stated
+UU,112,112,5,107,0.044642857142857144,False,Unknown,unknown

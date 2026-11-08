@@ -1,0 +1,781 @@
+{
+  "completed_at_utc": "2026-10-18T03:33:16.305210+00:00",
+  "resources": [
+    {
+      "resource_id": "21eb7966-38da-4814-a80e-521bce6c4c27",
+      "name": "National Collision Database - Data Dictionary",
+      "year": null,
+      "format": "PDF",
+      "language": "en,fr",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/21eb7966-38da-4814-a80e-521bce6c4c27/download/data_dictionary.pdf",
+      "selected": true,
+      "selection_reason": "Official bilingual dictionary linked from the same catalog",
+      "resource_date_published": "2022-02-23",
+      "resource_last_modified": "2022-02-23T15:03:19.737766",
+      "resource_metadata_modified": "2024-11-20T22:40:28.988270",
+      "catalog_validation_status": null,
+      "catalog_size_bytes": 385704,
+      "local_path": "data/raw/ncdb/data_dictionary.pdf",
+      "expected_years": [],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:01.040645+00:00",
+      "completed_at_utc": "2026-10-18T03:30:02.312830+00:00",
+      "sha256": "beef296c25eee70a55f747327b768b8da1bbdd428d02a9ca56ba781a7b6edb40",
+      "size_bytes": 385704,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/21eb7966-38da-4814-a80e-521bce6c4c27/data_dictionary.pdf",
+      "encoding": null,
+      "sheet": null,
+      "selected_years": [],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "80c765bc-eabe-4cc8-86f9-e464cd47e091",
+      "name": "National Collision Database (1999)",
+      "year": 1999,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/80c765bc-eabe-4cc8-86f9-e464cd47e091/download/y_1999_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T13:18:58.713568",
+      "resource_metadata_modified": "2025-01-17T22:20:27.171457",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 36885206,
+      "local_path": "data/raw/ncdb/y_1999_en.xlsx",
+      "expected_years": [
+        1999
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:01.041228+00:00",
+      "completed_at_utc": "2026-10-18T03:30:04.148870+00:00",
+      "sha256": "d084975e0b1bbd5fb3c86d932ff92ac3bb014ab005da77f9a320e96c84ef2575",
+      "size_bytes": 36885206,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/80c765bc-eabe-4cc8-86f9-e464cd47e091/y_1999_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        1999
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "d6de0f0f-fad0-4e53-a62a-7024196203d0",
+      "name": "National Collision Database (2000)",
+      "year": 2000,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/d6de0f0f-fad0-4e53-a62a-7024196203d0/download/y_2000_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T13:24:36.254815",
+      "resource_metadata_modified": "2025-01-17T22:20:27.171606",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 37830588,
+      "local_path": "data/raw/ncdb/y_2000_en.xlsx",
+      "expected_years": [
+        2000
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:01.041316+00:00",
+      "completed_at_utc": "2026-10-18T03:30:04.252984+00:00",
+      "sha256": "8807eaa764b43fb8a03364cd3ad6d12a148fe98792297037e643dfaed1feafa3",
+      "size_bytes": 37830588,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/d6de0f0f-fad0-4e53-a62a-7024196203d0/y_2000_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2000
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "9f696115-84a6-4425-b679-28f677df7c50",
+      "name": "National Collision Database (2001)",
+      "year": 2001,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/9f696115-84a6-4425-b679-28f677df7c50/download/y_2001_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T13:32:11.228484",
+      "resource_metadata_modified": "2025-01-17T22:20:27.171729",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 36817108,
+      "local_path": "data/raw/ncdb/y_2001_en.xlsx",
+      "expected_years": [
+        2001
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:02.313113+00:00",
+      "completed_at_utc": "2026-10-18T03:31:08.949185+00:00",
+      "sha256": "eec22cf37dd368493ce5298cf1992c1e0652edd94a776c757c7872be9802ccd3",
+      "size_bytes": 36817108,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/9f696115-84a6-4425-b679-28f677df7c50/y_2001_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2001
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "b9bafa34-5d55-4353-81b6-f0941ff33bc0",
+      "name": "National Collision Database (2002)",
+      "year": 2002,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/b9bafa34-5d55-4353-81b6-f0941ff33bc0/download/y_2002_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "",
+      "resource_last_modified": "2023-06-02T13:51:40.742329",
+      "resource_metadata_modified": "2025-01-17T22:20:27.171849",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 37754371,
+      "local_path": "data/raw/ncdb/y_2002_en.xlsx",
+      "expected_years": [
+        2002
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:03.950544+00:00",
+      "completed_at_utc": "2026-10-18T03:30:10.799011+00:00",
+      "sha256": "981e8c25b682edaebe4c7a6cee219f260a8951acb1a7cc798e48a6fe417952c7",
+      "size_bytes": 37754371,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/b9bafa34-5d55-4353-81b6-f0941ff33bc0/y_2002_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2002
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "213ba39d-02cd-43b5-a442-f5f9b80f9d13",
+      "name": "National Collision Database (2003)",
+      "year": 2003,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/213ba39d-02cd-43b5-a442-f5f9b80f9d13/download/y_2003_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T14:04:02.257424",
+      "resource_metadata_modified": "2025-01-17T22:20:27.171970",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 36635125,
+      "local_path": "data/raw/ncdb/y_2003_en.xlsx",
+      "expected_years": [
+        2003
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:04.149293+00:00",
+      "completed_at_utc": "2026-10-18T03:30:06.754515+00:00",
+      "sha256": "188ffc3cd0b8c1f04abcf165ccc1dc6f2ac0d1bd206fab1906c45ec44256029d",
+      "size_bytes": 36635125,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/213ba39d-02cd-43b5-a442-f5f9b80f9d13/y_2003_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2003
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "da00a00b-3355-47f2-b313-58afa7314b15",
+      "name": "National collision database (2004)",
+      "year": 2004,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/da00a00b-3355-47f2-b313-58afa7314b15/download/y_2004_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T14:20:33.085258",
+      "resource_metadata_modified": "2025-01-17T22:20:27.172088",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 35006796,
+      "local_path": "data/raw/ncdb/y_2004_en.xlsx",
+      "expected_years": [
+        2004
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:04.253308+00:00",
+      "completed_at_utc": "2026-10-18T03:30:07.235720+00:00",
+      "sha256": "2046970c6bbafc8aa929068788d8b66f0796a81ada538f01096d1b13ba9711be",
+      "size_bytes": 35006796,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/da00a00b-3355-47f2-b313-58afa7314b15/y_2004_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2004
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "d83abcbf-a61e-4fa0-b59a-dfdb4cae4bf8",
+      "name": "National Collision Database (2005)",
+      "year": 2005,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/d83abcbf-a61e-4fa0-b59a-dfdb4cae4bf8/download/y_2005_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T14:32:04.167921",
+      "resource_metadata_modified": "2025-01-17T22:20:27.172207",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 34808114,
+      "local_path": "data/raw/ncdb/y_2005_en.xlsx",
+      "expected_years": [
+        2005
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:06.755222+00:00",
+      "completed_at_utc": "2026-10-18T03:30:09.001510+00:00",
+      "sha256": "e678d9d5b133e1a79bb0efb5b61cfd1fb101eba1ce60c5ee1edc8e9c4477a84b",
+      "size_bytes": 34808114,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/d83abcbf-a61e-4fa0-b59a-dfdb4cae4bf8/y_2005_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2005
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "c3c61c6f-706a-41f4-b0c8-bf1e6aa46a8b",
+      "name": "National Collision Database (2006)",
+      "year": 2006,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/c3c61c6f-706a-41f4-b0c8-bf1e6aa46a8b/download/y_2006_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T17:35:21.246971",
+      "resource_metadata_modified": "2025-01-17T22:20:27.172325",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 34225586,
+      "local_path": "data/raw/ncdb/y_2006_en.xlsx",
+      "expected_years": [
+        2006
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:07.236084+00:00",
+      "completed_at_utc": "2026-10-18T03:30:09.464597+00:00",
+      "sha256": "6409925fb31581265fee61c562d09c7cfc93e644345f74669766ebdf2499deb8",
+      "size_bytes": 34225586,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/c3c61c6f-706a-41f4-b0c8-bf1e6aa46a8b/y_2006_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2006
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "b0366cbf-1400-4b9b-9bea-9ee7ad468b3d",
+      "name": "National Collision Database (2007)",
+      "year": 2007,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/b0366cbf-1400-4b9b-9bea-9ee7ad468b3d/download/y_2007_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T17:38:54.356045",
+      "resource_metadata_modified": "2025-01-17T22:20:27.172444",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 33250998,
+      "local_path": "data/raw/ncdb/y_2007_en.xlsx",
+      "expected_years": [
+        2007
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:09.002115+00:00",
+      "completed_at_utc": "2026-10-18T03:30:11.394086+00:00",
+      "sha256": "c65dc6f30a5207817d2b681abaf897c97aea96decd1c97b8344257d1370a27fa",
+      "size_bytes": 33250998,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/b0366cbf-1400-4b9b-9bea-9ee7ad468b3d/y_2007_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2007
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "60562270-5ffd-4dd7-a7ea-3461bcf245cb",
+      "name": "National Collision Database (2008)",
+      "year": 2008,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/60562270-5ffd-4dd7-a7ea-3461bcf245cb/download/y_2008_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T17:57:53.613199",
+      "resource_metadata_modified": "2025-01-17T22:20:27.172572",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 30537463,
+      "local_path": "data/raw/ncdb/y_2008_en.xlsx",
+      "expected_years": [
+        2008
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:09.464920+00:00",
+      "completed_at_utc": "2026-10-18T03:30:11.733167+00:00",
+      "sha256": "9b4a8dc998373d2934e1c82f246c69236f48ea32c488bd7df136e4f2fa3745e8",
+      "size_bytes": 30537463,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/60562270-5ffd-4dd7-a7ea-3461bcf245cb/y_2008_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2008
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "21b9ce1c-4a83-41fa-ab02-c45b3747c362",
+      "name": "National Collision Database (2009)",
+      "year": 2009,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/21b9ce1c-4a83-41fa-ab02-c45b3747c362/download/y_2009_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T18:01:32.214919",
+      "resource_metadata_modified": "2025-01-17T22:20:27.172693",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 29804315,
+      "local_path": "data/raw/ncdb/y_2009_en.xlsx",
+      "expected_years": [
+        2009
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:10.799310+00:00",
+      "completed_at_utc": "2026-10-18T03:30:13.770048+00:00",
+      "sha256": "17e0e5d4ac8dc97eb31e498df2f4e6bf6d6c809d6b83b6cecdfdfe3d32963e85",
+      "size_bytes": 29804315,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/21b9ce1c-4a83-41fa-ab02-c45b3747c362/y_2009_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2009
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "53018df0-82d2-4c9a-8f83-e8f75b3a4300",
+      "name": "National Collision Database (2010)",
+      "year": 2010,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/53018df0-82d2-4c9a-8f83-e8f75b3a4300/download/y_2010_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "",
+      "resource_last_modified": "2023-06-02T18:12:58.187627",
+      "resource_metadata_modified": "2025-01-17T22:20:27.172812",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 30150352,
+      "local_path": "data/raw/ncdb/y_2010_en.xlsx",
+      "expected_years": [
+        2010
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:11.394617+00:00",
+      "completed_at_utc": "2026-10-18T03:30:13.932563+00:00",
+      "sha256": "0a98341d7863ab38c84820868907e1c4bec281f1b7b0247e0fd739f682e3b7e2",
+      "size_bytes": 30150352,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/53018df0-82d2-4c9a-8f83-e8f75b3a4300/y_2010_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2010
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "3fefd7a0-3c49-4eef-97e0-b5310be0fb07",
+      "name": "National Collision Database (2011)",
+      "year": 2011,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/3fefd7a0-3c49-4eef-97e0-b5310be0fb07/download/y_2011_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T18:30:25.482642",
+      "resource_metadata_modified": "2025-01-17T22:20:27.172931",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 29380565,
+      "local_path": "data/raw/ncdb/y_2011_en.xlsx",
+      "expected_years": [
+        2011
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:11.733470+00:00",
+      "completed_at_utc": "2026-10-18T03:30:16.363042+00:00",
+      "sha256": "b901a8b47e01032ecd60dc08d16d33432bc5ce43bc6b72e9bfe823c5cce39b3b",
+      "size_bytes": 29380565,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/3fefd7a0-3c49-4eef-97e0-b5310be0fb07/y_2011_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2011
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "cd77a978-f506-406e-afd1-b1e61e77dd9a",
+      "name": "National Collision Database (2012)",
+      "year": 2012,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/cd77a978-f506-406e-afd1-b1e61e77dd9a/download/y_2012_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T18:44:42.414838",
+      "resource_metadata_modified": "2025-01-17T22:20:27.173049",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 29194913,
+      "local_path": "data/raw/ncdb/y_2012_en.xlsx",
+      "expected_years": [
+        2012
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:13.770323+00:00",
+      "completed_at_utc": "2026-10-18T03:30:16.307818+00:00",
+      "sha256": "9323e8e6b62cc0ae5abb4295bfafbb7277c16398e0deee293bf3db5622cced23",
+      "size_bytes": 29194913,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/cd77a978-f506-406e-afd1-b1e61e77dd9a/y_2012_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2012
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "c0ea4b35-353c-40fc-9b2b-cd99b5b58801",
+      "name": "National Collision Database (2013)",
+      "year": 2013,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/c0ea4b35-353c-40fc-9b2b-cd99b5b58801/download/y_2013_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T18:48:03.561277",
+      "resource_metadata_modified": "2025-01-17T22:20:27.173169",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 28631205,
+      "local_path": "data/raw/ncdb/y_2013_en.xlsx",
+      "expected_years": [
+        2013
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:13.933025+00:00",
+      "completed_at_utc": "2026-10-18T03:30:16.606860+00:00",
+      "sha256": "2e3c9a29e06dba2e0089be088abe4757c1f53c050e742e27321ef601fc91e711",
+      "size_bytes": 28631205,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/c0ea4b35-353c-40fc-9b2b-cd99b5b58801/y_2013_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2013
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "ea6471b8-2924-419b-9ade-baa8d68441ab",
+      "name": "National Collision Database (2014)",
+      "year": 2014,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/ea6471b8-2924-419b-9ade-baa8d68441ab/download/y_2014_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-02",
+      "resource_last_modified": "2023-06-02T18:51:12.822306",
+      "resource_metadata_modified": "2025-01-17T22:20:27.173288",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 27202345,
+      "local_path": "data/raw/ncdb/y_2014_en.xlsx",
+      "expected_years": [
+        2014
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:16.308416+00:00",
+      "completed_at_utc": "2026-10-18T03:30:19.168864+00:00",
+      "sha256": "0cb8e40972533c630bddc17f39a0dec2dc7a0f78d83c359615584c5bd61cf14a",
+      "size_bytes": 27202345,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/ea6471b8-2924-419b-9ade-baa8d68441ab/y_2014_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2014
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "cbee1eb5-c853-47fa-b807-0cee9ecd286d",
+      "name": "National Collision Database (2015)",
+      "year": 2015,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/cbee1eb5-c853-47fa-b807-0cee9ecd286d/download/y_2015_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-05",
+      "resource_last_modified": "2023-06-05T14:38:11.999362",
+      "resource_metadata_modified": "2025-01-17T22:20:27.173404",
+      "catalog_validation_status": "failure",
+      "catalog_size_bytes": 28158160,
+      "local_path": "data/raw/ncdb/y_2015_en.xlsx",
+      "expected_years": [
+        2015
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:16.363397+00:00",
+      "completed_at_utc": "2026-10-18T03:30:18.577548+00:00",
+      "sha256": "cec54236b1eb71c3a5751f772bacdad3f584723b8c3f52a5eea47f62504d049a",
+      "size_bytes": 28158160,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/cbee1eb5-c853-47fa-b807-0cee9ecd286d/y_2015_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2015
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "552280a5-f030-41c5-ac7d-649e42f2cb50",
+      "name": "National Collision Database (2016)",
+      "year": 2016,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/552280a5-f030-41c5-ac7d-649e42f2cb50/download/y_2016_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "",
+      "resource_last_modified": "2023-06-05T15:10:49.865008",
+      "resource_metadata_modified": "2025-01-17T22:20:27.173530",
+      "catalog_validation_status": "failure",
+      "catalog_size_bytes": 27651208,
+      "local_path": "data/raw/ncdb/y_2016_en.xlsx",
+      "expected_years": [
+        2016
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:16.607210+00:00",
+      "completed_at_utc": "2026-10-18T03:30:20.114523+00:00",
+      "sha256": "c67c0bba5a7e37d2a72e6f2c3824e54638c65960affc92da02d72c5d7bc5fe8f",
+      "size_bytes": 27651208,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/552280a5-f030-41c5-ac7d-649e42f2cb50/y_2016_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2016
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "1e384c9e-6af2-40b3-9457-719fbce819c0",
+      "name": "National Collision Database (2017)",
+      "year": 2017,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/1e384c9e-6af2-40b3-9457-719fbce819c0/download/y_2017_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-06",
+      "resource_last_modified": "2023-06-06T13:06:06.168072",
+      "resource_metadata_modified": "2025-01-17T22:20:27.173652",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 26176121,
+      "local_path": "data/raw/ncdb/y_2017_en.xlsx",
+      "expected_years": [
+        2017
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:18.577950+00:00",
+      "completed_at_utc": "2026-10-18T03:30:21.626766+00:00",
+      "sha256": "93f467f3a7f775b1a46e48cfc6a677a8393923b7e18f33f29e29de22fc93d727",
+      "size_bytes": 26176121,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/1e384c9e-6af2-40b3-9457-719fbce819c0/y_2017_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2017
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "bf937c33-6fc2-4010-8036-d91d4e1a6285",
+      "name": "National Collision Database (2018)",
+      "year": 2018,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/bf937c33-6fc2-4010-8036-d91d4e1a6285/download/y_2018_en.xlsx",
+      "selected": true,
+      "selection_reason": "Explicit annual release; avoids overlapping legacy combined file",
+      "resource_date_published": "2023-06-06",
+      "resource_last_modified": "2023-06-06T13:11:00.730630",
+      "resource_metadata_modified": "2025-01-17T22:20:27.173771",
+      "catalog_validation_status": "failure",
+      "catalog_size_bytes": 25786257,
+      "local_path": "data/raw/ncdb/y_2018_en.xlsx",
+      "expected_years": [
+        2018
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:19.169693+00:00",
+      "completed_at_utc": "2026-10-18T03:30:21.373988+00:00",
+      "sha256": "1ca01fa57a216d9d7187f0926cb4910dcff256517738639727e7a7a9d6bc2db1",
+      "size_bytes": 25786257,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/bf937c33-6fc2-4010-8036-d91d4e1a6285/y_2018_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2018
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "91d586f9-fb72-4eac-b1f5-d9b95830c877",
+      "name": "National Collision Database (2019)",
+      "year": 2019,
+      "format": "XLSX",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/91d586f9-fb72-4eac-b1f5-d9b95830c877/download/y_2019_en.xlsx",
+      "selected": true,
+      "selection_reason": "Newer 2023 annual XLSX release; both 2019 releases pass structural checks but totals differ",
+      "local_path": "data/raw/ncdb/y_2019_en.xlsx",
+      "expected_years": [
+        2019
+      ],
+      "resource_date_published": "2023-06-06",
+      "resource_last_modified": "2023-06-06T13:15:16.364357",
+      "catalog_validation_status": "failure",
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:30.199700+00:00",
+      "completed_at_utc": "2026-10-18T03:30:32.416483+00:00",
+      "sha256": "8285d8d734a1835ccd4bc72617ee11419d6e16c3dcd6effb8b5bdbe51fc43d0b",
+      "size_bytes": 24332345,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/91d586f9-fb72-4eac-b1f5-d9b95830c877/y_2019_en.xlsx",
+      "encoding": null,
+      "sheet": "in",
+      "selected_years": [
+        2019
+      ],
+      "resource_metadata_modified": "2025-01-17T22:20:27.173889",
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "2164b2a7-a580-4708-bdac-8ab0c1304bc2",
+      "name": "National Collision Database (2020)",
+      "year": 2020,
+      "format": "CSV",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/2164b2a7-a580-4708-bdac-8ab0c1304bc2/download/y_2020.csv",
+      "selected": true,
+      "selection_reason": "Official annual English CSV",
+      "resource_date_published": "2024-09-17",
+      "resource_last_modified": "2025-01-17T22:13:55.126630",
+      "resource_metadata_modified": "2025-01-17T22:40:26.987680",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": null,
+      "local_path": "data/raw/ncdb/y_2020.csv",
+      "expected_years": [
+        2020
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:20.115144+00:00",
+      "completed_at_utc": "2026-10-18T03:30:22.286258+00:00",
+      "sha256": "2c81d99278819c28f99c02bfec319fb99c94b02734418300306e86a68ec3f83b",
+      "size_bytes": 15700970,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/2164b2a7-a580-4708-bdac-8ab0c1304bc2/y_2020.csv",
+      "encoding": "utf-8",
+      "sheet": null,
+      "selected_years": [
+        2020
+      ],
+      "redirect_query_redacted": true
+    },
+    {
+      "resource_id": "f964d00f-6bba-44be-ae79-85f574d04a31",
+      "name": "National Collision Database (2021)",
+      "year": 2021,
+      "format": "CSV",
+      "language": "fr",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/f964d00f-6bba-44be-ae79-85f574d04a31/download/y_2021-fr.csv",
+      "selected": true,
+      "selection_reason": "English resource has empty URL; French annual CSV retained for schema audit",
+      "resource_date_published": "2024-09-17",
+      "resource_last_modified": "2025-01-17T22:37:44.859500",
+      "resource_metadata_modified": "2025-01-17T22:43:13.927833",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": null,
+      "local_path": "data/raw/ncdb/y_2021-fr.csv",
+      "expected_years": [
+        2021
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:21.374298+00:00",
+      "completed_at_utc": "2026-10-18T03:30:23.322312+00:00",
+      "sha256": "024a2d24cdaf6e30ec018433836075b83c626e7f8e189d14a46ea9d99b3d8dbb",
+      "size_bytes": 16149978,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/f964d00f-6bba-44be-ae79-85f574d04a31/y_2021-fr.csv",
+      "encoding": "cp1252",
+      "sheet": null,
+      "selected_years": [
+        2021
+      ],
+      "redirect_query_redacted": true
+    }
+  ],
+  "alternatives": [
+    {
+      "resource_id": "1e2a6aa0-c35f-4736-984a-71f2eac1c1dc",
+      "name": "National Collision Database (2019)",
+      "year": 2019,
+      "format": "CSV",
+      "language": "en",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/1e2a6aa0-c35f-4736-984a-71f2eac1c1dc/download/2019_dataset_en.csv",
+      "selected": false,
+      "selection_reason": "Older 2022 release retained as audit comparator; do not pool with selected 2019 XLSX",
+      "resource_date_published": "2022-02-23",
+      "resource_last_modified": "2022-11-02T17:04:28.200282",
+      "resource_metadata_modified": "2025-10-30T12:21:24.798919",
+      "catalog_validation_status": "success",
+      "catalog_size_bytes": 17398658,
+      "local_path": "data/raw/ncdb/2019_dataset_en.csv",
+      "expected_years": [
+        2019
+      ],
+      "status": "acquired",
+      "acquired_at_utc": "2026-10-18T03:30:01.040263+00:00",
+      "completed_at_utc": "2026-10-18T03:30:03.949947+00:00",
+      "sha256": "d1d4fcc176b387281dadbf02b9e32890174e7e9e07f05961c54e5e7c4487a87c",
+      "size_bytes": 17398658,
+      "final_url": "https://opencanada.blob.core.windows.net/opengovprod/resources/1e2a6aa0-c35f-4736-984a-71f2eac1c1dc/2019_dataset_en.csv",
+      "encoding": "utf-8",
+      "sheet": null,
+      "selected_years": [
+        2019
+      ],
+      "redirect_query_redacted": true
+    }
+  ],
+  "known_access_gaps": [
+    "English 2021 catalog resource has an empty URL; French release selected",
+    "No 2022 or newer annual records listed in this catalog snapshot"
+  ]
+}

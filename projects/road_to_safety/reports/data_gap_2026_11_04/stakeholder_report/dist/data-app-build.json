@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "kind": "separate-data-v1",
+  "html": {
+    "path": "index.html",
+    "sha256": "50a1a655ec020419085c5b20f52b47f9cc30ca4215fbaab6d46d1adfca0f22e9",
+    "bytes": 2855939
+  },
+  "snapshot": {
+    "path": "snapshot.2412e52027d8dd2ce1350acb2c2014c0bc1e0e85c615fa90bdf9ebbee94c55f6.json",
+    "sha256": "2412e52027d8dd2ce1350acb2c2014c0bc1e0e85c615fa90bdf9ebbee94c55f6",
+    "bytes": 2104
+  },
+  "runtimeSha256": "9e3ede84b28aded3c7379b6e6a5611f0d95b9977eb0f781e279ceefabfcbd27e",
+  "sourceSnapshotSha256": "2412e52027d8dd2ce1350acb2c2014c0bc1e0e85c615fa90bdf9ebbee94c55f6"
+}

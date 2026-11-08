@@ -1,0 +1,145 @@
+[
+  {
+    "requested_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-4-0-0-23-101",
+    "final_url_without_query": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:26:58.118791+00:00",
+    "completed_at_utc": "2026-11-05T05:26:58.494925+00:00",
+    "http_status": 200,
+    "headers": {
+      "Cache-Control": "private",
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Thu, 05 Nov 2026 05:26:58 GMT",
+      "Content-Length": "41108"
+    },
+    "size_bytes": 41108,
+    "sha256": "10de881c2577447ccafb278e9debf099819e0a1a5a2c405307d090994885449e",
+    "local_path": "data/raw/data_gap_2026_11_04/records/ncdb_online_help.html"
+  },
+  {
+    "requested_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-5-0",
+    "final_url_without_query": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:26:58.496416+00:00",
+    "completed_at_utc": "2026-11-05T05:26:58.852866+00:00",
+    "http_status": 200,
+    "headers": {
+      "Cache-Control": "private",
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Thu, 05 Nov 2026 05:26:58 GMT",
+      "Content-Length": "19433"
+    },
+    "size_bytes": 19433,
+    "sha256": "a68eed98838902a45e101eb54908a3cdcf7369bb30c0c52b2bc9f81ac5b34a9a",
+    "local_path": "data/raw/data_gap_2026_11_04/records/ncdb_online_faq.html"
+  },
+  {
+    "requested_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-3-0-0-0",
+    "final_url_without_query": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:26:58.854208+00:00",
+    "completed_at_utc": "2026-11-05T05:26:59.249565+00:00",
+    "http_status": 200,
+    "headers": {
+      "Cache-Control": "private",
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Thu, 05 Nov 2026 05:26:58 GMT",
+      "Content-Length": "16909"
+    },
+    "size_bytes": 16909,
+    "sha256": "a0e27ff15a567a2b698e0140f09c34b8d845dd861ecc2afaa9d4f44dec80e37f",
+    "local_path": "data/raw/data_gap_2026_11_04/records/ncdb_online_year_details.html"
+  },
+  {
+    "requested_url": "https://tc.canada.ca/en/road-transportation/statistics-data/canadian-motor-vehicle-traffic-collision-statistics/2024/canadian-motor-vehicle-traffic-collision-statistics-2024",
+    "final_url_without_query": "https://tc.canada.ca/en/road-transportation/statistics-data/canadian-motor-vehicle-traffic-collision-statistics/2024/canadian-motor-vehicle-traffic-collision-statistics-2024",
+    "redirect_query_redacted": false,
+    "acquired_at_utc": "2026-11-05T05:26:59.252368+00:00",
+    "completed_at_utc": "2026-11-05T05:26:59.689816+00:00",
+    "http_status": 200,
+    "headers": {
+      "Date": "Thu, 05 Nov 2026 05:26:59 GMT",
+      "Content-Type": "text/html; charset=UTF-8",
+      "Content-Length": "103680",
+      "Cache-Control": "max-age=2764800, public",
+      "Last-Modified": "Wed, 04 Nov 2026 21:10:23 GMT",
+      "ETag": "W/\"1793826623\""
+    },
+    "size_bytes": 103680,
+    "sha256": "9f2983700dc9ab5b20382c688d90fea800bc3acb3629cbad9013c0de649f72e4",
+    "local_path": "data/raw/data_gap_2026_11_04/records/publication_2024.html"
+  },
+  {
+    "requested_url": "https://tc.canada.ca/en/road-transportation/statistics-data/motor-vehicle-casualties-dashboard-user-guide",
+    "final_url_without_query": "https://tc.canada.ca/en/road-transportation/statistics-data/motor-vehicle-casualties-dashboard-user-guide",
+    "redirect_query_redacted": false,
+    "acquired_at_utc": "2026-11-05T05:26:59.692003+00:00",
+    "completed_at_utc": "2026-11-05T05:27:00.025350+00:00",
+    "http_status": 200,
+    "headers": {
+      "Date": "Thu, 05 Nov 2026 05:27:00 GMT",
+      "Content-Type": "text/html; charset=UTF-8",
+      "Content-Length": "39879",
+      "Cache-Control": "max-age=2764800, public",
+      "Last-Modified": "Thu, 05 Nov 2026 00:03:25 GMT",
+      "ETag": "W/\"1793837005\""
+    },
+    "size_bytes": 39879,
+    "sha256": "5550868c7d0e8caa3a524d59955969b075f0d4aca40157da2e8c804c1fdf8940",
+    "local_path": "data/raw/data_gap_2026_11_04/records/dashboard_guide.html"
+  },
+  {
+    "requested_url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/21eb7966-38da-4814-a80e-521bce6c4c27/download/data_dictionary.pdf",
+    "final_url_without_query": "https://opencanada.blob.core.windows.net/opengovprod/resources/21eb7966-38da-4814-a80e-521bce6c4c27/data_dictionary.pdf",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:27:00.026400+00:00",
+    "completed_at_utc": "2026-11-05T05:27:01.313173+00:00",
+    "http_status": 200,
+    "headers": {
+      "Content-Length": "385704",
+      "Content-Type": "application/pdf",
+      "Last-Modified": "Mon, 21 Aug 2023 21:22:09 GMT",
+      "ETag": "\"0x8DBA28CADC9E588\"",
+      "Date": "Thu, 05 Nov 2026 05:27:00 GMT"
+    },
+    "size_bytes": 385704,
+    "sha256": "beef296c25eee70a55f747327b768b8da1bbdd428d02a9ca56ba781a7b6edb40",
+    "local_path": "data/raw/data_gap_2026_11_04/records/dictionary_current.pdf"
+  },
+  {
+    "requested_url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/2164b2a7-a580-4708-bdac-8ab0c1304bc2/download/y_2020.csv",
+    "final_url_without_query": "https://opencanada.blob.core.windows.net/opengovprod/resources/2164b2a7-a580-4708-bdac-8ab0c1304bc2/y_2020.csv",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:27:01.314711+00:00",
+    "completed_at_utc": "2026-11-05T05:27:04.139368+00:00",
+    "http_status": 200,
+    "headers": {
+      "Content-Length": "15700970",
+      "Content-Type": "text/csv",
+      "Last-Modified": "Fri, 17 Jan 2025 22:13:56 GMT",
+      "ETag": "\"0x8DD37443C27B28F\"",
+      "Date": "Thu, 05 Nov 2026 05:27:01 GMT"
+    },
+    "size_bytes": 15700970,
+    "sha256": "2c81d99278819c28f99c02bfec319fb99c94b02734418300306e86a68ec3f83b",
+    "local_path": "data/raw/data_gap_2026_11_04/records/records_2020_en_current.csv"
+  },
+  {
+    "requested_url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/f964d00f-6bba-44be-ae79-85f574d04a31/download/y_2021-fr.csv",
+    "final_url_without_query": "https://opencanada.blob.core.windows.net/opengovprod/resources/f964d00f-6bba-44be-ae79-85f574d04a31/y_2021-fr.csv",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:27:04.155189+00:00",
+    "completed_at_utc": "2026-11-05T05:27:06.948138+00:00",
+    "http_status": 200,
+    "headers": {
+      "Content-Length": "16149978",
+      "Content-Type": "text/csv",
+      "Last-Modified": "Fri, 17 Jan 2025 22:37:45 GMT",
+      "ETag": "\"0x8DD3747901FDAE3\"",
+      "Date": "Thu, 05 Nov 2026 05:27:04 GMT"
+    },
+    "size_bytes": 16149978,
+    "sha256": "024a2d24cdaf6e30ec018433836075b83c626e7f8e189d14a46ea9d99b3d8dbb",
+    "local_path": "data/raw/data_gap_2026_11_04/records/records_2021_fr_current.csv"
+  }
+]

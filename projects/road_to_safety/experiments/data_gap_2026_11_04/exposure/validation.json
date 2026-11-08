@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "checks_passed": [
+    "original SHA256: toronto_svc_summary.csv",
+    "original SHA256: toronto_svc_dictionary.xlsx",
+    "original SHA256: toronto_volume_metadata.json",
+    "original SHA256: mtq_metadata.json",
+    "original SHA256: mtq_traffic.geojson",
+    "original SHA256: mtq_dictionary.pdf",
+    "original SHA256: tc_s6_2024.pdf",
+    "original SHA256: statcan_cvs_discontinued.html",
+    "MTQ complete WFS response and unique section IDs",
+    "MTQ all geometry and WGS84 coordinate domains",
+    "MTQ year/value accounting",
+    "MTQ annual year slots complete",
+    "Toronto count ID uniqueness",
+    "Toronto dates/coordinate shape",
+    "Toronto annual partition conservation",
+    "Toronto newer year partition conservation",
+    "Current-TCL exact join no expansion",
+    "PDF dictionary actual PDF",
+    "Excel dictionary actual XLSX",
+    "TC S6 context table ten annual rows only"
+  ],
+  "failures": [],
+  "scope": "Exposure source integrity, full-file profile conservation and traffic-count-to-current-road exact ID join; no collision-to-exposure join or occurrence model validated.",
+  "input_fingerprints": {
+    "data/raw/data_gap_2026_11_04/exposure/toronto_svc_summary.csv": "9a58d303011a5d1d1407f67e223e75c29ba4b95e445b40bf6ff1617280b887c8",
+    "data/raw/data_gap_2026_11_04/exposure/toronto_svc_dictionary.xlsx": "253b1c0a303a3b1381851f9644567e1accbd568c1a0faa4ff037f7de02e7e1af",
+    "data/raw/data_gap_2026_11_04/exposure/toronto_volume_metadata.json": "0f5d572f7ce5e11500bdff955b536a0a05e64f786869e8c595fced29bf604b1a",
+    "data/raw/data_gap_2026_11_04/exposure/mtq_metadata.json": "f0b74be45d145293556603d98ad986e63c89d9a44ad40358aa4568f40cf7fab0",
+    "data/raw/data_gap_2026_11_04/exposure/mtq_traffic.geojson": "b393a498e9255bbf9ad4df66c44cb14e380d369407450c49d777cc61ca8a84fd",
+    "data/raw/data_gap_2026_11_04/exposure/mtq_dictionary.pdf": "80d6e6381fd5bc5cb76d0b8c33c5a0edbe16d178a556dad90094275a2b467251",
+    "data/raw/data_gap_2026_11_04/exposure/tc_s6_2024.pdf": "1ec1a56384aa5bf02bd08d927c4aabc2ea828f3974bc913d118ef2e66d42a9e4",
+    "data/raw/data_gap_2026_11_04/exposure/statcan_cvs_discontinued.html": "086d13332582f47b192c940af8525128307b817bf67ba007110a445f313e9308",
+    "data/raw/data_gap_2026_11_04/geography/toronto_centreline_4326.csv": "c2f777bf3cb5a7d0ea479386a3a328f859f4d6c4748ac36494c5840bcb3d90dd"
+  },
+  "code_fingerprints": {
+    "experiments/data_gap_2026_11_04/exposure/acquire.py": "3d3fede8f9a5a2a9b11e6a8778ae03ef880e898ad604be4af1e23e645763485e",
+    "experiments/data_gap_2026_11_04/exposure/profile.py": "cd809c55fdb8700cd7a024d4c25260be7422bef3d918ec634f5849020afbb964",
+    "experiments/data_gap_2026_11_04/exposure/verify.py": "54d4a01347c43791c59e2541eff4e534b7c8780c547b23266f8d123142c4b64b"
+  }
+}

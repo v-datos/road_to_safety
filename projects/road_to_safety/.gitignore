@@ -1,0 +1,22 @@
+# Preserve originals locally; version manifests and documentation instead.
+data/raw/*
+!data/raw/.gitkeep
+data/derived/*
+!data/derived/.gitkeep
+
+# Version model cards and evaluation tables, not serialized estimators.
+models/*
+!models/README.md
+!models/*.md
+
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+.env
+.env.*
+!.env.example

@@ -1,0 +1,297 @@
+source_id,table_index,caption,row_index,cell_index,value
+tc_casualties_dashboard,0,,0,0,Year
+tc_casualties_dashboard,0,,0,1,Fatalities
+tc_casualties_dashboard,0,,1,0,2014
+tc_casualties_dashboard,0,,1,1,"1,852"
+tc_casualties_dashboard,0,,2,0,2015
+tc_casualties_dashboard,0,,2,1,"1,895"
+tc_casualties_dashboard,0,,3,0,2016
+tc_casualties_dashboard,0,,3,1,"1,916"
+tc_casualties_dashboard,0,,4,0,2017
+tc_casualties_dashboard,0,,4,1,"1,899"
+tc_casualties_dashboard,0,,5,0,2018
+tc_casualties_dashboard,0,,5,1,"1,976"
+tc_casualties_dashboard,0,,6,0,2019
+tc_casualties_dashboard,0,,6,1,"1,786"
+tc_casualties_dashboard,0,,7,0,2020
+tc_casualties_dashboard,0,,7,1,"1,716"
+tc_casualties_dashboard,0,,8,0,2021
+tc_casualties_dashboard,0,,8,1,"1,825"
+tc_casualties_dashboard,0,,9,0,2022
+tc_casualties_dashboard,0,,9,1,"2,002"
+tc_casualties_dashboard,0,,10,0,2023
+tc_casualties_dashboard,0,,10,1,"2,000"
+tc_casualties_dashboard,1,,0,0,Month
+tc_casualties_dashboard,1,,0,1,Fatalities
+tc_casualties_dashboard,1,,1,0,January
+tc_casualties_dashboard,1,,1,1,"1,232"
+tc_casualties_dashboard,1,,2,0,February
+tc_casualties_dashboard,1,,2,1,"1,045"
+tc_casualties_dashboard,1,,3,0,March
+tc_casualties_dashboard,1,,3,1,"1,033"
+tc_casualties_dashboard,1,,4,0,April
+tc_casualties_dashboard,1,,4,1,"1,143"
+tc_casualties_dashboard,1,,5,0,May
+tc_casualties_dashboard,1,,5,1,"1,527"
+tc_casualties_dashboard,1,,6,0,June
+tc_casualties_dashboard,1,,6,1,"1,738"
+tc_casualties_dashboard,1,,7,0,July
+tc_casualties_dashboard,1,,7,1,"2,056"
+tc_casualties_dashboard,1,,8,0,August
+tc_casualties_dashboard,1,,8,1,"2,059"
+tc_casualties_dashboard,1,,9,0,September
+tc_casualties_dashboard,1,,9,1,"1,869"
+tc_casualties_dashboard,1,,10,0,October
+tc_casualties_dashboard,1,,10,1,"1,968"
+tc_casualties_dashboard,1,,11,0,November
+tc_casualties_dashboard,1,,11,1,"1,674"
+tc_casualties_dashboard,1,,12,0,December
+tc_casualties_dashboard,1,,12,1,"1,517"
+tc_casualties_dashboard,1,,13,0,Unknown
+tc_casualties_dashboard,1,,13,1,6
+tc_casualties_dashboard,2,,0,0,Day of Week
+tc_casualties_dashboard,2,,0,1,Fatalities
+tc_casualties_dashboard,2,,1,0,Monday
+tc_casualties_dashboard,2,,1,1,"2,496"
+tc_casualties_dashboard,2,,2,0,Tuesday
+tc_casualties_dashboard,2,,2,1,"2,513"
+tc_casualties_dashboard,2,,3,0,Wednesday
+tc_casualties_dashboard,2,,3,1,"2,495"
+tc_casualties_dashboard,2,,4,0,Thursday
+tc_casualties_dashboard,2,,4,1,"2,619"
+tc_casualties_dashboard,2,,5,0,Friday
+tc_casualties_dashboard,2,,5,1,"3,048"
+tc_casualties_dashboard,2,,6,0,Saturday
+tc_casualties_dashboard,2,,6,1,"2,954"
+tc_casualties_dashboard,2,,7,0,Sunday
+tc_casualties_dashboard,2,,7,1,"2,736"
+tc_casualties_dashboard,2,,8,0,Unknown
+tc_casualties_dashboard,2,,8,1,6
+tc_casualties_dashboard,3,,0,0,Collision Hour
+tc_casualties_dashboard,3,,0,1,Fatalities
+tc_casualties_dashboard,3,,1,0,0:00 to 2:59
+tc_casualties_dashboard,3,,1,1,"1,621"
+tc_casualties_dashboard,3,,2,0,3:00 to 5:59
+tc_casualties_dashboard,3,,2,1,"1,196"
+tc_casualties_dashboard,3,,3,0,6:00 to 8:59
+tc_casualties_dashboard,3,,3,1,"1,996"
+tc_casualties_dashboard,3,,4,0,9:00 to 11:59
+tc_casualties_dashboard,3,,4,1,"2,204"
+tc_casualties_dashboard,3,,5,0,12:00 to 14:59
+tc_casualties_dashboard,3,,5,1,"2,888"
+tc_casualties_dashboard,3,,6,0,15:00 to 17:59
+tc_casualties_dashboard,3,,6,1,"3,495"
+tc_casualties_dashboard,3,,7,0,18:00 to 20:59
+tc_casualties_dashboard,3,,7,1,"2,935"
+tc_casualties_dashboard,3,,8,0,21:00 to 23:59
+tc_casualties_dashboard,3,,8,1,"2,266"
+tc_casualties_dashboard,3,,9,0,Unknown
+tc_casualties_dashboard,3,,9,1,266
+tc_casualties_dashboard,4,,0,0,Gender
+tc_casualties_dashboard,4,,0,1,Fatalities
+tc_casualties_dashboard,4,,1,0,Female
+tc_casualties_dashboard,4,,1,1,"5,568"
+tc_casualties_dashboard,4,,2,0,Male
+tc_casualties_dashboard,4,,2,1,"13,231"
+tc_casualties_dashboard,4,,3,0,Unknown
+tc_casualties_dashboard,4,,3,1,68
+tc_casualties_dashboard,5,,0,0,Person Age
+tc_casualties_dashboard,5,,0,1,Fatalities
+tc_casualties_dashboard,5,,1,0,0-4
+tc_casualties_dashboard,5,,1,1,158
+tc_casualties_dashboard,5,,2,0,5-9
+tc_casualties_dashboard,5,,2,1,150
+tc_casualties_dashboard,5,,3,0,10-14
+tc_casualties_dashboard,5,,3,1,194
+tc_casualties_dashboard,5,,4,0,15-19
+tc_casualties_dashboard,5,,4,1,"1,256"
+tc_casualties_dashboard,5,,5,0,20-24
+tc_casualties_dashboard,5,,5,1,"1,887"
+tc_casualties_dashboard,5,,6,0,25-29
+tc_casualties_dashboard,5,,6,1,"1,706"
+tc_casualties_dashboard,5,,7,0,30-34
+tc_casualties_dashboard,5,,7,1,"1,431"
+tc_casualties_dashboard,5,,8,0,35-39
+tc_casualties_dashboard,5,,8,1,"1,279"
+tc_casualties_dashboard,5,,9,0,40-44
+tc_casualties_dashboard,5,,9,1,"1,142"
+tc_casualties_dashboard,5,,10,0,45-49
+tc_casualties_dashboard,5,,10,1,"1,170"
+tc_casualties_dashboard,5,,11,0,50-54
+tc_casualties_dashboard,5,,11,1,"1,333"
+tc_casualties_dashboard,5,,12,0,55-59
+tc_casualties_dashboard,5,,12,1,"1,439"
+tc_casualties_dashboard,5,,13,0,60-64
+tc_casualties_dashboard,5,,13,1,"1,339"
+tc_casualties_dashboard,5,,14,0,65-69
+tc_casualties_dashboard,5,,14,1,"1,087"
+tc_casualties_dashboard,5,,15,0,70-74
+tc_casualties_dashboard,5,,15,1,951
+tc_casualties_dashboard,5,,16,0,75 +
+tc_casualties_dashboard,5,,16,1,"2,228"
+tc_casualties_dashboard,5,,17,0,Not applicable
+tc_casualties_dashboard,5,,17,1,1
+tc_casualties_dashboard,5,,18,0,Unknown
+tc_casualties_dashboard,5,,18,1,116
+tc_casualties_dashboard,6,,0,0,Road User Class
+tc_casualties_dashboard,6,,0,1,Fatalities
+tc_casualties_dashboard,6,,1,0,Motor vehicle driver
+tc_casualties_dashboard,6,,1,1,"9,123"
+tc_casualties_dashboard,6,,2,0,Motor vehicle passenger
+tc_casualties_dashboard,6,,2,1,"3,057"
+tc_casualties_dashboard,6,,3,0,Pedestrian
+tc_casualties_dashboard,6,,3,1,"3,269"
+tc_casualties_dashboard,6,,4,0,Bicyclist
+tc_casualties_dashboard,6,,4,1,463
+tc_casualties_dashboard,6,,5,0,Motorcyclist
+tc_casualties_dashboard,6,,5,1,"2,226"
+tc_casualties_dashboard,6,,6,0,Unknown
+tc_casualties_dashboard,6,,6,1,729
+tc_casualties_dashboard,7,,0,0,Year
+tc_casualties_dashboard,7,,0,1,Injuries
+tc_casualties_dashboard,7,,1,0,2014
+tc_casualties_dashboard,7,,1,1,"157,764"
+tc_casualties_dashboard,7,,2,0,2015
+tc_casualties_dashboard,7,,2,1,"161,239"
+tc_casualties_dashboard,7,,3,0,2016
+tc_casualties_dashboard,7,,3,1,"160,246"
+tc_casualties_dashboard,7,,4,0,2017
+tc_casualties_dashboard,7,,4,1,"155,085"
+tc_casualties_dashboard,7,,5,0,2018
+tc_casualties_dashboard,7,,5,1,"149,278"
+tc_casualties_dashboard,7,,6,0,2019
+tc_casualties_dashboard,7,,6,1,"138,752"
+tc_casualties_dashboard,7,,7,0,2020
+tc_casualties_dashboard,7,,7,1,"98,847"
+tc_casualties_dashboard,7,,8,0,2021
+tc_casualties_dashboard,7,,8,1,"107,055"
+tc_casualties_dashboard,7,,9,0,2022
+tc_casualties_dashboard,7,,9,1,"117,950"
+tc_casualties_dashboard,7,,10,0,2023
+tc_casualties_dashboard,7,,10,1,"123,737"
+tc_casualties_dashboard,8,,0,0,Month
+tc_casualties_dashboard,8,,0,1,Injuries
+tc_casualties_dashboard,8,,1,0,January
+tc_casualties_dashboard,8,,1,1,"115,881"
+tc_casualties_dashboard,8,,2,0,February
+tc_casualties_dashboard,8,,2,1,"104,465"
+tc_casualties_dashboard,8,,3,0,March
+tc_casualties_dashboard,8,,3,1,"94,040"
+tc_casualties_dashboard,8,,4,0,April
+tc_casualties_dashboard,8,,4,1,"84,801"
+tc_casualties_dashboard,8,,5,0,May
+tc_casualties_dashboard,8,,5,1,"105,625"
+tc_casualties_dashboard,8,,6,0,June
+tc_casualties_dashboard,8,,6,1,"119,439"
+tc_casualties_dashboard,8,,7,0,July
+tc_casualties_dashboard,8,,7,1,"125,875"
+tc_casualties_dashboard,8,,8,0,August
+tc_casualties_dashboard,8,,8,1,"126,685"
+tc_casualties_dashboard,8,,9,0,September
+tc_casualties_dashboard,8,,9,1,"123,139"
+tc_casualties_dashboard,8,,10,0,October
+tc_casualties_dashboard,8,,10,1,"124,669"
+tc_casualties_dashboard,8,,11,0,November
+tc_casualties_dashboard,8,,11,1,"122,983"
+tc_casualties_dashboard,8,,12,0,December
+tc_casualties_dashboard,8,,12,1,"122,332"
+tc_casualties_dashboard,8,,13,0,Unknown
+tc_casualties_dashboard,8,,13,1,19
+tc_casualties_dashboard,9,,0,0,Day of Week
+tc_casualties_dashboard,9,,0,1,Injuries
+tc_casualties_dashboard,9,,1,0,Monday
+tc_casualties_dashboard,9,,1,1,"185,472"
+tc_casualties_dashboard,9,,2,0,Tuesday
+tc_casualties_dashboard,9,,2,1,"198,196"
+tc_casualties_dashboard,9,,3,0,Wednesday
+tc_casualties_dashboard,9,,3,1,"199,884"
+tc_casualties_dashboard,9,,4,0,Thursday
+tc_casualties_dashboard,9,,4,1,"209,015"
+tc_casualties_dashboard,9,,5,0,Friday
+tc_casualties_dashboard,9,,5,1,"227,011"
+tc_casualties_dashboard,9,,6,0,Saturday
+tc_casualties_dashboard,9,,6,1,"189,746"
+tc_casualties_dashboard,9,,7,0,Sunday
+tc_casualties_dashboard,9,,7,1,"160,609"
+tc_casualties_dashboard,9,,8,0,Unknown
+tc_casualties_dashboard,9,,8,1,20
+tc_casualties_dashboard,10,,0,0,Collision Hour
+tc_casualties_dashboard,10,,0,1,Injuries
+tc_casualties_dashboard,10,,1,0,0:00 to 2:59
+tc_casualties_dashboard,10,,1,1,"47,885"
+tc_casualties_dashboard,10,,2,0,3:00 to 5:59
+tc_casualties_dashboard,10,,2,1,"36,386"
+tc_casualties_dashboard,10,,3,0,6:00 to 8:59
+tc_casualties_dashboard,10,,3,1,"160,985"
+tc_casualties_dashboard,10,,4,0,9:00 to 11:59
+tc_casualties_dashboard,10,,4,1,"190,492"
+tc_casualties_dashboard,10,,5,0,12:00 to 14:59
+tc_casualties_dashboard,10,,5,1,"263,436"
+tc_casualties_dashboard,10,,6,0,15:00 to 17:59
+tc_casualties_dashboard,10,,6,1,"348,869"
+tc_casualties_dashboard,10,,7,0,18:00 to 20:59
+tc_casualties_dashboard,10,,7,1,"200,816"
+tc_casualties_dashboard,10,,8,0,21:00 to 23:59
+tc_casualties_dashboard,10,,8,1,"109,452"
+tc_casualties_dashboard,10,,9,0,Unknown
+tc_casualties_dashboard,10,,9,1,"11,632"
+tc_casualties_dashboard,11,,0,0,Gender
+tc_casualties_dashboard,11,,0,1,Injuries
+tc_casualties_dashboard,11,,1,0,Female
+tc_casualties_dashboard,11,,1,1,"694,857"
+tc_casualties_dashboard,11,,2,0,Male
+tc_casualties_dashboard,11,,2,1,"662,322"
+tc_casualties_dashboard,11,,3,0,Unknown
+tc_casualties_dashboard,11,,3,1,"12,774"
+tc_casualties_dashboard,12,,0,0,Person Age
+tc_casualties_dashboard,12,,0,1,Injuries
+tc_casualties_dashboard,12,,1,0,0-4
+tc_casualties_dashboard,12,,1,1,"17,437"
+tc_casualties_dashboard,12,,2,0,5-9
+tc_casualties_dashboard,12,,2,1,"23,075"
+tc_casualties_dashboard,12,,3,0,10-14
+tc_casualties_dashboard,12,,3,1,"31,713"
+tc_casualties_dashboard,12,,4,0,15-19
+tc_casualties_dashboard,12,,4,1,"120,443"
+tc_casualties_dashboard,12,,5,0,20-24
+tc_casualties_dashboard,12,,5,1,"154,940"
+tc_casualties_dashboard,12,,6,0,25-29
+tc_casualties_dashboard,12,,6,1,"139,205"
+tc_casualties_dashboard,12,,7,0,30-34
+tc_casualties_dashboard,12,,7,1,"121,237"
+tc_casualties_dashboard,12,,8,0,35-39
+tc_casualties_dashboard,12,,8,1,"110,009"
+tc_casualties_dashboard,12,,9,0,40-44
+tc_casualties_dashboard,12,,9,1,"102,328"
+tc_casualties_dashboard,12,,10,0,45-49
+tc_casualties_dashboard,12,,10,1,"99,105"
+tc_casualties_dashboard,12,,11,0,50-54
+tc_casualties_dashboard,12,,11,1,"100,698"
+tc_casualties_dashboard,12,,12,0,55-59
+tc_casualties_dashboard,12,,12,1,"92,561"
+tc_casualties_dashboard,12,,13,0,60-64
+tc_casualties_dashboard,12,,13,1,"74,284"
+tc_casualties_dashboard,12,,14,0,65-69
+tc_casualties_dashboard,12,,14,1,"55,205"
+tc_casualties_dashboard,12,,15,0,70-74
+tc_casualties_dashboard,12,,15,1,"40,109"
+tc_casualties_dashboard,12,,16,0,75 +
+tc_casualties_dashboard,12,,16,1,"59,693"
+tc_casualties_dashboard,12,,17,0,Not applicable
+tc_casualties_dashboard,12,,17,1,1
+tc_casualties_dashboard,12,,18,0,Unknown
+tc_casualties_dashboard,12,,18,1,"27,910"
+tc_casualties_dashboard,13,,0,0,Road User Class
+tc_casualties_dashboard,13,,0,1,Injuries
+tc_casualties_dashboard,13,,1,0,Motor vehicle driver
+tc_casualties_dashboard,13,,1,1,"830,207"
+tc_casualties_dashboard,13,,2,0,Motor vehicle passenger
+tc_casualties_dashboard,13,,2,1,"297,055"
+tc_casualties_dashboard,13,,3,0,Pedestrian
+tc_casualties_dashboard,13,,3,1,"106,943"
+tc_casualties_dashboard,13,,4,0,Bicyclist
+tc_casualties_dashboard,13,,4,1,"48,845"
+tc_casualties_dashboard,13,,5,0,Motorcyclist
+tc_casualties_dashboard,13,,5,1,"57,097"
+tc_casualties_dashboard,13,,6,0,Unknown
+tc_casualties_dashboard,13,,6,1,"28,806"

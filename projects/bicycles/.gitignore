@@ -1,0 +1,12 @@
+/data/raw/*
+!/data/raw/.gitkeep
+/data/derived/*
+!/data/derived/.gitkeep
+/reports/**
+!/reports/**/
+!/reports/**/.gitkeep
+!/reports/README.md
+/build/
+/dist/
+/report/dist/
+/report/.data-app-offline/

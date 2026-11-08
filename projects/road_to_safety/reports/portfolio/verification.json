@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "reviewed_on": "2026-11-05",
+  "research_validation": "passed",
+  "completed_tree_fits": 120,
+  "completed_baseline_fits": 12,
+  "existing_regression_tests": 61,
+  "new_notebooks_executed": 2,
+  "geographic_matches": 13,
+  "policy_pages": 6,
+  "visual_checks": [
+    "Six policy pages rendered and visually inspected",
+    "Technical report inspected with final model table",
+    "Public story year and rate controls tested with keyboard",
+    "Responsive map checked at 390px during preview"
+  ],
+  "notes": [
+    "2020\u20132021 are reused retrospective years",
+    "Map geometry is generalized for display",
+    "The HTML and PDF files are local deliverables"
+  ],
+  "deliverable_sha256": {
+    "index.html": "22b3a86d179c7a863151d7182ccd88ae955839bfd7b12bf10195c71792bff33e",
+    "technical-report.html": "58804f6de79fdf4bd93fc59a1f89df64d54e40bfff8b5fff508bce26303efd18",
+    "road-to-safety-policy-brief.pdf": "a85e86fb2ba38f54f2652e195d9d102578aa9dee9b0cf00476b1f5a442fc1bf0",
+    "road-to-safety-portfolio.zip": "77b1f4394ce4d8ad76bbe702b7b5db5eafbfcf827b70dbe139355171025d58f7"
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "sources": [
+    {
+      "id": "tc_statistics_index",
+      "source_url": "https://tc.canada.ca/en/road-transportation/statistics-data",
+      "final_url": "https://tc.canada.ca/en/road-transportation/statistics-data",
+      "acquired_at_utc": "2026-10-18T03:31:06.131271+00:00",
+      "path": "data/raw/aggregates/tc_statistics_index.html",
+      "bytes": 56068,
+      "sha256": "21efaf593044a4ad63704f4b017e40098bd305efc1cc16dcc198521826d7fd00",
+      "http_headers": {
+        "Date": "Sun, 18 Oct 2026 03:31:06 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "56068",
+        "Last-Modified": "Fri, 16 Oct 2026 21:50:41 GMT",
+        "ETag": "W/\"1792187441\""
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "GET",
+      "status": "captured",
+      "publication_vintage": "index links to 2024 publication dated 2026-10-15; footer 2023-04-13",
+      "provenance_path": "data/raw/aggregates/tc_statistics_index.provenance.json",
+      "provenance_sha256": "82596eee90ba15c81442027a7ef6df35c70f4711e23e537c847a3296b7d825e1",
+      "query_scope": {
+        "years": "see publication_vintage",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "tc_casualties_dashboard",
+      "source_url": "https://tc.canada.ca/en/road-transportation/statistics-data/2025/motor-vehicle-casualties-dashboard",
+      "final_url": "https://tc.canada.ca/en/road-transportation/statistics-data/2025/motor-vehicle-casualties-dashboard",
+      "acquired_at_utc": "2026-10-18T03:31:06.624425+00:00",
+      "path": "data/raw/aggregates/tc_casualties_dashboard.html",
+      "bytes": 46568,
+      "sha256": "30632eaf8ea6de871628fd1dc0da8eb0020d54d801291907bdd195d99e67c72d",
+      "http_headers": {
+        "Date": "Sun, 18 Oct 2026 03:31:06 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "46568",
+        "Last-Modified": "Wed, 07 Oct 2026 15:41:08 GMT",
+        "ETag": "W/\"1791387668\""
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "GET",
+      "status": "captured",
+      "publication_vintage": "2014\u20132023 text tables; page modified 2025-12-11",
+      "provenance_path": "data/raw/aggregates/tc_casualties_dashboard.provenance.json",
+      "provenance_sha256": "4e566771c678885de7aff247f962b95ffa554ca3cd2cb59553f3eeb900534407",
+      "query_scope": {
+        "years": "see publication_vintage",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "tc_dashboard_guide",
+      "source_url": "https://tc.canada.ca/en/road-transportation/statistics-data/motor-vehicle-casualties-dashboard-user-guide",
+      "final_url": "https://tc.canada.ca/en/road-transportation/statistics-data/motor-vehicle-casualties-dashboard-user-guide",
+      "acquired_at_utc": "2026-10-18T03:31:07.101208+00:00",
+      "path": "data/raw/aggregates/tc_dashboard_guide.html",
+      "bytes": 39879,
+      "sha256": "089a206501249ea954956940d395abd142c0d5e8cdc26ef78b641ba4e0ccae51",
+      "http_headers": {
+        "Date": "Sun, 18 Oct 2026 03:31:07 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "39879",
+        "Last-Modified": "Fri, 16 Oct 2026 23:26:31 GMT",
+        "ETag": "W/\"1792193191\""
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "GET",
+      "status": "captured",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/tc_dashboard_guide.provenance.json",
+      "provenance_sha256": "fff42abebf6c392cd495117117d9e61f65aee1f6f0d599dedb284aead1000ceb",
+      "query_scope": {
+        "years": "see publication_vintage",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "tc_statistics_2024",
+      "source_url": "https://tc.canada.ca/en/road-transportation/statistics-data/canadian-motor-vehicle-traffic-collision-statistics/2024/canadian-motor-vehicle-traffic-collision-statistics-2024",
+      "final_url": "https://tc.canada.ca/en/road-transportation/statistics-data/canadian-motor-vehicle-traffic-collision-statistics/2024/canadian-motor-vehicle-traffic-collision-statistics-2024",
+      "acquired_at_utc": "2026-10-18T03:31:07.640909+00:00",
+      "path": "data/raw/aggregates/tc_statistics_2024.html",
+      "bytes": 103795,
+      "sha256": "b02312bf81b5bcc882cf4082c66fbefbe348289a19f7fc2cc49070c8c460d1f1",
+      "http_headers": {
+        "Date": "Sun, 18 Oct 2026 03:31:07 GMT",
+        "Content-Type": "text/html; charset=UTF-8",
+        "Content-Length": "103795",
+        "Last-Modified": "Thu, 15 Oct 2026 17:58:30 GMT",
+        "ETag": "W/\"1792087110\""
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "GET",
+      "status": "captured",
+      "publication_vintage": "2024 reference year; linked index publication 2026-10-15",
+      "provenance_path": "data/raw/aggregates/tc_statistics_2024.provenance.json",
+      "provenance_sha256": "a58f0be6d0f3952e3327be9c0be29a3b13bcfc21c5c63b9986311b6d913012b6",
+      "query_scope": {
+        "years": "see publication_vintage",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_online_landing",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-0-0",
+      "final_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-0-0",
+      "acquired_at_utc": "2026-10-18T03:31:08.146914+00:00",
+      "path": "data/raw/aggregates/ncdb_online_landing.html",
+      "bytes": 20340,
+      "sha256": "68f43be94b3c13513d6bed7264163786f67cbcbc1c693973638070fb388842d3",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:31:08 GMT",
+        "Content-Length": "20340"
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "GET",
+      "status": "captured",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_online_landing.provenance.json",
+      "provenance_sha256": "8e5460cc5fe2979abbf7ce38141e371df21971fba87d07a539da69efa13a78c8",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_online_faq",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-5-0",
+      "final_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-5-0",
+      "acquired_at_utc": "2026-10-18T03:31:08.709763+00:00",
+      "path": "data/raw/aggregates/ncdb_online_faq.html",
+      "bytes": 19433,
+      "sha256": "a68eed98838902a45e101eb54908a3cdcf7369bb30c0c52b2bc9f81ac5b34a9a",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:31:08 GMT",
+        "Content-Length": "19433"
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "GET",
+      "status": "captured",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_online_faq.provenance.json",
+      "provenance_sha256": "aeb66dcf893377b51996766e09390afe7f6616d9e0ac886fb806761faa7dc520",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_online_help",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-4-0-0-23-101",
+      "final_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-4-0-0-23-101",
+      "acquired_at_utc": "2026-10-18T03:31:09.199935+00:00",
+      "path": "data/raw/aggregates/ncdb_online_help.html",
+      "bytes": 41108,
+      "sha256": "10de881c2577447ccafb278e9debf099819e0a1a5a2c405307d090994885449e",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:31:09 GMT",
+        "Content-Length": "41108"
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "GET",
+      "status": "captured",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_online_help.provenance.json",
+      "provenance_sha256": "6e147ecc8024d3be41d17337df45e06ee35ef185c6e532ab3ab567d614fd1db4",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_online_query",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-1-0",
+      "final_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-1-0",
+      "acquired_at_utc": "2026-10-18T03:31:09.666250+00:00",
+      "path": "data/raw/aggregates/ncdb_online_query.html",
+      "bytes": 38184,
+      "sha256": "f1f5ff47725d8aff264400f936c152649f498fd7b6f56a3afba6957c6ac71cdb",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:31:09 GMT",
+        "Content-Length": "38184"
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "GET",
+      "status": "captured",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_online_query.provenance.json",
+      "provenance_sha256": "64b8f80f31aefe8ec65e7b273e4814e8d68a0aa1f78d3f38d25564c5847ea5d9",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_online_items",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "final_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "acquired_at_utc": "2026-10-18T03:31:10.203632+00:00",
+      "path": "data/raw/aggregates/ncdb_online_items.html",
+      "bytes": 26581,
+      "sha256": "72d49ac9dd27f893d6573dee819bfe628543ed79812b8c3f791805784ed106d7",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:31:10 GMT",
+        "Content-Length": "26581"
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "POST",
+      "status": "captured",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_online_items.provenance.json",
+      "provenance_sha256": "f4563254c1ec8e5795db9a9b6c8ca82f4ccbbe3d4f7bc6eadea9a15dcd9c2c64",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_online_years",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "final_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "acquired_at_utc": "2026-10-18T03:31:10.743796+00:00",
+      "path": "data/raw/aggregates/ncdb_online_years.html",
+      "bytes": 37858,
+      "sha256": "4abd8ba21d32218e14bd6cf4ae5e533a95fff2e6b607ff47426f8c4b6187c5b2",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:31:10 GMT",
+        "Content-Length": "37858"
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "POST",
+      "status": "captured",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_online_years.provenance.json",
+      "provenance_sha256": "279bef9b601522d267ddb33648048a346b9ad3615ad3ff642577c8adc3be237f",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_online_layout",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "final_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "acquired_at_utc": "2026-10-18T03:31:11.277239+00:00",
+      "path": "data/raw/aggregates/ncdb_online_layout.html",
+      "bytes": 18304,
+      "sha256": "d86714dcf5095bf8daed5f7b9766c71884c054c99bcccb24578d467c5663b924",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:31:11 GMT",
+        "Content-Length": "18304"
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "POST",
+      "status": "source_application_error",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_online_layout.provenance.json",
+      "provenance_sha256": "bbfe413b1f9209df70429dddaa3a5f1f9ca013862f178d68cffe4a66ae9f4ac0",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_online_annual",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "final_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "acquired_at_utc": "2026-10-18T03:31:11.819542+00:00",
+      "path": "data/raw/aggregates/ncdb_online_annual.html",
+      "bytes": 18304,
+      "sha256": "e8bff0f5e060f67ef05e459c5b489e1dd7695cf1554775f37c21f301503f338c",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:31:11 GMT",
+        "Content-Length": "18304"
+      },
+      "acquisition_type": "original_http_response",
+      "request_method": "POST",
+      "status": "source_application_error",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_online_annual.provenance.json",
+      "provenance_sha256": "3b16c577b65f7af2388bf7a435d8280c8b841550b4412bf213aaf6f3103d4f3e",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_retry_items",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "request_method": "POST",
+      "acquired_at_utc": "2026-10-18T03:31:59.565909+00:00",
+      "path": "data/raw/aggregates/ncdb_retry_items.html",
+      "bytes": 26581,
+      "sha256": "72d49ac9dd27f893d6573dee819bfe628543ed79812b8c3f791805784ed106d7",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:31:58 GMT",
+        "Content-Length": "26581"
+      },
+      "acquisition_type": "original_http_response",
+      "status": "captured",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_retry_items.provenance.json",
+      "provenance_sha256": "bd43f63cb843cd77e7512211b36017912afb39eefc947bb48ec1bd07ec74b563",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    },
+    {
+      "id": "ncdb_retry_single_measure",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "request_method": "POST",
+      "acquired_at_utc": "2026-10-18T03:32:00.061083+00:00",
+      "path": "data/raw/aggregates/ncdb_retry_single_measure.html",
+      "bytes": 17296,
+      "sha256": "60fabbf641e6a2f10af22003db443f11b8ef63e248cca6331bb20b920e5150dc",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:32:00 GMT",
+        "Content-Length": "17296"
+      },
+      "acquisition_type": "original_http_response",
+      "status": "source_application_error",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_retry_single_measure.provenance.json",
+      "provenance_sha256": "dc71572ee8d4c2faf91b137d64fa66713c0eab883c42c516176a16893cc20c7c",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "Number of collisions only"
+      }
+    },
+    {
+      "id": "ncdb_year_details",
+      "source_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en&c=100-3-0-0-0",
+      "acquired_at_utc": "2026-10-18T03:32:14.553658+00:00",
+      "path": "data/raw/aggregates/ncdb_year_details.html",
+      "bytes": 16909,
+      "sha256": "a0e27ff15a567a2b698e0140f09c34b8d845dd861ecc2afaa9d4f44dec80e37f",
+      "http_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Sun, 18 Oct 2026 03:32:14 GMT",
+        "Content-Length": "16909"
+      },
+      "acquisition_type": "original_http_response",
+      "status": "captured",
+      "publication_vintage": "see original page metadata; acquisition date is not publication date",
+      "provenance_path": "data/raw/aggregates/ncdb_year_details.provenance.json",
+      "provenance_sha256": "6f66fd230e36441224aa44ad5ee52dc419b73ae006a3da93918c3bf3c2fd19cb",
+      "query_scope": {
+        "years": "1999\u20132023",
+        "road_users": "all; no road-user filter applied",
+        "measure": "all five default measures where applicable"
+      }
+    }
+  ],
+  "extracts": [
+    {
+      "path": "data/reference/aggregate_tc_casualties_dashboard_cells.csv",
+      "sha256": "a50352c1838913aff6cbdc6633d21a74d246c807ea8756e80d75b0d4d04161ee",
+      "derived_from": "data/raw/aggregates/tc_casualties_dashboard.html",
+      "source_sha256": "30632eaf8ea6de871628fd1dc0da8eb0020d54d801291907bdd195d99e67c72d",
+      "type": "extracted_html_table_cells",
+      "tables": 14
+    },
+    {
+      "path": "data/reference/aggregate_tc_statistics_2024_cells.csv",
+      "sha256": "76e738b860ec7b38deccd0c78cc5aefbc0f519856733f599e81858b4d2bd6ae8",
+      "derived_from": "data/raw/aggregates/tc_statistics_2024.html",
+      "source_sha256": "b02312bf81b5bcc882cf4082c66fbefbe348289a19f7fc2cc49070c8c460d1f1",
+      "type": "extracted_html_table_cells",
+      "tables": 11
+    },
+    {
+      "path": "data/reference/aggregate_national_annual_2024_vintage.csv",
+      "sha256": "c67e69f4f7473fe35d0d1f3fb1a813d958501c80fdfbe36ebc88c4ae8681e0bf",
+      "derived_from": "data/raw/aggregates/tc_statistics_2024.html",
+      "source_sha256": "b02312bf81b5bcc882cf4082c66fbefbe348289a19f7fc2cc49070c8c460d1f1",
+      "type": "normalized_html_table_extract",
+      "rows": 20
+    },
+    {
+      "path": "data/reference/aggregate_jurisdiction_rates_2024.csv",
+      "sha256": "08b69101e472ef7e6c1a20fbf43f18f46379033a57e6f28f454cab5018ce3eab",
+      "derived_from": "data/raw/aggregates/tc_statistics_2024.html",
+      "source_sha256": "b02312bf81b5bcc882cf4082c66fbefbe348289a19f7fc2cc49070c8c460d1f1",
+      "type": "normalized_html_table_extract",
+      "rows": 14
+    },
+    {
+      "path": "data/reference/aggregate_dashboard_margins_2014_2023.csv",
+      "sha256": "e569b6b9ae9999f6867ec196c33835b6e0d78b76a896b372f733d8ca4c410ba9",
+      "derived_from": "data/raw/aggregates/tc_casualties_dashboard.html",
+      "source_sha256": "30632eaf8ea6de871628fd1dc0da8eb0020d54d801291907bdd195d99e67c72d",
+      "type": "normalized_html_table_extract",
+      "rows": 134
+    }
+  ],
+  "checks": {
+    "national_annual_years": [
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+    ],
+    "jurisdiction_rows_including_canada": 14,
+    "dashboard_partition_mismatches": [
+      {
+        "dimension": "Road User Class",
+        "measure": "Injuries",
+        "partition_sum": 1368953,
+        "year_sum": 1369953,
+        "difference": -1000
+      }
+    ],
+    "dashboard_partition_sums": [
+      {
+        "dimension": "Year",
+        "measure": "Fatalities",
+        "sum": 18867
+      },
+      {
+        "dimension": "Month",
+        "measure": "Fatalities",
+        "sum": 18867
+      },
+      {
+        "dimension": "Day of Week",
+        "measure": "Fatalities",
+        "sum": 18867
+      },
+      {
+        "dimension": "Collision Hour",
+        "measure": "Fatalities",
+        "sum": 18867
+      },
+      {
+        "dimension": "Gender",
+        "measure": "Fatalities",
+        "sum": 18867
+      },
+      {
+        "dimension": "Person Age",
+        "measure": "Fatalities",
+        "sum": 18867
+      },
+      {
+        "dimension": "Road User Class",
+        "measure": "Fatalities",
+        "sum": 18867
+      },
+      {
+        "dimension": "Year",
+        "measure": "Injuries",
+        "sum": 1369953
+      },
+      {
+        "dimension": "Month",
+        "measure": "Injuries",
+        "sum": 1369953
+      },
+      {
+        "dimension": "Day of Week",
+        "measure": "Injuries",
+        "sum": 1369953
+      },
+      {
+        "dimension": "Collision Hour",
+        "measure": "Injuries",
+        "sum": 1369953
+      },
+      {
+        "dimension": "Gender",
+        "measure": "Injuries",
+        "sum": 1369953
+      },
+      {
+        "dimension": "Person Age",
+        "measure": "Injuries",
+        "sum": 1369953
+      },
+      {
+        "dimension": "Road User Class",
+        "measure": "Injuries",
+        "sum": 1368953
+      }
+    ],
+    "dashboard_vs_2024_publication_injuries_2016": {
+      "dashboard": 160246,
+      "publication": 160248,
+      "resolution": "retain separate vintages"
+    }
+  }
+}

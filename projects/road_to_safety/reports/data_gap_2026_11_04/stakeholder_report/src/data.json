@@ -1,0 +1,65 @@
+{
+  "surface": "report",
+  "title": "Road to Safety: what the evidence can support",
+  "generatedAt": "2026-11-04T00:00:00Z",
+  "status": "reviewed",
+  "buildStatus": "creating",
+  "filters": [],
+  "queries": {
+    "stress_results": {
+      "rows": [
+        {
+          "method": "unchanged",
+          "n": 163580,
+          "fatal": 3230,
+          "mean_prediction": 0.0160361673465372,
+          "observed_prevalence": 0.0197456901821738,
+          "log_loss": 0.092626234012073,
+          "brier_score": 0.0191771416920308
+        },
+        {
+          "method": "sigmoid",
+          "n": 163580,
+          "fatal": 3230,
+          "mean_prediction": 0.0157005836054714,
+          "observed_prevalence": 0.0197456901821738,
+          "log_loss": 0.0927059206595964,
+          "brier_score": 0.0191814005247167
+        },
+        {
+          "method": "prevalence",
+          "n": 163580,
+          "fatal": 3230,
+          "mean_prediction": 0.0160801175948434,
+          "observed_prevalence": 0.0197456901821738,
+          "log_loss": 0.097443802850132,
+          "brier_score": 0.0193692343237964
+        }
+      ],
+      "source": {
+        "label": "Validated scoring-only 2020–2021 stress experiment",
+        "files": [
+          "reports/tables/cstress_v1_metrics.csv",
+          "data/derived/calibration_stress_v1/validation.json"
+        ],
+        "filters": [
+          "population=pooled",
+          "group=all; recorded fatal/injury collisions only"
+        ],
+        "evidenceFlow": [
+          {
+            "title": "Read the validated run",
+            "detail": "Read the exact three pooled all-collision method rows from cstress_v1_metrics.csv; independent validation receipt passed30checks."
+          }
+        ],
+        "metricDefinitions": [
+          {
+            "label": "Fatal-collision proportion",
+            "definition": "Fatal collisions divided by all fatal/nonfatal-injury collisions in the released cohort; not accident occurrence or individual mortality."
+          }
+        ]
+      }
+    }
+  },
+  "id": "report:2ea08647-7d66-4fbc-b2f2-148f73b3ca09"
+}

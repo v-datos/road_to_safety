@@ -1,0 +1,17 @@
+feature,feature_group,label,collisions_all_years,fatal_collisions_all_years,unadjusted_fatality_rate_pct,coefficient_log_odds,odds_ratio
+has_road_tractor,V_TYPE,Road tractor / semi-trailer (V_TYPE=08),80540,5475,6.7979,1.86062,6.4277
+has_special_offroad,V_TYPE,"Off-road / farm / construction / streetcar (V_TYPE=16,18-23)",30380,1707,5.6188,1.58914,4.8995
+has_heavy_truck,V_TYPE,Unit heavy truck >4536 kg (V_TYPE=07),96460,3445,3.5714,1.17267,3.2306
+heavy_freight_x_vru,V_TYPE,Heavy truck/tractor x Vulnerable Road User interaction,12252,1526,12.4551,0.94453,2.5716
+has_pedestrian,P_USER,Pedestrian involved (P_USER=3 / V_TYPE=NN),282626,7947,2.8118,0.94433,2.5711
+has_light_truck_van,V_TYPE,"Light truck / cargo van <=4536 kg (V_TYPE=05,06)",188628,3766,1.9965,0.64614,1.9082
+has_motorcyclist,P_USER,Motorcyclist person record (P_USER=5),140835,4492,3.1895,0.60242,1.8265
+has_motorcycle_moped,V_TYPE,Motorcycle / moped vehicle unit (V_TYPE=14),140835,4492,3.1895,0.60242,1.8265
+has_light_duty,V_TYPE,Light-duty vehicle involved (V_TYPE=01),2710412,39456,1.4557,0.56355,1.7569
+has_bus,V_TYPE,"Bus (school / transit / intercity; V_TYPE=09,10,11)",42853,697,1.6265,0.47656,1.6105
+has_passenger,P_USER,Motor vehicle passenger present (P_USER=2),1145046,19631,1.7144,0.43565,1.546
+has_unknown_user,P_USER,Unstated/unknown road user present (P_USER=U),181147,4021,2.2197,0.22197,1.2485
+has_bicyclist,P_USER,Bicyclist person record (P_USER=4),151718,1241,0.818,0.11385,1.1206
+has_bicycle_vehicle,V_TYPE,Bicycle vehicle unit (V_TYPE=17),151718,1241,0.818,0.11385,1.1206
+has_unknown_vehicle,V_TYPE,"Unknown / other vehicle type (V_TYPE=UU,XX,QQ)",57157,837,1.4644,-0.13014,0.878
+multi_vehicle,V_TYPE,Multi-vehicle collision (>=2 distinct motor/cycle units),1976465,23665,1.1973,-0.4534,0.6355

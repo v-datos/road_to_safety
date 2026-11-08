@@ -1,0 +1,152 @@
+{
+  "audit_date": "2026-10-17",
+  "candidate_csv": "data/reference/tractor_exposure_candidates.csv",
+  "candidate_csv_sha256": "3faa5533286a8ac39694d073bc9566ef9d31259daf4fd26235fa44871a78bf99",
+  "series_id": "tc_2021_parliament_table10_tractor",
+  "title": "Transport Canada modeled tractor-trailer VKT, Table 10, 2021 Annual Report to Parliament",
+  "publisher": "Transport Canada",
+  "publication_month": "2026-05",
+  "html_modified_date": "2026-06-25",
+  "data_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021
+  ],
+  "grain": "one calendar year and candidate exposure series",
+  "unit": "million_vehicle_kilometres",
+  "conversion_to_vehicle_kilometres": 1000000,
+  "source_table": "Table 10",
+  "pdf_physical_page": 57,
+  "pdf_printed_page": 45,
+  "methods_pdf_physical_page": 56,
+  "methods_pdf_printed_page": 44,
+  "extraction": "Parsed exact tractor row of preserved HTML table with Python HTMLParser; checked all seven values against preserved PDF text. No graph digitization or extrapolation.",
+  "published_precision_million_km": "0.1",
+  "figure_28_vkt_million_km_by_year": {
+    "2015": "34203.5",
+    "2016": "35898.04",
+    "2017": "37651.33",
+    "2018": "39494.66",
+    "2019": "41434.4",
+    "2020": "43463.48",
+    "2021": "45593.81"
+  },
+  "figure_28_rounds_to_table_10_all_years": true,
+  "vehicle_class_published": "tractor-trailers >15,000 kg",
+  "weight_measure_type": "not specified for exposure threshold (do not assume registered gross weight or gross vehicle weight rating)",
+  "estimate_type": "econometric forecasting model",
+  "model_named_inputs": [
+    "Canadian Vehicle Survey (CVS)",
+    "Canadian Vehicle Use Study (CVUS)",
+    "Statistics Canada data tables (identifiers not supplied)"
+  ],
+  "published_model_detail_missing": [
+    "equations",
+    "coefficient estimates",
+    "training/forecast cutoff",
+    "input table identifiers",
+    "uncertainty intervals",
+    "2020 traffic validation",
+    "territorial coverage",
+    "Canadian registered vehicle travel abroad handling",
+    "foreign registered vehicle travel in Canada handling",
+    "public-road-only boundary",
+    "trailer attachment definition within exposure class"
+  ],
+  "geography_report_context": "Canada",
+  "geography_compatibility_status": "unresolved: territorial and border adjustments not documented for model",
+  "ncdb_compatibility_status": "not_validated_for_ncdb08_rates",
+  "ncdb_comparator_definition": "V_TYPE08: road tractor with or without semitrailer, no public weight variable to enforce exposure threshold",
+  "older_vintage_check": {
+    "source": "tc_commercial_vehicle_safety_2012_2018.pdf",
+    "source_table": "Table 28",
+    "pdf_physical_page": 97,
+    "pdf_printed_page": 85,
+    "overlap_years": [
+      2015,
+      2016,
+      2017,
+      2018
+    ],
+    "tractor_values_million_km": [
+      "34203.5",
+      "35898.0",
+      "37651.3",
+      "39494.7"
+    ],
+    "overlap_matches_current_table": true,
+    "interpretation": "No numerical revision detected for these overlapping published cells; does not prove full model vintage or identical underlying inputs."
+  },
+  "conflicting_context": {
+    "source": "tc_commercial_vehicle_collisions_2012_2021.html",
+    "section": "Commercial vehicle exposure and involvement rates",
+    "publication_modified_date": "2023-11-16",
+    "population": "commercial vehicles including straight trucks, tractor trailers, buses excluding school buses",
+    "published_2019_2020_change_percent": -12,
+    "published_2020_2021_change_percent": 16,
+    "published_2021_vkt_billion": 48.9,
+    "use": "Context only; not an interchangeable tractor denominator and not used to fabricate tractor values."
+  },
+  "newer_tractor_vkt_search": {
+    "status": "not_located_in_bounded_official_search",
+    "years_sought": [
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "checks": [
+      "TC motor carriers/commercial vehicles/drivers index linked annual reports2021,2020,2019",
+      "TC and TDIH official-domain searches tractor and VKT/vehicle-kilometres with years2022,2023,2024,2025",
+      "Government of Canada publications search for2022commercial vehicle safety annual report"
+    ],
+    "found_but_not_eligible": "TDIH2024S6 all-vehicle VKT through2023; not tractor-specific",
+    "not_a_claim": "Absence from this search does not prove no unpublished or differently indexed estimate exists."
+  },
+  "source_files": [
+    {
+      "path": "data/raw/exposure/tc_commercial_vehicle_safety_2021.html",
+      "url": "https://tc.canada.ca/en/road-transportation/motor-vehicle-safety/motor-carriers-commercial-vehicles-drivers/commercial-vehicle-safety-canada-2021-annual-report-parliament",
+      "sha256": "10f699ca0c0895bda9d04b8ff65c1152076d662c094602a8cc091f549dcbbe05",
+      "bytes": 368529,
+      "retrieved_local_date": "2026-10-17",
+      "retrieved_timezone": "America/Edmonton"
+    },
+    {
+      "path": "data/raw/exposure/tc_commercial_vehicle_safety_2021.pdf",
+      "url": "https://tc.canada.ca/sites/default/files/2026-06/2021-CMVsafety-En.pdf",
+      "sha256": "40ff4c48d47eaa92b550106a7f309e62ea451f449de6d17a17ab8700dff0cfef",
+      "bytes": 1538617,
+      "retrieved_local_date": "2026-10-17",
+      "retrieved_timezone": "America/Edmonton"
+    },
+    {
+      "path": "data/raw/exposure/tc_commercial_vehicle_collisions_2012_2021.html",
+      "url": "https://tc.canada.ca/en/road-transportation/statistics-data/commercial-vehicle-collisions/2021/commercial-vehicle-collisions-canada-2012-2021",
+      "sha256": "5fd03dd5470d97c013ea57b219a9e9e9ee4d4fc9346d80057f53ab71eb0c1cd5",
+      "bytes": 72887,
+      "retrieved_local_date": "2026-10-17",
+      "retrieved_timezone": "America/Edmonton"
+    },
+    {
+      "path": "data/raw/exposure/tc_commercial_vehicle_safety_index.html",
+      "url": "https://tc.canada.ca/en/road-transportation/motor-vehicle-safety/motor-carriers-commercial-vehicles-drivers",
+      "sha256": "c3ed9cc521e217d0781a06034dee473b820c1a8a718846386cb29014159817e9",
+      "bytes": 51267,
+      "retrieved_local_date": "2026-10-17",
+      "retrieved_timezone": "America/Edmonton"
+    },
+    {
+      "path": "data/raw/exposure/tc_commercial_vehicle_safety_2012_2018.pdf",
+      "url": "https://tc.canada.ca/sites/default/files/2022-01/commercial-vehicle-safety-canada-2012-2018.pdf",
+      "sha256": "c12266f852d9a116466a43628f7602227e0191c3947cb47d2813a475810f7b6b",
+      "bytes": 2251554,
+      "retrieved_local_date": "2026-10-17",
+      "retrieved_timezone": "America/Edmonton"
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+[
+  {
+    "requested_url": "https://open.canada.ca/data/api/action/package_show?id=1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a",
+    "final_url_without_query": "https://open.canada.ca/data/api/action/package_show",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:25:42.837381+00:00",
+    "completed_at_utc": "2026-11-05T05:25:43.470476+00:00",
+    "http_status": 200,
+    "headers": {
+      "Date": "Thu, 05 Nov 2026 05:25:43 GMT",
+      "Content-Type": "application/json;charset=utf-8",
+      "Content-Length": "61074",
+      "Cache-Control": "public, max-age=30, must-revalidate"
+    },
+    "size_bytes": 61074,
+    "sha256": "131ab321ffd1a2b458fcbfcb76a6979a06a49eb7896d86d4415ee407ee598574",
+    "local_path": "data/raw/data_gap_2026_11_04/records/ncdb_catalog.json"
+  },
+  {
+    "requested_url": "https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a",
+    "final_url_without_query": "https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a",
+    "redirect_query_redacted": false,
+    "acquired_at_utc": "2026-11-05T05:25:43.474314+00:00",
+    "completed_at_utc": "2026-11-05T05:25:45.072149+00:00",
+    "http_status": 200,
+    "headers": {
+      "Date": "Thu, 05 Nov 2026 05:25:44 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "Content-Length": "94991",
+      "Cache-Control": "public, max-age=30, must-revalidate"
+    },
+    "size_bytes": 94991,
+    "sha256": "9903cce6a703c04a4a833a8412ad11ee2682ea6df0f3ab284b5da87f933beaf5",
+    "local_path": "data/raw/data_gap_2026_11_04/records/ncdb_catalog_page.html"
+  },
+  {
+    "requested_url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?c=100-0-0&l=en",
+    "final_url_without_query": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:25:45.074193+00:00",
+    "completed_at_utc": "2026-11-05T05:25:45.503738+00:00",
+    "http_status": 200,
+    "headers": {
+      "Cache-Control": "private",
+      "Content-Type": "text/html; charset=utf-8",
+      "Date": "Thu, 05 Nov 2026 05:25:45 GMT",
+      "Content-Length": "20340"
+    },
+    "size_bytes": 20340,
+    "sha256": "68f43be94b3c13513d6bed7264163786f67cbcbc1c693973638070fb388842d3",
+    "local_path": "data/raw/data_gap_2026_11_04/records/ncdb_online.html"
+  },
+  {
+    "requested_url": "https://tc.canada.ca/en/road-transportation/statistics-data/2025/motor-vehicle-casualties-dashboard",
+    "final_url_without_query": "https://tc.canada.ca/en/road-transportation/statistics-data/2025/motor-vehicle-casualties-dashboard",
+    "redirect_query_redacted": false,
+    "acquired_at_utc": "2026-11-05T05:25:45.504960+00:00",
+    "completed_at_utc": "2026-11-05T05:25:45.974029+00:00",
+    "http_status": 200,
+    "headers": {
+      "Date": "Thu, 05 Nov 2026 05:25:45 GMT",
+      "Content-Type": "text/html; charset=UTF-8",
+      "Content-Length": "46568",
+      "Cache-Control": "max-age=2764800, public",
+      "Last-Modified": "Tue, 03 Nov 2026 18:33:45 GMT",
+      "ETag": "W/\"1793730825\""
+    },
+    "size_bytes": 46568,
+    "sha256": "ba4e50cc828400649737af43066bf161ba62f29c0c3836fcccc207f194eaf9df",
+    "local_path": "data/raw/data_gap_2026_11_04/records/dashboard.html"
+  },
+  {
+    "requested_url": "https://tc.canada.ca/en/road-transportation/statistics-data",
+    "final_url_without_query": "https://tc.canada.ca/en/road-transportation/statistics-data",
+    "redirect_query_redacted": false,
+    "acquired_at_utc": "2026-11-05T05:25:45.975489+00:00",
+    "completed_at_utc": "2026-11-05T05:25:46.361748+00:00",
+    "http_status": 200,
+    "headers": {
+      "Date": "Thu, 05 Nov 2026 05:25:46 GMT",
+      "Content-Type": "text/html; charset=UTF-8",
+      "Content-Length": "56068",
+      "Cache-Control": "max-age=2764800, public",
+      "Last-Modified": "Wed, 04 Nov 2026 21:52:20 GMT",
+      "ETag": "W/\"1793829140\""
+    },
+    "size_bytes": 56068,
+    "sha256": "c866da98b384ab6aa60ab2f7fb5d12a693f3d615d97badb94d82895b88e830b8",
+    "local_path": "data/raw/data_gap_2026_11_04/records/statistics_index.html"
+  },
+  {
+    "requested_url": "https://open.canada.ca/data/api/action/package_search?q=National%20Collision%20Database&rows=100",
+    "final_url_without_query": "https://open.canada.ca/data/api/action/package_search",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:25:46.362783+00:00",
+    "completed_at_utc": "2026-11-05T05:25:48.089715+00:00",
+    "http_status": 200,
+    "headers": {
+      "Date": "Thu, 05 Nov 2026 05:25:46 GMT",
+      "Content-Type": "application/json;charset=utf-8",
+      "Content-Length": "1318016",
+      "Cache-Control": "public, max-age=30, must-revalidate"
+    },
+    "size_bytes": 1318016,
+    "sha256": "d26bc6c7f98a13d5f8a44d9b654553a5ce04b8498fb5f95c9c1e03699de2102e",
+    "local_path": "data/raw/data_gap_2026_11_04/records/catalog_search_ncdb.json"
+  },
+  {
+    "requested_url": "https://open.canada.ca/data/api/action/package_search?q=collision%202022&rows=100",
+    "final_url_without_query": "https://open.canada.ca/data/api/action/package_search",
+    "redirect_query_redacted": true,
+    "acquired_at_utc": "2026-11-05T05:25:48.093277+00:00",
+    "completed_at_utc": "2026-11-05T05:25:49.339156+00:00",
+    "http_status": 200,
+    "headers": {
+      "Date": "Thu, 05 Nov 2026 05:25:48 GMT",
+      "Content-Type": "application/json;charset=utf-8",
+      "Content-Length": "370854",
+      "Cache-Control": "public, max-age=30, must-revalidate"
+    },
+    "size_bytes": 370854,
+    "sha256": "64680c807bd8c8d0f5416c5e8b38ea9fce6cb24c1794fad3dd8af2c07b701f30",
+    "local_path": "data/raw/data_gap_2026_11_04/records/catalog_search_collision2022.json"
+  }
+]

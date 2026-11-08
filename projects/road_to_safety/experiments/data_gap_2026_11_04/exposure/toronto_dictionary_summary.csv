@@ -1,0 +1,31 @@
+Column Name,Data Type,Date Format,Description
+count_id,int,,Unique identifier for each SVC count. Use this ID to cross-reference 15-minute observations in svc_raw_data files.
+count_type,,,"Type of data collected
+
+ATR_VOLUME = Volume data only
+ATR_SPEED_VOLUME = Speed and volume data
+VEHICLE_CLASS = Vehicle classification and volume data"
+count_date_start,date,YYYY-MM-DD,Date on which the count started
+count_date_end,date,YYYY-MM-DD,Date on which the count ended
+count_duration,text,,"Count duration, in hours"
+location_name,text,,Human-readable name of the location where the count was conducted (e.g. Bloor St: Yonge St - Park Rd)
+longitude,float,,Longitude GPS coordinate
+latitude,float,,Latitude GPS coordinate
+centreline_id,int,,Unique location identifier that corresponds to the Toronto Centreline (https://open.toronto.ca/dataset/toronto-centreline-tcl/). Cross-reference with the TCL to find spatial geometry for mapping.
+avg_daily_vol,float,,"The average total daily vehicle volume (summing both directions of travel) over the count duration. Calculated by summing the grand total of vehicles observed over the count duration, in both directions, divided by the count duration in days."
+avg_weekday_daily_vol,float,,"The average weekday total daily vehicle volume (summing both directions of travel) over the count duration. If the study was conducted on weekdays only, this is the same as the average daily volume. If the study was conducted on a weekend, this value will be none. If the study was conducted over both weekdays and weekends (i.e. one or two weeks), this is the average daily volume of weekdays only."
+avg_weekend_daily_vol,float,,"Most traffic volume counts are conducted during the week. A handful of counts are done on weekends, or over periods of one or two weeks. For these counts, we calculate the average weekend daily volume.
+
+Similar to the average daily volume but considers only volume observations that fall on a weekend (Saturday or Sunday)."
+avg_wkdy_am_peak_start,time,,"Start of the average weekday AM peak hour. The AM peak hour is the one-hour continuous period between 6:30-10:30am during which the highest motor vehicle volume is observed moving through the roadway, for all available directions (one or both directions). Bicycles are not included. Calculated for weekdays only. If the study was conducted on a weekend, this value will be none.
+
+For counts with a duration longer than 24 hours, the AM peak is calculated by first calculating ""average"" volumes for each 15-minute period in the day, then finding the hour with the highest motor vehicle volume based on the averaged volumes."
+avg_wkdy_am_peak_vol,float,,"Average motor vehicles counted during the AM peak hour. Includes the sum of all available directions (one or both directions). Bicycles are not included. Calculated for weekdays only. If the study was conducted on a weekend, this value will be none."
+avg_wkdy_pm_peak_start,time,,"Start of the average weekday PM peak hour. The PM peak hour is the one-hour continuous period between 2:00-8:00pm during which the highest motor vehicle volume is observed moving through the roadway, for all available directions (one or both directions). Bicycles are not included. Calculated for weekdays only. If the study was conducted on a weekend, this value will be none.
+
+For counts with a duration longer than 24 hours, the PM peak is calculated by first calculating ""average"" volumes for each 15-minute period in the day, then finding the hour with the highest motor vehicle volume based on the averaged volumes."
+avg_wkdy_pm_peak_vol,float,,"Average motor vehicles counted during the PM peak hour. Includes the sum of all available directions (one or both directions). Bicycles are not included. Calculated for weekdays only. If the study was conducted on a weekend, this value will be none."
+avg_speed,float,,"If speed data are available for the count, the mean (average) speed of all vehicles over the entire count duration. NOT the same as 50th percentile speed. If the count was conducted on a two-way road, and both directions of travel were observed, counts from both directions are included in the calculation."
+avg_85th_percentile_speed,float,,"If speed data are available for the study, the 85th percentile speed is the speed at or below which 85% of vehicles travel. Calculated over all count days. If the count was conducted on a two-way road, and both directions of travel were observed, counts from both directions are included in the calculation."
+avg_95th_percentile_speed,float,,"If speed data are available for the study, the 95th percentile speed is the speed at or below which 95% of vehicles travel. Calculated over all count days. If the count was conducted on a two-way road, and both directions of travel were observed, counts from both directions are included in the calculation."
+avg_heavy_pct,float,,"If vehicle classification was collected, the percentage of motor vehicles considered heavy vehicles over the count duration. Put simply, this is the percentage of buses, single-unit, and articulated trucks. The percentage is calculated by summing the volume of vehicles in FWHA classes 4-13 inclusive, over the total vehicle volume."

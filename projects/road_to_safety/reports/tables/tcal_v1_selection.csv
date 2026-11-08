@@ -1,0 +1,4 @@
+method,macro_log_loss,macro_brier_score,macro_log_loss_difference,macro_brier_difference,years_log_loss_improved,raw_macro_log_loss_rank,eligible
+unchanged,0.07373510149533158,0.014547394582957366,0.0,0.0,0,3,True
+intercept_only,0.07370460628228741,0.014545104385136584,-3.0495213044180274e-05,-2.2901978207834697e-06,4,2,True
+sigmoid,0.07370302816463277,0.014544953283702701,-3.2073330698797566e-05,-2.4412992546667817e-06,4,1,True

@@ -1,0 +1,4537 @@
+dataset,year,category,measure,count
+annual_bicycle_2010_2023,2010,Total,vehicles,6712
+annual_bicycle_2010_2023,2010,Total,injured,6484
+annual_bicycle_2010_2023,2010,Total,fatalities,61
+annual_bicycle_2010_2023,2011,Total,vehicles,6587
+annual_bicycle_2010_2023,2011,Total,injured,6416
+annual_bicycle_2010_2023,2011,Total,fatalities,56
+annual_bicycle_2010_2023,2012,Total,vehicles,6842
+annual_bicycle_2010_2023,2012,Total,injured,6614
+annual_bicycle_2010_2023,2012,Total,fatalities,63
+annual_bicycle_2010_2023,2013,Total,vehicles,6435
+annual_bicycle_2010_2023,2013,Total,injured,6251
+annual_bicycle_2010_2023,2013,Total,fatalities,69
+annual_bicycle_2010_2023,2014,Total,vehicles,5799
+annual_bicycle_2010_2023,2014,Total,injured,5581
+annual_bicycle_2010_2023,2014,Total,fatalities,42
+annual_bicycle_2010_2023,2015,Total,vehicles,6455
+annual_bicycle_2010_2023,2015,Total,injured,6200
+annual_bicycle_2010_2023,2015,Total,fatalities,50
+annual_bicycle_2010_2023,2016,Total,vehicles,6341
+annual_bicycle_2010_2023,2016,Total,injured,6102
+annual_bicycle_2010_2023,2016,Total,fatalities,49
+annual_bicycle_2010_2023,2017,Total,vehicles,5600
+annual_bicycle_2010_2023,2017,Total,injured,5428
+annual_bicycle_2010_2023,2017,Total,fatalities,38
+annual_bicycle_2010_2023,2018,Total,vehicles,4892
+annual_bicycle_2010_2023,2018,Total,injured,4743
+annual_bicycle_2010_2023,2018,Total,fatalities,48
+annual_bicycle_2010_2023,2019,Total,vehicles,4628
+annual_bicycle_2010_2023,2019,Total,injured,4499
+annual_bicycle_2010_2023,2019,Total,fatalities,43
+annual_bicycle_2010_2023,2020,Total,vehicles,3717
+annual_bicycle_2010_2023,2020,Total,injured,3440
+annual_bicycle_2010_2023,2020,Total,fatalities,50
+annual_bicycle_2010_2023,2021,Total,vehicles,4196
+annual_bicycle_2010_2023,2021,Total,injured,4059
+annual_bicycle_2010_2023,2021,Total,fatalities,39
+annual_bicycle_2010_2023,2022,Total,vehicles,4047
+annual_bicycle_2010_2023,2022,Total,injured,3928
+annual_bicycle_2010_2023,2022,Total,fatalities,48
+annual_bicycle_2010_2023,2023,Total,vehicles,4902
+annual_bicycle_2010_2023,2023,Total,injured,4742
+annual_bicycle_2010_2023,2023,Total,fatalities,46
+annual_bicycle_2010_2023,2010,Fatal collisions,vehicles,68
+annual_bicycle_2010_2023,2010,Fatal collisions,injured,6
+annual_bicycle_2010_2023,2010,Fatal collisions,fatalities,61
+annual_bicycle_2010_2023,2011,Fatal collisions,vehicles,56
+annual_bicycle_2010_2023,2011,Fatal collisions,injured,0
+annual_bicycle_2010_2023,2011,Fatal collisions,fatalities,56
+annual_bicycle_2010_2023,2012,Fatal collisions,vehicles,70
+annual_bicycle_2010_2023,2012,Fatal collisions,injured,4
+annual_bicycle_2010_2023,2012,Fatal collisions,fatalities,63
+annual_bicycle_2010_2023,2013,Fatal collisions,vehicles,70
+annual_bicycle_2010_2023,2013,Fatal collisions,injured,2
+annual_bicycle_2010_2023,2013,Fatal collisions,fatalities,69
+annual_bicycle_2010_2023,2014,Fatal collisions,vehicles,45
+annual_bicycle_2010_2023,2014,Fatal collisions,injured,2
+annual_bicycle_2010_2023,2014,Fatal collisions,fatalities,42
+annual_bicycle_2010_2023,2015,Fatal collisions,vehicles,52
+annual_bicycle_2010_2023,2015,Fatal collisions,injured,0
+annual_bicycle_2010_2023,2015,Fatal collisions,fatalities,50
+annual_bicycle_2010_2023,2016,Fatal collisions,vehicles,58
+annual_bicycle_2010_2023,2016,Fatal collisions,injured,5
+annual_bicycle_2010_2023,2016,Fatal collisions,fatalities,49
+annual_bicycle_2010_2023,2017,Fatal collisions,vehicles,38
+annual_bicycle_2010_2023,2017,Fatal collisions,injured,0
+annual_bicycle_2010_2023,2017,Fatal collisions,fatalities,38
+annual_bicycle_2010_2023,2018,Fatal collisions,vehicles,50
+annual_bicycle_2010_2023,2018,Fatal collisions,injured,2
+annual_bicycle_2010_2023,2018,Fatal collisions,fatalities,48
+annual_bicycle_2010_2023,2019,Fatal collisions,vehicles,46
+annual_bicycle_2010_2023,2019,Fatal collisions,injured,2
+annual_bicycle_2010_2023,2019,Fatal collisions,fatalities,43
+annual_bicycle_2010_2023,2020,Fatal collisions,vehicles,51
+annual_bicycle_2010_2023,2020,Fatal collisions,injured,2
+annual_bicycle_2010_2023,2020,Fatal collisions,fatalities,50
+annual_bicycle_2010_2023,2021,Fatal collisions,vehicles,39
+annual_bicycle_2010_2023,2021,Fatal collisions,injured,0
+annual_bicycle_2010_2023,2021,Fatal collisions,fatalities,39
+annual_bicycle_2010_2023,2022,Fatal collisions,vehicles,50
+annual_bicycle_2010_2023,2022,Fatal collisions,injured,1
+annual_bicycle_2010_2023,2022,Fatal collisions,fatalities,48
+annual_bicycle_2010_2023,2023,Fatal collisions,vehicles,49
+annual_bicycle_2010_2023,2023,Fatal collisions,injured,1
+annual_bicycle_2010_2023,2023,Fatal collisions,fatalities,46
+annual_bicycle_2010_2023,2010,Injury collisions,vehicles,6644
+annual_bicycle_2010_2023,2010,Injury collisions,injured,6478
+annual_bicycle_2010_2023,2010,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2011,Injury collisions,vehicles,6531
+annual_bicycle_2010_2023,2011,Injury collisions,injured,6416
+annual_bicycle_2010_2023,2011,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2012,Injury collisions,vehicles,6772
+annual_bicycle_2010_2023,2012,Injury collisions,injured,6610
+annual_bicycle_2010_2023,2012,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2013,Injury collisions,vehicles,6365
+annual_bicycle_2010_2023,2013,Injury collisions,injured,6249
+annual_bicycle_2010_2023,2013,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2014,Injury collisions,vehicles,5754
+annual_bicycle_2010_2023,2014,Injury collisions,injured,5579
+annual_bicycle_2010_2023,2014,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2015,Injury collisions,vehicles,6403
+annual_bicycle_2010_2023,2015,Injury collisions,injured,6200
+annual_bicycle_2010_2023,2015,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2016,Injury collisions,vehicles,6283
+annual_bicycle_2010_2023,2016,Injury collisions,injured,6097
+annual_bicycle_2010_2023,2016,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2017,Injury collisions,vehicles,5562
+annual_bicycle_2010_2023,2017,Injury collisions,injured,5428
+annual_bicycle_2010_2023,2017,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2018,Injury collisions,vehicles,4842
+annual_bicycle_2010_2023,2018,Injury collisions,injured,4741
+annual_bicycle_2010_2023,2018,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2019,Injury collisions,vehicles,4582
+annual_bicycle_2010_2023,2019,Injury collisions,injured,4497
+annual_bicycle_2010_2023,2019,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2020,Injury collisions,vehicles,3666
+annual_bicycle_2010_2023,2020,Injury collisions,injured,3438
+annual_bicycle_2010_2023,2020,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2021,Injury collisions,vehicles,4157
+annual_bicycle_2010_2023,2021,Injury collisions,injured,4059
+annual_bicycle_2010_2023,2021,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2022,Injury collisions,vehicles,3997
+annual_bicycle_2010_2023,2022,Injury collisions,injured,3927
+annual_bicycle_2010_2023,2022,Injury collisions,fatalities,0
+annual_bicycle_2010_2023,2023,Injury collisions,vehicles,4853
+annual_bicycle_2010_2023,2023,Injury collisions,injured,4741
+annual_bicycle_2010_2023,2023,Injury collisions,fatalities,0
+road_user_annual,2010,Total,persons,7200
+road_user_annual,2010,Total,injured,6484
+road_user_annual,2010,Total,fatalities,61
+road_user_annual,2011,Total,persons,7078
+road_user_annual,2011,Total,injured,6416
+road_user_annual,2011,Total,fatalities,56
+road_user_annual,2012,Total,persons,7405
+road_user_annual,2012,Total,injured,6614
+road_user_annual,2012,Total,fatalities,63
+road_user_annual,2013,Total,persons,7099
+road_user_annual,2013,Total,injured,6251
+road_user_annual,2013,Total,fatalities,69
+road_user_annual,2014,Total,persons,6249
+road_user_annual,2014,Total,injured,5581
+road_user_annual,2014,Total,fatalities,42
+road_user_annual,2015,Total,persons,6634
+road_user_annual,2015,Total,injured,6200
+road_user_annual,2015,Total,fatalities,50
+road_user_annual,2016,Total,persons,6468
+road_user_annual,2016,Total,injured,6102
+road_user_annual,2016,Total,fatalities,49
+road_user_annual,2017,Total,persons,5687
+road_user_annual,2017,Total,injured,5428
+road_user_annual,2017,Total,fatalities,38
+road_user_annual,2018,Total,persons,4979
+road_user_annual,2018,Total,injured,4743
+road_user_annual,2018,Total,fatalities,48
+road_user_annual,2019,Total,persons,4696
+road_user_annual,2019,Total,injured,4499
+road_user_annual,2019,Total,fatalities,43
+road_user_annual,2020,Total,persons,4138
+road_user_annual,2020,Total,injured,3837
+road_user_annual,2020,Total,fatalities,54
+road_user_annual,2021,Total,persons,4644
+road_user_annual,2021,Total,injured,4432
+road_user_annual,2021,Total,fatalities,42
+road_user_annual,2022,Total,persons,4494
+road_user_annual,2022,Total,injured,4281
+road_user_annual,2022,Total,fatalities,51
+road_user_annual,2023,Total,persons,4958
+road_user_annual,2023,Total,injured,4742
+road_user_annual,2023,Total,fatalities,46
+road_user_annual,2010,Fatal collisions,persons,69
+road_user_annual,2010,Fatal collisions,injured,6
+road_user_annual,2010,Fatal collisions,fatalities,61
+road_user_annual,2011,Fatal collisions,persons,57
+road_user_annual,2011,Fatal collisions,injured,0
+road_user_annual,2011,Fatal collisions,fatalities,56
+road_user_annual,2012,Fatal collisions,persons,71
+road_user_annual,2012,Fatal collisions,injured,4
+road_user_annual,2012,Fatal collisions,fatalities,63
+road_user_annual,2013,Fatal collisions,persons,75
+road_user_annual,2013,Fatal collisions,injured,2
+road_user_annual,2013,Fatal collisions,fatalities,69
+road_user_annual,2014,Fatal collisions,persons,46
+road_user_annual,2014,Fatal collisions,injured,2
+road_user_annual,2014,Fatal collisions,fatalities,42
+road_user_annual,2015,Fatal collisions,persons,52
+road_user_annual,2015,Fatal collisions,injured,0
+road_user_annual,2015,Fatal collisions,fatalities,50
+road_user_annual,2016,Fatal collisions,persons,59
+road_user_annual,2016,Fatal collisions,injured,5
+road_user_annual,2016,Fatal collisions,fatalities,49
+road_user_annual,2017,Fatal collisions,persons,38
+road_user_annual,2017,Fatal collisions,injured,0
+road_user_annual,2017,Fatal collisions,fatalities,38
+road_user_annual,2018,Fatal collisions,persons,50
+road_user_annual,2018,Fatal collisions,injured,2
+road_user_annual,2018,Fatal collisions,fatalities,48
+road_user_annual,2019,Fatal collisions,persons,46
+road_user_annual,2019,Fatal collisions,injured,2
+road_user_annual,2019,Fatal collisions,fatalities,43
+road_user_annual,2020,Fatal collisions,persons,55
+road_user_annual,2020,Fatal collisions,injured,1
+road_user_annual,2020,Fatal collisions,fatalities,54
+road_user_annual,2021,Fatal collisions,persons,46
+road_user_annual,2021,Fatal collisions,injured,0
+road_user_annual,2021,Fatal collisions,fatalities,42
+road_user_annual,2022,Fatal collisions,persons,53
+road_user_annual,2022,Fatal collisions,injured,1
+road_user_annual,2022,Fatal collisions,fatalities,51
+road_user_annual,2023,Fatal collisions,persons,50
+road_user_annual,2023,Fatal collisions,injured,1
+road_user_annual,2023,Fatal collisions,fatalities,46
+road_user_annual,2010,Injury collisions,persons,7131
+road_user_annual,2010,Injury collisions,injured,6478
+road_user_annual,2010,Injury collisions,fatalities,0
+road_user_annual,2011,Injury collisions,persons,7021
+road_user_annual,2011,Injury collisions,injured,6416
+road_user_annual,2011,Injury collisions,fatalities,0
+road_user_annual,2012,Injury collisions,persons,7334
+road_user_annual,2012,Injury collisions,injured,6610
+road_user_annual,2012,Injury collisions,fatalities,0
+road_user_annual,2013,Injury collisions,persons,7024
+road_user_annual,2013,Injury collisions,injured,6249
+road_user_annual,2013,Injury collisions,fatalities,0
+road_user_annual,2014,Injury collisions,persons,6203
+road_user_annual,2014,Injury collisions,injured,5579
+road_user_annual,2014,Injury collisions,fatalities,0
+road_user_annual,2015,Injury collisions,persons,6582
+road_user_annual,2015,Injury collisions,injured,6200
+road_user_annual,2015,Injury collisions,fatalities,0
+road_user_annual,2016,Injury collisions,persons,6409
+road_user_annual,2016,Injury collisions,injured,6097
+road_user_annual,2016,Injury collisions,fatalities,0
+road_user_annual,2017,Injury collisions,persons,5649
+road_user_annual,2017,Injury collisions,injured,5428
+road_user_annual,2017,Injury collisions,fatalities,0
+road_user_annual,2018,Injury collisions,persons,4929
+road_user_annual,2018,Injury collisions,injured,4741
+road_user_annual,2018,Injury collisions,fatalities,0
+road_user_annual,2019,Injury collisions,persons,4650
+road_user_annual,2019,Injury collisions,injured,4497
+road_user_annual,2019,Injury collisions,fatalities,0
+road_user_annual,2020,Injury collisions,persons,4083
+road_user_annual,2020,Injury collisions,injured,3836
+road_user_annual,2020,Injury collisions,fatalities,0
+road_user_annual,2021,Injury collisions,persons,4598
+road_user_annual,2021,Injury collisions,injured,4432
+road_user_annual,2021,Injury collisions,fatalities,0
+road_user_annual,2022,Injury collisions,persons,4441
+road_user_annual,2022,Injury collisions,injured,4280
+road_user_annual,2022,Injury collisions,fatalities,0
+road_user_annual,2023,Injury collisions,persons,4908
+road_user_annual,2023,Injury collisions,injured,4741
+road_user_annual,2023,Injury collisions,fatalities,0
+gender,2010,Total,persons,7200
+gender,2010,Total,injured,6484
+gender,2010,Total,fatalities,61
+gender,2011,Total,persons,7078
+gender,2011,Total,injured,6416
+gender,2011,Total,fatalities,56
+gender,2012,Total,persons,7405
+gender,2012,Total,injured,6614
+gender,2012,Total,fatalities,63
+gender,2013,Total,persons,7099
+gender,2013,Total,injured,6251
+gender,2013,Total,fatalities,69
+gender,2014,Total,persons,6249
+gender,2014,Total,injured,5581
+gender,2014,Total,fatalities,42
+gender,2015,Total,persons,6634
+gender,2015,Total,injured,6200
+gender,2015,Total,fatalities,50
+gender,2016,Total,persons,6468
+gender,2016,Total,injured,6102
+gender,2016,Total,fatalities,49
+gender,2017,Total,persons,5687
+gender,2017,Total,injured,5428
+gender,2017,Total,fatalities,38
+gender,2018,Total,persons,4979
+gender,2018,Total,injured,4743
+gender,2018,Total,fatalities,48
+gender,2019,Total,persons,4696
+gender,2019,Total,injured,4499
+gender,2019,Total,fatalities,43
+gender,2020,Total,persons,4138
+gender,2020,Total,injured,3837
+gender,2020,Total,fatalities,54
+gender,2021,Total,persons,4644
+gender,2021,Total,injured,4432
+gender,2021,Total,fatalities,42
+gender,2022,Total,persons,4494
+gender,2022,Total,injured,4281
+gender,2022,Total,fatalities,51
+gender,2023,Total,persons,4958
+gender,2023,Total,injured,4742
+gender,2023,Total,fatalities,46
+gender,2010,Female,persons,1505
+gender,2010,Female,injured,1437
+gender,2010,Female,fatalities,8
+gender,2011,Female,persons,1325
+gender,2011,Female,injured,1268
+gender,2011,Female,fatalities,8
+gender,2012,Female,persons,1535
+gender,2012,Female,injured,1436
+gender,2012,Female,fatalities,10
+gender,2013,Female,persons,1505
+gender,2013,Female,injured,1390
+gender,2013,Female,fatalities,19
+gender,2014,Female,persons,1505
+gender,2014,Female,injured,1436
+gender,2014,Female,fatalities,9
+gender,2015,Female,persons,1759
+gender,2015,Female,injured,1712
+gender,2015,Female,fatalities,9
+gender,2016,Female,persons,1678
+gender,2016,Female,injured,1643
+gender,2016,Female,fatalities,10
+gender,2017,Female,persons,1453
+gender,2017,Female,injured,1430
+gender,2017,Female,fatalities,6
+gender,2018,Female,persons,1283
+gender,2018,Female,injured,1231
+gender,2018,Female,fatalities,9
+gender,2019,Female,persons,1217
+gender,2019,Female,injured,1177
+gender,2019,Female,fatalities,8
+gender,2020,Female,persons,1088
+gender,2020,Female,injured,1021
+gender,2020,Female,fatalities,9
+gender,2021,Female,persons,1139
+gender,2021,Female,injured,1101
+gender,2021,Female,fatalities,8
+gender,2022,Female,persons,1092
+gender,2022,Female,injured,1040
+gender,2022,Female,fatalities,12
+gender,2023,Female,persons,1178
+gender,2023,Female,injured,1142
+gender,2023,Female,fatalities,10
+gender,2010,Male,persons,4216
+gender,2010,Male,injured,3617
+gender,2010,Male,fatalities,52
+gender,2011,Male,persons,4081
+gender,2011,Male,injured,3528
+gender,2011,Male,fatalities,45
+gender,2012,Male,persons,4261
+gender,2012,Male,injured,3609
+gender,2012,Male,fatalities,53
+gender,2013,Male,persons,4117
+gender,2013,Male,injured,3508
+gender,2013,Male,fatalities,50
+gender,2014,Male,persons,4102
+gender,2014,Male,injured,3859
+gender,2014,Male,fatalities,31
+gender,2015,Male,persons,4460
+gender,2015,Male,injured,4353
+gender,2015,Male,fatalities,41
+gender,2016,Male,persons,4460
+gender,2016,Male,injured,4353
+gender,2016,Male,fatalities,39
+gender,2017,Male,persons,3984
+gender,2017,Male,injured,3893
+gender,2017,Male,fatalities,32
+gender,2018,Male,persons,3556
+gender,2018,Male,injured,3409
+gender,2018,Male,fatalities,38
+gender,2019,Male,persons,3341
+gender,2019,Male,injured,3221
+gender,2019,Male,fatalities,34
+gender,2020,Male,persons,2946
+gender,2020,Male,injured,2771
+gender,2020,Male,fatalities,45
+gender,2021,Male,persons,3372
+gender,2021,Male,injured,3240
+gender,2021,Male,fatalities,34
+gender,2022,Male,persons,3268
+gender,2022,Male,injured,3131
+gender,2022,Male,fatalities,37
+gender,2023,Male,persons,3630
+gender,2023,Male,injured,3497
+gender,2023,Male,fatalities,36
+gender,2010,Unknown,persons,1479
+gender,2010,Unknown,injured,1430
+gender,2010,Unknown,fatalities,1
+gender,2011,Unknown,persons,1672
+gender,2011,Unknown,injured,1620
+gender,2011,Unknown,fatalities,3
+gender,2012,Unknown,persons,1609
+gender,2012,Unknown,injured,1569
+gender,2012,Unknown,fatalities,0
+gender,2013,Unknown,persons,1477
+gender,2013,Unknown,injured,1353
+gender,2013,Unknown,fatalities,0
+gender,2014,Unknown,persons,642
+gender,2014,Unknown,injured,286
+gender,2014,Unknown,fatalities,2
+gender,2015,Unknown,persons,415
+gender,2015,Unknown,injured,135
+gender,2015,Unknown,fatalities,0
+gender,2016,Unknown,persons,330
+gender,2016,Unknown,injured,106
+gender,2016,Unknown,fatalities,0
+gender,2017,Unknown,persons,250
+gender,2017,Unknown,injured,105
+gender,2017,Unknown,fatalities,0
+gender,2018,Unknown,persons,140
+gender,2018,Unknown,injured,103
+gender,2018,Unknown,fatalities,1
+gender,2019,Unknown,persons,138
+gender,2019,Unknown,injured,101
+gender,2019,Unknown,fatalities,1
+gender,2020,Unknown,persons,104
+gender,2020,Unknown,injured,45
+gender,2020,Unknown,fatalities,0
+gender,2021,Unknown,persons,133
+gender,2021,Unknown,injured,91
+gender,2021,Unknown,fatalities,0
+gender,2022,Unknown,persons,134
+gender,2022,Unknown,injured,110
+gender,2022,Unknown,fatalities,2
+gender,2023,Unknown,persons,150
+gender,2023,Unknown,injured,103
+gender,2023,Unknown,fatalities,0
+gender,2010,Not applicable,persons,0
+gender,2010,Not applicable,injured,0
+gender,2010,Not applicable,fatalities,0
+gender,2011,Not applicable,persons,0
+gender,2011,Not applicable,injured,0
+gender,2011,Not applicable,fatalities,0
+gender,2012,Not applicable,persons,0
+gender,2012,Not applicable,injured,0
+gender,2012,Not applicable,fatalities,0
+gender,2013,Not applicable,persons,0
+gender,2013,Not applicable,injured,0
+gender,2013,Not applicable,fatalities,0
+gender,2014,Not applicable,persons,0
+gender,2014,Not applicable,injured,0
+gender,2014,Not applicable,fatalities,0
+gender,2015,Not applicable,persons,0
+gender,2015,Not applicable,injured,0
+gender,2015,Not applicable,fatalities,0
+gender,2016,Not applicable,persons,0
+gender,2016,Not applicable,injured,0
+gender,2016,Not applicable,fatalities,0
+gender,2017,Not applicable,persons,0
+gender,2017,Not applicable,injured,0
+gender,2017,Not applicable,fatalities,0
+gender,2018,Not applicable,persons,0
+gender,2018,Not applicable,injured,0
+gender,2018,Not applicable,fatalities,0
+gender,2019,Not applicable,persons,0
+gender,2019,Not applicable,injured,0
+gender,2019,Not applicable,fatalities,0
+gender,2020,Not applicable,persons,0
+gender,2020,Not applicable,injured,0
+gender,2020,Not applicable,fatalities,0
+gender,2021,Not applicable,persons,0
+gender,2021,Not applicable,injured,0
+gender,2021,Not applicable,fatalities,0
+gender,2022,Not applicable,persons,0
+gender,2022,Not applicable,injured,0
+gender,2022,Not applicable,fatalities,0
+gender,2023,Not applicable,persons,0
+gender,2023,Not applicable,injured,0
+gender,2023,Not applicable,fatalities,0
+age_complete,2010,Total,persons,7200
+age_complete,2010,Total,injured,6484
+age_complete,2010,Total,fatalities,61
+age_complete,2011,Total,persons,7078
+age_complete,2011,Total,injured,6416
+age_complete,2011,Total,fatalities,56
+age_complete,2012,Total,persons,7405
+age_complete,2012,Total,injured,6614
+age_complete,2012,Total,fatalities,63
+age_complete,2013,Total,persons,7099
+age_complete,2013,Total,injured,6251
+age_complete,2013,Total,fatalities,69
+age_complete,2014,Total,persons,6249
+age_complete,2014,Total,injured,5581
+age_complete,2014,Total,fatalities,42
+age_complete,2015,Total,persons,6634
+age_complete,2015,Total,injured,6200
+age_complete,2015,Total,fatalities,50
+age_complete,2016,Total,persons,6468
+age_complete,2016,Total,injured,6102
+age_complete,2016,Total,fatalities,49
+age_complete,2017,Total,persons,5687
+age_complete,2017,Total,injured,5428
+age_complete,2017,Total,fatalities,38
+age_complete,2018,Total,persons,4979
+age_complete,2018,Total,injured,4743
+age_complete,2018,Total,fatalities,48
+age_complete,2019,Total,persons,4696
+age_complete,2019,Total,injured,4499
+age_complete,2019,Total,fatalities,43
+age_complete,2020,Total,persons,4138
+age_complete,2020,Total,injured,3837
+age_complete,2020,Total,fatalities,54
+age_complete,2021,Total,persons,4644
+age_complete,2021,Total,injured,4432
+age_complete,2021,Total,fatalities,42
+age_complete,2022,Total,persons,4494
+age_complete,2022,Total,injured,4281
+age_complete,2022,Total,fatalities,51
+age_complete,2023,Total,persons,4958
+age_complete,2023,Total,injured,4742
+age_complete,2023,Total,fatalities,46
+age_complete,2010,0-14 years old,persons,649
+age_complete,2010,0-14 years old,injured,626
+age_complete,2010,0-14 years old,fatalities,7
+age_complete,2011,0-14 years old,persons,612
+age_complete,2011,0-14 years old,injured,585
+age_complete,2011,0-14 years old,fatalities,6
+age_complete,2012,0-14 years old,persons,529
+age_complete,2012,0-14 years old,injured,506
+age_complete,2012,0-14 years old,fatalities,7
+age_complete,2013,0-14 years old,persons,548
+age_complete,2013,0-14 years old,injured,529
+age_complete,2013,0-14 years old,fatalities,1
+age_complete,2014,0-14 years old,persons,578
+age_complete,2014,0-14 years old,injured,550
+age_complete,2014,0-14 years old,fatalities,4
+age_complete,2015,0-14 years old,persons,667
+age_complete,2015,0-14 years old,injured,645
+age_complete,2015,0-14 years old,fatalities,1
+age_complete,2016,0-14 years old,persons,643
+age_complete,2016,0-14 years old,injured,629
+age_complete,2016,0-14 years old,fatalities,4
+age_complete,2017,0-14 years old,persons,650
+age_complete,2017,0-14 years old,injured,639
+age_complete,2017,0-14 years old,fatalities,4
+age_complete,2018,0-14 years old,persons,509
+age_complete,2018,0-14 years old,injured,497
+age_complete,2018,0-14 years old,fatalities,2
+age_complete,2019,0-14 years old,persons,549
+age_complete,2019,0-14 years old,injured,534
+age_complete,2019,0-14 years old,fatalities,5
+age_complete,2020,0-14 years old,persons,513
+age_complete,2020,0-14 years old,injured,491
+age_complete,2020,0-14 years old,fatalities,4
+age_complete,2021,0-14 years old,persons,560
+age_complete,2021,0-14 years old,injured,541
+age_complete,2021,0-14 years old,fatalities,5
+age_complete,2022,0-14 years old,persons,447
+age_complete,2022,0-14 years old,injured,425
+age_complete,2022,0-14 years old,fatalities,1
+age_complete,2023,0-14 years old,persons,533
+age_complete,2023,0-14 years old,injured,510
+age_complete,2023,0-14 years old,fatalities,6
+age_complete,2010,15-19 years old,persons,727
+age_complete,2010,15-19 years old,injured,697
+age_complete,2010,15-19 years old,fatalities,6
+age_complete,2011,15-19 years old,persons,650
+age_complete,2011,15-19 years old,injured,632
+age_complete,2011,15-19 years old,fatalities,6
+age_complete,2012,15-19 years old,persons,695
+age_complete,2012,15-19 years old,injured,654
+age_complete,2012,15-19 years old,fatalities,8
+age_complete,2013,15-19 years old,persons,692
+age_complete,2013,15-19 years old,injured,651
+age_complete,2013,15-19 years old,fatalities,6
+age_complete,2014,15-19 years old,persons,732
+age_complete,2014,15-19 years old,injured,700
+age_complete,2014,15-19 years old,fatalities,3
+age_complete,2015,15-19 years old,persons,797
+age_complete,2015,15-19 years old,injured,780
+age_complete,2015,15-19 years old,fatalities,5
+age_complete,2016,15-19 years old,persons,754
+age_complete,2016,15-19 years old,injured,746
+age_complete,2016,15-19 years old,fatalities,2
+age_complete,2017,15-19 years old,persons,642
+age_complete,2017,15-19 years old,injured,630
+age_complete,2017,15-19 years old,fatalities,1
+age_complete,2018,15-19 years old,persons,546
+age_complete,2018,15-19 years old,injured,517
+age_complete,2018,15-19 years old,fatalities,5
+age_complete,2019,15-19 years old,persons,483
+age_complete,2019,15-19 years old,injured,468
+age_complete,2019,15-19 years old,fatalities,0
+age_complete,2020,15-19 years old,persons,434
+age_complete,2020,15-19 years old,injured,419
+age_complete,2020,15-19 years old,fatalities,2
+age_complete,2021,15-19 years old,persons,559
+age_complete,2021,15-19 years old,injured,533
+age_complete,2021,15-19 years old,fatalities,3
+age_complete,2022,15-19 years old,persons,462
+age_complete,2022,15-19 years old,injured,439
+age_complete,2022,15-19 years old,fatalities,4
+age_complete,2023,15-19 years old,persons,536
+age_complete,2023,15-19 years old,injured,519
+age_complete,2023,15-19 years old,fatalities,0
+age_complete,2010,20-24 years old,persons,681
+age_complete,2010,20-24 years old,injured,647
+age_complete,2010,20-24 years old,fatalities,3
+age_complete,2011,20-24 years old,persons,621
+age_complete,2011,20-24 years old,injured,610
+age_complete,2011,20-24 years old,fatalities,6
+age_complete,2012,20-24 years old,persons,766
+age_complete,2012,20-24 years old,injured,725
+age_complete,2012,20-24 years old,fatalities,5
+age_complete,2013,20-24 years old,persons,723
+age_complete,2013,20-24 years old,injured,667
+age_complete,2013,20-24 years old,fatalities,4
+age_complete,2014,20-24 years old,persons,778
+age_complete,2014,20-24 years old,injured,750
+age_complete,2014,20-24 years old,fatalities,1
+age_complete,2015,20-24 years old,persons,767
+age_complete,2015,20-24 years old,injured,758
+age_complete,2015,20-24 years old,fatalities,2
+age_complete,2016,20-24 years old,persons,736
+age_complete,2016,20-24 years old,injured,721
+age_complete,2016,20-24 years old,fatalities,3
+age_complete,2017,20-24 years old,persons,592
+age_complete,2017,20-24 years old,injured,585
+age_complete,2017,20-24 years old,fatalities,1
+age_complete,2018,20-24 years old,persons,522
+age_complete,2018,20-24 years old,injured,506
+age_complete,2018,20-24 years old,fatalities,1
+age_complete,2019,20-24 years old,persons,431
+age_complete,2019,20-24 years old,injured,413
+age_complete,2019,20-24 years old,fatalities,4
+age_complete,2020,20-24 years old,persons,396
+age_complete,2020,20-24 years old,injured,370
+age_complete,2020,20-24 years old,fatalities,3
+age_complete,2021,20-24 years old,persons,426
+age_complete,2021,20-24 years old,injured,410
+age_complete,2021,20-24 years old,fatalities,3
+age_complete,2022,20-24 years old,persons,428
+age_complete,2022,20-24 years old,injured,411
+age_complete,2022,20-24 years old,fatalities,4
+age_complete,2023,20-24 years old,persons,450
+age_complete,2023,20-24 years old,injured,440
+age_complete,2023,20-24 years old,fatalities,2
+age_complete,2010,25-29 years old,persons,536
+age_complete,2010,25-29 years old,injured,509
+age_complete,2010,25-29 years old,fatalities,4
+age_complete,2011,25-29 years old,persons,499
+age_complete,2011,25-29 years old,injured,488
+age_complete,2011,25-29 years old,fatalities,3
+age_complete,2012,25-29 years old,persons,594
+age_complete,2012,25-29 years old,injured,560
+age_complete,2012,25-29 years old,fatalities,3
+age_complete,2013,25-29 years old,persons,594
+age_complete,2013,25-29 years old,injured,538
+age_complete,2013,25-29 years old,fatalities,5
+age_complete,2014,25-29 years old,persons,600
+age_complete,2014,25-29 years old,injured,571
+age_complete,2014,25-29 years old,fatalities,1
+age_complete,2015,25-29 years old,persons,653
+age_complete,2015,25-29 years old,injured,638
+age_complete,2015,25-29 years old,fatalities,4
+age_complete,2016,25-29 years old,persons,650
+age_complete,2016,25-29 years old,injured,632
+age_complete,2016,25-29 years old,fatalities,2
+age_complete,2017,25-29 years old,persons,562
+age_complete,2017,25-29 years old,injured,551
+age_complete,2017,25-29 years old,fatalities,2
+age_complete,2018,25-29 years old,persons,521
+age_complete,2018,25-29 years old,injured,507
+age_complete,2018,25-29 years old,fatalities,0
+age_complete,2019,25-29 years old,persons,508
+age_complete,2019,25-29 years old,injured,490
+age_complete,2019,25-29 years old,fatalities,4
+age_complete,2020,25-29 years old,persons,399
+age_complete,2020,25-29 years old,injured,384
+age_complete,2020,25-29 years old,fatalities,6
+age_complete,2021,25-29 years old,persons,460
+age_complete,2021,25-29 years old,injured,445
+age_complete,2021,25-29 years old,fatalities,2
+age_complete,2022,25-29 years old,persons,430
+age_complete,2022,25-29 years old,injured,419
+age_complete,2022,25-29 years old,fatalities,5
+age_complete,2023,25-29 years old,persons,481
+age_complete,2023,25-29 years old,injured,468
+age_complete,2023,25-29 years old,fatalities,3
+age_complete,2010,30-34 years old,persons,418
+age_complete,2010,30-34 years old,injured,402
+age_complete,2010,30-34 years old,fatalities,0
+age_complete,2011,30-34 years old,persons,428
+age_complete,2011,30-34 years old,injured,419
+age_complete,2011,30-34 years old,fatalities,1
+age_complete,2012,30-34 years old,persons,440
+age_complete,2012,30-34 years old,injured,412
+age_complete,2012,30-34 years old,fatalities,3
+age_complete,2013,30-34 years old,persons,420
+age_complete,2013,30-34 years old,injured,392
+age_complete,2013,30-34 years old,fatalities,2
+age_complete,2014,30-34 years old,persons,476
+age_complete,2014,30-34 years old,injured,447
+age_complete,2014,30-34 years old,fatalities,3
+age_complete,2015,30-34 years old,persons,520
+age_complete,2015,30-34 years old,injured,513
+age_complete,2015,30-34 years old,fatalities,2
+age_complete,2016,30-34 years old,persons,552
+age_complete,2016,30-34 years old,injured,535
+age_complete,2016,30-34 years old,fatalities,6
+age_complete,2017,30-34 years old,persons,476
+age_complete,2017,30-34 years old,injured,466
+age_complete,2017,30-34 years old,fatalities,3
+age_complete,2018,30-34 years old,persons,412
+age_complete,2018,30-34 years old,injured,400
+age_complete,2018,30-34 years old,fatalities,2
+age_complete,2019,30-34 years old,persons,401
+age_complete,2019,30-34 years old,injured,388
+age_complete,2019,30-34 years old,fatalities,2
+age_complete,2020,30-34 years old,persons,327
+age_complete,2020,30-34 years old,injured,309
+age_complete,2020,30-34 years old,fatalities,4
+age_complete,2021,30-34 years old,persons,348
+age_complete,2021,30-34 years old,injured,342
+age_complete,2021,30-34 years old,fatalities,2
+age_complete,2022,30-34 years old,persons,419
+age_complete,2022,30-34 years old,injured,408
+age_complete,2022,30-34 years old,fatalities,1
+age_complete,2023,30-34 years old,persons,466
+age_complete,2023,30-34 years old,injured,452
+age_complete,2023,30-34 years old,fatalities,3
+age_complete,2010,35-39 years old,persons,352
+age_complete,2010,35-39 years old,injured,329
+age_complete,2010,35-39 years old,fatalities,8
+age_complete,2011,35-39 years old,persons,308
+age_complete,2011,35-39 years old,injured,302
+age_complete,2011,35-39 years old,fatalities,4
+age_complete,2012,35-39 years old,persons,341
+age_complete,2012,35-39 years old,injured,305
+age_complete,2012,35-39 years old,fatalities,7
+age_complete,2013,35-39 years old,persons,321
+age_complete,2013,35-39 years old,injured,294
+age_complete,2013,35-39 years old,fatalities,5
+age_complete,2014,35-39 years old,persons,368
+age_complete,2014,35-39 years old,injured,352
+age_complete,2014,35-39 years old,fatalities,2
+age_complete,2015,35-39 years old,persons,442
+age_complete,2015,35-39 years old,injured,433
+age_complete,2015,35-39 years old,fatalities,6
+age_complete,2016,35-39 years old,persons,442
+age_complete,2016,35-39 years old,injured,432
+age_complete,2016,35-39 years old,fatalities,3
+age_complete,2017,35-39 years old,persons,381
+age_complete,2017,35-39 years old,injured,373
+age_complete,2017,35-39 years old,fatalities,4
+age_complete,2018,35-39 years old,persons,370
+age_complete,2018,35-39 years old,injured,357
+age_complete,2018,35-39 years old,fatalities,3
+age_complete,2019,35-39 years old,persons,360
+age_complete,2019,35-39 years old,injured,347
+age_complete,2019,35-39 years old,fatalities,3
+age_complete,2020,35-39 years old,persons,305
+age_complete,2020,35-39 years old,injured,291
+age_complete,2020,35-39 years old,fatalities,3
+age_complete,2021,35-39 years old,persons,305
+age_complete,2021,35-39 years old,injured,295
+age_complete,2021,35-39 years old,fatalities,3
+age_complete,2022,35-39 years old,persons,321
+age_complete,2022,35-39 years old,injured,312
+age_complete,2022,35-39 years old,fatalities,2
+age_complete,2023,35-39 years old,persons,391
+age_complete,2023,35-39 years old,injured,380
+age_complete,2023,35-39 years old,fatalities,3
+age_complete,2010,40-44 years old,persons,376
+age_complete,2010,40-44 years old,injured,356
+age_complete,2010,40-44 years old,fatalities,4
+age_complete,2011,40-44 years old,persons,324
+age_complete,2011,40-44 years old,injured,313
+age_complete,2011,40-44 years old,fatalities,1
+age_complete,2012,40-44 years old,persons,383
+age_complete,2012,40-44 years old,injured,347
+age_complete,2012,40-44 years old,fatalities,3
+age_complete,2013,40-44 years old,persons,326
+age_complete,2013,40-44 years old,injured,300
+age_complete,2013,40-44 years old,fatalities,6
+age_complete,2014,40-44 years old,persons,365
+age_complete,2014,40-44 years old,injured,344
+age_complete,2014,40-44 years old,fatalities,3
+age_complete,2015,40-44 years old,persons,399
+age_complete,2015,40-44 years old,injured,386
+age_complete,2015,40-44 years old,fatalities,3
+age_complete,2016,40-44 years old,persons,407
+age_complete,2016,40-44 years old,injured,402
+age_complete,2016,40-44 years old,fatalities,0
+age_complete,2017,40-44 years old,persons,347
+age_complete,2017,40-44 years old,injured,336
+age_complete,2017,40-44 years old,fatalities,4
+age_complete,2018,40-44 years old,persons,297
+age_complete,2018,40-44 years old,injured,284
+age_complete,2018,40-44 years old,fatalities,3
+age_complete,2019,40-44 years old,persons,288
+age_complete,2019,40-44 years old,injured,283
+age_complete,2019,40-44 years old,fatalities,1
+age_complete,2020,40-44 years old,persons,241
+age_complete,2020,40-44 years old,injured,235
+age_complete,2020,40-44 years old,fatalities,1
+age_complete,2021,40-44 years old,persons,280
+age_complete,2021,40-44 years old,injured,276
+age_complete,2021,40-44 years old,fatalities,0
+age_complete,2022,40-44 years old,persons,291
+age_complete,2022,40-44 years old,injured,281
+age_complete,2022,40-44 years old,fatalities,0
+age_complete,2023,40-44 years old,persons,310
+age_complete,2023,40-44 years old,injured,300
+age_complete,2023,40-44 years old,fatalities,4
+age_complete,2010,45-49 years old,persons,427
+age_complete,2010,45-49 years old,injured,399
+age_complete,2010,45-49 years old,fatalities,7
+age_complete,2011,45-49 years old,persons,403
+age_complete,2011,45-49 years old,injured,395
+age_complete,2011,45-49 years old,fatalities,4
+age_complete,2012,45-49 years old,persons,432
+age_complete,2012,45-49 years old,injured,398
+age_complete,2012,45-49 years old,fatalities,2
+age_complete,2013,45-49 years old,persons,406
+age_complete,2013,45-49 years old,injured,367
+age_complete,2013,45-49 years old,fatalities,4
+age_complete,2014,45-49 years old,persons,379
+age_complete,2014,45-49 years old,injured,364
+age_complete,2014,45-49 years old,fatalities,4
+age_complete,2015,45-49 years old,persons,462
+age_complete,2015,45-49 years old,injured,447
+age_complete,2015,45-49 years old,fatalities,2
+age_complete,2016,45-49 years old,persons,417
+age_complete,2016,45-49 years old,injured,411
+age_complete,2016,45-49 years old,fatalities,2
+age_complete,2017,45-49 years old,persons,357
+age_complete,2017,45-49 years old,injured,352
+age_complete,2017,45-49 years old,fatalities,2
+age_complete,2018,45-49 years old,persons,290
+age_complete,2018,45-49 years old,injured,280
+age_complete,2018,45-49 years old,fatalities,4
+age_complete,2019,45-49 years old,persons,306
+age_complete,2019,45-49 years old,injured,298
+age_complete,2019,45-49 years old,fatalities,3
+age_complete,2020,45-49 years old,persons,247
+age_complete,2020,45-49 years old,injured,236
+age_complete,2020,45-49 years old,fatalities,4
+age_complete,2021,45-49 years old,persons,268
+age_complete,2021,45-49 years old,injured,259
+age_complete,2021,45-49 years old,fatalities,4
+age_complete,2022,45-49 years old,persons,274
+age_complete,2022,45-49 years old,injured,262
+age_complete,2022,45-49 years old,fatalities,1
+age_complete,2023,45-49 years old,persons,284
+age_complete,2023,45-49 years old,injured,277
+age_complete,2023,45-49 years old,fatalities,1
+age_complete,2010,50-54 years old,persons,344
+age_complete,2010,50-54 years old,injured,326
+age_complete,2010,50-54 years old,fatalities,1
+age_complete,2011,50-54 years old,persons,353
+age_complete,2011,50-54 years old,injured,338
+age_complete,2011,50-54 years old,fatalities,6
+age_complete,2012,50-54 years old,persons,439
+age_complete,2012,50-54 years old,injured,402
+age_complete,2012,50-54 years old,fatalities,3
+age_complete,2013,50-54 years old,persons,424
+age_complete,2013,50-54 years old,injured,389
+age_complete,2013,50-54 years old,fatalities,8
+age_complete,2014,50-54 years old,persons,418
+age_complete,2014,50-54 years old,injured,394
+age_complete,2014,50-54 years old,fatalities,8
+age_complete,2015,50-54 years old,persons,427
+age_complete,2015,50-54 years old,injured,412
+age_complete,2015,50-54 years old,fatalities,7
+age_complete,2016,50-54 years old,persons,459
+age_complete,2016,50-54 years old,injured,446
+age_complete,2016,50-54 years old,fatalities,4
+age_complete,2017,50-54 years old,persons,396
+age_complete,2017,50-54 years old,injured,389
+age_complete,2017,50-54 years old,fatalities,1
+age_complete,2018,50-54 years old,persons,362
+age_complete,2018,50-54 years old,injured,350
+age_complete,2018,50-54 years old,fatalities,2
+age_complete,2019,50-54 years old,persons,325
+age_complete,2019,50-54 years old,injured,315
+age_complete,2019,50-54 years old,fatalities,4
+age_complete,2020,50-54 years old,persons,250
+age_complete,2020,50-54 years old,injured,236
+age_complete,2020,50-54 years old,fatalities,10
+age_complete,2021,50-54 years old,persons,290
+age_complete,2021,50-54 years old,injured,277
+age_complete,2021,50-54 years old,fatalities,4
+age_complete,2022,50-54 years old,persons,284
+age_complete,2022,50-54 years old,injured,272
+age_complete,2022,50-54 years old,fatalities,5
+age_complete,2023,50-54 years old,persons,305
+age_complete,2023,50-54 years old,injured,294
+age_complete,2023,50-54 years old,fatalities,3
+age_complete,2010,55-59 years old,persons,249
+age_complete,2010,55-59 years old,injured,223
+age_complete,2010,55-59 years old,fatalities,7
+age_complete,2011,55-59 years old,persons,226
+age_complete,2011,55-59 years old,injured,217
+age_complete,2011,55-59 years old,fatalities,4
+age_complete,2012,55-59 years old,persons,293
+age_complete,2012,55-59 years old,injured,268
+age_complete,2012,55-59 years old,fatalities,2
+age_complete,2013,55-59 years old,persons,280
+age_complete,2013,55-59 years old,injured,257
+age_complete,2013,55-59 years old,fatalities,9
+age_complete,2014,55-59 years old,persons,298
+age_complete,2014,55-59 years old,injured,284
+age_complete,2014,55-59 years old,fatalities,1
+age_complete,2015,55-59 years old,persons,363
+age_complete,2015,55-59 years old,injured,354
+age_complete,2015,55-59 years old,fatalities,5
+age_complete,2016,55-59 years old,persons,384
+age_complete,2016,55-59 years old,injured,373
+age_complete,2016,55-59 years old,fatalities,5
+age_complete,2017,55-59 years old,persons,355
+age_complete,2017,55-59 years old,injured,345
+age_complete,2017,55-59 years old,fatalities,4
+age_complete,2018,55-59 years old,persons,346
+age_complete,2018,55-59 years old,injured,327
+age_complete,2018,55-59 years old,fatalities,6
+age_complete,2019,55-59 years old,persons,288
+age_complete,2019,55-59 years old,injured,277
+age_complete,2019,55-59 years old,fatalities,4
+age_complete,2020,55-59 years old,persons,295
+age_complete,2020,55-59 years old,injured,283
+age_complete,2020,55-59 years old,fatalities,5
+age_complete,2021,55-59 years old,persons,276
+age_complete,2021,55-59 years old,injured,265
+age_complete,2021,55-59 years old,fatalities,2
+age_complete,2022,55-59 years old,persons,286
+age_complete,2022,55-59 years old,injured,268
+age_complete,2022,55-59 years old,fatalities,8
+age_complete,2023,55-59 years old,persons,290
+age_complete,2023,55-59 years old,injured,283
+age_complete,2023,55-59 years old,fatalities,4
+age_complete,2010,60-64 years old,persons,166
+age_complete,2010,60-64 years old,injured,156
+age_complete,2010,60-64 years old,fatalities,3
+age_complete,2011,60-64 years old,persons,144
+age_complete,2011,60-64 years old,injured,138
+age_complete,2011,60-64 years old,fatalities,3
+age_complete,2012,60-64 years old,persons,180
+age_complete,2012,60-64 years old,injured,163
+age_complete,2012,60-64 years old,fatalities,6
+age_complete,2013,60-64 years old,persons,191
+age_complete,2013,60-64 years old,injured,177
+age_complete,2013,60-64 years old,fatalities,8
+age_complete,2014,60-64 years old,persons,224
+age_complete,2014,60-64 years old,injured,208
+age_complete,2014,60-64 years old,fatalities,5
+age_complete,2015,60-64 years old,persons,271
+age_complete,2015,60-64 years old,injured,262
+age_complete,2015,60-64 years old,fatalities,5
+age_complete,2016,60-64 years old,persons,257
+age_complete,2016,60-64 years old,injured,250
+age_complete,2016,60-64 years old,fatalities,5
+age_complete,2017,60-64 years old,persons,248
+age_complete,2017,60-64 years old,injured,237
+age_complete,2017,60-64 years old,fatalities,6
+age_complete,2018,60-64 years old,persons,233
+age_complete,2018,60-64 years old,injured,219
+age_complete,2018,60-64 years old,fatalities,4
+age_complete,2019,60-64 years old,persons,201
+age_complete,2019,60-64 years old,injured,190
+age_complete,2019,60-64 years old,fatalities,5
+age_complete,2020,60-64 years old,persons,230
+age_complete,2020,60-64 years old,injured,214
+age_complete,2020,60-64 years old,fatalities,3
+age_complete,2021,60-64 years old,persons,275
+age_complete,2021,60-64 years old,injured,261
+age_complete,2021,60-64 years old,fatalities,4
+age_complete,2022,60-64 years old,persons,230
+age_complete,2022,60-64 years old,injured,216
+age_complete,2022,60-64 years old,fatalities,6
+age_complete,2023,60-64 years old,persons,275
+age_complete,2023,60-64 years old,injured,266
+age_complete,2023,60-64 years old,fatalities,3
+age_complete,2010,65-69 years old,persons,105
+age_complete,2010,65-69 years old,injured,96
+age_complete,2010,65-69 years old,fatalities,2
+age_complete,2011,65-69 years old,persons,95
+age_complete,2011,65-69 years old,injured,92
+age_complete,2011,65-69 years old,fatalities,2
+age_complete,2012,65-69 years old,persons,117
+age_complete,2012,65-69 years old,injured,106
+age_complete,2012,65-69 years old,fatalities,6
+age_complete,2013,65-69 years old,persons,130
+age_complete,2013,65-69 years old,injured,117
+age_complete,2013,65-69 years old,fatalities,3
+age_complete,2014,65-69 years old,persons,133
+age_complete,2014,65-69 years old,injured,125
+age_complete,2014,65-69 years old,fatalities,4
+age_complete,2015,65-69 years old,persons,182
+age_complete,2015,65-69 years old,injured,178
+age_complete,2015,65-69 years old,fatalities,2
+age_complete,2016,65-69 years old,persons,158
+age_complete,2016,65-69 years old,injured,153
+age_complete,2016,65-69 years old,fatalities,3
+age_complete,2017,65-69 years old,persons,162
+age_complete,2017,65-69 years old,injured,158
+age_complete,2017,65-69 years old,fatalities,2
+age_complete,2018,65-69 years old,persons,145
+age_complete,2018,65-69 years old,injured,139
+age_complete,2018,65-69 years old,fatalities,3
+age_complete,2019,65-69 years old,persons,162
+age_complete,2019,65-69 years old,injured,147
+age_complete,2019,65-69 years old,fatalities,7
+age_complete,2020,65-69 years old,persons,138
+age_complete,2020,65-69 years old,injured,130
+age_complete,2020,65-69 years old,fatalities,3
+age_complete,2021,65-69 years old,persons,154
+age_complete,2021,65-69 years old,injured,148
+age_complete,2021,65-69 years old,fatalities,2
+age_complete,2022,65-69 years old,persons,182
+age_complete,2022,65-69 years old,injured,175
+age_complete,2022,65-69 years old,fatalities,4
+age_complete,2023,65-69 years old,persons,180
+age_complete,2023,65-69 years old,injured,173
+age_complete,2023,65-69 years old,fatalities,2
+age_complete,2010,70-74 years old,persons,75
+age_complete,2010,70-74 years old,injured,63
+age_complete,2010,70-74 years old,fatalities,5
+age_complete,2011,70-74 years old,persons,49
+age_complete,2011,70-74 years old,injured,48
+age_complete,2011,70-74 years old,fatalities,1
+age_complete,2012,70-74 years old,persons,79
+age_complete,2012,70-74 years old,injured,72
+age_complete,2012,70-74 years old,fatalities,3
+age_complete,2013,70-74 years old,persons,74
+age_complete,2013,70-74 years old,injured,68
+age_complete,2013,70-74 years old,fatalities,2
+age_complete,2014,70-74 years old,persons,75
+age_complete,2014,70-74 years old,injured,72
+age_complete,2014,70-74 years old,fatalities,2
+age_complete,2015,70-74 years old,persons,109
+age_complete,2015,70-74 years old,injured,102
+age_complete,2015,70-74 years old,fatalities,3
+age_complete,2016,70-74 years old,persons,116
+age_complete,2016,70-74 years old,injured,108
+age_complete,2016,70-74 years old,fatalities,6
+age_complete,2017,70-74 years old,persons,98
+age_complete,2017,70-74 years old,injured,94
+age_complete,2017,70-74 years old,fatalities,1
+age_complete,2018,70-74 years old,persons,105
+age_complete,2018,70-74 years old,injured,98
+age_complete,2018,70-74 years old,fatalities,5
+age_complete,2019,70-74 years old,persons,96
+age_complete,2019,70-74 years old,injured,96
+age_complete,2019,70-74 years old,fatalities,0
+age_complete,2020,70-74 years old,persons,109
+age_complete,2020,70-74 years old,injured,104
+age_complete,2020,70-74 years old,fatalities,2
+age_complete,2021,70-74 years old,persons,140
+age_complete,2021,70-74 years old,injured,131
+age_complete,2021,70-74 years old,fatalities,2
+age_complete,2022,70-74 years old,persons,129
+age_complete,2022,70-74 years old,injured,121
+age_complete,2022,70-74 years old,fatalities,4
+age_complete,2023,70-74 years old,persons,99
+age_complete,2023,70-74 years old,injured,96
+age_complete,2023,70-74 years old,fatalities,2
+age_complete,2010,75-79 years old,persons,45
+age_complete,2010,75-79 years old,injured,40
+age_complete,2010,75-79 years old,fatalities,3
+age_complete,2011,75-79 years old,persons,39
+age_complete,2011,75-79 years old,injured,35
+age_complete,2011,75-79 years old,fatalities,3
+age_complete,2012,75-79 years old,persons,46
+age_complete,2012,75-79 years old,injured,38
+age_complete,2012,75-79 years old,fatalities,4
+age_complete,2013,75-79 years old,persons,59
+age_complete,2013,75-79 years old,injured,55
+age_complete,2013,75-79 years old,fatalities,1
+age_complete,2014,75-79 years old,persons,55
+age_complete,2014,75-79 years old,injured,53
+age_complete,2014,75-79 years old,fatalities,0
+age_complete,2015,75-79 years old,persons,48
+age_complete,2015,75-79 years old,injured,46
+age_complete,2015,75-79 years old,fatalities,1
+age_complete,2016,75-79 years old,persons,60
+age_complete,2016,75-79 years old,injured,57
+age_complete,2016,75-79 years old,fatalities,2
+age_complete,2017,75-79 years old,persons,76
+age_complete,2017,75-79 years old,injured,76
+age_complete,2017,75-79 years old,fatalities,0
+age_complete,2018,75-79 years old,persons,67
+age_complete,2018,75-79 years old,injured,62
+age_complete,2018,75-79 years old,fatalities,3
+age_complete,2019,75-79 years old,persons,59
+age_complete,2019,75-79 years old,injured,54
+age_complete,2019,75-79 years old,fatalities,1
+age_complete,2020,75-79 years old,persons,44
+age_complete,2020,75-79 years old,injured,41
+age_complete,2020,75-79 years old,fatalities,2
+age_complete,2021,75-79 years old,persons,72
+age_complete,2021,75-79 years old,injured,69
+age_complete,2021,75-79 years old,fatalities,2
+age_complete,2022,75-79 years old,persons,79
+age_complete,2022,75-79 years old,injured,76
+age_complete,2022,75-79 years old,fatalities,1
+age_complete,2023,75-79 years old,persons,67
+age_complete,2023,75-79 years old,injured,60
+age_complete,2023,75-79 years old,fatalities,5
+age_complete,2010,80+ years old,persons,35
+age_complete,2010,80+ years old,injured,32
+age_complete,2010,80+ years old,fatalities,0
+age_complete,2011,80+ years old,persons,37
+age_complete,2011,80+ years old,injured,34
+age_complete,2011,80+ years old,fatalities,3
+age_complete,2012,80+ years old,persons,36
+age_complete,2012,80+ years old,injured,34
+age_complete,2012,80+ years old,fatalities,1
+age_complete,2013,80+ years old,persons,38
+age_complete,2013,80+ years old,injured,32
+age_complete,2013,80+ years old,fatalities,4
+age_complete,2014,80+ years old,persons,54
+age_complete,2014,80+ years old,injured,51
+age_complete,2014,80+ years old,fatalities,1
+age_complete,2015,80+ years old,persons,49
+age_complete,2015,80+ years old,injured,46
+age_complete,2015,80+ years old,fatalities,2
+age_complete,2016,80+ years old,persons,57
+age_complete,2016,80+ years old,injured,55
+age_complete,2016,80+ years old,fatalities,2
+age_complete,2017,80+ years old,persons,40
+age_complete,2017,80+ years old,injured,36
+age_complete,2017,80+ years old,fatalities,2
+age_complete,2018,80+ years old,persons,52
+age_complete,2018,80+ years old,injured,46
+age_complete,2018,80+ years old,fatalities,5
+age_complete,2019,80+ years old,persons,48
+age_complete,2019,80+ years old,injured,46
+age_complete,2019,80+ years old,fatalities,0
+age_complete,2020,80+ years old,persons,42
+age_complete,2020,80+ years old,injured,40
+age_complete,2020,80+ years old,fatalities,2
+age_complete,2021,80+ years old,persons,46
+age_complete,2021,80+ years old,injured,43
+age_complete,2021,80+ years old,fatalities,3
+age_complete,2022,80+ years old,persons,57
+age_complete,2022,80+ years old,injured,54
+age_complete,2022,80+ years old,fatalities,3
+age_complete,2023,80+ years old,persons,57
+age_complete,2023,80+ years old,injured,50
+age_complete,2023,80+ years old,fatalities,5
+age_complete,2010,Unknown,persons,2004
+age_complete,2010,Unknown,injured,1583
+age_complete,2010,Unknown,fatalities,1
+age_complete,2011,Unknown,persons,2279
+age_complete,2011,Unknown,injured,1770
+age_complete,2011,Unknown,fatalities,3
+age_complete,2012,Unknown,persons,2035
+age_complete,2012,Unknown,injured,1624
+age_complete,2012,Unknown,fatalities,0
+age_complete,2013,Unknown,persons,1873
+age_complete,2013,Unknown,injured,1418
+age_complete,2013,Unknown,fatalities,1
+age_complete,2014,Unknown,persons,716
+age_complete,2014,Unknown,injured,316
+age_complete,2014,Unknown,fatalities,0
+age_complete,2015,Unknown,persons,478
+age_complete,2015,Unknown,injured,200
+age_complete,2015,Unknown,fatalities,0
+age_complete,2016,Unknown,persons,376
+age_complete,2016,Unknown,injured,152
+age_complete,2016,Unknown,fatalities,0
+age_complete,2017,Unknown,persons,305
+age_complete,2017,Unknown,injured,161
+age_complete,2017,Unknown,fatalities,1
+age_complete,2018,Unknown,persons,202
+age_complete,2018,Unknown,injured,154
+age_complete,2018,Unknown,fatalities,0
+age_complete,2019,Unknown,persons,191
+age_complete,2019,Unknown,injured,153
+age_complete,2019,Unknown,fatalities,0
+age_complete,2020,Unknown,persons,168
+age_complete,2020,Unknown,injured,54
+age_complete,2020,Unknown,fatalities,0
+age_complete,2021,Unknown,persons,185
+age_complete,2021,Unknown,injured,137
+age_complete,2021,Unknown,fatalities,1
+age_complete,2022,Unknown,persons,175
+age_complete,2022,Unknown,injured,142
+age_complete,2022,Unknown,fatalities,2
+age_complete,2023,Unknown,persons,234
+age_complete,2023,Unknown,injured,174
+age_complete,2023,Unknown,fatalities,0
+age_complete,2010,Not applicable,persons,11
+age_complete,2010,Not applicable,injured,0
+age_complete,2010,Not applicable,fatalities,0
+age_complete,2011,Not applicable,persons,11
+age_complete,2011,Not applicable,injured,0
+age_complete,2011,Not applicable,fatalities,0
+age_complete,2012,Not applicable,persons,0
+age_complete,2012,Not applicable,injured,0
+age_complete,2012,Not applicable,fatalities,0
+age_complete,2013,Not applicable,persons,0
+age_complete,2013,Not applicable,injured,0
+age_complete,2013,Not applicable,fatalities,0
+age_complete,2014,Not applicable,persons,0
+age_complete,2014,Not applicable,injured,0
+age_complete,2014,Not applicable,fatalities,0
+age_complete,2015,Not applicable,persons,0
+age_complete,2015,Not applicable,injured,0
+age_complete,2015,Not applicable,fatalities,0
+age_complete,2016,Not applicable,persons,0
+age_complete,2016,Not applicable,injured,0
+age_complete,2016,Not applicable,fatalities,0
+age_complete,2017,Not applicable,persons,0
+age_complete,2017,Not applicable,injured,0
+age_complete,2017,Not applicable,fatalities,0
+age_complete,2018,Not applicable,persons,0
+age_complete,2018,Not applicable,injured,0
+age_complete,2018,Not applicable,fatalities,0
+age_complete,2019,Not applicable,persons,0
+age_complete,2019,Not applicable,injured,0
+age_complete,2019,Not applicable,fatalities,0
+age_complete,2020,Not applicable,persons,0
+age_complete,2020,Not applicable,injured,0
+age_complete,2020,Not applicable,fatalities,0
+age_complete,2021,Not applicable,persons,0
+age_complete,2021,Not applicable,injured,0
+age_complete,2021,Not applicable,fatalities,0
+age_complete,2022,Not applicable,persons,0
+age_complete,2022,Not applicable,injured,0
+age_complete,2022,Not applicable,fatalities,0
+age_complete,2023,Not applicable,persons,0
+age_complete,2023,Not applicable,injured,0
+age_complete,2023,Not applicable,fatalities,0
+month,2010,Total,vehicles,6712
+month,2010,Total,injured,6484
+month,2010,Total,fatalities,61
+month,2011,Total,vehicles,6587
+month,2011,Total,injured,6416
+month,2011,Total,fatalities,56
+month,2012,Total,vehicles,6842
+month,2012,Total,injured,6614
+month,2012,Total,fatalities,63
+month,2013,Total,vehicles,6435
+month,2013,Total,injured,6251
+month,2013,Total,fatalities,69
+month,2014,Total,vehicles,5799
+month,2014,Total,injured,5581
+month,2014,Total,fatalities,42
+month,2015,Total,vehicles,6455
+month,2015,Total,injured,6200
+month,2015,Total,fatalities,50
+month,2016,Total,vehicles,6341
+month,2016,Total,injured,6102
+month,2016,Total,fatalities,49
+month,2017,Total,vehicles,5600
+month,2017,Total,injured,5428
+month,2017,Total,fatalities,38
+month,2018,Total,vehicles,4892
+month,2018,Total,injured,4743
+month,2018,Total,fatalities,48
+month,2019,Total,vehicles,4628
+month,2019,Total,injured,4499
+month,2019,Total,fatalities,43
+month,2020,Total,vehicles,3717
+month,2020,Total,injured,3440
+month,2020,Total,fatalities,50
+month,2021,Total,vehicles,4196
+month,2021,Total,injured,4059
+month,2021,Total,fatalities,39
+month,2022,Total,vehicles,4047
+month,2022,Total,injured,3928
+month,2022,Total,fatalities,48
+month,2023,Total,vehicles,4902
+month,2023,Total,injured,4742
+month,2023,Total,fatalities,46
+month,2010,January,vehicles,112
+month,2010,January,injured,107
+month,2010,January,fatalities,1
+month,2011,January,vehicles,107
+month,2011,January,injured,104
+month,2011,January,fatalities,1
+month,2012,January,vehicles,125
+month,2012,January,injured,116
+month,2012,January,fatalities,3
+month,2013,January,vehicles,122
+month,2013,January,injured,118
+month,2013,January,fatalities,1
+month,2014,January,vehicles,80
+month,2014,January,injured,79
+month,2014,January,fatalities,0
+month,2015,January,vehicles,121
+month,2015,January,injured,117
+month,2015,January,fatalities,2
+month,2016,January,vehicles,129
+month,2016,January,injured,120
+month,2016,January,fatalities,4
+month,2017,January,vehicles,82
+month,2017,January,injured,79
+month,2017,January,fatalities,3
+month,2018,January,vehicles,90
+month,2018,January,injured,87
+month,2018,January,fatalities,1
+month,2019,January,vehicles,77
+month,2019,January,injured,72
+month,2019,January,fatalities,3
+month,2020,January,vehicles,65
+month,2020,January,injured,63
+month,2020,January,fatalities,1
+month,2021,January,vehicles,55
+month,2021,January,injured,53
+month,2021,January,fatalities,1
+month,2022,January,vehicles,33
+month,2022,January,injured,31
+month,2022,January,fatalities,0
+month,2023,January,vehicles,91
+month,2023,January,injured,86
+month,2023,January,fatalities,0
+month,2010,February,vehicles,119
+month,2010,February,injured,115
+month,2010,February,fatalities,0
+month,2011,February,vehicles,95
+month,2011,February,injured,89
+month,2011,February,fatalities,1
+month,2012,February,vehicles,146
+month,2012,February,injured,138
+month,2012,February,fatalities,2
+month,2013,February,vehicles,114
+month,2013,February,injured,112
+month,2013,February,fatalities,1
+month,2014,February,vehicles,71
+month,2014,February,injured,70
+month,2014,February,fatalities,0
+month,2015,February,vehicles,90
+month,2015,February,injured,87
+month,2015,February,fatalities,1
+month,2016,February,vehicles,136
+month,2016,February,injured,132
+month,2016,February,fatalities,2
+month,2017,February,vehicles,97
+month,2017,February,injured,95
+month,2017,February,fatalities,1
+month,2018,February,vehicles,76
+month,2018,February,injured,72
+month,2018,February,fatalities,1
+month,2019,February,vehicles,51
+month,2019,February,injured,51
+month,2019,February,fatalities,0
+month,2020,February,vehicles,61
+month,2020,February,injured,56
+month,2020,February,fatalities,2
+month,2021,February,vehicles,32
+month,2021,February,injured,31
+month,2021,February,fatalities,0
+month,2022,February,vehicles,36
+month,2022,February,injured,35
+month,2022,February,fatalities,0
+month,2023,February,vehicles,61
+month,2023,February,injured,60
+month,2023,February,fatalities,0
+month,2010,March,vehicles,304
+month,2010,March,injured,301
+month,2010,March,fatalities,1
+month,2011,March,vehicles,172
+month,2011,March,injured,167
+month,2011,March,fatalities,1
+month,2012,March,vehicles,316
+month,2012,March,injured,304
+month,2012,March,fatalities,3
+month,2013,March,vehicles,175
+month,2013,March,injured,169
+month,2013,March,fatalities,2
+month,2014,March,vehicles,96
+month,2014,March,injured,96
+month,2014,March,fatalities,0
+month,2015,March,vehicles,158
+month,2015,March,injured,154
+month,2015,March,fatalities,0
+month,2016,March,vehicles,180
+month,2016,March,injured,173
+month,2016,March,fatalities,2
+month,2017,March,vehicles,134
+month,2017,March,injured,131
+month,2017,March,fatalities,0
+month,2018,March,vehicles,130
+month,2018,March,injured,125
+month,2018,March,fatalities,3
+month,2019,March,vehicles,127
+month,2019,March,injured,126
+month,2019,March,fatalities,0
+month,2020,March,vehicles,77
+month,2020,March,injured,71
+month,2020,March,fatalities,0
+month,2021,March,vehicles,146
+month,2021,March,injured,139
+month,2021,March,fatalities,2
+month,2022,March,vehicles,108
+month,2022,March,injured,107
+month,2022,March,fatalities,2
+month,2023,March,vehicles,109
+month,2023,March,injured,107
+month,2023,March,fatalities,3
+month,2010,April,vehicles,554
+month,2010,April,injured,526
+month,2010,April,fatalities,7
+month,2011,April,vehicles,346
+month,2011,April,injured,341
+month,2011,April,fatalities,2
+month,2012,April,vehicles,392
+month,2012,April,injured,382
+month,2012,April,fatalities,2
+month,2013,April,vehicles,336
+month,2013,April,injured,325
+month,2013,April,fatalities,3
+month,2014,April,vehicles,309
+month,2014,April,injured,296
+month,2014,April,fatalities,5
+month,2015,April,vehicles,388
+month,2015,April,injured,378
+month,2015,April,fatalities,2
+month,2016,April,vehicles,405
+month,2016,April,injured,388
+month,2016,April,fatalities,3
+month,2017,April,vehicles,337
+month,2017,April,injured,325
+month,2017,April,fatalities,2
+month,2018,April,vehicles,202
+month,2018,April,injured,199
+month,2018,April,fatalities,1
+month,2019,April,vehicles,235
+month,2019,April,injured,227
+month,2019,April,fatalities,3
+month,2020,April,vehicles,107
+month,2020,April,injured,98
+month,2020,April,fatalities,1
+month,2021,April,vehicles,290
+month,2021,April,injured,279
+month,2021,April,fatalities,4
+month,2022,April,vehicles,168
+month,2022,April,injured,166
+month,2022,April,fatalities,2
+month,2023,April,vehicles,308
+month,2023,April,injured,296
+month,2023,April,fatalities,2
+month,2010,May,vehicles,798
+month,2010,May,injured,765
+month,2010,May,fatalities,9
+month,2011,May,vehicles,690
+month,2011,May,injured,679
+month,2011,May,fatalities,3
+month,2012,May,vehicles,802
+month,2012,May,injured,772
+month,2012,May,fatalities,6
+month,2013,May,vehicles,813
+month,2013,May,injured,787
+month,2013,May,fatalities,8
+month,2014,May,vehicles,575
+month,2014,May,injured,560
+month,2014,May,fatalities,5
+month,2015,May,vehicles,742
+month,2015,May,injured,704
+month,2015,May,fatalities,5
+month,2016,May,vehicles,759
+month,2016,May,injured,730
+month,2016,May,fatalities,4
+month,2017,May,vehicles,558
+month,2017,May,injured,535
+month,2017,May,fatalities,3
+month,2018,May,vehicles,680
+month,2018,May,injured,655
+month,2018,May,fatalities,7
+month,2019,May,vehicles,501
+month,2019,May,injured,491
+month,2019,May,fatalities,4
+month,2020,May,vehicles,335
+month,2020,May,injured,313
+month,2020,May,fatalities,4
+month,2021,May,vehicles,511
+month,2021,May,injured,492
+month,2021,May,fatalities,4
+month,2022,May,vehicles,452
+month,2022,May,injured,441
+month,2022,May,fatalities,5
+month,2023,May,vehicles,631
+month,2023,May,injured,613
+month,2023,May,fatalities,6
+month,2010,June,vehicles,914
+month,2010,June,injured,891
+month,2010,June,fatalities,12
+month,2011,June,vehicles,1014
+month,2011,June,injured,989
+month,2011,June,fatalities,5
+month,2012,June,vehicles,957
+month,2012,June,injured,932
+month,2012,June,fatalities,4
+month,2013,June,vehicles,910
+month,2013,June,injured,892
+month,2013,June,fatalities,4
+month,2014,June,vehicles,791
+month,2014,June,injured,754
+month,2014,June,fatalities,3
+month,2015,June,vehicles,951
+month,2015,June,injured,913
+month,2015,June,fatalities,10
+month,2016,June,vehicles,941
+month,2016,June,injured,906
+month,2016,June,fatalities,3
+month,2017,June,vehicles,817
+month,2017,June,injured,794
+month,2017,June,fatalities,3
+month,2018,June,vehicles,754
+month,2018,June,injured,724
+month,2018,June,fatalities,10
+month,2019,June,vehicles,673
+month,2019,June,injured,658
+month,2019,June,fatalities,8
+month,2020,June,vehicles,555
+month,2020,June,injured,513
+month,2020,June,fatalities,7
+month,2021,June,vehicles,599
+month,2021,June,injured,591
+month,2021,June,fatalities,3
+month,2022,June,vehicles,593
+month,2022,June,injured,575
+month,2022,June,fatalities,6
+month,2023,June,vehicles,662
+month,2023,June,injured,640
+month,2023,June,fatalities,5
+month,2010,July,vehicles,976
+month,2010,July,injured,944
+month,2010,July,fatalities,6
+month,2011,July,vehicles,1005
+month,2011,July,injured,983
+month,2011,July,fatalities,11
+month,2012,July,vehicles,1115
+month,2012,July,injured,1078
+month,2012,July,fatalities,10
+month,2013,July,vehicles,1025
+month,2013,July,injured,991
+month,2013,July,fatalities,15
+month,2014,July,vehicles,962
+month,2014,July,injured,924
+month,2014,July,fatalities,7
+month,2015,July,vehicles,1001
+month,2015,July,injured,945
+month,2015,July,fatalities,11
+month,2016,July,vehicles,891
+month,2016,July,injured,847
+month,2016,July,fatalities,13
+month,2017,July,vehicles,867
+month,2017,July,injured,838
+month,2017,July,fatalities,12
+month,2018,July,vehicles,779
+month,2018,July,injured,760
+month,2018,July,fatalities,3
+month,2019,July,vehicles,736
+month,2019,July,injured,717
+month,2019,July,fatalities,6
+month,2020,July,vehicles,673
+month,2020,July,injured,634
+month,2020,July,fatalities,8
+month,2021,July,vehicles,552
+month,2021,July,injured,530
+month,2021,July,fatalities,4
+month,2022,July,vehicles,584
+month,2022,July,injured,571
+month,2022,July,fatalities,8
+month,2023,July,vehicles,679
+month,2023,July,injured,653
+month,2023,July,fatalities,7
+month,2010,August,vehicles,983
+month,2010,August,injured,945
+month,2010,August,fatalities,10
+month,2011,August,vehicles,959
+month,2011,August,injured,930
+month,2011,August,fatalities,10
+month,2012,August,vehicles,964
+month,2012,August,injured,927
+month,2012,August,fatalities,9
+month,2013,August,vehicles,980
+month,2013,August,injured,963
+month,2013,August,fatalities,9
+month,2014,August,vehicles,949
+month,2014,August,injured,910
+month,2014,August,fatalities,5
+month,2015,August,vehicles,898
+month,2015,August,injured,864
+month,2015,August,fatalities,4
+month,2016,August,vehicles,894
+month,2016,August,injured,871
+month,2016,August,fatalities,9
+month,2017,August,vehicles,809
+month,2017,August,injured,784
+month,2017,August,fatalities,4
+month,2018,August,vehicles,743
+month,2018,August,injured,723
+month,2018,August,fatalities,9
+month,2019,August,vehicles,734
+month,2019,August,injured,718
+month,2019,August,fatalities,7
+month,2020,August,vehicles,627
+month,2020,August,injured,572
+month,2020,August,fatalities,7
+month,2021,August,vehicles,598
+month,2021,August,injured,577
+month,2021,August,fatalities,3
+month,2022,August,vehicles,632
+month,2022,August,injured,617
+month,2022,August,fatalities,5
+month,2023,August,vehicles,679
+month,2023,August,injured,659
+month,2023,August,fatalities,7
+month,2010,September,vehicles,825
+month,2010,September,injured,796
+month,2010,September,fatalities,8
+month,2011,September,vehicles,935
+month,2011,September,injured,910
+month,2011,September,fatalities,8
+month,2012,September,vehicles,922
+month,2012,September,injured,900
+month,2012,September,fatalities,8
+month,2013,September,vehicles,867
+month,2013,September,injured,837
+month,2013,September,fatalities,13
+month,2014,September,vehicles,879
+month,2014,September,injured,848
+month,2014,September,fatalities,8
+month,2015,September,vehicles,901
+month,2015,September,injured,867
+month,2015,September,fatalities,5
+month,2016,September,vehicles,874
+month,2016,September,injured,842
+month,2016,September,fatalities,4
+month,2017,September,vehicles,810
+month,2017,September,injured,791
+month,2017,September,fatalities,5
+month,2018,September,vehicles,645
+month,2018,September,injured,622
+month,2018,September,fatalities,8
+month,2019,September,vehicles,701
+month,2019,September,injured,675
+month,2019,September,fatalities,7
+month,2020,September,vehicles,607
+month,2020,September,injured,563
+month,2020,September,fatalities,11
+month,2021,September,vehicles,622
+month,2021,September,injured,605
+month,2021,September,fatalities,5
+month,2022,September,vehicles,629
+month,2022,September,injured,606
+month,2022,September,fatalities,9
+month,2023,September,vehicles,684
+month,2023,September,injured,656
+month,2023,September,fatalities,10
+month,2010,October,vehicles,619
+month,2010,October,injured,602
+month,2010,October,fatalities,3
+month,2011,October,vehicles,636
+month,2011,October,injured,619
+month,2011,October,fatalities,6
+month,2012,October,vehicles,574
+month,2012,October,injured,559
+month,2012,October,fatalities,9
+month,2013,October,vehicles,700
+month,2013,October,injured,679
+month,2013,October,fatalities,7
+month,2014,October,vehicles,650
+month,2014,October,injured,622
+month,2014,October,fatalities,3
+month,2015,October,vehicles,572
+month,2015,October,injured,556
+month,2015,October,fatalities,6
+month,2016,October,vehicles,573
+month,2016,October,injured,556
+month,2016,October,fatalities,0
+month,2017,October,vehicles,624
+month,2017,October,injured,601
+month,2017,October,fatalities,2
+month,2018,October,vehicles,445
+month,2018,October,injured,431
+month,2018,October,fatalities,3
+month,2019,October,vehicles,480
+month,2019,October,injured,460
+month,2019,October,fatalities,1
+month,2020,October,vehicles,318
+month,2020,October,injured,289
+month,2020,October,fatalities,4
+month,2021,October,vehicles,460
+month,2021,October,injured,443
+month,2021,October,fatalities,9
+month,2022,October,vehicles,494
+month,2022,October,injured,475
+month,2022,October,fatalities,8
+month,2023,October,vehicles,537
+month,2023,October,injured,527
+month,2023,October,fatalities,4
+month,2010,November,vehicles,359
+month,2010,November,injured,348
+month,2010,November,fatalities,4
+month,2011,November,vehicles,415
+month,2011,November,injured,398
+month,2011,November,fatalities,5
+month,2012,November,vehicles,366
+month,2012,November,injured,353
+month,2012,November,fatalities,5
+month,2013,November,vehicles,281
+month,2013,November,injured,270
+month,2013,November,fatalities,5
+month,2014,November,vehicles,273
+month,2014,November,injured,262
+month,2014,November,fatalities,4
+month,2015,November,vehicles,392
+month,2015,November,injured,377
+month,2015,November,fatalities,3
+month,2016,November,vehicles,424
+month,2016,November,injured,407
+month,2016,November,fatalities,2
+month,2017,November,vehicles,335
+month,2017,November,injured,328
+month,2017,November,fatalities,1
+month,2018,November,vehicles,226
+month,2018,November,injured,225
+month,2018,November,fatalities,1
+month,2019,November,vehicles,204
+month,2019,November,injured,199
+month,2019,November,fatalities,2
+month,2020,November,vehicles,202
+month,2020,November,injured,186
+month,2020,November,fatalities,4
+month,2021,November,vehicles,241
+month,2021,November,injured,234
+month,2021,November,fatalities,3
+month,2022,November,vehicles,225
+month,2022,November,injured,216
+month,2022,November,fatalities,1
+month,2023,November,vehicles,289
+month,2023,November,injured,281
+month,2023,November,fatalities,2
+month,2010,December,vehicles,149
+month,2010,December,injured,144
+month,2010,December,fatalities,0
+month,2011,December,vehicles,212
+month,2011,December,injured,206
+month,2011,December,fatalities,3
+month,2012,December,vehicles,163
+month,2012,December,injured,153
+month,2012,December,fatalities,2
+month,2013,December,vehicles,112
+month,2013,December,injured,108
+month,2013,December,fatalities,1
+month,2014,December,vehicles,164
+month,2014,December,injured,160
+month,2014,December,fatalities,2
+month,2015,December,vehicles,241
+month,2015,December,injured,238
+month,2015,December,fatalities,1
+month,2016,December,vehicles,135
+month,2016,December,injured,130
+month,2016,December,fatalities,3
+month,2017,December,vehicles,130
+month,2017,December,injured,127
+month,2017,December,fatalities,2
+month,2018,December,vehicles,122
+month,2018,December,injured,120
+month,2018,December,fatalities,1
+month,2019,December,vehicles,109
+month,2019,December,injured,105
+month,2019,December,fatalities,2
+month,2020,December,vehicles,90
+month,2020,December,injured,82
+month,2020,December,fatalities,1
+month,2021,December,vehicles,90
+month,2021,December,injured,85
+month,2021,December,fatalities,1
+month,2022,December,vehicles,93
+month,2022,December,injured,88
+month,2022,December,fatalities,2
+month,2023,December,vehicles,172
+month,2023,December,injured,164
+month,2023,December,fatalities,0
+month,2010,Unknown,vehicles,0
+month,2010,Unknown,injured,0
+month,2010,Unknown,fatalities,0
+month,2011,Unknown,vehicles,1
+month,2011,Unknown,injured,1
+month,2011,Unknown,fatalities,0
+month,2012,Unknown,vehicles,0
+month,2012,Unknown,injured,0
+month,2012,Unknown,fatalities,0
+month,2013,Unknown,vehicles,0
+month,2013,Unknown,injured,0
+month,2013,Unknown,fatalities,0
+month,2014,Unknown,vehicles,0
+month,2014,Unknown,injured,0
+month,2014,Unknown,fatalities,0
+month,2015,Unknown,vehicles,0
+month,2015,Unknown,injured,0
+month,2015,Unknown,fatalities,0
+month,2016,Unknown,vehicles,0
+month,2016,Unknown,injured,0
+month,2016,Unknown,fatalities,0
+month,2017,Unknown,vehicles,0
+month,2017,Unknown,injured,0
+month,2017,Unknown,fatalities,0
+month,2018,Unknown,vehicles,0
+month,2018,Unknown,injured,0
+month,2018,Unknown,fatalities,0
+month,2019,Unknown,vehicles,0
+month,2019,Unknown,injured,0
+month,2019,Unknown,fatalities,0
+month,2020,Unknown,vehicles,0
+month,2020,Unknown,injured,0
+month,2020,Unknown,fatalities,0
+month,2021,Unknown,vehicles,0
+month,2021,Unknown,injured,0
+month,2021,Unknown,fatalities,0
+month,2022,Unknown,vehicles,0
+month,2022,Unknown,injured,0
+month,2022,Unknown,fatalities,0
+month,2023,Unknown,vehicles,0
+month,2023,Unknown,injured,0
+month,2023,Unknown,fatalities,0
+weekday,2010,Total,vehicles,6712
+weekday,2010,Total,injured,6484
+weekday,2010,Total,fatalities,61
+weekday,2011,Total,vehicles,6587
+weekday,2011,Total,injured,6416
+weekday,2011,Total,fatalities,56
+weekday,2012,Total,vehicles,6842
+weekday,2012,Total,injured,6614
+weekday,2012,Total,fatalities,63
+weekday,2013,Total,vehicles,6435
+weekday,2013,Total,injured,6251
+weekday,2013,Total,fatalities,69
+weekday,2014,Total,vehicles,5799
+weekday,2014,Total,injured,5581
+weekday,2014,Total,fatalities,42
+weekday,2015,Total,vehicles,6455
+weekday,2015,Total,injured,6200
+weekday,2015,Total,fatalities,50
+weekday,2016,Total,vehicles,6341
+weekday,2016,Total,injured,6102
+weekday,2016,Total,fatalities,49
+weekday,2017,Total,vehicles,5600
+weekday,2017,Total,injured,5428
+weekday,2017,Total,fatalities,38
+weekday,2018,Total,vehicles,4892
+weekday,2018,Total,injured,4743
+weekday,2018,Total,fatalities,48
+weekday,2019,Total,vehicles,4628
+weekday,2019,Total,injured,4499
+weekday,2019,Total,fatalities,43
+weekday,2020,Total,vehicles,3717
+weekday,2020,Total,injured,3440
+weekday,2020,Total,fatalities,50
+weekday,2021,Total,vehicles,4196
+weekday,2021,Total,injured,4059
+weekday,2021,Total,fatalities,39
+weekday,2022,Total,vehicles,4047
+weekday,2022,Total,injured,3928
+weekday,2022,Total,fatalities,48
+weekday,2023,Total,vehicles,4902
+weekday,2023,Total,injured,4742
+weekday,2023,Total,fatalities,46
+weekday,2010,Monday,vehicles,957
+weekday,2010,Monday,injured,925
+weekday,2010,Monday,fatalities,9
+weekday,2011,Monday,vehicles,957
+weekday,2011,Monday,injured,926
+weekday,2011,Monday,fatalities,11
+weekday,2012,Monday,vehicles,979
+weekday,2012,Monday,injured,944
+weekday,2012,Monday,fatalities,13
+weekday,2013,Monday,vehicles,917
+weekday,2013,Monday,injured,883
+weekday,2013,Monday,fatalities,12
+weekday,2014,Monday,vehicles,843
+weekday,2014,Monday,injured,818
+weekday,2014,Monday,fatalities,5
+weekday,2015,Monday,vehicles,834
+weekday,2015,Monday,injured,796
+weekday,2015,Monday,fatalities,7
+weekday,2016,Monday,vehicles,864
+weekday,2016,Monday,injured,837
+weekday,2016,Monday,fatalities,5
+weekday,2017,Monday,vehicles,793
+weekday,2017,Monday,injured,777
+weekday,2017,Monday,fatalities,2
+weekday,2018,Monday,vehicles,707
+weekday,2018,Monday,injured,683
+weekday,2018,Monday,fatalities,6
+weekday,2019,Monday,vehicles,640
+weekday,2019,Monday,injured,619
+weekday,2019,Monday,fatalities,7
+weekday,2020,Monday,vehicles,451
+weekday,2020,Monday,injured,426
+weekday,2020,Monday,fatalities,4
+weekday,2021,Monday,vehicles,584
+weekday,2021,Monday,injured,561
+weekday,2021,Monday,fatalities,7
+weekday,2022,Monday,vehicles,548
+weekday,2022,Monday,injured,536
+weekday,2022,Monday,fatalities,3
+weekday,2023,Monday,vehicles,633
+weekday,2023,Monday,injured,613
+weekday,2023,Monday,fatalities,4
+weekday,2010,Tuesday,vehicles,1092
+weekday,2010,Tuesday,injured,1057
+weekday,2010,Tuesday,fatalities,11
+weekday,2011,Tuesday,vehicles,1098
+weekday,2011,Tuesday,injured,1073
+weekday,2011,Tuesday,fatalities,11
+weekday,2012,Tuesday,vehicles,1093
+weekday,2012,Tuesday,injured,1059
+weekday,2012,Tuesday,fatalities,9
+weekday,2013,Tuesday,vehicles,1047
+weekday,2013,Tuesday,injured,1017
+weekday,2013,Tuesday,fatalities,12
+weekday,2014,Tuesday,vehicles,959
+weekday,2014,Tuesday,injured,925
+weekday,2014,Tuesday,fatalities,5
+weekday,2015,Tuesday,vehicles,1053
+weekday,2015,Tuesday,injured,1013
+weekday,2015,Tuesday,fatalities,8
+weekday,2016,Tuesday,vehicles,1057
+weekday,2016,Tuesday,injured,1019
+weekday,2016,Tuesday,fatalities,8
+weekday,2017,Tuesday,vehicles,904
+weekday,2017,Tuesday,injured,871
+weekday,2017,Tuesday,fatalities,1
+weekday,2018,Tuesday,vehicles,774
+weekday,2018,Tuesday,injured,748
+weekday,2018,Tuesday,fatalities,12
+weekday,2019,Tuesday,vehicles,772
+weekday,2019,Tuesday,injured,749
+weekday,2019,Tuesday,fatalities,6
+weekday,2020,Tuesday,vehicles,565
+weekday,2020,Tuesday,injured,523
+weekday,2020,Tuesday,fatalities,8
+weekday,2021,Tuesday,vehicles,609
+weekday,2021,Tuesday,injured,587
+weekday,2021,Tuesday,fatalities,7
+weekday,2022,Tuesday,vehicles,625
+weekday,2022,Tuesday,injured,603
+weekday,2022,Tuesday,fatalities,7
+weekday,2023,Tuesday,vehicles,748
+weekday,2023,Tuesday,injured,725
+weekday,2023,Tuesday,fatalities,5
+weekday,2010,Wednesday,vehicles,1140
+weekday,2010,Wednesday,injured,1104
+weekday,2010,Wednesday,fatalities,7
+weekday,2011,Wednesday,vehicles,1078
+weekday,2011,Wednesday,injured,1057
+weekday,2011,Wednesday,fatalities,7
+weekday,2012,Wednesday,vehicles,1166
+weekday,2012,Wednesday,injured,1125
+weekday,2012,Wednesday,fatalities,9
+weekday,2013,Wednesday,vehicles,1114
+weekday,2013,Wednesday,injured,1091
+weekday,2013,Wednesday,fatalities,9
+weekday,2014,Wednesday,vehicles,932
+weekday,2014,Wednesday,injured,899
+weekday,2014,Wednesday,fatalities,4
+weekday,2015,Wednesday,vehicles,1119
+weekday,2015,Wednesday,injured,1074
+weekday,2015,Wednesday,fatalities,7
+weekday,2016,Wednesday,vehicles,1068
+weekday,2016,Wednesday,injured,1021
+weekday,2016,Wednesday,fatalities,10
+weekday,2017,Wednesday,vehicles,982
+weekday,2017,Wednesday,injured,947
+weekday,2017,Wednesday,fatalities,8
+weekday,2018,Wednesday,vehicles,834
+weekday,2018,Wednesday,injured,801
+weekday,2018,Wednesday,fatalities,7
+weekday,2019,Wednesday,vehicles,764
+weekday,2019,Wednesday,injured,750
+weekday,2019,Wednesday,fatalities,2
+weekday,2020,Wednesday,vehicles,585
+weekday,2020,Wednesday,injured,542
+weekday,2020,Wednesday,fatalities,6
+weekday,2021,Wednesday,vehicles,735
+weekday,2021,Wednesday,injured,711
+weekday,2021,Wednesday,fatalities,7
+weekday,2022,Wednesday,vehicles,672
+weekday,2022,Wednesday,injured,654
+weekday,2022,Wednesday,fatalities,8
+weekday,2023,Wednesday,vehicles,819
+weekday,2023,Wednesday,injured,794
+weekday,2023,Wednesday,fatalities,12
+weekday,2010,Thursday,vehicles,1073
+weekday,2010,Thursday,injured,1043
+weekday,2010,Thursday,fatalities,11
+weekday,2011,Thursday,vehicles,1081
+weekday,2011,Thursday,injured,1058
+weekday,2011,Thursday,fatalities,9
+weekday,2012,Thursday,vehicles,1191
+weekday,2012,Thursday,injured,1144
+weekday,2012,Thursday,fatalities,14
+weekday,2013,Thursday,vehicles,1066
+weekday,2013,Thursday,injured,1042
+weekday,2013,Thursday,fatalities,9
+weekday,2014,Thursday,vehicles,980
+weekday,2014,Thursday,injured,940
+weekday,2014,Thursday,fatalities,13
+weekday,2015,Thursday,vehicles,1169
+weekday,2015,Thursday,injured,1127
+weekday,2015,Thursday,fatalities,10
+weekday,2016,Thursday,vehicles,1121
+weekday,2016,Thursday,injured,1085
+weekday,2016,Thursday,fatalities,7
+weekday,2017,Thursday,vehicles,1001
+weekday,2017,Thursday,injured,981
+weekday,2017,Thursday,fatalities,5
+weekday,2018,Thursday,vehicles,863
+weekday,2018,Thursday,injured,844
+weekday,2018,Thursday,fatalities,2
+weekday,2019,Thursday,vehicles,807
+weekday,2019,Thursday,injured,788
+weekday,2019,Thursday,fatalities,9
+weekday,2020,Thursday,vehicles,639
+weekday,2020,Thursday,injured,601
+weekday,2020,Thursday,fatalities,10
+weekday,2021,Thursday,vehicles,638
+weekday,2021,Thursday,injured,621
+weekday,2021,Thursday,fatalities,6
+weekday,2022,Thursday,vehicles,649
+weekday,2022,Thursday,injured,632
+weekday,2022,Thursday,fatalities,11
+weekday,2023,Thursday,vehicles,813
+weekday,2023,Thursday,injured,779
+weekday,2023,Thursday,fatalities,9
+weekday,2010,Friday,vehicles,1158
+weekday,2010,Friday,injured,1113
+weekday,2010,Friday,fatalities,12
+weekday,2011,Friday,vehicles,1041
+weekday,2011,Friday,injured,1014
+weekday,2011,Friday,fatalities,11
+weekday,2012,Friday,vehicles,1130
+weekday,2012,Friday,injured,1102
+weekday,2012,Friday,fatalities,7
+weekday,2013,Friday,vehicles,1044
+weekday,2013,Friday,injured,1015
+weekday,2013,Friday,fatalities,8
+weekday,2014,Friday,vehicles,916
+weekday,2014,Friday,injured,879
+weekday,2014,Friday,fatalities,6
+weekday,2015,Friday,vehicles,1042
+weekday,2015,Friday,injured,1008
+weekday,2015,Friday,fatalities,6
+weekday,2016,Friday,vehicles,1041
+weekday,2016,Friday,injured,996
+weekday,2016,Friday,fatalities,10
+weekday,2017,Friday,vehicles,844
+weekday,2017,Friday,injured,809
+weekday,2017,Friday,fatalities,10
+weekday,2018,Friday,vehicles,797
+weekday,2018,Friday,injured,775
+weekday,2018,Friday,fatalities,11
+weekday,2019,Friday,vehicles,769
+weekday,2019,Friday,injured,744
+weekday,2019,Friday,fatalities,7
+weekday,2020,Friday,vehicles,637
+weekday,2020,Friday,injured,578
+weekday,2020,Friday,fatalities,12
+weekday,2021,Friday,vehicles,671
+weekday,2021,Friday,injured,654
+weekday,2021,Friday,fatalities,4
+weekday,2022,Friday,vehicles,629
+weekday,2022,Friday,injured,610
+weekday,2022,Friday,fatalities,7
+weekday,2023,Friday,vehicles,809
+weekday,2023,Friday,injured,796
+weekday,2023,Friday,fatalities,4
+weekday,2010,Saturday,vehicles,743
+weekday,2010,Saturday,injured,708
+weekday,2010,Saturday,fatalities,6
+weekday,2011,Saturday,vehicles,772
+weekday,2011,Saturday,injured,746
+weekday,2011,Saturday,fatalities,4
+weekday,2012,Saturday,vehicles,704
+weekday,2012,Saturday,injured,684
+weekday,2012,Saturday,fatalities,5
+weekday,2013,Saturday,vehicles,666
+weekday,2013,Saturday,injured,635
+weekday,2013,Saturday,fatalities,12
+weekday,2014,Saturday,vehicles,645
+weekday,2014,Saturday,injured,615
+weekday,2014,Saturday,fatalities,5
+weekday,2015,Saturday,vehicles,678
+weekday,2015,Saturday,injured,649
+weekday,2015,Saturday,fatalities,7
+weekday,2016,Saturday,vehicles,666
+weekday,2016,Saturday,injured,636
+weekday,2016,Saturday,fatalities,4
+weekday,2017,Saturday,vehicles,581
+weekday,2017,Saturday,injured,570
+weekday,2017,Saturday,fatalities,6
+weekday,2018,Saturday,vehicles,483
+weekday,2018,Saturday,injured,472
+weekday,2018,Saturday,fatalities,3
+weekday,2019,Saturday,vehicles,469
+weekday,2019,Saturday,injured,460
+weekday,2019,Saturday,fatalities,3
+weekday,2020,Saturday,vehicles,486
+weekday,2020,Saturday,injured,443
+weekday,2020,Saturday,fatalities,9
+weekday,2021,Saturday,vehicles,522
+weekday,2021,Saturday,injured,506
+weekday,2021,Saturday,fatalities,4
+weekday,2022,Saturday,vehicles,518
+weekday,2022,Saturday,injured,497
+weekday,2022,Saturday,fatalities,9
+weekday,2023,Saturday,vehicles,626
+weekday,2023,Saturday,injured,603
+weekday,2023,Saturday,fatalities,6
+weekday,2010,Sunday,vehicles,549
+weekday,2010,Sunday,injured,534
+weekday,2010,Sunday,fatalities,5
+weekday,2011,Sunday,vehicles,559
+weekday,2011,Sunday,injured,541
+weekday,2011,Sunday,fatalities,3
+weekday,2012,Sunday,vehicles,579
+weekday,2012,Sunday,injured,556
+weekday,2012,Sunday,fatalities,6
+weekday,2013,Sunday,vehicles,581
+weekday,2013,Sunday,injured,568
+weekday,2013,Sunday,fatalities,7
+weekday,2014,Sunday,vehicles,524
+weekday,2014,Sunday,injured,505
+weekday,2014,Sunday,fatalities,4
+weekday,2015,Sunday,vehicles,560
+weekday,2015,Sunday,injured,533
+weekday,2015,Sunday,fatalities,5
+weekday,2016,Sunday,vehicles,524
+weekday,2016,Sunday,injured,508
+weekday,2016,Sunday,fatalities,5
+weekday,2017,Sunday,vehicles,495
+weekday,2017,Sunday,injured,473
+weekday,2017,Sunday,fatalities,6
+weekday,2018,Sunday,vehicles,434
+weekday,2018,Sunday,injured,420
+weekday,2018,Sunday,fatalities,7
+weekday,2019,Sunday,vehicles,407
+weekday,2019,Sunday,injured,389
+weekday,2019,Sunday,fatalities,9
+weekday,2020,Sunday,vehicles,354
+weekday,2020,Sunday,injured,327
+weekday,2020,Sunday,fatalities,1
+weekday,2021,Sunday,vehicles,437
+weekday,2021,Sunday,injured,419
+weekday,2021,Sunday,fatalities,4
+weekday,2022,Sunday,vehicles,406
+weekday,2022,Sunday,injured,396
+weekday,2022,Sunday,fatalities,3
+weekday,2023,Sunday,vehicles,454
+weekday,2023,Sunday,injured,432
+weekday,2023,Sunday,fatalities,6
+weekday,2010,Unknown,vehicles,0
+weekday,2010,Unknown,injured,0
+weekday,2010,Unknown,fatalities,0
+weekday,2011,Unknown,vehicles,1
+weekday,2011,Unknown,injured,1
+weekday,2011,Unknown,fatalities,0
+weekday,2012,Unknown,vehicles,0
+weekday,2012,Unknown,injured,0
+weekday,2012,Unknown,fatalities,0
+weekday,2013,Unknown,vehicles,0
+weekday,2013,Unknown,injured,0
+weekday,2013,Unknown,fatalities,0
+weekday,2014,Unknown,vehicles,0
+weekday,2014,Unknown,injured,0
+weekday,2014,Unknown,fatalities,0
+weekday,2015,Unknown,vehicles,0
+weekday,2015,Unknown,injured,0
+weekday,2015,Unknown,fatalities,0
+weekday,2016,Unknown,vehicles,0
+weekday,2016,Unknown,injured,0
+weekday,2016,Unknown,fatalities,0
+weekday,2017,Unknown,vehicles,0
+weekday,2017,Unknown,injured,0
+weekday,2017,Unknown,fatalities,0
+weekday,2018,Unknown,vehicles,0
+weekday,2018,Unknown,injured,0
+weekday,2018,Unknown,fatalities,0
+weekday,2019,Unknown,vehicles,0
+weekday,2019,Unknown,injured,0
+weekday,2019,Unknown,fatalities,0
+weekday,2020,Unknown,vehicles,0
+weekday,2020,Unknown,injured,0
+weekday,2020,Unknown,fatalities,0
+weekday,2021,Unknown,vehicles,0
+weekday,2021,Unknown,injured,0
+weekday,2021,Unknown,fatalities,0
+weekday,2022,Unknown,vehicles,0
+weekday,2022,Unknown,injured,0
+weekday,2022,Unknown,fatalities,0
+weekday,2023,Unknown,vehicles,0
+weekday,2023,Unknown,injured,0
+weekday,2023,Unknown,fatalities,0
+hour,2010,Total,vehicles,6712
+hour,2010,Total,injured,6484
+hour,2010,Total,fatalities,61
+hour,2011,Total,vehicles,6587
+hour,2011,Total,injured,6416
+hour,2011,Total,fatalities,56
+hour,2012,Total,vehicles,6842
+hour,2012,Total,injured,6614
+hour,2012,Total,fatalities,63
+hour,2013,Total,vehicles,6435
+hour,2013,Total,injured,6251
+hour,2013,Total,fatalities,69
+hour,2014,Total,vehicles,5799
+hour,2014,Total,injured,5581
+hour,2014,Total,fatalities,42
+hour,2015,Total,vehicles,6455
+hour,2015,Total,injured,6200
+hour,2015,Total,fatalities,50
+hour,2016,Total,vehicles,6341
+hour,2016,Total,injured,6102
+hour,2016,Total,fatalities,49
+hour,2017,Total,vehicles,5600
+hour,2017,Total,injured,5428
+hour,2017,Total,fatalities,38
+hour,2018,Total,vehicles,4892
+hour,2018,Total,injured,4743
+hour,2018,Total,fatalities,48
+hour,2019,Total,vehicles,4628
+hour,2019,Total,injured,4499
+hour,2019,Total,fatalities,43
+hour,2020,Total,vehicles,3717
+hour,2020,Total,injured,3440
+hour,2020,Total,fatalities,50
+hour,2021,Total,vehicles,4196
+hour,2021,Total,injured,4059
+hour,2021,Total,fatalities,39
+hour,2022,Total,vehicles,4047
+hour,2022,Total,injured,3928
+hour,2022,Total,fatalities,48
+hour,2023,Total,vehicles,4902
+hour,2023,Total,injured,4742
+hour,2023,Total,fatalities,46
+hour,2010,Midnight to 2:59,vehicles,137
+hour,2010,Midnight to 2:59,injured,132
+hour,2010,Midnight to 2:59,fatalities,1
+hour,2011,Midnight to 2:59,vehicles,124
+hour,2011,Midnight to 2:59,injured,123
+hour,2011,Midnight to 2:59,fatalities,2
+hour,2012,Midnight to 2:59,vehicles,120
+hour,2012,Midnight to 2:59,injured,106
+hour,2012,Midnight to 2:59,fatalities,6
+hour,2013,Midnight to 2:59,vehicles,124
+hour,2013,Midnight to 2:59,injured,123
+hour,2013,Midnight to 2:59,fatalities,1
+hour,2014,Midnight to 2:59,vehicles,118
+hour,2014,Midnight to 2:59,injured,108
+hour,2014,Midnight to 2:59,fatalities,1
+hour,2015,Midnight to 2:59,vehicles,107
+hour,2015,Midnight to 2:59,injured,101
+hour,2015,Midnight to 2:59,fatalities,2
+hour,2016,Midnight to 2:59,vehicles,95
+hour,2016,Midnight to 2:59,injured,91
+hour,2016,Midnight to 2:59,fatalities,2
+hour,2017,Midnight to 2:59,vehicles,90
+hour,2017,Midnight to 2:59,injured,86
+hour,2017,Midnight to 2:59,fatalities,3
+hour,2018,Midnight to 2:59,vehicles,74
+hour,2018,Midnight to 2:59,injured,72
+hour,2018,Midnight to 2:59,fatalities,1
+hour,2019,Midnight to 2:59,vehicles,86
+hour,2019,Midnight to 2:59,injured,79
+hour,2019,Midnight to 2:59,fatalities,5
+hour,2020,Midnight to 2:59,vehicles,74
+hour,2020,Midnight to 2:59,injured,67
+hour,2020,Midnight to 2:59,fatalities,3
+hour,2021,Midnight to 2:59,vehicles,61
+hour,2021,Midnight to 2:59,injured,60
+hour,2021,Midnight to 2:59,fatalities,0
+hour,2022,Midnight to 2:59,vehicles,67
+hour,2022,Midnight to 2:59,injured,66
+hour,2022,Midnight to 2:59,fatalities,0
+hour,2023,Midnight to 2:59,vehicles,97
+hour,2023,Midnight to 2:59,injured,94
+hour,2023,Midnight to 2:59,fatalities,1
+hour,2010,3:00 to 5:59,vehicles,64
+hour,2010,3:00 to 5:59,injured,62
+hour,2010,3:00 to 5:59,fatalities,0
+hour,2011,3:00 to 5:59,vehicles,78
+hour,2011,3:00 to 5:59,injured,79
+hour,2011,3:00 to 5:59,fatalities,1
+hour,2012,3:00 to 5:59,vehicles,68
+hour,2012,3:00 to 5:59,injured,64
+hour,2012,3:00 to 5:59,fatalities,2
+hour,2013,3:00 to 5:59,vehicles,81
+hour,2013,3:00 to 5:59,injured,75
+hour,2013,3:00 to 5:59,fatalities,2
+hour,2014,3:00 to 5:59,vehicles,54
+hour,2014,3:00 to 5:59,injured,50
+hour,2014,3:00 to 5:59,fatalities,1
+hour,2015,3:00 to 5:59,vehicles,72
+hour,2015,3:00 to 5:59,injured,65
+hour,2015,3:00 to 5:59,fatalities,4
+hour,2016,3:00 to 5:59,vehicles,69
+hour,2016,3:00 to 5:59,injured,66
+hour,2016,3:00 to 5:59,fatalities,1
+hour,2017,3:00 to 5:59,vehicles,59
+hour,2017,3:00 to 5:59,injured,56
+hour,2017,3:00 to 5:59,fatalities,2
+hour,2018,3:00 to 5:59,vehicles,53
+hour,2018,3:00 to 5:59,injured,51
+hour,2018,3:00 to 5:59,fatalities,1
+hour,2019,3:00 to 5:59,vehicles,47
+hour,2019,3:00 to 5:59,injured,43
+hour,2019,3:00 to 5:59,fatalities,3
+hour,2020,3:00 to 5:59,vehicles,30
+hour,2020,3:00 to 5:59,injured,27
+hour,2020,3:00 to 5:59,fatalities,2
+hour,2021,3:00 to 5:59,vehicles,39
+hour,2021,3:00 to 5:59,injured,37
+hour,2021,3:00 to 5:59,fatalities,0
+hour,2022,3:00 to 5:59,vehicles,52
+hour,2022,3:00 to 5:59,injured,44
+hour,2022,3:00 to 5:59,fatalities,7
+hour,2023,3:00 to 5:59,vehicles,62
+hour,2023,3:00 to 5:59,injured,59
+hour,2023,3:00 to 5:59,fatalities,2
+hour,2010,6:00 to 8:59,vehicles,724
+hour,2010,6:00 to 8:59,injured,703
+hour,2010,6:00 to 8:59,fatalities,8
+hour,2011,6:00 to 8:59,vehicles,776
+hour,2011,6:00 to 8:59,injured,760
+hour,2011,6:00 to 8:59,fatalities,4
+hour,2012,6:00 to 8:59,vehicles,813
+hour,2012,6:00 to 8:59,injured,794
+hour,2012,6:00 to 8:59,fatalities,7
+hour,2013,6:00 to 8:59,vehicles,780
+hour,2013,6:00 to 8:59,injured,758
+hour,2013,6:00 to 8:59,fatalities,5
+hour,2014,6:00 to 8:59,vehicles,680
+hour,2014,6:00 to 8:59,injured,648
+hour,2014,6:00 to 8:59,fatalities,9
+hour,2015,6:00 to 8:59,vehicles,811
+hour,2015,6:00 to 8:59,injured,789
+hour,2015,6:00 to 8:59,fatalities,4
+hour,2016,6:00 to 8:59,vehicles,863
+hour,2016,6:00 to 8:59,injured,834
+hour,2016,6:00 to 8:59,fatalities,8
+hour,2017,6:00 to 8:59,vehicles,730
+hour,2017,6:00 to 8:59,injured,701
+hour,2017,6:00 to 8:59,fatalities,5
+hour,2018,6:00 to 8:59,vehicles,645
+hour,2018,6:00 to 8:59,injured,620
+hour,2018,6:00 to 8:59,fatalities,14
+hour,2019,6:00 to 8:59,vehicles,619
+hour,2019,6:00 to 8:59,injured,607
+hour,2019,6:00 to 8:59,fatalities,3
+hour,2020,6:00 to 8:59,vehicles,324
+hour,2020,6:00 to 8:59,injured,308
+hour,2020,6:00 to 8:59,fatalities,3
+hour,2021,6:00 to 8:59,vehicles,400
+hour,2021,6:00 to 8:59,injured,390
+hour,2021,6:00 to 8:59,fatalities,3
+hour,2022,6:00 to 8:59,vehicles,458
+hour,2022,6:00 to 8:59,injured,448
+hour,2022,6:00 to 8:59,fatalities,6
+hour,2023,6:00 to 8:59,vehicles,563
+hour,2023,6:00 to 8:59,injured,541
+hour,2023,6:00 to 8:59,fatalities,6
+hour,2010,9:00 to 11:59,vehicles,883
+hour,2010,9:00 to 11:59,injured,854
+hour,2010,9:00 to 11:59,fatalities,9
+hour,2011,9:00 to 11:59,vehicles,880
+hour,2011,9:00 to 11:59,injured,855
+hour,2011,9:00 to 11:59,fatalities,8
+hour,2012,9:00 to 11:59,vehicles,934
+hour,2012,9:00 to 11:59,injured,912
+hour,2012,9:00 to 11:59,fatalities,9
+hour,2013,9:00 to 11:59,vehicles,875
+hour,2013,9:00 to 11:59,injured,850
+hour,2013,9:00 to 11:59,fatalities,7
+hour,2014,9:00 to 11:59,vehicles,772
+hour,2014,9:00 to 11:59,injured,732
+hour,2014,9:00 to 11:59,fatalities,8
+hour,2015,9:00 to 11:59,vehicles,909
+hour,2015,9:00 to 11:59,injured,868
+hour,2015,9:00 to 11:59,fatalities,14
+hour,2016,9:00 to 11:59,vehicles,872
+hour,2016,9:00 to 11:59,injured,838
+hour,2016,9:00 to 11:59,fatalities,4
+hour,2017,9:00 to 11:59,vehicles,770
+hour,2017,9:00 to 11:59,injured,741
+hour,2017,9:00 to 11:59,fatalities,8
+hour,2018,9:00 to 11:59,vehicles,663
+hour,2018,9:00 to 11:59,injured,640
+hour,2018,9:00 to 11:59,fatalities,5
+hour,2019,9:00 to 11:59,vehicles,632
+hour,2019,9:00 to 11:59,injured,609
+hour,2019,9:00 to 11:59,fatalities,7
+hour,2020,9:00 to 11:59,vehicles,449
+hour,2020,9:00 to 11:59,injured,422
+hour,2020,9:00 to 11:59,fatalities,7
+hour,2021,9:00 to 11:59,vehicles,493
+hour,2021,9:00 to 11:59,injured,476
+hour,2021,9:00 to 11:59,fatalities,4
+hour,2022,9:00 to 11:59,vehicles,559
+hour,2022,9:00 to 11:59,injured,542
+hour,2022,9:00 to 11:59,fatalities,6
+hour,2023,9:00 to 11:59,vehicles,635
+hour,2023,9:00 to 11:59,injured,612
+hour,2023,9:00 to 11:59,fatalities,9
+hour,2010,12:00 to 14:59,vehicles,1214
+hour,2010,12:00 to 14:59,injured,1166
+hour,2010,12:00 to 14:59,fatalities,16
+hour,2011,12:00 to 14:59,vehicles,1204
+hour,2011,12:00 to 14:59,injured,1174
+hour,2011,12:00 to 14:59,fatalities,11
+hour,2012,12:00 to 14:59,vehicles,1258
+hour,2012,12:00 to 14:59,injured,1219
+hour,2012,12:00 to 14:59,fatalities,9
+hour,2013,12:00 to 14:59,vehicles,1178
+hour,2013,12:00 to 14:59,injured,1152
+hour,2013,12:00 to 14:59,fatalities,12
+hour,2014,12:00 to 14:59,vehicles,1075
+hour,2014,12:00 to 14:59,injured,1042
+hour,2014,12:00 to 14:59,fatalities,4
+hour,2015,12:00 to 14:59,vehicles,1089
+hour,2015,12:00 to 14:59,injured,1051
+hour,2015,12:00 to 14:59,fatalities,4
+hour,2016,12:00 to 14:59,vehicles,1093
+hour,2016,12:00 to 14:59,injured,1044
+hour,2016,12:00 to 14:59,fatalities,13
+hour,2017,12:00 to 14:59,vehicles,1018
+hour,2017,12:00 to 14:59,injured,992
+hour,2017,12:00 to 14:59,fatalities,7
+hour,2018,12:00 to 14:59,vehicles,910
+hour,2018,12:00 to 14:59,injured,878
+hour,2018,12:00 to 14:59,fatalities,10
+hour,2019,12:00 to 14:59,vehicles,814
+hour,2019,12:00 to 14:59,injured,790
+hour,2019,12:00 to 14:59,fatalities,8
+hour,2020,12:00 to 14:59,vehicles,771
+hour,2020,12:00 to 14:59,injured,708
+hour,2020,12:00 to 14:59,fatalities,8
+hour,2021,12:00 to 14:59,vehicles,867
+hour,2021,12:00 to 14:59,injured,837
+hour,2021,12:00 to 14:59,fatalities,10
+hour,2022,12:00 to 14:59,vehicles,732
+hour,2022,12:00 to 14:59,injured,710
+hour,2022,12:00 to 14:59,fatalities,9
+hour,2023,12:00 to 14:59,vehicles,943
+hour,2023,12:00 to 14:59,injured,910
+hour,2023,12:00 to 14:59,fatalities,8
+hour,2010,15:00 to 17:59,vehicles,1911
+hour,2010,15:00 to 17:59,injured,1867
+hour,2010,15:00 to 17:59,fatalities,7
+hour,2011,15:00 to 17:59,vehicles,1822
+hour,2011,15:00 to 17:59,injured,1784
+hour,2011,15:00 to 17:59,fatalities,4
+hour,2012,15:00 to 17:59,vehicles,1956
+hour,2012,15:00 to 17:59,injured,1899
+hour,2012,15:00 to 17:59,fatalities,11
+hour,2013,15:00 to 17:59,vehicles,1793
+hour,2013,15:00 to 17:59,injured,1737
+hour,2013,15:00 to 17:59,fatalities,15
+hour,2014,15:00 to 17:59,vehicles,1664
+hour,2014,15:00 to 17:59,injured,1619
+hour,2014,15:00 to 17:59,fatalities,9
+hour,2015,15:00 to 17:59,vehicles,1856
+hour,2015,15:00 to 17:59,injured,1802
+hour,2015,15:00 to 17:59,fatalities,6
+hour,2016,15:00 to 17:59,vehicles,1813
+hour,2016,15:00 to 17:59,injured,1753
+hour,2016,15:00 to 17:59,fatalities,10
+hour,2017,15:00 to 17:59,vehicles,1595
+hour,2017,15:00 to 17:59,injured,1553
+hour,2017,15:00 to 17:59,fatalities,7
+hour,2018,15:00 to 17:59,vehicles,1398
+hour,2018,15:00 to 17:59,injured,1363
+hour,2018,15:00 to 17:59,fatalities,7
+hour,2019,15:00 to 17:59,vehicles,1324
+hour,2019,15:00 to 17:59,injured,1300
+hour,2019,15:00 to 17:59,fatalities,5
+hour,2020,15:00 to 17:59,vehicles,1099
+hour,2020,15:00 to 17:59,injured,1018
+hour,2020,15:00 to 17:59,fatalities,8
+hour,2021,15:00 to 17:59,vehicles,1260
+hour,2021,15:00 to 17:59,injured,1230
+hour,2021,15:00 to 17:59,fatalities,6
+hour,2022,15:00 to 17:59,vehicles,1177
+hour,2022,15:00 to 17:59,injured,1153
+hour,2022,15:00 to 17:59,fatalities,8
+hour,2023,15:00 to 17:59,vehicles,1370
+hour,2023,15:00 to 17:59,injured,1330
+hour,2023,15:00 to 17:59,fatalities,10
+hour,2010,18:00 to 20:59,vehicles,1159
+hour,2010,18:00 to 20:59,injured,1110
+hour,2010,18:00 to 20:59,fatalities,9
+hour,2011,18:00 to 20:59,vehicles,1120
+hour,2011,18:00 to 20:59,injured,1076
+hour,2011,18:00 to 20:59,fatalities,15
+hour,2012,18:00 to 20:59,vehicles,1160
+hour,2012,18:00 to 20:59,injured,1103
+hour,2012,18:00 to 20:59,fatalities,13
+hour,2013,18:00 to 20:59,vehicles,1097
+hour,2013,18:00 to 20:59,injured,1067
+hour,2013,18:00 to 20:59,fatalities,19
+hour,2014,18:00 to 20:59,vehicles,947
+hour,2014,18:00 to 20:59,injured,909
+hour,2014,18:00 to 20:59,fatalities,7
+hour,2015,18:00 to 20:59,vehicles,1103
+hour,2015,18:00 to 20:59,injured,1046
+hour,2015,18:00 to 20:59,fatalities,5
+hour,2016,18:00 to 20:59,vehicles,1049
+hour,2016,18:00 to 20:59,injured,1010
+hour,2016,18:00 to 20:59,fatalities,7
+hour,2017,18:00 to 20:59,vehicles,905
+hour,2017,18:00 to 20:59,injured,877
+hour,2017,18:00 to 20:59,fatalities,4
+hour,2018,18:00 to 20:59,vehicles,789
+hour,2018,18:00 to 20:59,injured,766
+hour,2018,18:00 to 20:59,fatalities,6
+hour,2019,18:00 to 20:59,vehicles,770
+hour,2019,18:00 to 20:59,injured,754
+hour,2019,18:00 to 20:59,fatalities,2
+hour,2020,18:00 to 20:59,vehicles,679
+hour,2020,18:00 to 20:59,injured,623
+hour,2020,18:00 to 20:59,fatalities,12
+hour,2021,18:00 to 20:59,vehicles,784
+hour,2021,18:00 to 20:59,injured,746
+hour,2021,18:00 to 20:59,fatalities,13
+hour,2022,18:00 to 20:59,vehicles,674
+hour,2022,18:00 to 20:59,injured,651
+hour,2022,18:00 to 20:59,fatalities,7
+hour,2023,18:00 to 20:59,vehicles,860
+hour,2023,18:00 to 20:59,injured,834
+hour,2023,18:00 to 20:59,fatalities,8
+hour,2010,21:00 to 23:59,vehicles,501
+hour,2010,21:00 to 23:59,injured,476
+hour,2010,21:00 to 23:59,fatalities,8
+hour,2011,21:00 to 23:59,vehicles,495
+hour,2011,21:00 to 23:59,injured,479
+hour,2011,21:00 to 23:59,fatalities,10
+hour,2012,21:00 to 23:59,vehicles,462
+hour,2012,21:00 to 23:59,injured,446
+hour,2012,21:00 to 23:59,fatalities,6
+hour,2013,21:00 to 23:59,vehicles,443
+hour,2013,21:00 to 23:59,injured,425
+hour,2013,21:00 to 23:59,fatalities,8
+hour,2014,21:00 to 23:59,vehicles,432
+hour,2014,21:00 to 23:59,injured,418
+hour,2014,21:00 to 23:59,fatalities,2
+hour,2015,21:00 to 23:59,vehicles,462
+hour,2015,21:00 to 23:59,injured,433
+hour,2015,21:00 to 23:59,fatalities,11
+hour,2016,21:00 to 23:59,vehicles,424
+hour,2016,21:00 to 23:59,injured,404
+hour,2016,21:00 to 23:59,fatalities,4
+hour,2017,21:00 to 23:59,vehicles,383
+hour,2017,21:00 to 23:59,injured,373
+hour,2017,21:00 to 23:59,fatalities,2
+hour,2018,21:00 to 23:59,vehicles,318
+hour,2018,21:00 to 23:59,injured,312
+hour,2018,21:00 to 23:59,fatalities,4
+hour,2019,21:00 to 23:59,vehicles,298
+hour,2019,21:00 to 23:59,injured,279
+hour,2019,21:00 to 23:59,fatalities,10
+hour,2020,21:00 to 23:59,vehicles,252
+hour,2020,21:00 to 23:59,injured,229
+hour,2020,21:00 to 23:59,fatalities,7
+hour,2021,21:00 to 23:59,vehicles,272
+hour,2021,21:00 to 23:59,injured,263
+hour,2021,21:00 to 23:59,fatalities,3
+hour,2022,21:00 to 23:59,vehicles,306
+hour,2022,21:00 to 23:59,injured,293
+hour,2022,21:00 to 23:59,fatalities,4
+hour,2023,21:00 to 23:59,vehicles,343
+hour,2023,21:00 to 23:59,injured,333
+hour,2023,21:00 to 23:59,fatalities,1
+hour,2010,Unknown,vehicles,119
+hour,2010,Unknown,injured,114
+hour,2010,Unknown,fatalities,3
+hour,2011,Unknown,vehicles,88
+hour,2011,Unknown,injured,86
+hour,2011,Unknown,fatalities,1
+hour,2012,Unknown,vehicles,71
+hour,2012,Unknown,injured,71
+hour,2012,Unknown,fatalities,0
+hour,2013,Unknown,vehicles,64
+hour,2013,Unknown,injured,64
+hour,2013,Unknown,fatalities,0
+hour,2014,Unknown,vehicles,57
+hour,2014,Unknown,injured,55
+hour,2014,Unknown,fatalities,1
+hour,2015,Unknown,vehicles,46
+hour,2015,Unknown,injured,45
+hour,2015,Unknown,fatalities,0
+hour,2016,Unknown,vehicles,63
+hour,2016,Unknown,injured,62
+hour,2016,Unknown,fatalities,0
+hour,2017,Unknown,vehicles,50
+hour,2017,Unknown,injured,49
+hour,2017,Unknown,fatalities,0
+hour,2018,Unknown,vehicles,42
+hour,2018,Unknown,injured,41
+hour,2018,Unknown,fatalities,0
+hour,2019,Unknown,vehicles,38
+hour,2019,Unknown,injured,38
+hour,2019,Unknown,fatalities,0
+hour,2020,Unknown,vehicles,39
+hour,2020,Unknown,injured,38
+hour,2020,Unknown,fatalities,0
+hour,2021,Unknown,vehicles,20
+hour,2021,Unknown,injured,20
+hour,2021,Unknown,fatalities,0
+hour,2022,Unknown,vehicles,22
+hour,2022,Unknown,injured,21
+hour,2022,Unknown,fatalities,1
+hour,2023,Unknown,vehicles,29
+hour,2023,Unknown,injured,29
+hour,2023,Unknown,fatalities,1
+weather,2010,Total,vehicles,6712
+weather,2010,Total,injured,6484
+weather,2010,Total,fatalities,61
+weather,2011,Total,vehicles,6587
+weather,2011,Total,injured,6416
+weather,2011,Total,fatalities,56
+weather,2012,Total,vehicles,6842
+weather,2012,Total,injured,6614
+weather,2012,Total,fatalities,63
+weather,2013,Total,vehicles,6435
+weather,2013,Total,injured,6251
+weather,2013,Total,fatalities,69
+weather,2014,Total,vehicles,5799
+weather,2014,Total,injured,5581
+weather,2014,Total,fatalities,42
+weather,2015,Total,vehicles,6455
+weather,2015,Total,injured,6200
+weather,2015,Total,fatalities,50
+weather,2016,Total,vehicles,6341
+weather,2016,Total,injured,6102
+weather,2016,Total,fatalities,49
+weather,2017,Total,vehicles,5600
+weather,2017,Total,injured,5428
+weather,2017,Total,fatalities,38
+weather,2018,Total,vehicles,4892
+weather,2018,Total,injured,4743
+weather,2018,Total,fatalities,48
+weather,2019,Total,vehicles,4628
+weather,2019,Total,injured,4499
+weather,2019,Total,fatalities,43
+weather,2020,Total,vehicles,3717
+weather,2020,Total,injured,3440
+weather,2020,Total,fatalities,50
+weather,2021,Total,vehicles,4196
+weather,2021,Total,injured,4059
+weather,2021,Total,fatalities,39
+weather,2022,Total,vehicles,4047
+weather,2022,Total,injured,3928
+weather,2022,Total,fatalities,48
+weather,2023,Total,vehicles,4902
+weather,2023,Total,injured,4742
+weather,2023,Total,fatalities,46
+weather,2010,Clear and sunny,vehicles,5453
+weather,2010,Clear and sunny,injured,5254
+weather,2010,Clear and sunny,fatalities,46
+weather,2011,Clear and sunny,vehicles,5338
+weather,2011,Clear and sunny,injured,5188
+weather,2011,Clear and sunny,fatalities,47
+weather,2012,Clear and sunny,vehicles,5682
+weather,2012,Clear and sunny,injured,5479
+weather,2012,Clear and sunny,fatalities,51
+weather,2013,Clear and sunny,vehicles,5325
+weather,2013,Clear and sunny,injured,5174
+weather,2013,Clear and sunny,fatalities,51
+weather,2014,Clear and sunny,vehicles,4731
+weather,2014,Clear and sunny,injured,4542
+weather,2014,Clear and sunny,fatalities,34
+weather,2015,Clear and sunny,vehicles,5418
+weather,2015,Clear and sunny,injured,5183
+weather,2015,Clear and sunny,fatalities,42
+weather,2016,Clear and sunny,vehicles,5371
+weather,2016,Clear and sunny,injured,5157
+weather,2016,Clear and sunny,fatalities,38
+weather,2017,Clear and sunny,vehicles,4702
+weather,2017,Clear and sunny,injured,4545
+weather,2017,Clear and sunny,fatalities,34
+weather,2018,Clear and sunny,vehicles,4077
+weather,2018,Clear and sunny,injured,3943
+weather,2018,Clear and sunny,fatalities,42
+weather,2019,Clear and sunny,vehicles,3916
+weather,2019,Clear and sunny,injured,3795
+weather,2019,Clear and sunny,fatalities,41
+weather,2020,Clear and sunny,vehicles,3294
+weather,2020,Clear and sunny,injured,3031
+weather,2020,Clear and sunny,fatalities,43
+weather,2021,Clear and sunny,vehicles,3681
+weather,2021,Clear and sunny,injured,3560
+weather,2021,Clear and sunny,fatalities,33
+weather,2022,Clear and sunny,vehicles,3580
+weather,2022,Clear and sunny,injured,3476
+weather,2022,Clear and sunny,fatalities,38
+weather,2023,Clear and sunny,vehicles,4209
+weather,2023,Clear and sunny,injured,4068
+weather,2023,Clear and sunny,fatalities,38
+weather,2010,"Overcast, cloudy but no precipitation",vehicles,603
+weather,2010,"Overcast, cloudy but no precipitation",injured,589
+weather,2010,"Overcast, cloudy but no precipitation",fatalities,9
+weather,2011,"Overcast, cloudy but no precipitation",vehicles,608
+weather,2011,"Overcast, cloudy but no precipitation",injured,602
+weather,2011,"Overcast, cloudy but no precipitation",fatalities,4
+weather,2012,"Overcast, cloudy but no precipitation",vehicles,526
+weather,2012,"Overcast, cloudy but no precipitation",injured,520
+weather,2012,"Overcast, cloudy but no precipitation",fatalities,4
+weather,2013,"Overcast, cloudy but no precipitation",vehicles,541
+weather,2013,"Overcast, cloudy but no precipitation",injured,529
+weather,2013,"Overcast, cloudy but no precipitation",fatalities,9
+weather,2014,"Overcast, cloudy but no precipitation",vehicles,515
+weather,2014,"Overcast, cloudy but no precipitation",injured,509
+weather,2014,"Overcast, cloudy but no precipitation",fatalities,4
+weather,2015,"Overcast, cloudy but no precipitation",vehicles,492
+weather,2015,"Overcast, cloudy but no precipitation",injured,488
+weather,2015,"Overcast, cloudy but no precipitation",fatalities,3
+weather,2016,"Overcast, cloudy but no precipitation",vehicles,445
+weather,2016,"Overcast, cloudy but no precipitation",injured,437
+weather,2016,"Overcast, cloudy but no precipitation",fatalities,5
+weather,2017,"Overcast, cloudy but no precipitation",vehicles,385
+weather,2017,"Overcast, cloudy but no precipitation",injured,380
+weather,2017,"Overcast, cloudy but no precipitation",fatalities,4
+weather,2018,"Overcast, cloudy but no precipitation",vehicles,373
+weather,2018,"Overcast, cloudy but no precipitation",injured,367
+weather,2018,"Overcast, cloudy but no precipitation",fatalities,3
+weather,2019,"Overcast, cloudy but no precipitation",vehicles,320
+weather,2019,"Overcast, cloudy but no precipitation",injured,315
+weather,2019,"Overcast, cloudy but no precipitation",fatalities,1
+weather,2020,"Overcast, cloudy but no precipitation",vehicles,197
+weather,2020,"Overcast, cloudy but no precipitation",injured,195
+weather,2020,"Overcast, cloudy but no precipitation",fatalities,3
+weather,2021,"Overcast, cloudy but no precipitation",vehicles,234
+weather,2021,"Overcast, cloudy but no precipitation",injured,229
+weather,2021,"Overcast, cloudy but no precipitation",fatalities,4
+weather,2022,"Overcast, cloudy but no precipitation",vehicles,179
+weather,2022,"Overcast, cloudy but no precipitation",injured,175
+weather,2022,"Overcast, cloudy but no precipitation",fatalities,5
+weather,2023,"Overcast, cloudy but no precipitation",vehicles,242
+weather,2023,"Overcast, cloudy but no precipitation",injured,236
+weather,2023,"Overcast, cloudy but no precipitation",fatalities,4
+weather,2010,Raining,vehicles,505
+weather,2010,Raining,injured,492
+weather,2010,Raining,fatalities,5
+weather,2011,Raining,vehicles,500
+weather,2011,Raining,injured,487
+weather,2011,Raining,fatalities,5
+weather,2012,Raining,vehicles,446
+weather,2012,Raining,injured,434
+weather,2012,Raining,fatalities,4
+weather,2013,Raining,vehicles,409
+weather,2013,Raining,injured,398
+weather,2013,Raining,fatalities,4
+weather,2014,Raining,vehicles,431
+weather,2014,Raining,injured,415
+weather,2014,Raining,fatalities,2
+weather,2015,Raining,vehicles,412
+weather,2015,Raining,injured,400
+weather,2015,Raining,fatalities,4
+weather,2016,Raining,vehicles,359
+weather,2016,Raining,injured,350
+weather,2016,Raining,fatalities,3
+weather,2017,Raining,vehicles,384
+weather,2017,Raining,injured,380
+weather,2017,Raining,fatalities,0
+weather,2018,Raining,vehicles,311
+weather,2018,Raining,injured,308
+weather,2018,Raining,fatalities,0
+weather,2019,Raining,vehicles,274
+weather,2019,Raining,injured,271
+weather,2019,Raining,fatalities,1
+weather,2020,Raining,vehicles,139
+weather,2020,Raining,injured,131
+weather,2020,Raining,fatalities,2
+weather,2021,Raining,vehicles,198
+weather,2021,Raining,injured,191
+weather,2021,Raining,fatalities,2
+weather,2022,Raining,vehicles,182
+weather,2022,Raining,injured,175
+weather,2022,Raining,fatalities,2
+weather,2023,Raining,vehicles,315
+weather,2023,Raining,injured,305
+weather,2023,Raining,fatalities,3
+weather,2010,"Snowing, not including drifting snow",vehicles,36
+weather,2010,"Snowing, not including drifting snow",injured,36
+weather,2010,"Snowing, not including drifting snow",fatalities,0
+weather,2011,"Snowing, not including drifting snow",vehicles,27
+weather,2011,"Snowing, not including drifting snow",injured,26
+weather,2011,"Snowing, not including drifting snow",fatalities,0
+weather,2012,"Snowing, not including drifting snow",vehicles,30
+weather,2012,"Snowing, not including drifting snow",injured,28
+weather,2012,"Snowing, not including drifting snow",fatalities,1
+weather,2013,"Snowing, not including drifting snow",vehicles,35
+weather,2013,"Snowing, not including drifting snow",injured,34
+weather,2013,"Snowing, not including drifting snow",fatalities,0
+weather,2014,"Snowing, not including drifting snow",vehicles,29
+weather,2014,"Snowing, not including drifting snow",injured,26
+weather,2014,"Snowing, not including drifting snow",fatalities,0
+weather,2015,"Snowing, not including drifting snow",vehicles,13
+weather,2015,"Snowing, not including drifting snow",injured,12
+weather,2015,"Snowing, not including drifting snow",fatalities,0
+weather,2016,"Snowing, not including drifting snow",vehicles,33
+weather,2016,"Snowing, not including drifting snow",injured,30
+weather,2016,"Snowing, not including drifting snow",fatalities,1
+weather,2017,"Snowing, not including drifting snow",vehicles,29
+weather,2017,"Snowing, not including drifting snow",injured,29
+weather,2017,"Snowing, not including drifting snow",fatalities,0
+weather,2018,"Snowing, not including drifting snow",vehicles,30
+weather,2018,"Snowing, not including drifting snow",injured,29
+weather,2018,"Snowing, not including drifting snow",fatalities,1
+weather,2019,"Snowing, not including drifting snow",vehicles,17
+weather,2019,"Snowing, not including drifting snow",injured,17
+weather,2019,"Snowing, not including drifting snow",fatalities,0
+weather,2020,"Snowing, not including drifting snow",vehicles,16
+weather,2020,"Snowing, not including drifting snow",injured,15
+weather,2020,"Snowing, not including drifting snow",fatalities,0
+weather,2021,"Snowing, not including drifting snow",vehicles,10
+weather,2021,"Snowing, not including drifting snow",injured,9
+weather,2021,"Snowing, not including drifting snow",fatalities,0
+weather,2022,"Snowing, not including drifting snow",vehicles,15
+weather,2022,"Snowing, not including drifting snow",injured,15
+weather,2022,"Snowing, not including drifting snow",fatalities,0
+weather,2023,"Snowing, not including drifting snow",vehicles,18
+weather,2023,"Snowing, not including drifting snow",injured,17
+weather,2023,"Snowing, not including drifting snow",fatalities,0
+weather,2010,"Freezing rain, sleet, hail",vehicles,2
+weather,2010,"Freezing rain, sleet, hail",injured,2
+weather,2010,"Freezing rain, sleet, hail",fatalities,0
+weather,2011,"Freezing rain, sleet, hail",vehicles,3
+weather,2011,"Freezing rain, sleet, hail",injured,2
+weather,2011,"Freezing rain, sleet, hail",fatalities,0
+weather,2012,"Freezing rain, sleet, hail",vehicles,3
+weather,2012,"Freezing rain, sleet, hail",injured,3
+weather,2012,"Freezing rain, sleet, hail",fatalities,0
+weather,2013,"Freezing rain, sleet, hail",vehicles,7
+weather,2013,"Freezing rain, sleet, hail",injured,6
+weather,2013,"Freezing rain, sleet, hail",fatalities,1
+weather,2014,"Freezing rain, sleet, hail",vehicles,2
+weather,2014,"Freezing rain, sleet, hail",injured,2
+weather,2014,"Freezing rain, sleet, hail",fatalities,0
+weather,2015,"Freezing rain, sleet, hail",vehicles,2
+weather,2015,"Freezing rain, sleet, hail",injured,2
+weather,2015,"Freezing rain, sleet, hail",fatalities,0
+weather,2016,"Freezing rain, sleet, hail",vehicles,6
+weather,2016,"Freezing rain, sleet, hail",injured,6
+weather,2016,"Freezing rain, sleet, hail",fatalities,0
+weather,2017,"Freezing rain, sleet, hail",vehicles,1
+weather,2017,"Freezing rain, sleet, hail",injured,1
+weather,2017,"Freezing rain, sleet, hail",fatalities,0
+weather,2018,"Freezing rain, sleet, hail",vehicles,2
+weather,2018,"Freezing rain, sleet, hail",injured,2
+weather,2018,"Freezing rain, sleet, hail",fatalities,0
+weather,2019,"Freezing rain, sleet, hail",vehicles,1
+weather,2019,"Freezing rain, sleet, hail",injured,1
+weather,2019,"Freezing rain, sleet, hail",fatalities,0
+weather,2020,"Freezing rain, sleet, hail",vehicles,1
+weather,2020,"Freezing rain, sleet, hail",injured,1
+weather,2020,"Freezing rain, sleet, hail",fatalities,0
+weather,2021,"Freezing rain, sleet, hail",vehicles,2
+weather,2021,"Freezing rain, sleet, hail",injured,2
+weather,2021,"Freezing rain, sleet, hail",fatalities,0
+weather,2022,"Freezing rain, sleet, hail",vehicles,1
+weather,2022,"Freezing rain, sleet, hail",injured,1
+weather,2022,"Freezing rain, sleet, hail",fatalities,0
+weather,2023,"Freezing rain, sleet, hail",vehicles,4
+weather,2023,"Freezing rain, sleet, hail",injured,4
+weather,2023,"Freezing rain, sleet, hail",fatalities,0
+weather,2010,Visibility limitation,vehicles,13
+weather,2010,Visibility limitation,injured,13
+weather,2010,Visibility limitation,fatalities,0
+weather,2011,Visibility limitation,vehicles,11
+weather,2011,Visibility limitation,injured,11
+weather,2011,Visibility limitation,fatalities,0
+weather,2012,Visibility limitation,vehicles,12
+weather,2012,Visibility limitation,injured,10
+weather,2012,Visibility limitation,fatalities,1
+weather,2013,Visibility limitation,vehicles,17
+weather,2013,Visibility limitation,injured,17
+weather,2013,Visibility limitation,fatalities,0
+weather,2014,Visibility limitation,vehicles,14
+weather,2014,Visibility limitation,injured,13
+weather,2014,Visibility limitation,fatalities,0
+weather,2015,Visibility limitation,vehicles,22
+weather,2015,Visibility limitation,injured,21
+weather,2015,Visibility limitation,fatalities,0
+weather,2016,Visibility limitation,vehicles,14
+weather,2016,Visibility limitation,injured,14
+weather,2016,Visibility limitation,fatalities,0
+weather,2017,Visibility limitation,vehicles,16
+weather,2017,Visibility limitation,injured,16
+weather,2017,Visibility limitation,fatalities,0
+weather,2018,Visibility limitation,vehicles,27
+weather,2018,Visibility limitation,injured,26
+weather,2018,Visibility limitation,fatalities,0
+weather,2019,Visibility limitation,vehicles,9
+weather,2019,Visibility limitation,injured,9
+weather,2019,Visibility limitation,fatalities,0
+weather,2020,Visibility limitation,vehicles,10
+weather,2020,Visibility limitation,injured,10
+weather,2020,Visibility limitation,fatalities,0
+weather,2021,Visibility limitation,vehicles,12
+weather,2021,Visibility limitation,injured,12
+weather,2021,Visibility limitation,fatalities,0
+weather,2022,Visibility limitation,vehicles,15
+weather,2022,Visibility limitation,injured,13
+weather,2022,Visibility limitation,fatalities,2
+weather,2023,Visibility limitation,vehicles,13
+weather,2023,Visibility limitation,injured,13
+weather,2023,Visibility limitation,fatalities,0
+weather,2010,Strong wind,vehicles,7
+weather,2010,Strong wind,injured,7
+weather,2010,Strong wind,fatalities,0
+weather,2011,Strong wind,vehicles,6
+weather,2011,Strong wind,injured,6
+weather,2011,Strong wind,fatalities,0
+weather,2012,Strong wind,vehicles,4
+weather,2012,Strong wind,injured,3
+weather,2012,Strong wind,fatalities,1
+weather,2013,Strong wind,vehicles,8
+weather,2013,Strong wind,injured,5
+weather,2013,Strong wind,fatalities,2
+weather,2014,Strong wind,vehicles,3
+weather,2014,Strong wind,injured,3
+weather,2014,Strong wind,fatalities,0
+weather,2015,Strong wind,vehicles,2
+weather,2015,Strong wind,injured,2
+weather,2015,Strong wind,fatalities,0
+weather,2016,Strong wind,vehicles,4
+weather,2016,Strong wind,injured,3
+weather,2016,Strong wind,fatalities,1
+weather,2017,Strong wind,vehicles,2
+weather,2017,Strong wind,injured,2
+weather,2017,Strong wind,fatalities,0
+weather,2018,Strong wind,vehicles,1
+weather,2018,Strong wind,injured,1
+weather,2018,Strong wind,fatalities,0
+weather,2019,Strong wind,vehicles,2
+weather,2019,Strong wind,injured,2
+weather,2019,Strong wind,fatalities,0
+weather,2020,Strong wind,vehicles,3
+weather,2020,Strong wind,injured,3
+weather,2020,Strong wind,fatalities,0
+weather,2021,Strong wind,vehicles,6
+weather,2021,Strong wind,injured,5
+weather,2021,Strong wind,fatalities,0
+weather,2022,Strong wind,vehicles,2
+weather,2022,Strong wind,injured,2
+weather,2022,Strong wind,fatalities,0
+weather,2023,Strong wind,vehicles,3
+weather,2023,Strong wind,injured,3
+weather,2023,Strong wind,fatalities,0
+weather,2010,Other,vehicles,13
+weather,2010,Other,injured,13
+weather,2010,Other,fatalities,0
+weather,2011,Other,vehicles,17
+weather,2011,Other,injured,17
+weather,2011,Other,fatalities,0
+weather,2012,Other,vehicles,10
+weather,2012,Other,injured,9
+weather,2012,Other,fatalities,1
+weather,2013,Other,vehicles,13
+weather,2013,Other,injured,13
+weather,2013,Other,fatalities,0
+weather,2014,Other,vehicles,12
+weather,2014,Other,injured,11
+weather,2014,Other,fatalities,1
+weather,2015,Other,vehicles,12
+weather,2015,Other,injured,11
+weather,2015,Other,fatalities,1
+weather,2016,Other,vehicles,5
+weather,2016,Other,injured,5
+weather,2016,Other,fatalities,0
+weather,2017,Other,vehicles,6
+weather,2017,Other,injured,5
+weather,2017,Other,fatalities,0
+weather,2018,Other,vehicles,5
+weather,2018,Other,injured,4
+weather,2018,Other,fatalities,1
+weather,2019,Other,vehicles,5
+weather,2019,Other,injured,5
+weather,2019,Other,fatalities,0
+weather,2020,Other,vehicles,4
+weather,2020,Other,injured,4
+weather,2020,Other,fatalities,0
+weather,2021,Other,vehicles,5
+weather,2021,Other,injured,3
+weather,2021,Other,fatalities,0
+weather,2022,Other,vehicles,9
+weather,2022,Other,injured,9
+weather,2022,Other,fatalities,0
+weather,2023,Other,vehicles,12
+weather,2023,Other,injured,12
+weather,2023,Other,fatalities,0
+weather,2010,Unknown,vehicles,80
+weather,2010,Unknown,injured,78
+weather,2010,Unknown,fatalities,1
+weather,2011,Unknown,vehicles,77
+weather,2011,Unknown,injured,77
+weather,2011,Unknown,fatalities,0
+weather,2012,Unknown,vehicles,129
+weather,2012,Unknown,injured,128
+weather,2012,Unknown,fatalities,0
+weather,2013,Unknown,vehicles,80
+weather,2013,Unknown,injured,75
+weather,2013,Unknown,fatalities,2
+weather,2014,Unknown,vehicles,62
+weather,2014,Unknown,injured,60
+weather,2014,Unknown,fatalities,1
+weather,2015,Unknown,vehicles,82
+weather,2015,Unknown,injured,81
+weather,2015,Unknown,fatalities,0
+weather,2016,Unknown,vehicles,104
+weather,2016,Unknown,injured,100
+weather,2016,Unknown,fatalities,1
+weather,2017,Unknown,vehicles,75
+weather,2017,Unknown,injured,70
+weather,2017,Unknown,fatalities,0
+weather,2018,Unknown,vehicles,66
+weather,2018,Unknown,injured,63
+weather,2018,Unknown,fatalities,1
+weather,2019,Unknown,vehicles,84
+weather,2019,Unknown,injured,84
+weather,2019,Unknown,fatalities,0
+weather,2020,Unknown,vehicles,53
+weather,2020,Unknown,injured,50
+weather,2020,Unknown,fatalities,2
+weather,2021,Unknown,vehicles,48
+weather,2021,Unknown,injured,48
+weather,2021,Unknown,fatalities,0
+weather,2022,Unknown,vehicles,64
+weather,2022,Unknown,injured,62
+weather,2022,Unknown,fatalities,1
+weather,2023,Unknown,vehicles,86
+weather,2023,Unknown,injured,84
+weather,2023,Unknown,fatalities,1
+surface,2010,Total,vehicles,6712
+surface,2010,Total,injured,6484
+surface,2010,Total,fatalities,61
+surface,2011,Total,vehicles,6587
+surface,2011,Total,injured,6416
+surface,2011,Total,fatalities,56
+surface,2012,Total,vehicles,6842
+surface,2012,Total,injured,6614
+surface,2012,Total,fatalities,63
+surface,2013,Total,vehicles,6435
+surface,2013,Total,injured,6251
+surface,2013,Total,fatalities,69
+surface,2014,Total,vehicles,5799
+surface,2014,Total,injured,5581
+surface,2014,Total,fatalities,42
+surface,2015,Total,vehicles,6455
+surface,2015,Total,injured,6200
+surface,2015,Total,fatalities,50
+surface,2016,Total,vehicles,6341
+surface,2016,Total,injured,6102
+surface,2016,Total,fatalities,49
+surface,2017,Total,vehicles,5600
+surface,2017,Total,injured,5428
+surface,2017,Total,fatalities,38
+surface,2018,Total,vehicles,4892
+surface,2018,Total,injured,4743
+surface,2018,Total,fatalities,48
+surface,2019,Total,vehicles,4628
+surface,2019,Total,injured,4499
+surface,2019,Total,fatalities,43
+surface,2020,Total,vehicles,3717
+surface,2020,Total,injured,3440
+surface,2020,Total,fatalities,50
+surface,2021,Total,vehicles,4196
+surface,2021,Total,injured,4059
+surface,2021,Total,fatalities,39
+surface,2022,Total,vehicles,4047
+surface,2022,Total,injured,3928
+surface,2022,Total,fatalities,48
+surface,2023,Total,vehicles,4902
+surface,2023,Total,injured,4742
+surface,2023,Total,fatalities,46
+surface,2010,"Dry, normal",vehicles,5800
+surface,2010,"Dry, normal",injured,5600
+surface,2010,"Dry, normal",fatalities,53
+surface,2011,"Dry, normal",vehicles,5686
+surface,2011,"Dry, normal",injured,5538
+surface,2011,"Dry, normal",fatalities,48
+surface,2012,"Dry, normal",vehicles,5984
+surface,2012,"Dry, normal",injured,5786
+surface,2012,"Dry, normal",fatalities,51
+surface,2013,"Dry, normal",vehicles,5640
+surface,2013,"Dry, normal",injured,5479
+surface,2013,"Dry, normal",fatalities,59
+surface,2014,"Dry, normal",vehicles,5023
+surface,2014,"Dry, normal",injured,4837
+surface,2014,"Dry, normal",fatalities,38
+surface,2015,"Dry, normal",vehicles,5715
+surface,2015,"Dry, normal",injured,5481
+surface,2015,"Dry, normal",fatalities,44
+surface,2016,"Dry, normal",vehicles,5623
+surface,2016,"Dry, normal",injured,5406
+surface,2016,"Dry, normal",fatalities,41
+surface,2017,"Dry, normal",vehicles,4892
+surface,2017,"Dry, normal",injured,4739
+surface,2017,"Dry, normal",fatalities,32
+surface,2018,"Dry, normal",vehicles,4282
+surface,2018,"Dry, normal",injured,4148
+surface,2018,"Dry, normal",fatalities,44
+surface,2019,"Dry, normal",vehicles,4104
+surface,2019,"Dry, normal",injured,3988
+surface,2019,"Dry, normal",fatalities,36
+surface,2020,"Dry, normal",vehicles,3396
+surface,2020,"Dry, normal",injured,3137
+surface,2020,"Dry, normal",fatalities,45
+surface,2021,"Dry, normal",vehicles,3823
+surface,2021,"Dry, normal",injured,3697
+surface,2021,"Dry, normal",fatalities,35
+surface,2022,"Dry, normal",vehicles,3680
+surface,2022,"Dry, normal",injured,3572
+surface,2022,"Dry, normal",fatalities,44
+surface,2023,"Dry, normal",vehicles,3769
+surface,2023,"Dry, normal",injured,3640
+surface,2023,"Dry, normal",fatalities,33
+surface,2010,Wet,vehicles,737
+surface,2010,Wet,injured,717
+surface,2010,Wet,fatalities,6
+surface,2011,Wet,vehicles,767
+surface,2011,Wet,injured,745
+surface,2011,Wet,fatalities,8
+surface,2012,Wet,vehicles,672
+surface,2012,Wet,injured,650
+surface,2012,Wet,fatalities,8
+surface,2013,Wet,vehicles,631
+surface,2013,Wet,injured,615
+surface,2013,Wet,fatalities,9
+surface,2014,Wet,vehicles,642
+surface,2014,Wet,injured,617
+surface,2014,Wet,fatalities,2
+surface,2015,Wet,vehicles,612
+surface,2015,Wet,injured,595
+surface,2015,Wet,fatalities,5
+surface,2016,Wet,vehicles,571
+surface,2016,Wet,injured,557
+surface,2016,Wet,fatalities,4
+surface,2017,Wet,vehicles,575
+surface,2017,Wet,injured,563
+surface,2017,Wet,fatalities,3
+surface,2018,Wet,vehicles,488
+surface,2018,Wet,injured,477
+surface,2018,Wet,fatalities,3
+surface,2019,Wet,vehicles,416
+surface,2019,Wet,injured,406
+surface,2019,Wet,fatalities,6
+surface,2020,Wet,vehicles,245
+surface,2020,Wet,injured,230
+surface,2020,Wet,fatalities,4
+surface,2021,Wet,vehicles,293
+surface,2021,Wet,injured,283
+surface,2021,Wet,fatalities,3
+surface,2022,Wet,vehicles,267
+surface,2022,Wet,injured,261
+surface,2022,Wet,fatalities,2
+surface,2023,Wet,vehicles,371
+surface,2023,Wet,injured,360
+surface,2023,Wet,fatalities,4
+surface,2010,"Snow (fresh, loose snow)",vehicles,21
+surface,2010,"Snow (fresh, loose snow)",injured,21
+surface,2010,"Snow (fresh, loose snow)",fatalities,0
+surface,2011,"Snow (fresh, loose snow)",vehicles,18
+surface,2011,"Snow (fresh, loose snow)",injured,18
+surface,2011,"Snow (fresh, loose snow)",fatalities,0
+surface,2012,"Snow (fresh, loose snow)",vehicles,11
+surface,2012,"Snow (fresh, loose snow)",injured,9
+surface,2012,"Snow (fresh, loose snow)",fatalities,1
+surface,2013,"Snow (fresh, loose snow)",vehicles,29
+surface,2013,"Snow (fresh, loose snow)",injured,27
+surface,2013,"Snow (fresh, loose snow)",fatalities,0
+surface,2014,"Snow (fresh, loose snow)",vehicles,17
+surface,2014,"Snow (fresh, loose snow)",injured,17
+surface,2014,"Snow (fresh, loose snow)",fatalities,0
+surface,2015,"Snow (fresh, loose snow)",vehicles,13
+surface,2015,"Snow (fresh, loose snow)",injured,12
+surface,2015,"Snow (fresh, loose snow)",fatalities,0
+surface,2016,"Snow (fresh, loose snow)",vehicles,19
+surface,2016,"Snow (fresh, loose snow)",injured,16
+surface,2016,"Snow (fresh, loose snow)",fatalities,1
+surface,2017,"Snow (fresh, loose snow)",vehicles,17
+surface,2017,"Snow (fresh, loose snow)",injured,16
+surface,2017,"Snow (fresh, loose snow)",fatalities,1
+surface,2018,"Snow (fresh, loose snow)",vehicles,19
+surface,2018,"Snow (fresh, loose snow)",injured,18
+surface,2018,"Snow (fresh, loose snow)",fatalities,0
+surface,2019,"Snow (fresh, loose snow)",vehicles,16
+surface,2019,"Snow (fresh, loose snow)",injured,15
+surface,2019,"Snow (fresh, loose snow)",fatalities,0
+surface,2020,"Snow (fresh, loose snow)",vehicles,7
+surface,2020,"Snow (fresh, loose snow)",injured,7
+surface,2020,"Snow (fresh, loose snow)",fatalities,0
+surface,2021,"Snow (fresh, loose snow)",vehicles,7
+surface,2021,"Snow (fresh, loose snow)",injured,7
+surface,2021,"Snow (fresh, loose snow)",fatalities,0
+surface,2022,"Snow (fresh, loose snow)",vehicles,12
+surface,2022,"Snow (fresh, loose snow)",injured,10
+surface,2022,"Snow (fresh, loose snow)",fatalities,1
+surface,2023,"Snow (fresh, loose snow)",vehicles,13
+surface,2023,"Snow (fresh, loose snow)",injured,13
+surface,2023,"Snow (fresh, loose snow)",fatalities,0
+surface,2010,"Slush, wet snow",vehicles,4
+surface,2010,"Slush, wet snow",injured,4
+surface,2010,"Slush, wet snow",fatalities,0
+surface,2011,"Slush, wet snow",vehicles,8
+surface,2011,"Slush, wet snow",injured,7
+surface,2011,"Slush, wet snow",fatalities,0
+surface,2012,"Slush, wet snow",vehicles,5
+surface,2012,"Slush, wet snow",injured,4
+surface,2012,"Slush, wet snow",fatalities,1
+surface,2013,"Slush, wet snow",vehicles,10
+surface,2013,"Slush, wet snow",injured,10
+surface,2013,"Slush, wet snow",fatalities,0
+surface,2014,"Slush, wet snow",vehicles,10
+surface,2014,"Slush, wet snow",injured,9
+surface,2014,"Slush, wet snow",fatalities,0
+surface,2015,"Slush, wet snow",vehicles,9
+surface,2015,"Slush, wet snow",injured,8
+surface,2015,"Slush, wet snow",fatalities,0
+surface,2016,"Slush, wet snow",vehicles,12
+surface,2016,"Slush, wet snow",injured,12
+surface,2016,"Slush, wet snow",fatalities,0
+surface,2017,"Slush, wet snow",vehicles,5
+surface,2017,"Slush, wet snow",injured,5
+surface,2017,"Slush, wet snow",fatalities,0
+surface,2018,"Slush, wet snow",vehicles,6
+surface,2018,"Slush, wet snow",injured,6
+surface,2018,"Slush, wet snow",fatalities,0
+surface,2019,"Slush, wet snow",vehicles,5
+surface,2019,"Slush, wet snow",injured,5
+surface,2019,"Slush, wet snow",fatalities,0
+surface,2020,"Slush, wet snow",vehicles,4
+surface,2020,"Slush, wet snow",injured,3
+surface,2020,"Slush, wet snow",fatalities,0
+surface,2021,"Slush, wet snow",vehicles,4
+surface,2021,"Slush, wet snow",injured,4
+surface,2021,"Slush, wet snow",fatalities,0
+surface,2022,"Slush, wet snow",vehicles,5
+surface,2022,"Slush, wet snow",injured,5
+surface,2022,"Slush, wet snow",fatalities,0
+surface,2023,"Slush, wet snow",vehicles,4
+surface,2023,"Slush, wet snow",injured,3
+surface,2023,"Slush, wet snow",fatalities,0
+surface,2010,Icy,vehicles,14
+surface,2010,Icy,injured,13
+surface,2010,Icy,fatalities,0
+surface,2011,Icy,vehicles,17
+surface,2011,Icy,injured,17
+surface,2011,Icy,fatalities,0
+surface,2012,Icy,vehicles,16
+surface,2012,Icy,injured,15
+surface,2012,Icy,fatalities,1
+surface,2013,Icy,vehicles,15
+surface,2013,Icy,injured,14
+surface,2013,Icy,fatalities,0
+surface,2014,Icy,vehicles,18
+surface,2014,Icy,injured,17
+surface,2014,Icy,fatalities,0
+surface,2015,Icy,vehicles,15
+surface,2015,Icy,injured,15
+surface,2015,Icy,fatalities,0
+surface,2016,Icy,vehicles,15
+surface,2016,Icy,injured,14
+surface,2016,Icy,fatalities,1
+surface,2017,Icy,vehicles,17
+surface,2017,Icy,injured,17
+surface,2017,Icy,fatalities,0
+surface,2018,Icy,vehicles,18
+surface,2018,Icy,injured,18
+surface,2018,Icy,fatalities,0
+surface,2019,Icy,vehicles,9
+surface,2019,Icy,injured,8
+surface,2019,Icy,fatalities,0
+surface,2020,Icy,vehicles,8
+surface,2020,Icy,injured,8
+surface,2020,Icy,fatalities,0
+surface,2021,Icy,vehicles,4
+surface,2021,Icy,injured,4
+surface,2021,Icy,fatalities,0
+surface,2022,Icy,vehicles,11
+surface,2022,Icy,injured,10
+surface,2022,Icy,fatalities,0
+surface,2023,Icy,vehicles,13
+surface,2023,Icy,injured,13
+surface,2023,Icy,fatalities,0
+surface,2010,Sand/gravel/dirt,vehicles,13
+surface,2010,Sand/gravel/dirt,injured,13
+surface,2010,Sand/gravel/dirt,fatalities,0
+surface,2011,Sand/gravel/dirt,vehicles,4
+surface,2011,Sand/gravel/dirt,injured,4
+surface,2011,Sand/gravel/dirt,fatalities,0
+surface,2012,Sand/gravel/dirt,vehicles,12
+surface,2012,Sand/gravel/dirt,injured,11
+surface,2012,Sand/gravel/dirt,fatalities,1
+surface,2013,Sand/gravel/dirt,vehicles,11
+surface,2013,Sand/gravel/dirt,injured,10
+surface,2013,Sand/gravel/dirt,fatalities,0
+surface,2014,Sand/gravel/dirt,vehicles,7
+surface,2014,Sand/gravel/dirt,injured,6
+surface,2014,Sand/gravel/dirt,fatalities,0
+surface,2015,Sand/gravel/dirt,vehicles,3
+surface,2015,Sand/gravel/dirt,injured,3
+surface,2015,Sand/gravel/dirt,fatalities,0
+surface,2016,Sand/gravel/dirt,vehicles,6
+surface,2016,Sand/gravel/dirt,injured,6
+surface,2016,Sand/gravel/dirt,fatalities,0
+surface,2017,Sand/gravel/dirt,vehicles,6
+surface,2017,Sand/gravel/dirt,injured,6
+surface,2017,Sand/gravel/dirt,fatalities,0
+surface,2018,Sand/gravel/dirt,vehicles,7
+surface,2018,Sand/gravel/dirt,injured,6
+surface,2018,Sand/gravel/dirt,fatalities,1
+surface,2019,Sand/gravel/dirt,vehicles,2
+surface,2019,Sand/gravel/dirt,injured,2
+surface,2019,Sand/gravel/dirt,fatalities,0
+surface,2020,Sand/gravel/dirt,vehicles,1
+surface,2020,Sand/gravel/dirt,injured,1
+surface,2020,Sand/gravel/dirt,fatalities,0
+surface,2021,Sand/gravel/dirt,vehicles,8
+surface,2021,Sand/gravel/dirt,injured,8
+surface,2021,Sand/gravel/dirt,fatalities,0
+surface,2022,Sand/gravel/dirt,vehicles,7
+surface,2022,Sand/gravel/dirt,injured,5
+surface,2022,Sand/gravel/dirt,fatalities,1
+surface,2023,Sand/gravel/dirt,vehicles,10
+surface,2023,Sand/gravel/dirt,injured,8
+surface,2023,Sand/gravel/dirt,fatalities,0
+surface,2010,Muddy,vehicles,1
+surface,2010,Muddy,injured,1
+surface,2010,Muddy,fatalities,0
+surface,2011,Muddy,vehicles,0
+surface,2011,Muddy,injured,0
+surface,2011,Muddy,fatalities,0
+surface,2012,Muddy,vehicles,0
+surface,2012,Muddy,injured,0
+surface,2012,Muddy,fatalities,0
+surface,2013,Muddy,vehicles,0
+surface,2013,Muddy,injured,0
+surface,2013,Muddy,fatalities,0
+surface,2014,Muddy,vehicles,0
+surface,2014,Muddy,injured,0
+surface,2014,Muddy,fatalities,0
+surface,2015,Muddy,vehicles,2
+surface,2015,Muddy,injured,2
+surface,2015,Muddy,fatalities,0
+surface,2016,Muddy,vehicles,0
+surface,2016,Muddy,injured,0
+surface,2016,Muddy,fatalities,0
+surface,2017,Muddy,vehicles,2
+surface,2017,Muddy,injured,1
+surface,2017,Muddy,fatalities,1
+surface,2018,Muddy,vehicles,1
+surface,2018,Muddy,injured,1
+surface,2018,Muddy,fatalities,0
+surface,2019,Muddy,vehicles,0
+surface,2019,Muddy,injured,0
+surface,2019,Muddy,fatalities,0
+surface,2020,Muddy,vehicles,0
+surface,2020,Muddy,injured,0
+surface,2020,Muddy,fatalities,0
+surface,2021,Muddy,vehicles,0
+surface,2021,Muddy,injured,0
+surface,2021,Muddy,fatalities,0
+surface,2022,Muddy,vehicles,0
+surface,2022,Muddy,injured,0
+surface,2022,Muddy,fatalities,0
+surface,2023,Muddy,vehicles,1
+surface,2023,Muddy,injured,1
+surface,2023,Muddy,fatalities,0
+surface,2010,Oil,vehicles,1
+surface,2010,Oil,injured,1
+surface,2010,Oil,fatalities,0
+surface,2011,Oil,vehicles,0
+surface,2011,Oil,injured,0
+surface,2011,Oil,fatalities,0
+surface,2012,Oil,vehicles,0
+surface,2012,Oil,injured,0
+surface,2012,Oil,fatalities,0
+surface,2013,Oil,vehicles,0
+surface,2013,Oil,injured,0
+surface,2013,Oil,fatalities,0
+surface,2014,Oil,vehicles,1
+surface,2014,Oil,injured,1
+surface,2014,Oil,fatalities,0
+surface,2015,Oil,vehicles,0
+surface,2015,Oil,injured,0
+surface,2015,Oil,fatalities,0
+surface,2016,Oil,vehicles,0
+surface,2016,Oil,injured,0
+surface,2016,Oil,fatalities,0
+surface,2017,Oil,vehicles,0
+surface,2017,Oil,injured,0
+surface,2017,Oil,fatalities,0
+surface,2018,Oil,vehicles,1
+surface,2018,Oil,injured,1
+surface,2018,Oil,fatalities,0
+surface,2019,Oil,vehicles,0
+surface,2019,Oil,injured,0
+surface,2019,Oil,fatalities,0
+surface,2020,Oil,vehicles,0
+surface,2020,Oil,injured,0
+surface,2020,Oil,fatalities,0
+surface,2021,Oil,vehicles,0
+surface,2021,Oil,injured,0
+surface,2021,Oil,fatalities,0
+surface,2022,Oil,vehicles,0
+surface,2022,Oil,injured,0
+surface,2022,Oil,fatalities,0
+surface,2023,Oil,vehicles,0
+surface,2023,Oil,injured,0
+surface,2023,Oil,fatalities,0
+surface,2010,Flooded,vehicles,0
+surface,2010,Flooded,injured,0
+surface,2010,Flooded,fatalities,0
+surface,2011,Flooded,vehicles,0
+surface,2011,Flooded,injured,0
+surface,2011,Flooded,fatalities,0
+surface,2012,Flooded,vehicles,0
+surface,2012,Flooded,injured,0
+surface,2012,Flooded,fatalities,0
+surface,2013,Flooded,vehicles,0
+surface,2013,Flooded,injured,0
+surface,2013,Flooded,fatalities,0
+surface,2014,Flooded,vehicles,0
+surface,2014,Flooded,injured,0
+surface,2014,Flooded,fatalities,0
+surface,2015,Flooded,vehicles,0
+surface,2015,Flooded,injured,0
+surface,2015,Flooded,fatalities,0
+surface,2016,Flooded,vehicles,0
+surface,2016,Flooded,injured,0
+surface,2016,Flooded,fatalities,0
+surface,2017,Flooded,vehicles,0
+surface,2017,Flooded,injured,0
+surface,2017,Flooded,fatalities,0
+surface,2018,Flooded,vehicles,0
+surface,2018,Flooded,injured,0
+surface,2018,Flooded,fatalities,0
+surface,2019,Flooded,vehicles,0
+surface,2019,Flooded,injured,0
+surface,2019,Flooded,fatalities,0
+surface,2020,Flooded,vehicles,0
+surface,2020,Flooded,injured,0
+surface,2020,Flooded,fatalities,0
+surface,2021,Flooded,vehicles,0
+surface,2021,Flooded,injured,0
+surface,2021,Flooded,fatalities,0
+surface,2022,Flooded,vehicles,0
+surface,2022,Flooded,injured,0
+surface,2022,Flooded,fatalities,0
+surface,2023,Flooded,vehicles,0
+surface,2023,Flooded,injured,0
+surface,2023,Flooded,fatalities,0
+surface,2010,Other,vehicles,21
+surface,2010,Other,injured,21
+surface,2010,Other,fatalities,0
+surface,2011,Other,vehicles,20
+surface,2011,Other,injured,20
+surface,2011,Other,fatalities,0
+surface,2012,Other,vehicles,19
+surface,2012,Other,injured,19
+surface,2012,Other,fatalities,0
+surface,2013,Other,vehicles,17
+surface,2013,Other,injured,17
+surface,2013,Other,fatalities,0
+surface,2014,Other,vehicles,18
+surface,2014,Other,injured,17
+surface,2014,Other,fatalities,0
+surface,2015,Other,vehicles,18
+surface,2015,Other,injured,17
+surface,2015,Other,fatalities,1
+surface,2016,Other,vehicles,7
+surface,2016,Other,injured,7
+surface,2016,Other,fatalities,0
+surface,2017,Other,vehicles,22
+surface,2017,Other,injured,21
+surface,2017,Other,fatalities,1
+surface,2018,Other,vehicles,15
+surface,2018,Other,injured,15
+surface,2018,Other,fatalities,0
+surface,2019,Other,vehicles,14
+surface,2019,Other,injured,14
+surface,2019,Other,fatalities,0
+surface,2020,Other,vehicles,13
+surface,2020,Other,injured,13
+surface,2020,Other,fatalities,0
+surface,2021,Other,vehicles,12
+surface,2021,Other,injured,12
+surface,2021,Other,fatalities,0
+surface,2022,Other,vehicles,16
+surface,2022,Other,injured,16
+surface,2022,Other,fatalities,0
+surface,2023,Other,vehicles,9
+surface,2023,Other,injured,9
+surface,2023,Other,fatalities,0
+surface,2010,Unknown,vehicles,100
+surface,2010,Unknown,injured,93
+surface,2010,Unknown,fatalities,2
+surface,2011,Unknown,vehicles,67
+surface,2011,Unknown,injured,67
+surface,2011,Unknown,fatalities,0
+surface,2012,Unknown,vehicles,123
+surface,2012,Unknown,injured,120
+surface,2012,Unknown,fatalities,0
+surface,2013,Unknown,vehicles,82
+surface,2013,Unknown,injured,79
+surface,2013,Unknown,fatalities,1
+surface,2014,Unknown,vehicles,63
+surface,2014,Unknown,injured,60
+surface,2014,Unknown,fatalities,2
+surface,2015,Unknown,vehicles,68
+surface,2015,Unknown,injured,67
+surface,2015,Unknown,fatalities,0
+surface,2016,Unknown,vehicles,88
+surface,2016,Unknown,injured,84
+surface,2016,Unknown,fatalities,2
+surface,2017,Unknown,vehicles,64
+surface,2017,Unknown,injured,60
+surface,2017,Unknown,fatalities,0
+surface,2018,Unknown,vehicles,55
+surface,2018,Unknown,injured,53
+surface,2018,Unknown,fatalities,0
+surface,2019,Unknown,vehicles,62
+surface,2019,Unknown,injured,61
+surface,2019,Unknown,fatalities,1
+surface,2020,Unknown,vehicles,43
+surface,2020,Unknown,injured,41
+surface,2020,Unknown,fatalities,1
+surface,2021,Unknown,vehicles,45
+surface,2021,Unknown,injured,44
+surface,2021,Unknown,fatalities,1
+surface,2022,Unknown,vehicles,49
+surface,2022,Unknown,injured,49
+surface,2022,Unknown,fatalities,0
+surface,2023,Unknown,vehicles,712
+surface,2023,Unknown,injured,695
+surface,2023,Unknown,fatalities,9
+road_configuration,2010,Total,vehicles,6712
+road_configuration,2010,Total,injured,6484
+road_configuration,2010,Total,fatalities,61
+road_configuration,2011,Total,vehicles,6587
+road_configuration,2011,Total,injured,6416
+road_configuration,2011,Total,fatalities,56
+road_configuration,2012,Total,vehicles,6842
+road_configuration,2012,Total,injured,6614
+road_configuration,2012,Total,fatalities,63
+road_configuration,2013,Total,vehicles,6435
+road_configuration,2013,Total,injured,6251
+road_configuration,2013,Total,fatalities,69
+road_configuration,2014,Total,vehicles,5799
+road_configuration,2014,Total,injured,5581
+road_configuration,2014,Total,fatalities,42
+road_configuration,2015,Total,vehicles,6455
+road_configuration,2015,Total,injured,6200
+road_configuration,2015,Total,fatalities,50
+road_configuration,2016,Total,vehicles,6341
+road_configuration,2016,Total,injured,6102
+road_configuration,2016,Total,fatalities,49
+road_configuration,2017,Total,vehicles,5600
+road_configuration,2017,Total,injured,5428
+road_configuration,2017,Total,fatalities,38
+road_configuration,2018,Total,vehicles,4892
+road_configuration,2018,Total,injured,4743
+road_configuration,2018,Total,fatalities,48
+road_configuration,2019,Total,vehicles,4628
+road_configuration,2019,Total,injured,4499
+road_configuration,2019,Total,fatalities,43
+road_configuration,2020,Total,vehicles,3717
+road_configuration,2020,Total,injured,3440
+road_configuration,2020,Total,fatalities,50
+road_configuration,2021,Total,vehicles,4196
+road_configuration,2021,Total,injured,4059
+road_configuration,2021,Total,fatalities,39
+road_configuration,2022,Total,vehicles,4047
+road_configuration,2022,Total,injured,3928
+road_configuration,2022,Total,fatalities,48
+road_configuration,2023,Total,vehicles,4902
+road_configuration,2023,Total,injured,4742
+road_configuration,2023,Total,fatalities,46
+road_configuration,2010,Non-intersection,vehicles,1492
+road_configuration,2010,Non-intersection,injured,1428
+road_configuration,2010,Non-intersection,fatalities,29
+road_configuration,2011,Non-intersection,vehicles,1388
+road_configuration,2011,Non-intersection,injured,1349
+road_configuration,2011,Non-intersection,fatalities,21
+road_configuration,2012,Non-intersection,vehicles,1540
+road_configuration,2012,Non-intersection,injured,1472
+road_configuration,2012,Non-intersection,fatalities,29
+road_configuration,2013,Non-intersection,vehicles,1426
+road_configuration,2013,Non-intersection,injured,1357
+road_configuration,2013,Non-intersection,fatalities,38
+road_configuration,2014,Non-intersection,vehicles,1386
+road_configuration,2014,Non-intersection,injured,1329
+road_configuration,2014,Non-intersection,fatalities,17
+road_configuration,2015,Non-intersection,vehicles,1517
+road_configuration,2015,Non-intersection,injured,1439
+road_configuration,2015,Non-intersection,fatalities,28
+road_configuration,2016,Non-intersection,vehicles,1498
+road_configuration,2016,Non-intersection,injured,1423
+road_configuration,2016,Non-intersection,fatalities,22
+road_configuration,2017,Non-intersection,vehicles,1345
+road_configuration,2017,Non-intersection,injured,1288
+road_configuration,2017,Non-intersection,fatalities,19
+road_configuration,2018,Non-intersection,vehicles,1183
+road_configuration,2018,Non-intersection,injured,1140
+road_configuration,2018,Non-intersection,fatalities,19
+road_configuration,2019,Non-intersection,vehicles,1088
+road_configuration,2019,Non-intersection,injured,1036
+road_configuration,2019,Non-intersection,fatalities,25
+road_configuration,2020,Non-intersection,vehicles,961
+road_configuration,2020,Non-intersection,injured,884
+road_configuration,2020,Non-intersection,fatalities,25
+road_configuration,2021,Non-intersection,vehicles,1063
+road_configuration,2021,Non-intersection,injured,1027
+road_configuration,2021,Non-intersection,fatalities,20
+road_configuration,2022,Non-intersection,vehicles,1018
+road_configuration,2022,Non-intersection,injured,966
+road_configuration,2022,Non-intersection,fatalities,26
+road_configuration,2023,Non-intersection,vehicles,1224
+road_configuration,2023,Non-intersection,injured,1174
+road_configuration,2023,Non-intersection,fatalities,19
+road_configuration,2010,At an intersection of at least two public roadways,vehicles,4095
+road_configuration,2010,At an intersection of at least two public roadways,injured,3974
+road_configuration,2010,At an intersection of at least two public roadways,fatalities,23
+road_configuration,2011,At an intersection of at least two public roadways,vehicles,4094
+road_configuration,2011,At an intersection of at least two public roadways,injured,3980
+road_configuration,2011,At an intersection of at least two public roadways,fatalities,29
+road_configuration,2012,At an intersection of at least two public roadways,vehicles,4135
+road_configuration,2012,At an intersection of at least two public roadways,injured,4009
+road_configuration,2012,At an intersection of at least two public roadways,fatalities,28
+road_configuration,2013,At an intersection of at least two public roadways,vehicles,3982
+road_configuration,2013,At an intersection of at least two public roadways,injured,3881
+road_configuration,2013,At an intersection of at least two public roadways,fatalities,27
+road_configuration,2014,At an intersection of at least two public roadways,vehicles,3493
+road_configuration,2014,At an intersection of at least two public roadways,injured,3369
+road_configuration,2014,At an intersection of at least two public roadways,fatalities,19
+road_configuration,2015,At an intersection of at least two public roadways,vehicles,3948
+road_configuration,2015,At an intersection of at least two public roadways,injured,3795
+road_configuration,2015,At an intersection of at least two public roadways,fatalities,21
+road_configuration,2016,At an intersection of at least two public roadways,vehicles,3935
+road_configuration,2016,At an intersection of at least two public roadways,injured,3799
+road_configuration,2016,At an intersection of at least two public roadways,fatalities,24
+road_configuration,2017,At an intersection of at least two public roadways,vehicles,3424
+road_configuration,2017,At an intersection of at least two public roadways,injured,3334
+road_configuration,2017,At an intersection of at least two public roadways,fatalities,14
+road_configuration,2018,At an intersection of at least two public roadways,vehicles,2971
+road_configuration,2018,At an intersection of at least two public roadways,injured,2886
+road_configuration,2018,At an intersection of at least two public roadways,fatalities,27
+road_configuration,2019,At an intersection of at least two public roadways,vehicles,2835
+road_configuration,2019,At an intersection of at least two public roadways,injured,2772
+road_configuration,2019,At an intersection of at least two public roadways,fatalities,15
+road_configuration,2020,At an intersection of at least two public roadways,vehicles,2239
+road_configuration,2020,At an intersection of at least two public roadways,injured,2058
+road_configuration,2020,At an intersection of at least two public roadways,fatalities,21
+road_configuration,2021,At an intersection of at least two public roadways,vehicles,2523
+road_configuration,2021,At an intersection of at least two public roadways,injured,2439
+road_configuration,2021,At an intersection of at least two public roadways,fatalities,16
+road_configuration,2022,At an intersection of at least two public roadways,vehicles,2507
+road_configuration,2022,At an intersection of at least two public roadways,injured,2447
+road_configuration,2022,At an intersection of at least two public roadways,fatalities,18
+road_configuration,2023,At an intersection of at least two public roadways,vehicles,2994
+road_configuration,2023,At an intersection of at least two public roadways,injured,2906
+road_configuration,2023,At an intersection of at least two public roadways,fatalities,22
+road_configuration,2010,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,586
+road_configuration,2010,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,560
+road_configuration,2010,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,3
+road_configuration,2011,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,552
+road_configuration,2011,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,545
+road_configuration,2011,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,3
+road_configuration,2012,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,610
+road_configuration,2012,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,592
+road_configuration,2012,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,3
+road_configuration,2013,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,526
+road_configuration,2013,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,516
+road_configuration,2013,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,2
+road_configuration,2014,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,487
+road_configuration,2014,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,458
+road_configuration,2014,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,2
+road_configuration,2015,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,497
+road_configuration,2015,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,476
+road_configuration,2015,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,1
+road_configuration,2016,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,462
+road_configuration,2016,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,439
+road_configuration,2016,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,1
+road_configuration,2017,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,396
+road_configuration,2017,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,383
+road_configuration,2017,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,0
+road_configuration,2018,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,364
+road_configuration,2018,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,349
+road_configuration,2018,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,0
+road_configuration,2019,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,357
+road_configuration,2019,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,349
+road_configuration,2019,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,2
+road_configuration,2020,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,214
+road_configuration,2020,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,197
+road_configuration,2020,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,2
+road_configuration,2021,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,244
+road_configuration,2021,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,235
+road_configuration,2021,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,2
+road_configuration,2022,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,222
+road_configuration,2022,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,220
+road_configuration,2022,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,2
+road_configuration,2023,"Intersection with parking lot entrance/exit, private driveway or laneway",vehicles,331
+road_configuration,2023,"Intersection with parking lot entrance/exit, private driveway or laneway",injured,319
+road_configuration,2023,"Intersection with parking lot entrance/exit, private driveway or laneway",fatalities,2
+road_configuration,2010,Railroad level crossing,vehicles,17
+road_configuration,2010,Railroad level crossing,injured,16
+road_configuration,2010,Railroad level crossing,fatalities,1
+road_configuration,2011,Railroad level crossing,vehicles,17
+road_configuration,2011,Railroad level crossing,injured,18
+road_configuration,2011,Railroad level crossing,fatalities,0
+road_configuration,2012,Railroad level crossing,vehicles,17
+road_configuration,2012,Railroad level crossing,injured,14
+road_configuration,2012,Railroad level crossing,fatalities,0
+road_configuration,2013,Railroad level crossing,vehicles,8
+road_configuration,2013,Railroad level crossing,injured,8
+road_configuration,2013,Railroad level crossing,fatalities,0
+road_configuration,2014,Railroad level crossing,vehicles,5
+road_configuration,2014,Railroad level crossing,injured,5
+road_configuration,2014,Railroad level crossing,fatalities,0
+road_configuration,2015,Railroad level crossing,vehicles,9
+road_configuration,2015,Railroad level crossing,injured,9
+road_configuration,2015,Railroad level crossing,fatalities,0
+road_configuration,2016,Railroad level crossing,vehicles,5
+road_configuration,2016,Railroad level crossing,injured,5
+road_configuration,2016,Railroad level crossing,fatalities,0
+road_configuration,2017,Railroad level crossing,vehicles,9
+road_configuration,2017,Railroad level crossing,injured,8
+road_configuration,2017,Railroad level crossing,fatalities,0
+road_configuration,2018,Railroad level crossing,vehicles,11
+road_configuration,2018,Railroad level crossing,injured,11
+road_configuration,2018,Railroad level crossing,fatalities,0
+road_configuration,2019,Railroad level crossing,vehicles,11
+road_configuration,2019,Railroad level crossing,injured,11
+road_configuration,2019,Railroad level crossing,fatalities,0
+road_configuration,2020,Railroad level crossing,vehicles,6
+road_configuration,2020,Railroad level crossing,injured,7
+road_configuration,2020,Railroad level crossing,fatalities,0
+road_configuration,2021,Railroad level crossing,vehicles,9
+road_configuration,2021,Railroad level crossing,injured,9
+road_configuration,2021,Railroad level crossing,fatalities,0
+road_configuration,2022,Railroad level crossing,vehicles,10
+road_configuration,2022,Railroad level crossing,injured,10
+road_configuration,2022,Railroad level crossing,fatalities,0
+road_configuration,2023,Railroad level crossing,vehicles,7
+road_configuration,2023,Railroad level crossing,injured,7
+road_configuration,2023,Railroad level crossing,fatalities,0
+road_configuration,2010,"Bridge, overpass, viaduct",vehicles,18
+road_configuration,2010,"Bridge, overpass, viaduct",injured,17
+road_configuration,2010,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2011,"Bridge, overpass, viaduct",vehicles,7
+road_configuration,2011,"Bridge, overpass, viaduct",injured,7
+road_configuration,2011,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2012,"Bridge, overpass, viaduct",vehicles,12
+road_configuration,2012,"Bridge, overpass, viaduct",injured,11
+road_configuration,2012,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2013,"Bridge, overpass, viaduct",vehicles,10
+road_configuration,2013,"Bridge, overpass, viaduct",injured,10
+road_configuration,2013,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2014,"Bridge, overpass, viaduct",vehicles,10
+road_configuration,2014,"Bridge, overpass, viaduct",injured,10
+road_configuration,2014,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2015,"Bridge, overpass, viaduct",vehicles,9
+road_configuration,2015,"Bridge, overpass, viaduct",injured,9
+road_configuration,2015,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2016,"Bridge, overpass, viaduct",vehicles,9
+road_configuration,2016,"Bridge, overpass, viaduct",injured,8
+road_configuration,2016,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2017,"Bridge, overpass, viaduct",vehicles,13
+road_configuration,2017,"Bridge, overpass, viaduct",injured,13
+road_configuration,2017,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2018,"Bridge, overpass, viaduct",vehicles,2
+road_configuration,2018,"Bridge, overpass, viaduct",injured,1
+road_configuration,2018,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2019,"Bridge, overpass, viaduct",vehicles,11
+road_configuration,2019,"Bridge, overpass, viaduct",injured,11
+road_configuration,2019,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2020,"Bridge, overpass, viaduct",vehicles,3
+road_configuration,2020,"Bridge, overpass, viaduct",injured,3
+road_configuration,2020,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2021,"Bridge, overpass, viaduct",vehicles,7
+road_configuration,2021,"Bridge, overpass, viaduct",injured,7
+road_configuration,2021,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2022,"Bridge, overpass, viaduct",vehicles,8
+road_configuration,2022,"Bridge, overpass, viaduct",injured,8
+road_configuration,2022,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2023,"Bridge, overpass, viaduct",vehicles,11
+road_configuration,2023,"Bridge, overpass, viaduct",injured,10
+road_configuration,2023,"Bridge, overpass, viaduct",fatalities,0
+road_configuration,2010,Tunnel or underpass,vehicles,2
+road_configuration,2010,Tunnel or underpass,injured,2
+road_configuration,2010,Tunnel or underpass,fatalities,0
+road_configuration,2011,Tunnel or underpass,vehicles,4
+road_configuration,2011,Tunnel or underpass,injured,4
+road_configuration,2011,Tunnel or underpass,fatalities,0
+road_configuration,2012,Tunnel or underpass,vehicles,2
+road_configuration,2012,Tunnel or underpass,injured,2
+road_configuration,2012,Tunnel or underpass,fatalities,0
+road_configuration,2013,Tunnel or underpass,vehicles,2
+road_configuration,2013,Tunnel or underpass,injured,2
+road_configuration,2013,Tunnel or underpass,fatalities,0
+road_configuration,2014,Tunnel or underpass,vehicles,3
+road_configuration,2014,Tunnel or underpass,injured,2
+road_configuration,2014,Tunnel or underpass,fatalities,1
+road_configuration,2015,Tunnel or underpass,vehicles,0
+road_configuration,2015,Tunnel or underpass,injured,0
+road_configuration,2015,Tunnel or underpass,fatalities,0
+road_configuration,2016,Tunnel or underpass,vehicles,1
+road_configuration,2016,Tunnel or underpass,injured,1
+road_configuration,2016,Tunnel or underpass,fatalities,0
+road_configuration,2017,Tunnel or underpass,vehicles,1
+road_configuration,2017,Tunnel or underpass,injured,1
+road_configuration,2017,Tunnel or underpass,fatalities,0
+road_configuration,2018,Tunnel or underpass,vehicles,1
+road_configuration,2018,Tunnel or underpass,injured,1
+road_configuration,2018,Tunnel or underpass,fatalities,0
+road_configuration,2019,Tunnel or underpass,vehicles,2
+road_configuration,2019,Tunnel or underpass,injured,2
+road_configuration,2019,Tunnel or underpass,fatalities,0
+road_configuration,2020,Tunnel or underpass,vehicles,3
+road_configuration,2020,Tunnel or underpass,injured,3
+road_configuration,2020,Tunnel or underpass,fatalities,0
+road_configuration,2021,Tunnel or underpass,vehicles,1
+road_configuration,2021,Tunnel or underpass,injured,1
+road_configuration,2021,Tunnel or underpass,fatalities,0
+road_configuration,2022,Tunnel or underpass,vehicles,0
+road_configuration,2022,Tunnel or underpass,injured,0
+road_configuration,2022,Tunnel or underpass,fatalities,0
+road_configuration,2023,Tunnel or underpass,vehicles,2
+road_configuration,2023,Tunnel or underpass,injured,2
+road_configuration,2023,Tunnel or underpass,fatalities,0
+road_configuration,2010,Passing or climbing lane,vehicles,0
+road_configuration,2010,Passing or climbing lane,injured,0
+road_configuration,2010,Passing or climbing lane,fatalities,0
+road_configuration,2011,Passing or climbing lane,vehicles,2
+road_configuration,2011,Passing or climbing lane,injured,2
+road_configuration,2011,Passing or climbing lane,fatalities,0
+road_configuration,2012,Passing or climbing lane,vehicles,0
+road_configuration,2012,Passing or climbing lane,injured,0
+road_configuration,2012,Passing or climbing lane,fatalities,0
+road_configuration,2013,Passing or climbing lane,vehicles,0
+road_configuration,2013,Passing or climbing lane,injured,0
+road_configuration,2013,Passing or climbing lane,fatalities,0
+road_configuration,2014,Passing or climbing lane,vehicles,0
+road_configuration,2014,Passing or climbing lane,injured,0
+road_configuration,2014,Passing or climbing lane,fatalities,0
+road_configuration,2015,Passing or climbing lane,vehicles,0
+road_configuration,2015,Passing or climbing lane,injured,0
+road_configuration,2015,Passing or climbing lane,fatalities,0
+road_configuration,2016,Passing or climbing lane,vehicles,1
+road_configuration,2016,Passing or climbing lane,injured,1
+road_configuration,2016,Passing or climbing lane,fatalities,0
+road_configuration,2017,Passing or climbing lane,vehicles,1
+road_configuration,2017,Passing or climbing lane,injured,1
+road_configuration,2017,Passing or climbing lane,fatalities,0
+road_configuration,2018,Passing or climbing lane,vehicles,0
+road_configuration,2018,Passing or climbing lane,injured,0
+road_configuration,2018,Passing or climbing lane,fatalities,0
+road_configuration,2019,Passing or climbing lane,vehicles,0
+road_configuration,2019,Passing or climbing lane,injured,0
+road_configuration,2019,Passing or climbing lane,fatalities,0
+road_configuration,2020,Passing or climbing lane,vehicles,0
+road_configuration,2020,Passing or climbing lane,injured,0
+road_configuration,2020,Passing or climbing lane,fatalities,0
+road_configuration,2021,Passing or climbing lane,vehicles,0
+road_configuration,2021,Passing or climbing lane,injured,0
+road_configuration,2021,Passing or climbing lane,fatalities,0
+road_configuration,2022,Passing or climbing lane,vehicles,0
+road_configuration,2022,Passing or climbing lane,injured,0
+road_configuration,2022,Passing or climbing lane,fatalities,0
+road_configuration,2023,Passing or climbing lane,vehicles,0
+road_configuration,2023,Passing or climbing lane,injured,0
+road_configuration,2023,Passing or climbing lane,fatalities,0
+road_configuration,2010,Ramp,vehicles,5
+road_configuration,2010,Ramp,injured,5
+road_configuration,2010,Ramp,fatalities,0
+road_configuration,2011,Ramp,vehicles,5
+road_configuration,2011,Ramp,injured,5
+road_configuration,2011,Ramp,fatalities,0
+road_configuration,2012,Ramp,vehicles,7
+road_configuration,2012,Ramp,injured,7
+road_configuration,2012,Ramp,fatalities,0
+road_configuration,2013,Ramp,vehicles,9
+road_configuration,2013,Ramp,injured,8
+road_configuration,2013,Ramp,fatalities,1
+road_configuration,2014,Ramp,vehicles,10
+road_configuration,2014,Ramp,injured,10
+road_configuration,2014,Ramp,fatalities,0
+road_configuration,2015,Ramp,vehicles,15
+road_configuration,2015,Ramp,injured,14
+road_configuration,2015,Ramp,fatalities,0
+road_configuration,2016,Ramp,vehicles,9
+road_configuration,2016,Ramp,injured,9
+road_configuration,2016,Ramp,fatalities,0
+road_configuration,2017,Ramp,vehicles,8
+road_configuration,2017,Ramp,injured,8
+road_configuration,2017,Ramp,fatalities,0
+road_configuration,2018,Ramp,vehicles,7
+road_configuration,2018,Ramp,injured,7
+road_configuration,2018,Ramp,fatalities,0
+road_configuration,2019,Ramp,vehicles,6
+road_configuration,2019,Ramp,injured,5
+road_configuration,2019,Ramp,fatalities,0
+road_configuration,2020,Ramp,vehicles,2
+road_configuration,2020,Ramp,injured,2
+road_configuration,2020,Ramp,fatalities,0
+road_configuration,2021,Ramp,vehicles,4
+road_configuration,2021,Ramp,injured,4
+road_configuration,2021,Ramp,fatalities,0
+road_configuration,2022,Ramp,vehicles,2
+road_configuration,2022,Ramp,injured,2
+road_configuration,2022,Ramp,fatalities,0
+road_configuration,2023,Ramp,vehicles,1
+road_configuration,2023,Ramp,injured,1
+road_configuration,2023,Ramp,fatalities,0
+road_configuration,2010,Traffic circle,vehicles,5
+road_configuration,2010,Traffic circle,injured,5
+road_configuration,2010,Traffic circle,fatalities,0
+road_configuration,2011,Traffic circle,vehicles,11
+road_configuration,2011,Traffic circle,injured,11
+road_configuration,2011,Traffic circle,fatalities,0
+road_configuration,2012,Traffic circle,vehicles,9
+road_configuration,2012,Traffic circle,injured,9
+road_configuration,2012,Traffic circle,fatalities,0
+road_configuration,2013,Traffic circle,vehicles,6
+road_configuration,2013,Traffic circle,injured,6
+road_configuration,2013,Traffic circle,fatalities,0
+road_configuration,2014,Traffic circle,vehicles,5
+road_configuration,2014,Traffic circle,injured,5
+road_configuration,2014,Traffic circle,fatalities,0
+road_configuration,2015,Traffic circle,vehicles,9
+road_configuration,2015,Traffic circle,injured,9
+road_configuration,2015,Traffic circle,fatalities,0
+road_configuration,2016,Traffic circle,vehicles,7
+road_configuration,2016,Traffic circle,injured,7
+road_configuration,2016,Traffic circle,fatalities,0
+road_configuration,2017,Traffic circle,vehicles,10
+road_configuration,2017,Traffic circle,injured,10
+road_configuration,2017,Traffic circle,fatalities,0
+road_configuration,2018,Traffic circle,vehicles,7
+road_configuration,2018,Traffic circle,injured,6
+road_configuration,2018,Traffic circle,fatalities,0
+road_configuration,2019,Traffic circle,vehicles,7
+road_configuration,2019,Traffic circle,injured,7
+road_configuration,2019,Traffic circle,fatalities,0
+road_configuration,2020,Traffic circle,vehicles,9
+road_configuration,2020,Traffic circle,injured,9
+road_configuration,2020,Traffic circle,fatalities,0
+road_configuration,2021,Traffic circle,vehicles,13
+road_configuration,2021,Traffic circle,injured,12
+road_configuration,2021,Traffic circle,fatalities,0
+road_configuration,2022,Traffic circle,vehicles,7
+road_configuration,2022,Traffic circle,injured,7
+road_configuration,2022,Traffic circle,fatalities,0
+road_configuration,2023,Traffic circle,vehicles,11
+road_configuration,2023,Traffic circle,injured,11
+road_configuration,2023,Traffic circle,fatalities,0
+road_configuration,2010,Express lane of a freeway system,vehicles,0
+road_configuration,2010,Express lane of a freeway system,injured,0
+road_configuration,2010,Express lane of a freeway system,fatalities,0
+road_configuration,2011,Express lane of a freeway system,vehicles,0
+road_configuration,2011,Express lane of a freeway system,injured,0
+road_configuration,2011,Express lane of a freeway system,fatalities,0
+road_configuration,2012,Express lane of a freeway system,vehicles,0
+road_configuration,2012,Express lane of a freeway system,injured,0
+road_configuration,2012,Express lane of a freeway system,fatalities,0
+road_configuration,2013,Express lane of a freeway system,vehicles,0
+road_configuration,2013,Express lane of a freeway system,injured,0
+road_configuration,2013,Express lane of a freeway system,fatalities,0
+road_configuration,2014,Express lane of a freeway system,vehicles,0
+road_configuration,2014,Express lane of a freeway system,injured,0
+road_configuration,2014,Express lane of a freeway system,fatalities,0
+road_configuration,2015,Express lane of a freeway system,vehicles,0
+road_configuration,2015,Express lane of a freeway system,injured,0
+road_configuration,2015,Express lane of a freeway system,fatalities,0
+road_configuration,2016,Express lane of a freeway system,vehicles,0
+road_configuration,2016,Express lane of a freeway system,injured,0
+road_configuration,2016,Express lane of a freeway system,fatalities,0
+road_configuration,2017,Express lane of a freeway system,vehicles,0
+road_configuration,2017,Express lane of a freeway system,injured,0
+road_configuration,2017,Express lane of a freeway system,fatalities,0
+road_configuration,2018,Express lane of a freeway system,vehicles,0
+road_configuration,2018,Express lane of a freeway system,injured,0
+road_configuration,2018,Express lane of a freeway system,fatalities,0
+road_configuration,2019,Express lane of a freeway system,vehicles,0
+road_configuration,2019,Express lane of a freeway system,injured,0
+road_configuration,2019,Express lane of a freeway system,fatalities,0
+road_configuration,2020,Express lane of a freeway system,vehicles,0
+road_configuration,2020,Express lane of a freeway system,injured,0
+road_configuration,2020,Express lane of a freeway system,fatalities,0
+road_configuration,2021,Express lane of a freeway system,vehicles,0
+road_configuration,2021,Express lane of a freeway system,injured,0
+road_configuration,2021,Express lane of a freeway system,fatalities,0
+road_configuration,2022,Express lane of a freeway system,vehicles,0
+road_configuration,2022,Express lane of a freeway system,injured,0
+road_configuration,2022,Express lane of a freeway system,fatalities,0
+road_configuration,2023,Express lane of a freeway system,vehicles,0
+road_configuration,2023,Express lane of a freeway system,injured,0
+road_configuration,2023,Express lane of a freeway system,fatalities,0
+road_configuration,2010,Collector lane of a freeway system,vehicles,0
+road_configuration,2010,Collector lane of a freeway system,injured,0
+road_configuration,2010,Collector lane of a freeway system,fatalities,0
+road_configuration,2011,Collector lane of a freeway system,vehicles,0
+road_configuration,2011,Collector lane of a freeway system,injured,0
+road_configuration,2011,Collector lane of a freeway system,fatalities,0
+road_configuration,2012,Collector lane of a freeway system,vehicles,0
+road_configuration,2012,Collector lane of a freeway system,injured,0
+road_configuration,2012,Collector lane of a freeway system,fatalities,0
+road_configuration,2013,Collector lane of a freeway system,vehicles,0
+road_configuration,2013,Collector lane of a freeway system,injured,0
+road_configuration,2013,Collector lane of a freeway system,fatalities,0
+road_configuration,2014,Collector lane of a freeway system,vehicles,0
+road_configuration,2014,Collector lane of a freeway system,injured,0
+road_configuration,2014,Collector lane of a freeway system,fatalities,0
+road_configuration,2015,Collector lane of a freeway system,vehicles,0
+road_configuration,2015,Collector lane of a freeway system,injured,0
+road_configuration,2015,Collector lane of a freeway system,fatalities,0
+road_configuration,2016,Collector lane of a freeway system,vehicles,0
+road_configuration,2016,Collector lane of a freeway system,injured,0
+road_configuration,2016,Collector lane of a freeway system,fatalities,0
+road_configuration,2017,Collector lane of a freeway system,vehicles,0
+road_configuration,2017,Collector lane of a freeway system,injured,0
+road_configuration,2017,Collector lane of a freeway system,fatalities,0
+road_configuration,2018,Collector lane of a freeway system,vehicles,0
+road_configuration,2018,Collector lane of a freeway system,injured,0
+road_configuration,2018,Collector lane of a freeway system,fatalities,0
+road_configuration,2019,Collector lane of a freeway system,vehicles,0
+road_configuration,2019,Collector lane of a freeway system,injured,0
+road_configuration,2019,Collector lane of a freeway system,fatalities,0
+road_configuration,2020,Collector lane of a freeway system,vehicles,0
+road_configuration,2020,Collector lane of a freeway system,injured,0
+road_configuration,2020,Collector lane of a freeway system,fatalities,0
+road_configuration,2021,Collector lane of a freeway system,vehicles,0
+road_configuration,2021,Collector lane of a freeway system,injured,0
+road_configuration,2021,Collector lane of a freeway system,fatalities,0
+road_configuration,2022,Collector lane of a freeway system,vehicles,0
+road_configuration,2022,Collector lane of a freeway system,injured,0
+road_configuration,2022,Collector lane of a freeway system,fatalities,0
+road_configuration,2023,Collector lane of a freeway system,vehicles,0
+road_configuration,2023,Collector lane of a freeway system,injured,0
+road_configuration,2023,Collector lane of a freeway system,fatalities,0
+road_configuration,2010,Transfer lane of a freeway system,vehicles,0
+road_configuration,2010,Transfer lane of a freeway system,injured,0
+road_configuration,2010,Transfer lane of a freeway system,fatalities,0
+road_configuration,2011,Transfer lane of a freeway system,vehicles,0
+road_configuration,2011,Transfer lane of a freeway system,injured,0
+road_configuration,2011,Transfer lane of a freeway system,fatalities,0
+road_configuration,2012,Transfer lane of a freeway system,vehicles,0
+road_configuration,2012,Transfer lane of a freeway system,injured,0
+road_configuration,2012,Transfer lane of a freeway system,fatalities,0
+road_configuration,2013,Transfer lane of a freeway system,vehicles,0
+road_configuration,2013,Transfer lane of a freeway system,injured,0
+road_configuration,2013,Transfer lane of a freeway system,fatalities,0
+road_configuration,2014,Transfer lane of a freeway system,vehicles,0
+road_configuration,2014,Transfer lane of a freeway system,injured,0
+road_configuration,2014,Transfer lane of a freeway system,fatalities,0
+road_configuration,2015,Transfer lane of a freeway system,vehicles,0
+road_configuration,2015,Transfer lane of a freeway system,injured,0
+road_configuration,2015,Transfer lane of a freeway system,fatalities,0
+road_configuration,2016,Transfer lane of a freeway system,vehicles,0
+road_configuration,2016,Transfer lane of a freeway system,injured,0
+road_configuration,2016,Transfer lane of a freeway system,fatalities,0
+road_configuration,2017,Transfer lane of a freeway system,vehicles,0
+road_configuration,2017,Transfer lane of a freeway system,injured,0
+road_configuration,2017,Transfer lane of a freeway system,fatalities,0
+road_configuration,2018,Transfer lane of a freeway system,vehicles,0
+road_configuration,2018,Transfer lane of a freeway system,injured,0
+road_configuration,2018,Transfer lane of a freeway system,fatalities,0
+road_configuration,2019,Transfer lane of a freeway system,vehicles,0
+road_configuration,2019,Transfer lane of a freeway system,injured,0
+road_configuration,2019,Transfer lane of a freeway system,fatalities,0
+road_configuration,2020,Transfer lane of a freeway system,vehicles,0
+road_configuration,2020,Transfer lane of a freeway system,injured,0
+road_configuration,2020,Transfer lane of a freeway system,fatalities,0
+road_configuration,2021,Transfer lane of a freeway system,vehicles,0
+road_configuration,2021,Transfer lane of a freeway system,injured,0
+road_configuration,2021,Transfer lane of a freeway system,fatalities,0
+road_configuration,2022,Transfer lane of a freeway system,vehicles,0
+road_configuration,2022,Transfer lane of a freeway system,injured,0
+road_configuration,2022,Transfer lane of a freeway system,fatalities,0
+road_configuration,2023,Transfer lane of a freeway system,vehicles,0
+road_configuration,2023,Transfer lane of a freeway system,injured,0
+road_configuration,2023,Transfer lane of a freeway system,fatalities,0
+road_configuration,2010,Other,vehicles,145
+road_configuration,2010,Other,injured,145
+road_configuration,2010,Other,fatalities,0
+road_configuration,2011,Other,vehicles,161
+road_configuration,2011,Other,injured,158
+road_configuration,2011,Other,fatalities,1
+road_configuration,2012,Other,vehicles,150
+road_configuration,2012,Other,injured,146
+road_configuration,2012,Other,fatalities,1
+road_configuration,2013,Other,vehicles,151
+road_configuration,2013,Other,injured,152
+road_configuration,2013,Other,fatalities,0
+road_configuration,2014,Other,vehicles,130
+road_configuration,2014,Other,injured,128
+road_configuration,2014,Other,fatalities,1
+road_configuration,2015,Other,vehicles,131
+road_configuration,2015,Other,injured,131
+road_configuration,2015,Other,fatalities,0
+road_configuration,2016,Other,vehicles,147
+road_configuration,2016,Other,injured,147
+road_configuration,2016,Other,fatalities,0
+road_configuration,2017,Other,vehicles,156
+road_configuration,2017,Other,injured,150
+road_configuration,2017,Other,fatalities,2
+road_configuration,2018,Other,vehicles,142
+road_configuration,2018,Other,injured,142
+road_configuration,2018,Other,fatalities,0
+road_configuration,2019,Other,vehicles,129
+road_configuration,2019,Other,injured,127
+road_configuration,2019,Other,fatalities,0
+road_configuration,2020,Other,vehicles,104
+road_configuration,2020,Other,injured,103
+road_configuration,2020,Other,fatalities,1
+road_configuration,2021,Other,vehicles,99
+road_configuration,2021,Other,injured,98
+road_configuration,2021,Other,fatalities,0
+road_configuration,2022,Other,vehicles,88
+road_configuration,2022,Other,injured,86
+road_configuration,2022,Other,fatalities,1
+road_configuration,2023,Other,vehicles,108
+road_configuration,2023,Other,injured,103
+road_configuration,2023,Other,fatalities,2
+road_configuration,2010,Unknown,vehicles,347
+road_configuration,2010,Unknown,injured,332
+road_configuration,2010,Unknown,fatalities,5
+road_configuration,2011,Unknown,vehicles,346
+road_configuration,2011,Unknown,injured,337
+road_configuration,2011,Unknown,fatalities,2
+road_configuration,2012,Unknown,vehicles,360
+road_configuration,2012,Unknown,injured,352
+road_configuration,2012,Unknown,fatalities,2
+road_configuration,2013,Unknown,vehicles,315
+road_configuration,2013,Unknown,injured,311
+road_configuration,2013,Unknown,fatalities,1
+road_configuration,2014,Unknown,vehicles,270
+road_configuration,2014,Unknown,injured,265
+road_configuration,2014,Unknown,fatalities,2
+road_configuration,2015,Unknown,vehicles,320
+road_configuration,2015,Unknown,injured,318
+road_configuration,2015,Unknown,fatalities,0
+road_configuration,2016,Unknown,vehicles,267
+road_configuration,2016,Unknown,injured,263
+road_configuration,2016,Unknown,fatalities,2
+road_configuration,2017,Unknown,vehicles,237
+road_configuration,2017,Unknown,injured,232
+road_configuration,2017,Unknown,fatalities,3
+road_configuration,2018,Unknown,vehicles,204
+road_configuration,2018,Unknown,injured,200
+road_configuration,2018,Unknown,fatalities,2
+road_configuration,2019,Unknown,vehicles,182
+road_configuration,2019,Unknown,injured,179
+road_configuration,2019,Unknown,fatalities,1
+road_configuration,2020,Unknown,vehicles,176
+road_configuration,2020,Unknown,injured,174
+road_configuration,2020,Unknown,fatalities,1
+road_configuration,2021,Unknown,vehicles,233
+road_configuration,2021,Unknown,injured,227
+road_configuration,2021,Unknown,fatalities,1
+road_configuration,2022,Unknown,vehicles,185
+road_configuration,2022,Unknown,injured,182
+road_configuration,2022,Unknown,fatalities,1
+road_configuration,2023,Unknown,vehicles,213
+road_configuration,2023,Unknown,injured,209
+road_configuration,2023,Unknown,fatalities,1
+light,2010,Total,vehicles,6712
+light,2010,Total,injured,6484
+light,2010,Total,fatalities,61
+light,2011,Total,vehicles,6587
+light,2011,Total,injured,6416
+light,2011,Total,fatalities,56
+light,2012,Total,vehicles,6842
+light,2012,Total,injured,6614
+light,2012,Total,fatalities,63
+light,2013,Total,vehicles,6435
+light,2013,Total,injured,6251
+light,2013,Total,fatalities,69
+light,2014,Total,vehicles,5799
+light,2014,Total,injured,5581
+light,2014,Total,fatalities,42
+light,2015,Total,vehicles,6455
+light,2015,Total,injured,6200
+light,2015,Total,fatalities,50
+light,2016,Total,vehicles,6341
+light,2016,Total,injured,6102
+light,2016,Total,fatalities,49
+light,2017,Total,vehicles,5600
+light,2017,Total,injured,5428
+light,2017,Total,fatalities,38
+light,2018,Total,vehicles,4892
+light,2018,Total,injured,4743
+light,2018,Total,fatalities,48
+light,2019,Total,vehicles,4628
+light,2019,Total,injured,4499
+light,2019,Total,fatalities,43
+light,2020,Total,vehicles,3717
+light,2020,Total,injured,3440
+light,2020,Total,fatalities,50
+light,2021,Total,vehicles,4196
+light,2021,Total,injured,4059
+light,2021,Total,fatalities,39
+light,2022,Total,vehicles,4047
+light,2022,Total,injured,3928
+light,2022,Total,fatalities,48
+light,2023,Total,vehicles,4902
+light,2023,Total,injured,4742
+light,2023,Total,fatalities,46
+light,2010,Daylight,vehicles,5300
+light,2010,Daylight,injured,5126
+light,2010,Daylight,fatalities,45
+light,2011,Daylight,vehicles,5195
+light,2011,Daylight,injured,5070
+light,2011,Daylight,fatalities,35
+light,2012,Daylight,vehicles,5481
+light,2012,Daylight,injured,5320
+light,2012,Daylight,fatalities,38
+light,2013,Daylight,vehicles,5175
+light,2013,Daylight,injured,5029
+light,2013,Daylight,fatalities,51
+light,2014,Daylight,vehicles,4573
+light,2014,Daylight,injured,4398
+light,2014,Daylight,fatalities,33
+light,2015,Daylight,vehicles,5098
+light,2015,Daylight,injured,4906
+light,2015,Daylight,fatalities,27
+light,2016,Daylight,vehicles,5057
+light,2016,Daylight,injured,4863
+light,2016,Daylight,fatalities,34
+light,2017,Daylight,vehicles,4462
+light,2017,Daylight,injured,4324
+light,2017,Daylight,fatalities,28
+light,2018,Daylight,vehicles,3913
+light,2018,Daylight,injured,3797
+light,2018,Daylight,fatalities,33
+light,2019,Daylight,vehicles,3716
+light,2019,Daylight,injured,3624
+light,2019,Daylight,fatalities,25
+light,2020,Daylight,vehicles,2992
+light,2020,Daylight,injured,2773
+light,2020,Daylight,fatalities,32
+light,2021,Daylight,vehicles,3322
+light,2021,Daylight,injured,3213
+light,2021,Daylight,fatalities,28
+light,2022,Daylight,vehicles,3190
+light,2022,Daylight,injured,3109
+light,2022,Daylight,fatalities,31
+light,2023,Daylight,vehicles,3818
+light,2023,Daylight,injured,3689
+light,2023,Daylight,fatalities,37
+light,2010,Dawn,vehicles,74
+light,2010,Dawn,injured,70
+light,2010,Dawn,fatalities,0
+light,2011,Dawn,vehicles,63
+light,2011,Dawn,injured,63
+light,2011,Dawn,fatalities,0
+light,2012,Dawn,vehicles,63
+light,2012,Dawn,injured,62
+light,2012,Dawn,fatalities,1
+light,2013,Dawn,vehicles,64
+light,2013,Dawn,injured,63
+light,2013,Dawn,fatalities,0
+light,2014,Dawn,vehicles,53
+light,2014,Dawn,injured,51
+light,2014,Dawn,fatalities,0
+light,2015,Dawn,vehicles,56
+light,2015,Dawn,injured,54
+light,2015,Dawn,fatalities,0
+light,2016,Dawn,vehicles,60
+light,2016,Dawn,injured,60
+light,2016,Dawn,fatalities,0
+light,2017,Dawn,vehicles,57
+light,2017,Dawn,injured,54
+light,2017,Dawn,fatalities,0
+light,2018,Dawn,vehicles,53
+light,2018,Dawn,injured,51
+light,2018,Dawn,fatalities,1
+light,2019,Dawn,vehicles,44
+light,2019,Dawn,injured,44
+light,2019,Dawn,fatalities,0
+light,2020,Dawn,vehicles,34
+light,2020,Dawn,injured,29
+light,2020,Dawn,fatalities,1
+light,2021,Dawn,vehicles,34
+light,2021,Dawn,injured,31
+light,2021,Dawn,fatalities,0
+light,2022,Dawn,vehicles,37
+light,2022,Dawn,injured,34
+light,2022,Dawn,fatalities,1
+light,2023,Dawn,vehicles,56
+light,2023,Dawn,injured,55
+light,2023,Dawn,fatalities,1
+light,2010,Dusk,vehicles,225
+light,2010,Dusk,injured,215
+light,2010,Dusk,fatalities,3
+light,2011,Dusk,vehicles,207
+light,2011,Dusk,injured,197
+light,2011,Dusk,fatalities,4
+light,2012,Dusk,vehicles,202
+light,2012,Dusk,injured,193
+light,2012,Dusk,fatalities,3
+light,2013,Dusk,vehicles,189
+light,2013,Dusk,injured,187
+light,2013,Dusk,fatalities,3
+light,2014,Dusk,vehicles,174
+light,2014,Dusk,injured,169
+light,2014,Dusk,fatalities,1
+light,2015,Dusk,vehicles,214
+light,2015,Dusk,injured,206
+light,2015,Dusk,fatalities,3
+light,2016,Dusk,vehicles,184
+light,2016,Dusk,injured,176
+light,2016,Dusk,fatalities,4
+light,2017,Dusk,vehicles,193
+light,2017,Dusk,injured,189
+light,2017,Dusk,fatalities,0
+light,2018,Dusk,vehicles,149
+light,2018,Dusk,injured,141
+light,2018,Dusk,fatalities,1
+light,2019,Dusk,vehicles,146
+light,2019,Dusk,injured,143
+light,2019,Dusk,fatalities,1
+light,2020,Dusk,vehicles,99
+light,2020,Dusk,injured,93
+light,2020,Dusk,fatalities,1
+light,2021,Dusk,vehicles,137
+light,2021,Dusk,injured,134
+light,2021,Dusk,fatalities,0
+light,2022,Dusk,vehicles,111
+light,2022,Dusk,injured,108
+light,2022,Dusk,fatalities,1
+light,2023,Dusk,vehicles,157
+light,2023,Dusk,injured,154
+light,2023,Dusk,fatalities,0
+light,2010,Dawn or dusk,vehicles,0
+light,2010,Dawn or dusk,injured,0
+light,2010,Dawn or dusk,fatalities,0
+light,2011,Dawn or dusk,vehicles,0
+light,2011,Dawn or dusk,injured,0
+light,2011,Dawn or dusk,fatalities,0
+light,2012,Dawn or dusk,vehicles,0
+light,2012,Dawn or dusk,injured,0
+light,2012,Dawn or dusk,fatalities,0
+light,2013,Dawn or dusk,vehicles,0
+light,2013,Dawn or dusk,injured,0
+light,2013,Dawn or dusk,fatalities,0
+light,2014,Dawn or dusk,vehicles,0
+light,2014,Dawn or dusk,injured,0
+light,2014,Dawn or dusk,fatalities,0
+light,2015,Dawn or dusk,vehicles,0
+light,2015,Dawn or dusk,injured,0
+light,2015,Dawn or dusk,fatalities,0
+light,2016,Dawn or dusk,vehicles,0
+light,2016,Dawn or dusk,injured,0
+light,2016,Dawn or dusk,fatalities,0
+light,2017,Dawn or dusk,vehicles,0
+light,2017,Dawn or dusk,injured,0
+light,2017,Dawn or dusk,fatalities,0
+light,2018,Dawn or dusk,vehicles,0
+light,2018,Dawn or dusk,injured,0
+light,2018,Dawn or dusk,fatalities,0
+light,2019,Dawn or dusk,vehicles,0
+light,2019,Dawn or dusk,injured,0
+light,2019,Dawn or dusk,fatalities,0
+light,2020,Dawn or dusk,vehicles,0
+light,2020,Dawn or dusk,injured,0
+light,2020,Dawn or dusk,fatalities,0
+light,2021,Dawn or dusk,vehicles,0
+light,2021,Dawn or dusk,injured,0
+light,2021,Dawn or dusk,fatalities,0
+light,2022,Dawn or dusk,vehicles,0
+light,2022,Dawn or dusk,injured,0
+light,2022,Dawn or dusk,fatalities,0
+light,2023,Dawn or dusk,vehicles,0
+light,2023,Dawn or dusk,injured,0
+light,2023,Dawn or dusk,fatalities,0
+light,2010,Darkness,vehicles,1032
+light,2010,Darkness,injured,994
+light,2010,Darkness,fatalities,12
+light,2011,Darkness,vehicles,1048
+light,2011,Darkness,injured,1013
+light,2011,Darkness,fatalities,16
+light,2012,Darkness,vehicles,1011
+light,2012,Darkness,injured,955
+light,2012,Darkness,fatalities,20
+light,2013,Darkness,vehicles,933
+light,2013,Darkness,injured,899
+light,2013,Darkness,fatalities,15
+light,2014,Darkness,vehicles,909
+light,2014,Darkness,injured,874
+light,2014,Darkness,fatalities,8
+light,2015,Darkness,vehicles,1018
+light,2015,Darkness,injured,966
+light,2015,Darkness,fatalities,20
+light,2016,Darkness,vehicles,925
+light,2016,Darkness,injured,891
+light,2016,Darkness,fatalities,9
+light,2017,Darkness,vehicles,817
+light,2017,Darkness,injured,794
+light,2017,Darkness,fatalities,10
+light,2018,Darkness,vehicles,706
+light,2018,Darkness,injured,685
+light,2018,Darkness,fatalities,13
+light,2019,Darkness,vehicles,668
+light,2019,Darkness,injured,634
+light,2019,Darkness,fatalities,17
+light,2020,Darkness,vehicles,532
+light,2020,Darkness,injured,490
+light,2020,Darkness,fatalities,15
+light,2021,Darkness,vehicles,618
+light,2021,Darkness,injured,597
+light,2021,Darkness,fatalities,10
+light,2022,Darkness,vehicles,625
+light,2022,Darkness,injured,595
+light,2022,Darkness,fatalities,13
+light,2023,Darkness,vehicles,771
+light,2023,Darkness,injured,744
+light,2023,Darkness,fatalities,8
+light,2010,Choice is other than the preceding values,vehicles,0
+light,2010,Choice is other than the preceding values,injured,0
+light,2010,Choice is other than the preceding values,fatalities,0
+light,2011,Choice is other than the preceding values,vehicles,0
+light,2011,Choice is other than the preceding values,injured,0
+light,2011,Choice is other than the preceding values,fatalities,0
+light,2012,Choice is other than the preceding values,vehicles,0
+light,2012,Choice is other than the preceding values,injured,0
+light,2012,Choice is other than the preceding values,fatalities,0
+light,2013,Choice is other than the preceding values,vehicles,0
+light,2013,Choice is other than the preceding values,injured,0
+light,2013,Choice is other than the preceding values,fatalities,0
+light,2014,Choice is other than the preceding values,vehicles,0
+light,2014,Choice is other than the preceding values,injured,0
+light,2014,Choice is other than the preceding values,fatalities,0
+light,2015,Choice is other than the preceding values,vehicles,0
+light,2015,Choice is other than the preceding values,injured,0
+light,2015,Choice is other than the preceding values,fatalities,0
+light,2016,Choice is other than the preceding values,vehicles,0
+light,2016,Choice is other than the preceding values,injured,0
+light,2016,Choice is other than the preceding values,fatalities,0
+light,2017,Choice is other than the preceding values,vehicles,0
+light,2017,Choice is other than the preceding values,injured,0
+light,2017,Choice is other than the preceding values,fatalities,0
+light,2018,Choice is other than the preceding values,vehicles,0
+light,2018,Choice is other than the preceding values,injured,0
+light,2018,Choice is other than the preceding values,fatalities,0
+light,2019,Choice is other than the preceding values,vehicles,0
+light,2019,Choice is other than the preceding values,injured,0
+light,2019,Choice is other than the preceding values,fatalities,0
+light,2020,Choice is other than the preceding values,vehicles,0
+light,2020,Choice is other than the preceding values,injured,0
+light,2020,Choice is other than the preceding values,fatalities,0
+light,2021,Choice is other than the preceding values,vehicles,0
+light,2021,Choice is other than the preceding values,injured,0
+light,2021,Choice is other than the preceding values,fatalities,0
+light,2022,Choice is other than the preceding values,vehicles,0
+light,2022,Choice is other than the preceding values,injured,0
+light,2022,Choice is other than the preceding values,fatalities,0
+light,2023,Choice is other than the preceding values,vehicles,0
+light,2023,Choice is other than the preceding values,injured,0
+light,2023,Choice is other than the preceding values,fatalities,0
+light,2010,Unknown,vehicles,81
+light,2010,Unknown,injured,79
+light,2010,Unknown,fatalities,1
+light,2011,Unknown,vehicles,74
+light,2011,Unknown,injured,73
+light,2011,Unknown,fatalities,1
+light,2012,Unknown,vehicles,85
+light,2012,Unknown,injured,84
+light,2012,Unknown,fatalities,1
+light,2013,Unknown,vehicles,74
+light,2013,Unknown,injured,73
+light,2013,Unknown,fatalities,0
+light,2014,Unknown,vehicles,90
+light,2014,Unknown,injured,89
+light,2014,Unknown,fatalities,0
+light,2015,Unknown,vehicles,69
+light,2015,Unknown,injured,68
+light,2015,Unknown,fatalities,0
+light,2016,Unknown,vehicles,115
+light,2016,Unknown,injured,112
+light,2016,Unknown,fatalities,2
+light,2017,Unknown,vehicles,71
+light,2017,Unknown,injured,67
+light,2017,Unknown,fatalities,0
+light,2018,Unknown,vehicles,71
+light,2018,Unknown,injured,69
+light,2018,Unknown,fatalities,0
+light,2019,Unknown,vehicles,54
+light,2019,Unknown,injured,54
+light,2019,Unknown,fatalities,0
+light,2020,Unknown,vehicles,60
+light,2020,Unknown,injured,55
+light,2020,Unknown,fatalities,1
+light,2021,Unknown,vehicles,85
+light,2021,Unknown,injured,84
+light,2021,Unknown,fatalities,1
+light,2022,Unknown,vehicles,84
+light,2022,Unknown,injured,82
+light,2022,Unknown,fatalities,2
+light,2023,Unknown,vehicles,100
+light,2023,Unknown,injured,100
+light,2023,Unknown,fatalities,0
+light,2010,Jurisdiction does not provide this data element,vehicles,0
+light,2010,Jurisdiction does not provide this data element,injured,0
+light,2010,Jurisdiction does not provide this data element,fatalities,0
+light,2011,Jurisdiction does not provide this data element,vehicles,0
+light,2011,Jurisdiction does not provide this data element,injured,0
+light,2011,Jurisdiction does not provide this data element,fatalities,0
+light,2012,Jurisdiction does not provide this data element,vehicles,0
+light,2012,Jurisdiction does not provide this data element,injured,0
+light,2012,Jurisdiction does not provide this data element,fatalities,0
+light,2013,Jurisdiction does not provide this data element,vehicles,0
+light,2013,Jurisdiction does not provide this data element,injured,0
+light,2013,Jurisdiction does not provide this data element,fatalities,0
+light,2014,Jurisdiction does not provide this data element,vehicles,0
+light,2014,Jurisdiction does not provide this data element,injured,0
+light,2014,Jurisdiction does not provide this data element,fatalities,0
+light,2015,Jurisdiction does not provide this data element,vehicles,0
+light,2015,Jurisdiction does not provide this data element,injured,0
+light,2015,Jurisdiction does not provide this data element,fatalities,0
+light,2016,Jurisdiction does not provide this data element,vehicles,0
+light,2016,Jurisdiction does not provide this data element,injured,0
+light,2016,Jurisdiction does not provide this data element,fatalities,0
+light,2017,Jurisdiction does not provide this data element,vehicles,0
+light,2017,Jurisdiction does not provide this data element,injured,0
+light,2017,Jurisdiction does not provide this data element,fatalities,0
+light,2018,Jurisdiction does not provide this data element,vehicles,0
+light,2018,Jurisdiction does not provide this data element,injured,0
+light,2018,Jurisdiction does not provide this data element,fatalities,0
+light,2019,Jurisdiction does not provide this data element,vehicles,0
+light,2019,Jurisdiction does not provide this data element,injured,0
+light,2019,Jurisdiction does not provide this data element,fatalities,0
+light,2020,Jurisdiction does not provide this data element,vehicles,0
+light,2020,Jurisdiction does not provide this data element,injured,0
+light,2020,Jurisdiction does not provide this data element,fatalities,0
+light,2021,Jurisdiction does not provide this data element,vehicles,0
+light,2021,Jurisdiction does not provide this data element,injured,0
+light,2021,Jurisdiction does not provide this data element,fatalities,0
+light,2022,Jurisdiction does not provide this data element,vehicles,0
+light,2022,Jurisdiction does not provide this data element,injured,0
+light,2022,Jurisdiction does not provide this data element,fatalities,0
+light,2023,Jurisdiction does not provide this data element,vehicles,0
+light,2023,Jurisdiction does not provide this data element,injured,0
+light,2023,Jurisdiction does not provide this data element,fatalities,0

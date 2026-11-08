@@ -1,0 +1,34 @@
+{
+  "status": "first_edition_acquired_and_validated_with_documented_source_differences",
+  "basis": "Pinned record files copied and checksum-verified; live Online tables captured October 17, 2026; validation described in docs/validation.md.",
+  "sources": [
+    {
+      "id": "transport_canada_statistics_index",
+      "title": "Transport Canada \u2014 Statistics and data",
+      "url": "https://tc.canada.ca/en/road-transportation/statistics-data",
+      "role": "Discover official reports and data sources",
+      "status": "official_discovery_index"
+    },
+    {
+      "id": "ncdb_public_records",
+      "title": "National Collision Database \u2014 Open Government",
+      "url": "https://open.canada.ca/data/en/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a",
+      "role": "Candidate annual collision, vehicle and person records and data dictionary",
+      "status": "nine_pinned_sources_selected_for_2010_2021"
+    },
+    {
+      "id": "ncdb_online",
+      "title": "National Collision Database Online",
+      "url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+      "role": "Candidate national bicycle and bicyclist aggregate tables",
+      "status": "2010_2023_bicycle_and_bicyclist_tables_captured_and_partition_checked"
+    },
+    {
+      "id": "ncdb_dictionary",
+      "title": "National Collision Database \u2014 Data Dictionary",
+      "url": "https://open.canada.ca/data/dataset/1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a/resource/21eb7966-38da-4814-a80e-521bce6c4c27/download/data_dictionary.pdf",
+      "role": "Candidate field definitions and code domains",
+      "status": "official_copy_acquired_and_checksum_verified"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+period_start,period_end,dimension,category,measure,count
+2014,2023,Year,2014,Fatalities,1852
+2014,2023,Year,2015,Fatalities,1895
+2014,2023,Year,2016,Fatalities,1916
+2014,2023,Year,2017,Fatalities,1899
+2014,2023,Year,2018,Fatalities,1976
+2014,2023,Year,2019,Fatalities,1786
+2014,2023,Year,2020,Fatalities,1716
+2014,2023,Year,2021,Fatalities,1825
+2014,2023,Year,2022,Fatalities,2002
+2014,2023,Year,2023,Fatalities,2000
+2014,2023,Month,January,Fatalities,1232
+2014,2023,Month,February,Fatalities,1045
+2014,2023,Month,March,Fatalities,1033
+2014,2023,Month,April,Fatalities,1143
+2014,2023,Month,May,Fatalities,1527
+2014,2023,Month,June,Fatalities,1738
+2014,2023,Month,July,Fatalities,2056
+2014,2023,Month,August,Fatalities,2059
+2014,2023,Month,September,Fatalities,1869
+2014,2023,Month,October,Fatalities,1968
+2014,2023,Month,November,Fatalities,1674
+2014,2023,Month,December,Fatalities,1517
+2014,2023,Month,Unknown,Fatalities,6
+2014,2023,Day of Week,Monday,Fatalities,2496
+2014,2023,Day of Week,Tuesday,Fatalities,2513
+2014,2023,Day of Week,Wednesday,Fatalities,2495
+2014,2023,Day of Week,Thursday,Fatalities,2619
+2014,2023,Day of Week,Friday,Fatalities,3048
+2014,2023,Day of Week,Saturday,Fatalities,2954
+2014,2023,Day of Week,Sunday,Fatalities,2736
+2014,2023,Day of Week,Unknown,Fatalities,6
+2014,2023,Collision Hour,0:00 to 2:59,Fatalities,1621
+2014,2023,Collision Hour,3:00 to 5:59,Fatalities,1196
+2014,2023,Collision Hour,6:00 to 8:59,Fatalities,1996
+2014,2023,Collision Hour,9:00 to 11:59,Fatalities,2204
+2014,2023,Collision Hour,12:00 to 14:59,Fatalities,2888
+2014,2023,Collision Hour,15:00 to 17:59,Fatalities,3495
+2014,2023,Collision Hour,18:00 to 20:59,Fatalities,2935
+2014,2023,Collision Hour,21:00 to 23:59,Fatalities,2266
+2014,2023,Collision Hour,Unknown,Fatalities,266
+2014,2023,Gender,Female,Fatalities,5568
+2014,2023,Gender,Male,Fatalities,13231
+2014,2023,Gender,Unknown,Fatalities,68
+2014,2023,Person Age,0-4,Fatalities,158
+2014,2023,Person Age,5-9,Fatalities,150
+2014,2023,Person Age,10-14,Fatalities,194
+2014,2023,Person Age,15-19,Fatalities,1256
+2014,2023,Person Age,20-24,Fatalities,1887
+2014,2023,Person Age,25-29,Fatalities,1706
+2014,2023,Person Age,30-34,Fatalities,1431
+2014,2023,Person Age,35-39,Fatalities,1279
+2014,2023,Person Age,40-44,Fatalities,1142
+2014,2023,Person Age,45-49,Fatalities,1170
+2014,2023,Person Age,50-54,Fatalities,1333
+2014,2023,Person Age,55-59,Fatalities,1439
+2014,2023,Person Age,60-64,Fatalities,1339
+2014,2023,Person Age,65-69,Fatalities,1087
+2014,2023,Person Age,70-74,Fatalities,951
+2014,2023,Person Age,75 +,Fatalities,2228
+2014,2023,Person Age,Not applicable,Fatalities,1
+2014,2023,Person Age,Unknown,Fatalities,116
+2014,2023,Road User Class,Motor vehicle driver,Fatalities,9123
+2014,2023,Road User Class,Motor vehicle passenger,Fatalities,3057
+2014,2023,Road User Class,Pedestrian,Fatalities,3269
+2014,2023,Road User Class,Bicyclist,Fatalities,463
+2014,2023,Road User Class,Motorcyclist,Fatalities,2226
+2014,2023,Road User Class,Unknown,Fatalities,729
+2014,2023,Year,2014,Injuries,157764
+2014,2023,Year,2015,Injuries,161239
+2014,2023,Year,2016,Injuries,160246
+2014,2023,Year,2017,Injuries,155085
+2014,2023,Year,2018,Injuries,149278
+2014,2023,Year,2019,Injuries,138752
+2014,2023,Year,2020,Injuries,98847
+2014,2023,Year,2021,Injuries,107055
+2014,2023,Year,2022,Injuries,117950
+2014,2023,Year,2023,Injuries,123737
+2014,2023,Month,January,Injuries,115881
+2014,2023,Month,February,Injuries,104465
+2014,2023,Month,March,Injuries,94040
+2014,2023,Month,April,Injuries,84801
+2014,2023,Month,May,Injuries,105625
+2014,2023,Month,June,Injuries,119439
+2014,2023,Month,July,Injuries,125875
+2014,2023,Month,August,Injuries,126685
+2014,2023,Month,September,Injuries,123139
+2014,2023,Month,October,Injuries,124669
+2014,2023,Month,November,Injuries,122983
+2014,2023,Month,December,Injuries,122332
+2014,2023,Month,Unknown,Injuries,19
+2014,2023,Day of Week,Monday,Injuries,185472
+2014,2023,Day of Week,Tuesday,Injuries,198196
+2014,2023,Day of Week,Wednesday,Injuries,199884
+2014,2023,Day of Week,Thursday,Injuries,209015
+2014,2023,Day of Week,Friday,Injuries,227011
+2014,2023,Day of Week,Saturday,Injuries,189746
+2014,2023,Day of Week,Sunday,Injuries,160609
+2014,2023,Day of Week,Unknown,Injuries,20
+2014,2023,Collision Hour,0:00 to 2:59,Injuries,47885
+2014,2023,Collision Hour,3:00 to 5:59,Injuries,36386
+2014,2023,Collision Hour,6:00 to 8:59,Injuries,160985
+2014,2023,Collision Hour,9:00 to 11:59,Injuries,190492
+2014,2023,Collision Hour,12:00 to 14:59,Injuries,263436
+2014,2023,Collision Hour,15:00 to 17:59,Injuries,348869
+2014,2023,Collision Hour,18:00 to 20:59,Injuries,200816
+2014,2023,Collision Hour,21:00 to 23:59,Injuries,109452
+2014,2023,Collision Hour,Unknown,Injuries,11632
+2014,2023,Gender,Female,Injuries,694857
+2014,2023,Gender,Male,Injuries,662322
+2014,2023,Gender,Unknown,Injuries,12774
+2014,2023,Person Age,0-4,Injuries,17437
+2014,2023,Person Age,5-9,Injuries,23075
+2014,2023,Person Age,10-14,Injuries,31713
+2014,2023,Person Age,15-19,Injuries,120443
+2014,2023,Person Age,20-24,Injuries,154940
+2014,2023,Person Age,25-29,Injuries,139205
+2014,2023,Person Age,30-34,Injuries,121237
+2014,2023,Person Age,35-39,Injuries,110009
+2014,2023,Person Age,40-44,Injuries,102328
+2014,2023,Person Age,45-49,Injuries,99105
+2014,2023,Person Age,50-54,Injuries,100698
+2014,2023,Person Age,55-59,Injuries,92561
+2014,2023,Person Age,60-64,Injuries,74284
+2014,2023,Person Age,65-69,Injuries,55205
+2014,2023,Person Age,70-74,Injuries,40109
+2014,2023,Person Age,75 +,Injuries,59693
+2014,2023,Person Age,Not applicable,Injuries,1
+2014,2023,Person Age,Unknown,Injuries,27910
+2014,2023,Road User Class,Motor vehicle driver,Injuries,830207
+2014,2023,Road User Class,Motor vehicle passenger,Injuries,297055
+2014,2023,Road User Class,Pedestrian,Injuries,106943
+2014,2023,Road User Class,Bicyclist,Injuries,48845
+2014,2023,Road User Class,Motorcyclist,Injuries,57097
+2014,2023,Road User Class,Unknown,Injuries,28806

@@ -1,0 +1,117 @@
+feature,code,label,train_count,train_unobserved,validation_count,test_count,reference
+C_MNTH,1,January,211820,False,28607,14032,True
+C_MNTH,2,February,178784,False,24913,13092,False
+C_MNTH,3,March,173399,False,23062,10521,False
+C_MNTH,4,April,164720,False,21500,8336,False
+C_MNTH,5,May,196280,False,26092,11383,False
+C_MNTH,6,June,217738,False,29085,14481,False
+C_MNTH,7,July,220996,False,29850,15455,False
+C_MNTH,8,August,223244,False,29112,16226,False
+C_MNTH,9,September,215622,False,29148,15825,False
+C_MNTH,10,October,217336,False,29781,15249,False
+C_MNTH,11,November,215378,False,30248,14934,False
+C_MNTH,12,December,220468,False,28974,14043,False
+C_MNTH,UU,Unknown,105,False,4,3,False
+C_MNTH,XX,Jurisdiction unavailable,0,True,0,0,False
+C_WDAY,1,Monday,335654,False,45793,22470,True
+C_WDAY,2,Tuesday,353285,False,49350,23710,False
+C_WDAY,3,Wednesday,356547,False,49386,24818,False
+C_WDAY,4,Thursday,373896,False,51259,25250,False
+C_WDAY,5,Friday,414381,False,55176,27140,False
+C_WDAY,6,Saturday,341228,False,42442,21876,False
+C_WDAY,7,Sunday,280380,False,36966,18313,False
+C_WDAY,U,Unknown,519,False,4,3,False
+C_WDAY,X,Jurisdiction unavailable,0,True,0,0,False
+C_HOUR,0,00:00–00:59,40102,False,4588,2288,False
+C_HOUR,1,01:00–01:59,34835,False,3668,1833,False
+C_HOUR,2,02:00–02:59,35951,False,3195,1489,False
+C_HOUR,3,03:00–03:59,31251,False,2833,1262,False
+C_HOUR,4,04:00–04:59,21839,False,2461,1233,False
+C_HOUR,5,05:00–05:59,25698,False,4023,2050,False
+C_HOUR,6,06:00–06:59,55233,False,8793,4499,False
+C_HOUR,7,07:00–07:59,99400,False,14604,6428,False
+C_HOUR,8,08:00–08:59,133616,False,18417,7727,False
+C_HOUR,9,09:00–09:59,101888,False,14629,6701,False
+C_HOUR,10,10:00–10:59,107066,False,14942,7113,False
+C_HOUR,11,11:00–11:59,124693,False,17096,8698,False
+C_HOUR,12,12:00–12:59,148474,False,20151,10213,True
+C_HOUR,13,13:00–13:59,146662,False,20120,10388,False
+C_HOUR,14,14:00–14:59,158702,False,21864,11499,False
+C_HOUR,15,15:00–15:59,194639,False,26480,13607,False
+C_HOUR,16,16:00–16:59,206874,False,28361,14102,False
+C_HOUR,17,17:00–17:59,198571,False,27481,13422,False
+C_HOUR,18,18:00–18:59,149936,False,20323,10134,False
+C_HOUR,19,19:00–19:59,113959,False,15143,8015,False
+C_HOUR,20,20:00–20:59,89882,False,12015,6284,False
+C_HOUR,21,21:00–21:59,84568,False,10973,5222,False
+C_HOUR,22,22:00–22:59,69734,False,8730,4245,False
+C_HOUR,23,23:00–23:59,55359,False,6854,3457,False
+C_HOUR,UU,Unknown,26958,False,2632,1671,False
+C_HOUR,XX,Jurisdiction unavailable,0,True,0,0,False
+C_RCFG,1,Non-intersection,955655,False,144314,69372,True
+C_RCFG,2,Intersection of public roadways,1065676,False,138489,69237,False
+C_RCFG,3,Intersection with private entrance/exit,111226,False,11383,5397,False
+C_RCFG,4,Railroad level crossing,10228,False,1063,579,False
+C_RCFG,5,"Bridge, overpass, viaduct",20592,False,2555,1082,False
+C_RCFG,6,Tunnel or underpass,2588,False,370,324,False
+C_RCFG,7,Passing or climbing lane,433,False,39,141,False
+C_RCFG,8,Ramp,5613,False,953,536,False
+C_RCFG,9,Traffic circle,926,False,395,225,False
+C_RCFG,10,Freeway express lane,174,False,47,27,False
+C_RCFG,11,Freeway collector lane,0,True,0,0,False
+C_RCFG,12,Freeway transfer lane,0,True,0,0,False
+C_RCFG,QQ,Other,75755,False,12503,7488,False
+C_RCFG,UU,Unknown,207024,False,18265,9172,False
+C_RCFG,XX,Jurisdiction unavailable,0,True,0,0,False
+C_WTHR,1,Clear and sunny,1687792,False,232007,118833,True
+C_WTHR,2,"Overcast, no precipitation",264822,False,32034,15996,False
+C_WTHR,3,Raining,243429,False,29807,12671,False
+C_WTHR,4,Snowing (excluding drifting snow),156676,False,22015,10268,False
+C_WTHR,5,"Freezing rain, sleet, hail",14289,False,2359,714,False
+C_WTHR,6,Visibility limitation,37259,False,5713,1545,False
+C_WTHR,7,Strong wind,7480,False,1272,681,False
+C_WTHR,Q,Other,5840,False,662,273,False
+C_WTHR,U,Unknown,38303,False,4507,2599,False
+C_WTHR,X,Jurisdiction unavailable,0,True,0,0,False
+C_RSUR,1,"Dry, normal",1589961,False,216608,114219,True
+C_RSUR,2,Wet,437775,False,54518,23601,False
+C_RSUR,3,"Snow (fresh, loose)",118028,False,15731,6875,False
+C_RSUR,4,"Slush, wet snow",34213,False,5458,2556,False
+C_RSUR,5,Icy (including packed snow),152958,False,21774,8305,False
+C_RSUR,6,Sand/gravel/dirt debris,14531,False,1608,941,False
+C_RSUR,7,Muddy,3106,False,255,142,False
+C_RSUR,8,Oil (including spilled/applied liquid),727,False,90,34,False
+C_RSUR,9,Flooded,157,False,49,26,False
+C_RSUR,Q,Other,71797,False,11045,5135,False
+C_RSUR,U,Unknown,32637,False,3240,1746,False
+C_RSUR,X,Jurisdiction unavailable,0,True,0,0,False
+C_RALN,1,Straight and level,1702454,False,242937,118563,True
+C_RALN,2,Straight with gradient,235711,False,26062,12919,False
+C_RALN,3,Curved and level,190106,False,24813,12814,False
+C_RALN,4,Curved with gradient,112969,False,12129,6486,False
+C_RALN,5,Top of hill or gradient,18490,False,4274,2300,False
+C_RALN,6,Bottom of hill or gradient,13946,False,3388,1893,False
+C_RALN,Q,Other,13686,False,829,223,False
+C_RALN,U,Unknown,168528,False,15944,8382,False
+C_RALN,X,Jurisdiction unavailable,0,True,0,0,False
+C_TRAF,1,Traffic signals operational,610827,False,86293,41537,False
+C_TRAF,2,Traffic signals flashing,7383,False,1037,505,False
+C_TRAF,3,Stop sign,259645,False,36562,18057,False
+C_TRAF,4,Yield sign,37103,False,5824,2539,False
+C_TRAF,5,Warning sign,2152,False,192,105,False
+C_TRAF,6,Pedestrian crosswalk,18948,False,2564,1269,False
+C_TRAF,7,Police officer,807,False,66,24,False
+C_TRAF,8,School guard/flagman,9190,False,1198,446,False
+C_TRAF,9,School crossing,251,False,34,13,False
+C_TRAF,10,Reduced speed zone,1235,False,125,79,False
+C_TRAF,11,No passing zone sign,1602,False,333,221,False
+C_TRAF,12,Road markings,1249,False,382,231,False
+C_TRAF,13,"Stopped school bus, signals flashing",1424,False,165,57,False
+C_TRAF,14,"Stopped school bus, signals not flashing",0,True,0,0,False
+C_TRAF,15,Railway signals/gates,1751,False,219,121,False
+C_TRAF,16,Railway signs only,519,False,110,43,False
+C_TRAF,17,Control device not specified,1573,False,189,79,False
+C_TRAF,18,No control present,1358203,False,172206,86031,True
+C_TRAF,QQ,Other,34680,False,5132,2505,False
+C_TRAF,UU,Unknown,107348,False,17745,9718,False
+C_TRAF,XX,Jurisdiction unavailable,0,True,0,0,False

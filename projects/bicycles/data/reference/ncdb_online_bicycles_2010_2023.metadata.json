@@ -1,0 +1,115 @@
+{
+  "source": "Transport Canada NCDB Online",
+  "url": "https://wwwapps2.tc.gc.ca/Saf-Sec-Sur/7/NCDB-BNDC/p.aspx?l=en",
+  "source_vintage": "August 12, 2025",
+  "reference_years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023
+  ],
+  "geography": "Canada",
+  "filters": {
+    "Vehicle Type": "Bicycle",
+    "Year": "2010\u20132023",
+    "Year totals": false,
+    "Vehicle Type totals": false,
+    "Road User Class": "Bicyclist in road_user_annual, gender and age profiles; no Vehicle Type filter in those queries",
+    "Collision Sev": "Total, Fatal collisions, Injury collisions in annual queries; all severity in profiles"
+  },
+  "acquisition": "Read visible DOM table cells through the browser. Original cell matrices preserved. Native CSV download timed out; these are not native CSV exports or manually typed counts.",
+  "profile_selection": "All displayed mutually exclusive categories, including unknown and not applicable; age uses disjoint native age ranges plus unknown/not applicable; hour uses disjoint three-hour ranges plus unknown.",
+  "excluded_capture": "Earlier age/gender vehicle-context and known-age-only captures are retained for audit; the selected person profiles are gender_road_user.dom.json and age_road_user_complete.dom.json.",
+  "files": [
+    {
+      "dataset": "annual_bicycle_2010_2023",
+      "path": "data/raw/ncdb_online/annual_bicycle_2010_2023.dom.json",
+      "sha256": "b5b84901581792c09dea2fff554fbf3482e96a95182089921fd265ef3d28a169",
+      "captured_at": "2026-10-17T20:46:32.175764+00:00"
+    },
+    {
+      "dataset": "road_user_annual",
+      "path": "data/raw/ncdb_online/road_user_annual.dom.json",
+      "sha256": "5f6816e1899c82c70c19f4b35d826a37fbd242c5ed145604a82eabfd0d6e1efd",
+      "captured_at": "2026-10-17T20:53:08.132864+00:00"
+    },
+    {
+      "dataset": "gender",
+      "path": "data/raw/ncdb_online/gender_road_user.dom.json",
+      "sha256": "ec0c953bbc3e9a556a76bea8707181c2055e2e75f846f528511b250eee00022e",
+      "captured_at": "2026-10-17T20:59:31.739374+00:00"
+    },
+    {
+      "dataset": "age_complete",
+      "path": "data/raw/ncdb_online/age_road_user_complete.dom.json",
+      "sha256": "1e81e22fa28b6ab9912b09bf2190ea22ae48618c4ef1197af267fc0368a4f139",
+      "captured_at": "2026-10-17T20:59:47.666139+00:00"
+    },
+    {
+      "dataset": "month",
+      "path": "data/raw/ncdb_online/month.dom.json",
+      "sha256": "13e1e2374786ff55175faf25d8ce71199bd552b950fc39fe4ddb3ff8a78599eb",
+      "captured_at": "2026-10-17T20:48:28.135889+00:00"
+    },
+    {
+      "dataset": "weekday",
+      "path": "data/raw/ncdb_online/weekday.dom.json",
+      "sha256": "1e005a09b94fe747b72eaa3de6e9c5d4de86a3f36ddff8fe86724ecf6e3570e7",
+      "captured_at": "2026-10-17T20:49:33.639778+00:00"
+    },
+    {
+      "dataset": "hour",
+      "path": "data/raw/ncdb_online/hour.dom.json",
+      "sha256": "707d061dc7d0a6e5dd5adb2eb7b3e70922eb9c592bd7da5698c797351192ee7f",
+      "captured_at": "2026-10-17T20:49:29.709373+00:00"
+    },
+    {
+      "dataset": "weather",
+      "path": "data/raw/ncdb_online/weather.dom.json",
+      "sha256": "5fc0eeafb11fa4fb84c2c3c56f25259a33668e4e70c6206a38c7760abb2758d1",
+      "captured_at": "2026-10-17T20:49:37.650230+00:00"
+    },
+    {
+      "dataset": "surface",
+      "path": "data/raw/ncdb_online/surface.dom.json",
+      "sha256": "8b0e63bc40a2416191d7767b3564deb384ab76abb64047098fb5a6bf5d77f51d",
+      "captured_at": "2026-10-17T20:49:45.155497+00:00"
+    },
+    {
+      "dataset": "road_configuration",
+      "path": "data/raw/ncdb_online/road_configuration.dom.json",
+      "sha256": "5e5df617fa07fa9018410be59fa75075861365306bf76b764326f0438aa44688",
+      "captured_at": "2026-10-17T20:49:49.322730+00:00"
+    },
+    {
+      "dataset": "light",
+      "path": "data/raw/ncdb_online/light.dom.json",
+      "sha256": "e591eb0f76a959fda3a969b49121a349ed99b9eca5549f106d67c264398ca2fb",
+      "captured_at": "2026-10-17T20:49:53.313389+00:00"
+    }
+  ],
+  "normalized_sha256": "e66941cac92e4990645a1c69211e2ea2cabf44f0063f2e2cbbcc32f98663e3ca",
+  "normalized_rows": 4536,
+  "checks": {
+    "all_14_years": true,
+    "all_category_partitions_reconcile": true,
+    "profile_totals_match_corresponding_person_or_vehicle_annual": true
+  },
+  "limitations": [
+    "Vehicle involvements are not unique collision counts.",
+    "Person-level and vehicle-level query casualties differ for 2020\u20132022. Person profiles reconcile to Road User Class=Bicyclist; vehicle/condition profiles reconcile to Vehicle Type=Bicycle. Both series are retained without overwriting.",
+    "Casualties belong to the selected bicycle vehicle type; they do not count all people harmed in bicycle-involved events.",
+    "Recorded deaths/injuries and vehicle involvement counts do not measure exposure-adjusted cycling risk.",
+    "This source vintage may differ from newer revised official publications."
+  ]
+}

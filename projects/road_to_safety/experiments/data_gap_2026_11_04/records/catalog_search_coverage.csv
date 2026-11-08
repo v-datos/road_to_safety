@@ -1,0 +1,5 @@
+capture,reported_matches,captured_matches,complete_result_page
+catalog_search_exact.json,1,1,True
+catalog_search_tc_collision.json,2,2,True
+catalog_search_ncdb.json,528,100,False
+catalog_search_collision2022.json,52,52,True

@@ -1,0 +1,36 @@
+{
+  "input_sha256": "b393a498e9255bbf9ad4df66c44cb14e380d369407450c49d777cc61ca8a84fd",
+  "features": 7911,
+  "fields": 109,
+  "numberMatched": 7911,
+  "feature_id_unique": 7911,
+  "traffic_section_id_unique": 7911,
+  "traffic_section_duplicate_extra": 0,
+  "traffic_number_unique": 7911,
+  "traffic_number_duplicate_extra": 0,
+  "geometry_types": {
+    "LineString": 6357,
+    "MultiLineString": 1554
+  },
+  "missing_geometry": 0,
+  "coordinate_pairs": 806539,
+  "bbox_actual": [
+    -79.517715,
+    44.992076,
+    -57.107446,
+    54.860794
+  ],
+  "bbox_metadata": [
+    -79.517715,
+    44.992076,
+    -57.107446,
+    54.860794
+  ],
+  "same_rtss_start_end": 5891,
+  "missing_rtss_start": 0,
+  "missing_rtss_end": 0,
+  "section_start_min": "1987-05-27",
+  "section_start_max": "2026-11-03",
+  "all_geometry_pairs_valid_lonlat": true,
+  "profiled_all_features": true
+}

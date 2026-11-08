@@ -1,0 +1,10 @@
+# Evidence for the policy brief
+
+The four recommendations connect observed Canadian collision patterns to interventions and evaluation designs. The cited studies and guidance establish the intervention rationale. The national records describe burden and severity among reported events. Site selection and effectiveness estimates require local observations.
+
+- **Lower-speed local streets.** The Toronto study's treated-road decline supports a pilot with measurement. The comparison between changes on treated and comparator streets was statistically uncertain. [Toronto quasi-experiment](https://link.springer.com/article/10.1186/s12889-019-8139-5)
+- **Rural roadway departures.** Select potential rumble strip treatments based on documented crash types and local geometry. Noise, cyclists, pavement and shoulder width affect placement. [FHWA implementation guidance](https://highways.fhwa.dot.gov/safety/rwd/keep-vehicles-road/rumble-strips/rumble-strip-implementation-guide-addressing-noise)
+- **Crossing visibility after dark.** Select audit sites using local crash history, traffic volumes and pedestrian activity. The reported hour profile supplies a time pattern and local counts supply site evidence. [FHWA lighting guidance](https://highways.fhwa.dot.gov/safety/proven-safety-countermeasures/lighting)
+- **Linked exposure and reporting.** Prioritize consistent definitions, location keys and timely observations to evaluate future interventions. [Canada's Road Safety Strategy 2035 and Beyond](https://www.ccmta.ca/road-safety-strategy-2026/en/strategy)
+
+The [reviewed recommendation records](../data/reference/policy_sources.json) supply the observations, actions, stakeholders and evaluation measures used in each deliverable. Canadian counts are from the [2024 publication](https://tc.canada.ca/en/road-transportation/statistics-data/canadian-motor-vehicle-traffic-collision-statistics/2024/canadian-motor-vehicle-traffic-collision-statistics-2024) and [descriptive analysis](descriptive_analysis.md).
