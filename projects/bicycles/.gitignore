@@ -1,11 +1,7 @@
 /data/raw/*
 !/data/raw/.gitkeep
 /data/derived/*
-!/data/derived/.gitkeep
-/reports/**
-!/reports/**/
-!/reports/**/.gitkeep
-!/reports/README.md
+!data/derived/.gitkeep
 /build/
 /dist/
 /report/dist/

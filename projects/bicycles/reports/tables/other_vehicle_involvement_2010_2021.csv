@@ -1,0 +1,9 @@
+vehicle_group,collisions,share_of_collisions
+Light-duty vehicle,61698,0.8982485768777206
+Cargo or other light truck/van,2415,0.03515949160685428
+Heavy unit truck,1102,0.01604379285745483
+Road tractor,307,0.004469550278800937
+Bus,918,0.013364974449313553
+Motorcycle or moped,479,0.006973663138585176
+Other classified non-bicycle vehicle,179,0.0026060244296591786
+"Unknown, other or conflicting vehicle type",1374,0.02000378528688107

@@ -1,0 +1,113 @@
+year,category,vehicles,injured,fatalities
+2010,Daylight,5300,5126,45
+2011,Daylight,5195,5070,35
+2012,Daylight,5481,5320,38
+2013,Daylight,5175,5029,51
+2014,Daylight,4573,4398,33
+2015,Daylight,5098,4906,27
+2016,Daylight,5057,4863,34
+2017,Daylight,4462,4324,28
+2018,Daylight,3913,3797,33
+2019,Daylight,3716,3624,25
+2020,Daylight,2992,2773,32
+2021,Daylight,3322,3213,28
+2022,Daylight,3190,3109,31
+2023,Daylight,3818,3689,37
+2010,Dawn,74,70,0
+2011,Dawn,63,63,0
+2012,Dawn,63,62,1
+2013,Dawn,64,63,0
+2014,Dawn,53,51,0
+2015,Dawn,56,54,0
+2016,Dawn,60,60,0
+2017,Dawn,57,54,0
+2018,Dawn,53,51,1
+2019,Dawn,44,44,0
+2020,Dawn,34,29,1
+2021,Dawn,34,31,0
+2022,Dawn,37,34,1
+2023,Dawn,56,55,1
+2010,Dusk,225,215,3
+2011,Dusk,207,197,4
+2012,Dusk,202,193,3
+2013,Dusk,189,187,3
+2014,Dusk,174,169,1
+2015,Dusk,214,206,3
+2016,Dusk,184,176,4
+2017,Dusk,193,189,0
+2018,Dusk,149,141,1
+2019,Dusk,146,143,1
+2020,Dusk,99,93,1
+2021,Dusk,137,134,0
+2022,Dusk,111,108,1
+2023,Dusk,157,154,0
+2010,Dawn or dusk,0,0,0
+2011,Dawn or dusk,0,0,0
+2012,Dawn or dusk,0,0,0
+2013,Dawn or dusk,0,0,0
+2014,Dawn or dusk,0,0,0
+2015,Dawn or dusk,0,0,0
+2016,Dawn or dusk,0,0,0
+2017,Dawn or dusk,0,0,0
+2018,Dawn or dusk,0,0,0
+2019,Dawn or dusk,0,0,0
+2020,Dawn or dusk,0,0,0
+2021,Dawn or dusk,0,0,0
+2022,Dawn or dusk,0,0,0
+2023,Dawn or dusk,0,0,0
+2010,Darkness,1032,994,12
+2011,Darkness,1048,1013,16
+2012,Darkness,1011,955,20
+2013,Darkness,933,899,15
+2014,Darkness,909,874,8
+2015,Darkness,1018,966,20
+2016,Darkness,925,891,9
+2017,Darkness,817,794,10
+2018,Darkness,706,685,13
+2019,Darkness,668,634,17
+2020,Darkness,532,490,15
+2021,Darkness,618,597,10
+2022,Darkness,625,595,13
+2023,Darkness,771,744,8
+2010,Choice is other than the preceding values,0,0,0
+2011,Choice is other than the preceding values,0,0,0
+2012,Choice is other than the preceding values,0,0,0
+2013,Choice is other than the preceding values,0,0,0
+2014,Choice is other than the preceding values,0,0,0
+2015,Choice is other than the preceding values,0,0,0
+2016,Choice is other than the preceding values,0,0,0
+2017,Choice is other than the preceding values,0,0,0
+2018,Choice is other than the preceding values,0,0,0
+2019,Choice is other than the preceding values,0,0,0
+2020,Choice is other than the preceding values,0,0,0
+2021,Choice is other than the preceding values,0,0,0
+2022,Choice is other than the preceding values,0,0,0
+2023,Choice is other than the preceding values,0,0,0
+2010,Unknown,81,79,1
+2011,Unknown,74,73,1
+2012,Unknown,85,84,1
+2013,Unknown,74,73,0
+2014,Unknown,90,89,0
+2015,Unknown,69,68,0
+2016,Unknown,115,112,2
+2017,Unknown,71,67,0
+2018,Unknown,71,69,0
+2019,Unknown,54,54,0
+2020,Unknown,60,55,1
+2021,Unknown,85,84,1
+2022,Unknown,84,82,2
+2023,Unknown,100,100,0
+2010,Jurisdiction does not provide this data element,0,0,0
+2011,Jurisdiction does not provide this data element,0,0,0
+2012,Jurisdiction does not provide this data element,0,0,0
+2013,Jurisdiction does not provide this data element,0,0,0
+2014,Jurisdiction does not provide this data element,0,0,0
+2015,Jurisdiction does not provide this data element,0,0,0
+2016,Jurisdiction does not provide this data element,0,0,0
+2017,Jurisdiction does not provide this data element,0,0,0
+2018,Jurisdiction does not provide this data element,0,0,0
+2019,Jurisdiction does not provide this data element,0,0,0
+2020,Jurisdiction does not provide this data element,0,0,0
+2021,Jurisdiction does not provide this data element,0,0,0
+2022,Jurisdiction does not provide this data element,0,0,0
+2023,Jurisdiction does not provide this data element,0,0,0

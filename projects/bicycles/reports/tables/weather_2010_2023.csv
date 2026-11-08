@@ -1,0 +1,127 @@
+year,category,vehicles,injured,fatalities
+2010,Clear and sunny,5453,5254,46
+2011,Clear and sunny,5338,5188,47
+2012,Clear and sunny,5682,5479,51
+2013,Clear and sunny,5325,5174,51
+2014,Clear and sunny,4731,4542,34
+2015,Clear and sunny,5418,5183,42
+2016,Clear and sunny,5371,5157,38
+2017,Clear and sunny,4702,4545,34
+2018,Clear and sunny,4077,3943,42
+2019,Clear and sunny,3916,3795,41
+2020,Clear and sunny,3294,3031,43
+2021,Clear and sunny,3681,3560,33
+2022,Clear and sunny,3580,3476,38
+2023,Clear and sunny,4209,4068,38
+2010,"Overcast, cloudy but no precipitation",603,589,9
+2011,"Overcast, cloudy but no precipitation",608,602,4
+2012,"Overcast, cloudy but no precipitation",526,520,4
+2013,"Overcast, cloudy but no precipitation",541,529,9
+2014,"Overcast, cloudy but no precipitation",515,509,4
+2015,"Overcast, cloudy but no precipitation",492,488,3
+2016,"Overcast, cloudy but no precipitation",445,437,5
+2017,"Overcast, cloudy but no precipitation",385,380,4
+2018,"Overcast, cloudy but no precipitation",373,367,3
+2019,"Overcast, cloudy but no precipitation",320,315,1
+2020,"Overcast, cloudy but no precipitation",197,195,3
+2021,"Overcast, cloudy but no precipitation",234,229,4
+2022,"Overcast, cloudy but no precipitation",179,175,5
+2023,"Overcast, cloudy but no precipitation",242,236,4
+2010,Raining,505,492,5
+2011,Raining,500,487,5
+2012,Raining,446,434,4
+2013,Raining,409,398,4
+2014,Raining,431,415,2
+2015,Raining,412,400,4
+2016,Raining,359,350,3
+2017,Raining,384,380,0
+2018,Raining,311,308,0
+2019,Raining,274,271,1
+2020,Raining,139,131,2
+2021,Raining,198,191,2
+2022,Raining,182,175,2
+2023,Raining,315,305,3
+2010,"Snowing, not including drifting snow",36,36,0
+2011,"Snowing, not including drifting snow",27,26,0
+2012,"Snowing, not including drifting snow",30,28,1
+2013,"Snowing, not including drifting snow",35,34,0
+2014,"Snowing, not including drifting snow",29,26,0
+2015,"Snowing, not including drifting snow",13,12,0
+2016,"Snowing, not including drifting snow",33,30,1
+2017,"Snowing, not including drifting snow",29,29,0
+2018,"Snowing, not including drifting snow",30,29,1
+2019,"Snowing, not including drifting snow",17,17,0
+2020,"Snowing, not including drifting snow",16,15,0
+2021,"Snowing, not including drifting snow",10,9,0
+2022,"Snowing, not including drifting snow",15,15,0
+2023,"Snowing, not including drifting snow",18,17,0
+2010,"Freezing rain, sleet, hail",2,2,0
+2011,"Freezing rain, sleet, hail",3,2,0
+2012,"Freezing rain, sleet, hail",3,3,0
+2013,"Freezing rain, sleet, hail",7,6,1
+2014,"Freezing rain, sleet, hail",2,2,0
+2015,"Freezing rain, sleet, hail",2,2,0
+2016,"Freezing rain, sleet, hail",6,6,0
+2017,"Freezing rain, sleet, hail",1,1,0
+2018,"Freezing rain, sleet, hail",2,2,0
+2019,"Freezing rain, sleet, hail",1,1,0
+2020,"Freezing rain, sleet, hail",1,1,0
+2021,"Freezing rain, sleet, hail",2,2,0
+2022,"Freezing rain, sleet, hail",1,1,0
+2023,"Freezing rain, sleet, hail",4,4,0
+2010,Visibility limitation,13,13,0
+2011,Visibility limitation,11,11,0
+2012,Visibility limitation,12,10,1
+2013,Visibility limitation,17,17,0
+2014,Visibility limitation,14,13,0
+2015,Visibility limitation,22,21,0
+2016,Visibility limitation,14,14,0
+2017,Visibility limitation,16,16,0
+2018,Visibility limitation,27,26,0
+2019,Visibility limitation,9,9,0
+2020,Visibility limitation,10,10,0
+2021,Visibility limitation,12,12,0
+2022,Visibility limitation,15,13,2
+2023,Visibility limitation,13,13,0
+2010,Strong wind,7,7,0
+2011,Strong wind,6,6,0
+2012,Strong wind,4,3,1
+2013,Strong wind,8,5,2
+2014,Strong wind,3,3,0
+2015,Strong wind,2,2,0
+2016,Strong wind,4,3,1
+2017,Strong wind,2,2,0
+2018,Strong wind,1,1,0
+2019,Strong wind,2,2,0
+2020,Strong wind,3,3,0
+2021,Strong wind,6,5,0
+2022,Strong wind,2,2,0
+2023,Strong wind,3,3,0
+2010,Other,13,13,0
+2011,Other,17,17,0
+2012,Other,10,9,1
+2013,Other,13,13,0
+2014,Other,12,11,1
+2015,Other,12,11,1
+2016,Other,5,5,0
+2017,Other,6,5,0
+2018,Other,5,4,1
+2019,Other,5,5,0
+2020,Other,4,4,0
+2021,Other,5,3,0
+2022,Other,9,9,0
+2023,Other,12,12,0
+2010,Unknown,80,78,1
+2011,Unknown,77,77,0
+2012,Unknown,129,128,0
+2013,Unknown,80,75,2
+2014,Unknown,62,60,1
+2015,Unknown,82,81,0
+2016,Unknown,104,100,1
+2017,Unknown,75,70,0
+2018,Unknown,66,63,1
+2019,Unknown,84,84,0
+2020,Unknown,53,50,2
+2021,Unknown,48,48,0
+2022,Unknown,64,62,1
+2023,Unknown,86,84,1

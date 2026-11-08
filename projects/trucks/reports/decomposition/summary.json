@@ -1,0 +1,20 @@
+{
+  "inputs_sha256": {
+    "data/derived/ncdb/collisions.parquet": "a0417eb0cb5f0da6417fce387eba7d0063362f9fd198a55117330ccd09b29688",
+    "data/derived/baselines/pre_source_revision_20261015/data/derived/ncdb/collisions.parquet": "a1b6265b43a7287ae17249a405074018cd889d5de2ef03892268e8317517b31f",
+    "data/reference/collision_codebook.json": "08edc088328d85af4e3ce6284cc9b712b5d1e61bc24d7d54a4eaab81011ad910",
+    "Collisions/data_dictionary.pdf": "beef296c25eee70a55f747327b768b8da1bbdd428d02a9ca56ba781a7b6edb40",
+    "data/sources.json": "f4d313eb3a1a82db93446fba7d5e6e6ed8736263f2fdb20c8cf45e78faf309a6"
+  },
+  "code_sha256": {
+    "src/truck_collisions/decompose_configuration.py": "360bf7df060688586c486225bbc079b59a3d94215c10b4b643d3f1442d783267",
+    "src/truck_collisions/analyze_conditions.py": "ae6d3acbe5f09f8de025f53525c9d04071f89aece551451a7e3d2b31b88bf19b",
+    "src/truck_collisions/audit_conditions.py": "834c70b996befee17bae5a51d079275aa7486623236a28ad59ad9215d55ba1ed",
+    "src/truck_collisions/build.py": "aa6e36e1d7e54b64b02db9c0384c20ca61e929abe8ceed0673bb90404f2463bc"
+  },
+  "baseline_available": true,
+  "comparisons": 24,
+  "category_rows": 504,
+  "allocation_rows": 72,
+  "maximum_reconciliation_error_pp": 7.771561172376096e-16
+}

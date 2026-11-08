@@ -1,0 +1,26 @@
+{
+  "status": "first_edition_verified_with_documented_limits",
+  "tests_passed": 7,
+  "online_partitions_checked": 462,
+  "online_reference_years": [
+    2010,
+    2023
+  ],
+  "linked_record_years": [
+    2010,
+    2021
+  ],
+  "charts_visually_checked": 15,
+  "browser_errors": [],
+  "live_2023_bicyclist_query": {
+    "injured": 4742,
+    "fatalities": 46
+  },
+  "annual_table_pagination": "verified through 2023",
+  "source_metadata": "inspected through live read-only Data app context",
+  "unperformed_checks": [
+    "Narrow viewport unavailable through browser controls",
+    "Interactive source drawer could not be exercised through browser controls"
+  ],
+  "build_manifest": "report/dist/data-app-build.json"
+}

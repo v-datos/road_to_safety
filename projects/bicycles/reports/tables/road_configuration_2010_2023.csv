@@ -1,0 +1,197 @@
+year,category,vehicles,injured,fatalities
+2010,Non-intersection,1492,1428,29
+2011,Non-intersection,1388,1349,21
+2012,Non-intersection,1540,1472,29
+2013,Non-intersection,1426,1357,38
+2014,Non-intersection,1386,1329,17
+2015,Non-intersection,1517,1439,28
+2016,Non-intersection,1498,1423,22
+2017,Non-intersection,1345,1288,19
+2018,Non-intersection,1183,1140,19
+2019,Non-intersection,1088,1036,25
+2020,Non-intersection,961,884,25
+2021,Non-intersection,1063,1027,20
+2022,Non-intersection,1018,966,26
+2023,Non-intersection,1224,1174,19
+2010,At an intersection of at least two public roadways,4095,3974,23
+2011,At an intersection of at least two public roadways,4094,3980,29
+2012,At an intersection of at least two public roadways,4135,4009,28
+2013,At an intersection of at least two public roadways,3982,3881,27
+2014,At an intersection of at least two public roadways,3493,3369,19
+2015,At an intersection of at least two public roadways,3948,3795,21
+2016,At an intersection of at least two public roadways,3935,3799,24
+2017,At an intersection of at least two public roadways,3424,3334,14
+2018,At an intersection of at least two public roadways,2971,2886,27
+2019,At an intersection of at least two public roadways,2835,2772,15
+2020,At an intersection of at least two public roadways,2239,2058,21
+2021,At an intersection of at least two public roadways,2523,2439,16
+2022,At an intersection of at least two public roadways,2507,2447,18
+2023,At an intersection of at least two public roadways,2994,2906,22
+2010,"Intersection with parking lot entrance/exit, private driveway or laneway",586,560,3
+2011,"Intersection with parking lot entrance/exit, private driveway or laneway",552,545,3
+2012,"Intersection with parking lot entrance/exit, private driveway or laneway",610,592,3
+2013,"Intersection with parking lot entrance/exit, private driveway or laneway",526,516,2
+2014,"Intersection with parking lot entrance/exit, private driveway or laneway",487,458,2
+2015,"Intersection with parking lot entrance/exit, private driveway or laneway",497,476,1
+2016,"Intersection with parking lot entrance/exit, private driveway or laneway",462,439,1
+2017,"Intersection with parking lot entrance/exit, private driveway or laneway",396,383,0
+2018,"Intersection with parking lot entrance/exit, private driveway or laneway",364,349,0
+2019,"Intersection with parking lot entrance/exit, private driveway or laneway",357,349,2
+2020,"Intersection with parking lot entrance/exit, private driveway or laneway",214,197,2
+2021,"Intersection with parking lot entrance/exit, private driveway or laneway",244,235,2
+2022,"Intersection with parking lot entrance/exit, private driveway or laneway",222,220,2
+2023,"Intersection with parking lot entrance/exit, private driveway or laneway",331,319,2
+2010,Railroad level crossing,17,16,1
+2011,Railroad level crossing,17,18,0
+2012,Railroad level crossing,17,14,0
+2013,Railroad level crossing,8,8,0
+2014,Railroad level crossing,5,5,0
+2015,Railroad level crossing,9,9,0
+2016,Railroad level crossing,5,5,0
+2017,Railroad level crossing,9,8,0
+2018,Railroad level crossing,11,11,0
+2019,Railroad level crossing,11,11,0
+2020,Railroad level crossing,6,7,0
+2021,Railroad level crossing,9,9,0
+2022,Railroad level crossing,10,10,0
+2023,Railroad level crossing,7,7,0
+2010,"Bridge, overpass, viaduct",18,17,0
+2011,"Bridge, overpass, viaduct",7,7,0
+2012,"Bridge, overpass, viaduct",12,11,0
+2013,"Bridge, overpass, viaduct",10,10,0
+2014,"Bridge, overpass, viaduct",10,10,0
+2015,"Bridge, overpass, viaduct",9,9,0
+2016,"Bridge, overpass, viaduct",9,8,0
+2017,"Bridge, overpass, viaduct",13,13,0
+2018,"Bridge, overpass, viaduct",2,1,0
+2019,"Bridge, overpass, viaduct",11,11,0
+2020,"Bridge, overpass, viaduct",3,3,0
+2021,"Bridge, overpass, viaduct",7,7,0
+2022,"Bridge, overpass, viaduct",8,8,0
+2023,"Bridge, overpass, viaduct",11,10,0
+2010,Tunnel or underpass,2,2,0
+2011,Tunnel or underpass,4,4,0
+2012,Tunnel or underpass,2,2,0
+2013,Tunnel or underpass,2,2,0
+2014,Tunnel or underpass,3,2,1
+2015,Tunnel or underpass,0,0,0
+2016,Tunnel or underpass,1,1,0
+2017,Tunnel or underpass,1,1,0
+2018,Tunnel or underpass,1,1,0
+2019,Tunnel or underpass,2,2,0
+2020,Tunnel or underpass,3,3,0
+2021,Tunnel or underpass,1,1,0
+2022,Tunnel or underpass,0,0,0
+2023,Tunnel or underpass,2,2,0
+2010,Passing or climbing lane,0,0,0
+2011,Passing or climbing lane,2,2,0
+2012,Passing or climbing lane,0,0,0
+2013,Passing or climbing lane,0,0,0
+2014,Passing or climbing lane,0,0,0
+2015,Passing or climbing lane,0,0,0
+2016,Passing or climbing lane,1,1,0
+2017,Passing or climbing lane,1,1,0
+2018,Passing or climbing lane,0,0,0
+2019,Passing or climbing lane,0,0,0
+2020,Passing or climbing lane,0,0,0
+2021,Passing or climbing lane,0,0,0
+2022,Passing or climbing lane,0,0,0
+2023,Passing or climbing lane,0,0,0
+2010,Ramp,5,5,0
+2011,Ramp,5,5,0
+2012,Ramp,7,7,0
+2013,Ramp,9,8,1
+2014,Ramp,10,10,0
+2015,Ramp,15,14,0
+2016,Ramp,9,9,0
+2017,Ramp,8,8,0
+2018,Ramp,7,7,0
+2019,Ramp,6,5,0
+2020,Ramp,2,2,0
+2021,Ramp,4,4,0
+2022,Ramp,2,2,0
+2023,Ramp,1,1,0
+2010,Traffic circle,5,5,0
+2011,Traffic circle,11,11,0
+2012,Traffic circle,9,9,0
+2013,Traffic circle,6,6,0
+2014,Traffic circle,5,5,0
+2015,Traffic circle,9,9,0
+2016,Traffic circle,7,7,0
+2017,Traffic circle,10,10,0
+2018,Traffic circle,7,6,0
+2019,Traffic circle,7,7,0
+2020,Traffic circle,9,9,0
+2021,Traffic circle,13,12,0
+2022,Traffic circle,7,7,0
+2023,Traffic circle,11,11,0
+2010,Express lane of a freeway system,0,0,0
+2011,Express lane of a freeway system,0,0,0
+2012,Express lane of a freeway system,0,0,0
+2013,Express lane of a freeway system,0,0,0
+2014,Express lane of a freeway system,0,0,0
+2015,Express lane of a freeway system,0,0,0
+2016,Express lane of a freeway system,0,0,0
+2017,Express lane of a freeway system,0,0,0
+2018,Express lane of a freeway system,0,0,0
+2019,Express lane of a freeway system,0,0,0
+2020,Express lane of a freeway system,0,0,0
+2021,Express lane of a freeway system,0,0,0
+2022,Express lane of a freeway system,0,0,0
+2023,Express lane of a freeway system,0,0,0
+2010,Collector lane of a freeway system,0,0,0
+2011,Collector lane of a freeway system,0,0,0
+2012,Collector lane of a freeway system,0,0,0
+2013,Collector lane of a freeway system,0,0,0
+2014,Collector lane of a freeway system,0,0,0
+2015,Collector lane of a freeway system,0,0,0
+2016,Collector lane of a freeway system,0,0,0
+2017,Collector lane of a freeway system,0,0,0
+2018,Collector lane of a freeway system,0,0,0
+2019,Collector lane of a freeway system,0,0,0
+2020,Collector lane of a freeway system,0,0,0
+2021,Collector lane of a freeway system,0,0,0
+2022,Collector lane of a freeway system,0,0,0
+2023,Collector lane of a freeway system,0,0,0
+2010,Transfer lane of a freeway system,0,0,0
+2011,Transfer lane of a freeway system,0,0,0
+2012,Transfer lane of a freeway system,0,0,0
+2013,Transfer lane of a freeway system,0,0,0
+2014,Transfer lane of a freeway system,0,0,0
+2015,Transfer lane of a freeway system,0,0,0
+2016,Transfer lane of a freeway system,0,0,0
+2017,Transfer lane of a freeway system,0,0,0
+2018,Transfer lane of a freeway system,0,0,0
+2019,Transfer lane of a freeway system,0,0,0
+2020,Transfer lane of a freeway system,0,0,0
+2021,Transfer lane of a freeway system,0,0,0
+2022,Transfer lane of a freeway system,0,0,0
+2023,Transfer lane of a freeway system,0,0,0
+2010,Other,145,145,0
+2011,Other,161,158,1
+2012,Other,150,146,1
+2013,Other,151,152,0
+2014,Other,130,128,1
+2015,Other,131,131,0
+2016,Other,147,147,0
+2017,Other,156,150,2
+2018,Other,142,142,0
+2019,Other,129,127,0
+2020,Other,104,103,1
+2021,Other,99,98,0
+2022,Other,88,86,1
+2023,Other,108,103,2
+2010,Unknown,347,332,5
+2011,Unknown,346,337,2
+2012,Unknown,360,352,2
+2013,Unknown,315,311,1
+2014,Unknown,270,265,2
+2015,Unknown,320,318,0
+2016,Unknown,267,263,2
+2017,Unknown,237,232,3
+2018,Unknown,204,200,2
+2019,Unknown,182,179,1
+2020,Unknown,176,174,1
+2021,Unknown,233,227,1
+2022,Unknown,185,182,1
+2023,Unknown,213,209,1

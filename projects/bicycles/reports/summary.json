@@ -1,0 +1,241 @@
+{
+  "scope": "Canada 2010\u20132023; linked collision/other-vehicle detail 2010\u20132021",
+  "unique_collisions_2010_2021": 68687,
+  "quality": {
+    "input_rows": 155984,
+    "distinct_rows": 155969,
+    "invalid_key_rows": 0,
+    "collision_attribute_conflicts": 0,
+    "person_severity_conflicts": 3,
+    "person_road_user_conflicts": 5,
+    "bicycle_role_disagreements": 1,
+    "unresolved_rows": 306,
+    "unresolved_positive_casualty_rows": 1,
+    "bicyclist_events_without_bicycle": [],
+    "annual": [
+      {
+        "year": 2010,
+        "collisions": 6664,
+        "fatal_collisions": 59,
+        "injury_collisions": 6605,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2011,
+        "collisions": 6545,
+        "fatal_collisions": 56,
+        "injury_collisions": 6489,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2012,
+        "collisions": 6815,
+        "fatal_collisions": 63,
+        "injury_collisions": 6752,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2013,
+        "collisions": 6404,
+        "fatal_collisions": 67,
+        "injury_collisions": 6337,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2014,
+        "collisions": 5762,
+        "fatal_collisions": 43,
+        "injury_collisions": 5719,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2015,
+        "collisions": 6409,
+        "fatal_collisions": 49,
+        "injury_collisions": 6360,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2016,
+        "collisions": 6263,
+        "fatal_collisions": 51,
+        "injury_collisions": 6212,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2017,
+        "collisions": 5526,
+        "fatal_collisions": 40,
+        "injury_collisions": 5486,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2018,
+        "collisions": 4838,
+        "fatal_collisions": 46,
+        "injury_collisions": 4792,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2019,
+        "collisions": 4576,
+        "fatal_collisions": 42,
+        "injury_collisions": 4534,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2020,
+        "collisions": 4233,
+        "fatal_collisions": 51,
+        "injury_collisions": 4182,
+        "unknown_severity_collisions": 0
+      },
+      {
+        "year": 2021,
+        "collisions": 4652,
+        "fatal_collisions": 47,
+        "injury_collisions": 4605,
+        "unknown_severity_collisions": 0
+      }
+    ],
+    "built_at": "2026-10-17T20:53:06.442895+00:00",
+    "code_sha256": "a1df728cd9d3676f1aa49f89923191181ece1335af8fb47e492ca3f44b898df7",
+    "sources": [
+      {
+        "source_id": "ncdb_1999_2017_legacy",
+        "path": "data/raw/ncdb/NCDB_1999_to_2017.csv",
+        "sha256": "8693b723732e59ecc0a0494c1d99e76d980dd047e6129307132f8d7dfd84b8d2",
+        "selected_years": [
+          2010,
+          2011,
+          2012,
+          2013
+        ],
+        "physical_years": [
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017
+        ]
+      },
+      {
+        "source_id": "ncdb_2014_official_xlsx",
+        "path": "data/raw/ncdb/y_2014_en.xlsx",
+        "sha256": "0cb8e40972533c630bddc17f39a0dec2dc7a0f78d83c359615584c5bd61cf14a",
+        "selected_years": [
+          2014
+        ],
+        "physical_years": [
+          2014
+        ]
+      },
+      {
+        "source_id": "ncdb_2015_official_xlsx",
+        "path": "data/raw/ncdb/y_2015_en.xlsx",
+        "sha256": "cec54236b1eb71c3a5751f772bacdad3f584723b8c3f52a5eea47f62504d049a",
+        "selected_years": [
+          2015
+        ],
+        "physical_years": [
+          2015
+        ]
+      },
+      {
+        "source_id": "ncdb_2016_official_xlsx",
+        "path": "data/raw/ncdb/y_2016_en.xlsx",
+        "sha256": "c67c0bba5a7e37d2a72e6f2c3824e54638c65960affc92da02d72c5d7bc5fe8f",
+        "selected_years": [
+          2016
+        ],
+        "physical_years": [
+          2016
+        ]
+      },
+      {
+        "source_id": "ncdb_2017_official_xlsx",
+        "path": "data/raw/ncdb/y_2017_en.xlsx",
+        "sha256": "93f467f3a7f775b1a46e48cfc6a677a8393923b7e18f33f29e29de22fc93d727",
+        "selected_years": [
+          2017
+        ],
+        "physical_years": [
+          2017
+        ]
+      },
+      {
+        "source_id": "ncdb_2018_official",
+        "path": "data/raw/ncdb/y_2018_en.xlsx",
+        "sha256": "1ca01fa57a216d9d7187f0926cb4910dcff256517738639727e7a7a9d6bc2db1",
+        "selected_years": [
+          2018
+        ],
+        "physical_years": [
+          2018
+        ]
+      },
+      {
+        "source_id": "ncdb_2019_official_xlsx",
+        "path": "data/raw/ncdb/y_2019_en.xlsx",
+        "sha256": "8285d8d734a1835ccd4bc72617ee11419d6e16c3dcd6effb8b5bdbe51fc43d0b",
+        "selected_years": [
+          2019
+        ],
+        "physical_years": [
+          2019
+        ]
+      },
+      {
+        "source_id": "ncdb_2020_official",
+        "path": "data/raw/ncdb/y_2020.csv",
+        "sha256": "2c81d99278819c28f99c02bfec319fb99c94b02734418300306e86a68ec3f83b",
+        "selected_years": [
+          2020
+        ],
+        "physical_years": [
+          2020
+        ]
+      },
+      {
+        "source_id": "ncdb_2021_official_fr",
+        "path": "data/raw/ncdb/y_2021-fr.csv",
+        "sha256": "024a2d24cdaf6e30ec018433836075b83c626e7f8e189d14a46ea9d99b3d8dbb",
+        "selected_years": [
+          2021
+        ],
+        "physical_years": [
+          2021
+        ]
+      }
+    ]
+  },
+  "online_totals": {
+    "injured": 75610,
+    "fatalities": 712
+  },
+  "verified_checks": [
+    "unique event/vehicle/person keys",
+    "direct V_TYPE=17 event-count replication",
+    "road-user group additivity",
+    "online category/year partition additivity"
+  ],
+  "input_sha256": {
+    "online_reference": "e66941cac92e4990645a1c69211e2ea2cabf44f0063f2e2cbbcc32f98663e3ca",
+    "source_manifest": "5df5e91e5fe7d97d5a023cc87da688b2f1d7db5f4e41ebc21955886f6082de9f",
+    "analysis_code": "4c077b6333db26a54ee8de9c13264faf91040e15571bbdf5062a9b4cd9ca24c7"
+  }
+}

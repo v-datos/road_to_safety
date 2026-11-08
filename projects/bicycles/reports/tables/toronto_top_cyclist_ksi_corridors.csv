@@ -1,0 +1,25 @@
+LINEAR_NAME_FULL,FEATURE_CODE_DESC,corridor_name,monitored_segments,monitored_length_km,mean_aadt,cumulative_100m_vkt,ksi_crashes,fatal_crashes,vru_ksi_crashes,cyclist_ksi_crashes,pedestrian_ksi_crashes,heavy_truck_ksi_crashes,cyclist_ksi_per_100m_vkt,cyclist_ksi_per_km,cyclist_share_of_ksi_pct,total_ksi_per_100m_vkt,eb_total_ksi_per_100m_vkt,network_cyclist_ksi_crashes,network_length_km,network_cyclist_ksi_per_km,rank_by_cyclist_ksi,rank_by_cyclist_rate,rank_by_network_cyclist_ksi
+Bloor St W,Major Arterial,Bloor St W (Major Arterial),105,11.375,13882.5,10.7876,96,10,78,29,39,8,2.688,2.55,30.21,8.899,8.412,36,16.661,2.161,1,4,1
+Yonge St,Major Arterial,Yonge St (Major Arterial),137,13.437,21316.1,19.7873,169,14,130,21,100,25,1.061,1.563,12.43,8.541,7.409,26,17.6,1.477,2,13,2
+Danforth Ave,Major Arterial,Danforth Ave (Major Arterial),54,5.059,16370.8,5.6193,74,3,57,13,33,7,2.313,2.57,17.57,13.169,9.941,20,6.982,2.864,3,6,4
+Spadina Ave,Major Arterial,Spadina Ave (Major Arterial),28,2.092,15427.4,1.9986,43,8,40,12,27,20,6.004,5.736,27.91,21.515,13.982,14,3.102,4.513,4,1,12
+Kingston Rd,Major Arterial,Kingston Rd (Major Arterial),83,14.451,20208.0,19.9472,77,9,50,11,30,9,0.551,0.761,14.29,3.86,4.558,15,20.371,0.736,5,25,10
+Avenue Rd,Major Arterial,Avenue Rd (Major Arterial),64,6.372,22431.7,9.6844,49,8,31,10,19,10,1.033,1.569,20.41,5.06,5.81,10,8.004,1.249,6,14,17
+Kennedy Rd,Major Arterial,Kennedy Rd (Major Arterial),50,9.675,20948.7,14.0238,91,17,58,10,39,7,0.713,1.034,10.99,6.489,5.667,12,12.482,0.961,7,19,14
+Bathurst St,Major Arterial,Bathurst St (Major Arterial),93,9.832,17612.0,11.9111,96,8,66,9,52,15,0.756,0.915,9.38,8.06,7.278,18,17.942,1.003,8,17,5
+Lake Shore Blvd W,Major Arterial,Lake Shore Blvd W (Major Arterial),47,7.875,20783.1,12.7163,46,4,28,9,8,4,0.708,1.143,19.57,3.617,4.151,15,21.643,0.693,9,20,11
+Dundas St W,Major Arterial,Dundas St W (Major Arterial),62,8.198,18383.1,10.2462,53,8,43,8,29,6,0.781,0.976,15.09,5.173,5.595,15,13.368,1.122,10,16,9
+Keele St,Major Arterial,Keele St (Major Arterial),60,9.384,21024.8,14.2715,92,9,61,8,47,21,0.561,0.853,8.7,6.446,5.776,9,13.127,0.686,11,24,22
+Dupont St,Major Arterial,Dupont St (Major Arterial),25,2.0,13055.9,1.7751,27,0,18,7,6,4,3.943,3.5,25.93,15.211,11.757,9,4.757,1.892,12,2,20
+Bay St,Major Arterial,Bay St (Major Arterial),29,2.785,13876.4,2.665,37,4,29,7,19,5,2.627,2.514,18.92,13.884,10.49,9,3.689,2.44,13,5,18
+Jane St,Major Arterial,Jane St (Major Arterial),73,10.76,17476.2,13.2917,103,10,75,7,61,10,0.527,0.651,6.8,7.749,6.665,8,14.356,0.557,14,26,25
+St Clair Ave W,Major Arterial,St Clair Ave W (Major Arterial),61,6.338,10401.3,4.6604,64,8,45,6,34,18,1.287,0.947,9.38,13.733,11.259,8,8.829,0.906,15,11,24
+Dundas St E,Minor Arterial,Dundas St E (Minor Arterial),26,2.196,10230.2,1.5013,7,1,6,5,1,0,3.331,2.276,71.43,4.663,6.616,6,3.374,1.778,18,3,33
+Lake Shore Blvd E,Major Arterial,Lake Shore Blvd E (Major Arterial),28,5.225,16910.8,6.3139,22,1,15,5,5,3,0.792,0.957,22.73,3.484,3.955,5,8.897,0.562,19,15,43
+Sherbourne St,Minor Arterial,Sherbourne St (Minor Arterial),19,2.3,8268.7,1.4468,18,6,16,3,13,7,2.074,1.304,16.67,12.441,8.193,3,2.545,1.179,29,7,71
+Gerrard St E,Minor Arterial,Gerrard St E (Minor Arterial),22,2.14,10332.8,1.4594,9,0,9,3,6,1,2.056,1.402,33.33,6.167,6.182,11,9.113,1.207,30,8,15
+Spadina Rd,Minor Arterial,Spadina Rd (Minor Arterial),21,2.568,10090.9,1.8309,12,1,9,3,5,0,1.639,1.168,25.0,6.554,5.981,3,3.999,0.75,31,9,73
+Davenport Rd,Minor Arterial,Davenport Rd (Minor Arterial),29,2.835,10815.3,2.0387,12,2,9,3,6,1,1.472,1.058,25.0,5.886,5.898,9,5.04,1.786,32,10,21
+Birchmount Rd,Minor Arterial,Birchmount Rd (Minor Arterial),19,3.435,9520.5,2.3604,13,4,11,3,8,3,1.271,0.873,23.08,5.508,4.968,3,4.289,0.699,33,12,75
+College St,Major Arterial,College St (Major Arterial),1,0.067,7321.7,0.0323,0,0,0,0,0,0,0.0,0.0,0.0,0.0,11.034,20,4.13,4.842,,,3
+Harbord St,Minor Arterial,Harbord St (Minor Arterial),19,1.079,9663.9,0.7105,1,0,1,0,1,0,0.0,0.0,0.0,1.407,7.083,1,2.182,0.458,,,331

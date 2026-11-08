@@ -1,0 +1,145 @@
+{
+  "created_at_utc": "2026-10-15T16:39:37.246441+00:00",
+  "coverage": [
+    1999,
+    2021
+  ],
+  "target_period": [
+    2016,
+    2025
+  ],
+  "status": "record-resolution scenarios, not reconciled national person totals",
+  "groups": {
+    "tractor_occupant": "Tractor occupants",
+    "other_motor_vehicle_occupant": "Other motor vehicle occupants",
+    "pedestrian": "Pedestrians",
+    "cyclist": "Cyclists",
+    "motorcyclist": "Motorcyclists",
+    "other_or_unknown": "Other / unknown road users",
+    "ambiguous": "Conflicting road-user group"
+  },
+  "checks": {
+    "annual_rows": 46,
+    "annual_group_rows": 322,
+    "all_group_additivity": "passed",
+    "scenario_ordering": "passed"
+  },
+  "principal_results": [
+    {
+      "subset": "observed",
+      "road_user_group": "all",
+      "start_year": 2012,
+      "end_year": 2021,
+      "measure": "deaths",
+      "record_scenario": "low",
+      "start_count": 233,
+      "end_count": 191,
+      "change_count": -42,
+      "pct_change": -18.02575107296137
+    },
+    {
+      "subset": "observed",
+      "road_user_group": "all",
+      "start_year": 2012,
+      "end_year": 2021,
+      "measure": "deaths",
+      "record_scenario": "high",
+      "start_count": 233,
+      "end_count": 191,
+      "change_count": -42,
+      "pct_change": -18.02575107296137
+    },
+    {
+      "subset": "observed",
+      "road_user_group": "all",
+      "start_year": 2012,
+      "end_year": 2021,
+      "measure": "injuries",
+      "record_scenario": "low",
+      "start_count": 4337,
+      "end_count": 2828,
+      "change_count": -1509,
+      "pct_change": -34.793636154023524
+    },
+    {
+      "subset": "observed",
+      "road_user_group": "all",
+      "start_year": 2012,
+      "end_year": 2021,
+      "measure": "injuries",
+      "record_scenario": "high",
+      "start_count": 4337,
+      "end_count": 2844,
+      "change_count": -1493,
+      "pct_change": -34.42471754669126
+    },
+    {
+      "subset": "observed",
+      "road_user_group": "all",
+      "start_year": 2016,
+      "end_year": 2021,
+      "measure": "deaths",
+      "record_scenario": "low",
+      "start_count": 217,
+      "end_count": 191,
+      "change_count": -26,
+      "pct_change": -11.981566820276502
+    },
+    {
+      "subset": "observed",
+      "road_user_group": "all",
+      "start_year": 2016,
+      "end_year": 2021,
+      "measure": "deaths",
+      "record_scenario": "high",
+      "start_count": 217,
+      "end_count": 191,
+      "change_count": -26,
+      "pct_change": -11.981566820276502
+    },
+    {
+      "subset": "observed",
+      "road_user_group": "all",
+      "start_year": 2016,
+      "end_year": 2021,
+      "measure": "injuries",
+      "record_scenario": "low",
+      "start_count": 3794,
+      "end_count": 2828,
+      "change_count": -966,
+      "pct_change": -25.461254612546124
+    },
+    {
+      "subset": "observed",
+      "road_user_group": "all",
+      "start_year": 2016,
+      "end_year": 2021,
+      "measure": "injuries",
+      "record_scenario": "high",
+      "start_count": 3796,
+      "end_count": 2844,
+      "change_count": -952,
+      "pct_change": -25.079030558482618
+    }
+  ],
+  "input_sha256": {
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/annual_counts.csv": "f6bd9cc5e75fb99262b030ff901cb20009e66a3d0a6bc2062ed19081784f91f5",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/annual_group_counts.csv": "b50b97b26498083a67dd82742f2f316c0dc4ab807e430c8b3a6461ef6895289b",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/annual_group_counts.parquet": "b2b7fd314248bbc43e1ceed7ba06f20b8c82cb3c26da907924bc280ea4795ce9",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/code_profile.csv": "770ab1b1a89651c055ff6dfe6209017aaab9c29550f05f0462a6d8b966316f60",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/conflicting_person_keys.parquet": "30a8e0dd600fef962690dab0ae7d691282973353b952191dadcbe399b48f0b9b",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/occupant_benchmark_comparison.csv": "fb1ebd25f3952da3116a2fad1dfd2393e794acbb28914b519f96e10375458696",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/person_units.parquet": "2152924b4a29ac41952f590ec78e3adac90d2f80666cc642fb91ce171dc1cab1",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/positive_tractor_position_profile.csv": "602b92582ebfb59da1dc9a275d9af64813703b255ce360a525904c78fa6fa469",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/quality_by_year.csv": "612c3b0b14589fb946b19ea3c50be0cd44e8b067692601135e7cef086566903a",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/record_alternatives.parquet": "7f6d98cf470b8c41fa61f623cfa91bc8e65f9809e3b7fa0140bbbeb16139ddde",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/source_manifest.json": "77ebd7e0a95c2e945593e4b262712c2836a6fa8b2c28958e0c1ecd4ee112deb1",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/unresolved_and_dummy_records.parquet": "eed4dc624fc3c6a88fdd12e24e8cb22e08829a388f1b703e3ffef9494c2d1127",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/casualties/validation.json": "b5b8c110f7975fb29c57938d9dbb70ae1a53bbb49fe3ae876694e3a45f045858",
+    "/Users/micra/Dataland/Collisions_Canada/data/derived/ncdb/road_tractor_collisions.parquet": "c4541b558e3f81fb25f15e02a14abb8ec39e4f35d56ba551330c0730a1e5a495"
+  },
+  "code_sha256": "c6f2484900e61dfd8ec9fc635b939387adbafdc0a56a80d2380adb4b81c01fc8",
+  "software": {
+    "duckdb": "1.5.6"
+  }
+}

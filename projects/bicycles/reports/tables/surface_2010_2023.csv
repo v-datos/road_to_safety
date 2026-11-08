@@ -1,0 +1,155 @@
+year,category,vehicles,injured,fatalities
+2010,"Dry, normal",5800,5600,53
+2011,"Dry, normal",5686,5538,48
+2012,"Dry, normal",5984,5786,51
+2013,"Dry, normal",5640,5479,59
+2014,"Dry, normal",5023,4837,38
+2015,"Dry, normal",5715,5481,44
+2016,"Dry, normal",5623,5406,41
+2017,"Dry, normal",4892,4739,32
+2018,"Dry, normal",4282,4148,44
+2019,"Dry, normal",4104,3988,36
+2020,"Dry, normal",3396,3137,45
+2021,"Dry, normal",3823,3697,35
+2022,"Dry, normal",3680,3572,44
+2023,"Dry, normal",3769,3640,33
+2010,Wet,737,717,6
+2011,Wet,767,745,8
+2012,Wet,672,650,8
+2013,Wet,631,615,9
+2014,Wet,642,617,2
+2015,Wet,612,595,5
+2016,Wet,571,557,4
+2017,Wet,575,563,3
+2018,Wet,488,477,3
+2019,Wet,416,406,6
+2020,Wet,245,230,4
+2021,Wet,293,283,3
+2022,Wet,267,261,2
+2023,Wet,371,360,4
+2010,"Snow (fresh, loose snow)",21,21,0
+2011,"Snow (fresh, loose snow)",18,18,0
+2012,"Snow (fresh, loose snow)",11,9,1
+2013,"Snow (fresh, loose snow)",29,27,0
+2014,"Snow (fresh, loose snow)",17,17,0
+2015,"Snow (fresh, loose snow)",13,12,0
+2016,"Snow (fresh, loose snow)",19,16,1
+2017,"Snow (fresh, loose snow)",17,16,1
+2018,"Snow (fresh, loose snow)",19,18,0
+2019,"Snow (fresh, loose snow)",16,15,0
+2020,"Snow (fresh, loose snow)",7,7,0
+2021,"Snow (fresh, loose snow)",7,7,0
+2022,"Snow (fresh, loose snow)",12,10,1
+2023,"Snow (fresh, loose snow)",13,13,0
+2010,"Slush, wet snow",4,4,0
+2011,"Slush, wet snow",8,7,0
+2012,"Slush, wet snow",5,4,1
+2013,"Slush, wet snow",10,10,0
+2014,"Slush, wet snow",10,9,0
+2015,"Slush, wet snow",9,8,0
+2016,"Slush, wet snow",12,12,0
+2017,"Slush, wet snow",5,5,0
+2018,"Slush, wet snow",6,6,0
+2019,"Slush, wet snow",5,5,0
+2020,"Slush, wet snow",4,3,0
+2021,"Slush, wet snow",4,4,0
+2022,"Slush, wet snow",5,5,0
+2023,"Slush, wet snow",4,3,0
+2010,Icy,14,13,0
+2011,Icy,17,17,0
+2012,Icy,16,15,1
+2013,Icy,15,14,0
+2014,Icy,18,17,0
+2015,Icy,15,15,0
+2016,Icy,15,14,1
+2017,Icy,17,17,0
+2018,Icy,18,18,0
+2019,Icy,9,8,0
+2020,Icy,8,8,0
+2021,Icy,4,4,0
+2022,Icy,11,10,0
+2023,Icy,13,13,0
+2010,Sand/gravel/dirt,13,13,0
+2011,Sand/gravel/dirt,4,4,0
+2012,Sand/gravel/dirt,12,11,1
+2013,Sand/gravel/dirt,11,10,0
+2014,Sand/gravel/dirt,7,6,0
+2015,Sand/gravel/dirt,3,3,0
+2016,Sand/gravel/dirt,6,6,0
+2017,Sand/gravel/dirt,6,6,0
+2018,Sand/gravel/dirt,7,6,1
+2019,Sand/gravel/dirt,2,2,0
+2020,Sand/gravel/dirt,1,1,0
+2021,Sand/gravel/dirt,8,8,0
+2022,Sand/gravel/dirt,7,5,1
+2023,Sand/gravel/dirt,10,8,0
+2010,Muddy,1,1,0
+2011,Muddy,0,0,0
+2012,Muddy,0,0,0
+2013,Muddy,0,0,0
+2014,Muddy,0,0,0
+2015,Muddy,2,2,0
+2016,Muddy,0,0,0
+2017,Muddy,2,1,1
+2018,Muddy,1,1,0
+2019,Muddy,0,0,0
+2020,Muddy,0,0,0
+2021,Muddy,0,0,0
+2022,Muddy,0,0,0
+2023,Muddy,1,1,0
+2010,Oil,1,1,0
+2011,Oil,0,0,0
+2012,Oil,0,0,0
+2013,Oil,0,0,0
+2014,Oil,1,1,0
+2015,Oil,0,0,0
+2016,Oil,0,0,0
+2017,Oil,0,0,0
+2018,Oil,1,1,0
+2019,Oil,0,0,0
+2020,Oil,0,0,0
+2021,Oil,0,0,0
+2022,Oil,0,0,0
+2023,Oil,0,0,0
+2010,Flooded,0,0,0
+2011,Flooded,0,0,0
+2012,Flooded,0,0,0
+2013,Flooded,0,0,0
+2014,Flooded,0,0,0
+2015,Flooded,0,0,0
+2016,Flooded,0,0,0
+2017,Flooded,0,0,0
+2018,Flooded,0,0,0
+2019,Flooded,0,0,0
+2020,Flooded,0,0,0
+2021,Flooded,0,0,0
+2022,Flooded,0,0,0
+2023,Flooded,0,0,0
+2010,Other,21,21,0
+2011,Other,20,20,0
+2012,Other,19,19,0
+2013,Other,17,17,0
+2014,Other,18,17,0
+2015,Other,18,17,1
+2016,Other,7,7,0
+2017,Other,22,21,1
+2018,Other,15,15,0
+2019,Other,14,14,0
+2020,Other,13,13,0
+2021,Other,12,12,0
+2022,Other,16,16,0
+2023,Other,9,9,0
+2010,Unknown,100,93,2
+2011,Unknown,67,67,0
+2012,Unknown,123,120,0
+2013,Unknown,82,79,1
+2014,Unknown,63,60,2
+2015,Unknown,68,67,0
+2016,Unknown,88,84,2
+2017,Unknown,64,60,0
+2018,Unknown,55,53,0
+2019,Unknown,62,61,1
+2020,Unknown,43,41,1
+2021,Unknown,45,44,1
+2022,Unknown,49,49,0
+2023,Unknown,712,695,9

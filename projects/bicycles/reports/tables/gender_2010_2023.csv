@@ -1,0 +1,57 @@
+year,category,persons,injured,fatalities
+2010,Female,1505,1437,8
+2011,Female,1325,1268,8
+2012,Female,1535,1436,10
+2013,Female,1505,1390,19
+2014,Female,1505,1436,9
+2015,Female,1759,1712,9
+2016,Female,1678,1643,10
+2017,Female,1453,1430,6
+2018,Female,1283,1231,9
+2019,Female,1217,1177,8
+2020,Female,1088,1021,9
+2021,Female,1139,1101,8
+2022,Female,1092,1040,12
+2023,Female,1178,1142,10
+2010,Male,4216,3617,52
+2011,Male,4081,3528,45
+2012,Male,4261,3609,53
+2013,Male,4117,3508,50
+2014,Male,4102,3859,31
+2015,Male,4460,4353,41
+2016,Male,4460,4353,39
+2017,Male,3984,3893,32
+2018,Male,3556,3409,38
+2019,Male,3341,3221,34
+2020,Male,2946,2771,45
+2021,Male,3372,3240,34
+2022,Male,3268,3131,37
+2023,Male,3630,3497,36
+2010,Unknown,1479,1430,1
+2011,Unknown,1672,1620,3
+2012,Unknown,1609,1569,0
+2013,Unknown,1477,1353,0
+2014,Unknown,642,286,2
+2015,Unknown,415,135,0
+2016,Unknown,330,106,0
+2017,Unknown,250,105,0
+2018,Unknown,140,103,1
+2019,Unknown,138,101,1
+2020,Unknown,104,45,0
+2021,Unknown,133,91,0
+2022,Unknown,134,110,2
+2023,Unknown,150,103,0
+2010,Not applicable,0,0,0
+2011,Not applicable,0,0,0
+2012,Not applicable,0,0,0
+2013,Not applicable,0,0,0
+2014,Not applicable,0,0,0
+2015,Not applicable,0,0,0
+2016,Not applicable,0,0,0
+2017,Not applicable,0,0,0
+2018,Not applicable,0,0,0
+2019,Not applicable,0,0,0
+2020,Not applicable,0,0,0
+2021,Not applicable,0,0,0
+2022,Not applicable,0,0,0
+2023,Not applicable,0,0,0

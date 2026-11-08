@@ -1,0 +1,8 @@
+road_user,identified_people,deaths_resolved,injuries_resolved,unresolved_outcome_people,deaths_min,deaths_max,injuries_min,injuries_max
+Bicyclist,72610,610,66849,37,610,610,66849,66849
+Pedestrian,1480,7,859,1,7,7,859,859
+Motor vehicle driver,65732,3,1403,780,3,3,1403,1403
+Motorcyclist,544,2,279,5,2,2,279,279
+Other or unknown,4093,2,218,1961,2,2,218,218
+Motor vehicle passenger,11186,1,402,1,1,1,402,402
+Conflicting road-user classification,5,0,0,3,0,0,0,2
