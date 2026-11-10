@@ -99,6 +99,7 @@ def collect(draft):
         "typology_subgroups": rows(read_csv(tables / "typology_subgroup_performance.csv")),
         "triage_tiers": rows(read_csv(tables / "triage_tiered_operating_points.csv")),
         "triage_bands": rows(read_csv(tables / "triage_mutually_exclusive_bands.csv")),
+        "triage_intake_vs_post": rows(read_csv(tables / "triage_intake_vs_post_comparison.csv")),
         "triage_context": rows(read_csv(tables / "triage_context_specific_curves.csv")),
         "monitoring_drift": rows(read_csv(tables / "monitoring_annual_drift_summary.csv")),
         "monitoring_catalog": rows(read_csv(tables / "monitoring_catalog_status.csv")),
@@ -305,6 +306,22 @@ def operational_panel(evidence):
         ]
         for r in op["triage_bands"]
     ]
+    intake_comp_rows = [
+        [
+            r["tier_label"],
+            r["model"] + (" (post cutoff)" if r["threshold_policy"] == "evaluated_at_m_post_cutoff" else " (tuned cutoff)" if r["threshold_policy"] == "m_intake_separately_tuned_validation_cost_optimal" else ""),
+            f'{r["threshold"]:.5f}',
+            f'{r["alert_rate_pct"]:.2f}% ({r["alert_count"]:,})',
+            f'{r["precision_pct"]:.2f}%',
+            f'{r["recall_pct"]:.2f}% ({r["tp"]:,})',
+            f'{r["relative_risk_vs_routine"]:.2f}x',
+            f'{r["delta_precision_vs_post_pp"]:+.2f} pp' if r["model"] != "M_post_recal" else "—",
+            f'{r["delta_recall_vs_post_pp"]:+.2f} pp' if r["model"] != "M_post_recal" else "—",
+            f'{r["alert_volume_ratio_vs_post"]:.2f}x' if r["model"] != "M_post_recal" else "1.00x",
+        ]
+        for r in op.get("triage_intake_vs_post", [])
+        if r["split"] == "test_2020_2021"
+    ]
     drift_rows = [
         [
             r["release"],
@@ -386,6 +403,22 @@ def operational_panel(evidence):
             band_rows,
             "Mutually exclusive risk stratification on 2020–2021 test collisions (n = 163,580; 3,230 fatal)",
         )
+        + '<details><summary>Emergency call intake (M_intake) vs. post-investigation (M_post) triage comparison</summary>'
+        + '<p>To assess triage performance when restricted to information available at 911 emergency call intake '
+        '(timestamp + 5 caller-reported indicators: multi-vehicle, pedestrian, bicyclist, motorcyclist, heavy freight) '
+        'versus post-crash investigation variables (<code>M_post</code> / <code>M2_full_typology</code>), we benchmarked '
+        '<code>M_intake</code> across the 3 operational tiers. While <code>M_intake</code> improves over conditions-only <code>M0</code> '
+        '(ROC-AUC 0.7066 vs 0.6958, PR-AUC 4.88% vs 4.15%), moving from <code>M_post</code> to <code>M_intake</code> results in an out-of-time '
+        'drop of <strong>-5.62 pp in ROC-AUC</strong> (0.7628 to 0.7066) and <strong>-2.60 pp in PR-AUC</strong> (7.47% to 4.88%, a 34.7% relative loss). '
+        'In Tier 1 Critical Dispatch, precision drops from 14.27% to <strong>10.43%</strong> (retaining <strong>9.90x</strong> relative risk vs routine), '
+        'while alert volume drops by 50.5% (from 1,801 to 892) and recall drops from 7.96% to <strong>2.88%</strong> (93 of 3,230 fatals captured), '
+        'confirming that <code>M_intake</code> operates as a conservative, high-specificity filter until field responders ascertain road geometry and detailed vehicle classifications.</p>'
+        + html_table(
+            ["Triage tier", "Model policy", "Cutoff (τ)", "Alert share (count)", "Precision (PPV)", "Recall (TP)", "RR vs routine", "Δ Precision", "Δ Recall", "Alert volume ratio"],
+            intake_comp_rows,
+            "Emergency call intake (M_intake) vs. post-investigation (M_post) triage comparison on out-of-time test set (2020–2021)",
+        )
+        + '</details>'
         + embedded_image("triage_cost_utility_and_pr.png", "Precision-recall operating points and Vickers-Elkin net benefit curves")
         + embedded_image("triage_context_operating_curves.png", "Research scenario operating curves for non-intersection uncontrolled freight vs urban intersection VRU")
         + '<h3>Phase 4 · Prospective data monitoring pipeline (2022+ NCDB drift governance)</h3>'
@@ -432,7 +465,9 @@ def technical(evidence):
             evidence_download(REPORTS / "tables/corridor_pilot_by_road_class.csv", "Corridor SPF road class CSV"),
             evidence_download(REPORTS / "tables/corridor_pilot_top_corridors.csv", "Top EB corridors CSV"),
             evidence_download(REPORTS / "tables/typology_odds_ratios.csv", "Typology odds ratios CSV"),
+            evidence_download(REPORTS / "tables/typology_model_comparison.csv", "Typology model comparison CSV"),
             evidence_download(REPORTS / "tables/triage_tiered_operating_points.csv", "3-Tier operational triage CSV"),
+            evidence_download(REPORTS / "tables/triage_intake_vs_post_comparison.csv", "Intake vs Post triage comparison CSV"),
             evidence_download(REPORTS / "tables/monitoring_annual_drift_summary.csv", "Prospective drift monitor CSV"),
         ]
     model_title = "A retrospective comparison of collision severity"

@@ -45,6 +45,20 @@ from .explore import sha256
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
+TIMING_FEATURES = [
+    "C_MNTH",
+    "C_WDAY",
+    "C_HOUR",
+]
+
+INTAKE_INDICATORS = [
+    "multi_vehicle",
+    "has_pedestrian",
+    "has_bicyclist",
+    "has_motorcyclist",
+    "has_heavy_freight",
+]
+
 P_USER_FEATURES = [
     "has_pedestrian",
     "has_bicyclist",
@@ -423,11 +437,13 @@ def render_figures(
     fig, axes = plt.subplots(1, 2, figsize=(13.0, 5.2), layout="constrained")
     colors = {
         "M0_conditions_only": "#6b7280",
+        "M_intake": "#059669",
         "M1_plus_p_user": "#2563eb",
         "M2_full_typology": "#dc2626",
     }
     labels = {
         "M0_conditions_only": "M0: Conditions Only (8 vars)",
+        "M_intake": "M_intake: Call Intake Only (timing + 5 caller flags)",
         "M1_plus_p_user": "M1: + Road-User Typology (P_USER)",
         "M2_full_typology": "M2: + Vehicle & VRU Typology (P_USER + V_TYPE)",
     }
@@ -549,8 +565,20 @@ def run(root: Path | None = None, workers: int = 4, rebuild: bool = False) -> di
     X_p_user = csr_matrix(df[P_USER_FEATURES].to_numpy(dtype=np.float64))
     X_v_type = csr_matrix(df[V_TYPE_FEATURES].to_numpy(dtype=np.float64))
 
+    encoder_timing = OneHotEncoder(
+        categories=[domains[f] for f in TIMING_FEATURES],
+        drop=[references[f] for f in TIMING_FEATURES],
+        handle_unknown="error",
+        sparse_output=True,
+        dtype=np.float64,
+    )
+    X_timing = encoder_timing.fit_transform(df[TIMING_FEATURES])
+    X_intake_indicators = csr_matrix(df[INTAKE_INDICATORS].to_numpy(dtype=np.float64))
+    X_intake = hstack([X_timing, X_intake_indicators], format="csr")
+
     model_matrices = {
         "M0_conditions_only": X_cond,
+        "M_intake": X_intake,
         "M1_plus_p_user": hstack([X_cond, X_p_user], format="csr"),
         "M2_full_typology": hstack([X_cond, X_p_user, X_v_type], format="csr"),
     }
@@ -568,7 +596,12 @@ def run(root: Path | None = None, workers: int = 4, rebuild: bool = False) -> di
     rolling_csv = tables_dir / "typology_rolling_folds.csv"
     if rolling_csv.exists() and not rebuild:
         fold_df = pd.read_csv(rolling_csv)
+        missing_models = [m for m in model_matrices.keys() if m not in fold_df["model"].unique()]
     else:
+        fold_df = pd.DataFrame()
+        missing_models = list(model_matrices.keys())
+
+    if missing_models:
         fitted_pre_pandemic_models = {}
         fitted_pre_pandemic_cal_delta = {}
 
@@ -577,7 +610,8 @@ def run(root: Path | None = None, workers: int = 4, rebuild: bool = False) -> di
             train_cutoff = cal_year - 1
             eval_mask = year == t
 
-            for model_name, X_mat in model_matrices.items():
+            for model_name in missing_models:
+                X_mat = model_matrices[model_name]
                 clf, delta = compute_rolling_calibration_step(
                     model_name=model_name,
                     X_mat=X_mat,
@@ -614,7 +648,8 @@ def run(root: Path | None = None, workers: int = 4, rebuild: bool = False) -> di
                     **m_recal,
                 })
 
-        fold_df = pd.DataFrame(fold_rows)
+        new_fold_df = pd.DataFrame(fold_rows)
+        fold_df = pd.concat([fold_df, new_fold_df], ignore_index=True) if not fold_df.empty else new_fold_df
         fold_df.to_csv(rolling_csv, index=False)
 
     # 2. Canonical Split Benchmark: Train 1999-2016, Validation 2017-2019, Test 2020-2021
@@ -684,6 +719,7 @@ def run(root: Path | None = None, workers: int = 4, rebuild: bool = False) -> di
 
     summary_df = pd.DataFrame(summary_rows)
     summary_df.to_csv(tables_dir / "typology_model_summary.csv", index=False)
+    summary_df.to_csv(tables_dir / "typology_model_comparison.csv", index=False)
 
     # 3. Extract Full Pre-Pandemic (1999-2019) M2 Model Coefficients & Adjusted Odds Ratios
     train_19 = year <= 2019
@@ -762,6 +798,7 @@ def run(root: Path | None = None, workers: int = 4, rebuild: bool = False) -> di
     render_figures(summary_df, fold_df, or_df, subgroup_df, figures_dir)
 
     test_m0 = summary_df[(summary_df["split"] == "test_2020_2021_uncal") & (summary_df["model"] == "M0_conditions_only")].iloc[0]
+    test_intake = summary_df[(summary_df["split"] == "test_2020_2021_uncal") & (summary_df["model"] == "M_intake")].iloc[0]
     test_m1 = summary_df[(summary_df["split"] == "test_2020_2021_uncal") & (summary_df["model"] == "M1_plus_p_user")].iloc[0]
     test_m2 = summary_df[(summary_df["split"] == "test_2020_2021_uncal") & (summary_df["model"] == "M2_full_typology")].iloc[0]
 
@@ -776,6 +813,12 @@ def run(root: Path | None = None, workers: int = 4, rebuild: bool = False) -> di
                 "pr_auc": round(float(test_m0["pr_auc"]), 4),
                 "log_loss": round(float(test_m0["log_loss"]), 5),
                 "brier_score": round(float(test_m0["brier_score"]), 5),
+            },
+            "M_intake": {
+                "roc_auc": round(float(test_intake["roc_auc"]), 4),
+                "pr_auc": round(float(test_intake["pr_auc"]), 4),
+                "log_loss": round(float(test_intake["log_loss"]), 5),
+                "brier_score": round(float(test_intake["brier_score"]), 5),
             },
             "M1_plus_p_user": {
                 "roc_auc": round(float(test_m1["roc_auc"]), 4),

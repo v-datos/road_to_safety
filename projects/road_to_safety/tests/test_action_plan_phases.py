@@ -148,6 +148,69 @@ class TestPhase2TypologySeverity(unittest.TestCase):
         for key_driver in ["has_pedestrian", "has_motorcyclist", "has_heavy_truck", "has_road_tractor"]:
             self.assertGreater(float(or_df.loc[key_driver, "odds_ratio"]), 1.5)
 
+    @unittest.skipUnless(
+        (ROOT / "data/derived/typology_severity/eval_predictions_2017_2021.parquet").exists()
+        and (ROOT / "reports/tables/triage_intake_vs_post_comparison.csv").exists(),
+        "Requires derived evaluation predictions and triage intake vs post comparison table",
+    )
+    def test_intake_severity_model_construction_and_monotonicity(self):
+        """Verify M_intake construction, discrimination hierarchy, and triage monotonicity."""
+        manifest_path = ROOT / "data/derived/typology_severity/manifest.json"
+        self.assertTrue(manifest_path.exists())
+        manifest = json.loads(manifest_path.read_text())
+        comp = manifest["test_2020_2021_comparison"]
+
+        self.assertIn("M_intake", comp)
+        # Discrimination hierarchy: M0 < M_intake < M2_full_typology (M_post)
+        self.assertGreater(comp["M_intake"]["roc_auc"], comp["M0_conditions_only"]["roc_auc"])
+        self.assertGreater(comp["M_intake"]["pr_auc"], comp["M0_conditions_only"]["pr_auc"])
+        self.assertLess(comp["M_intake"]["roc_auc"], comp["M2_full_typology"]["roc_auc"])
+        self.assertLess(comp["M_intake"]["pr_auc"], comp["M2_full_typology"]["pr_auc"])
+
+        # Check prediction columns in eval_predictions_2017_2021.parquet
+        pred_parquet = ROOT / "data/derived/typology_severity/eval_predictions_2017_2021.parquet"
+        con = duckdb.connect()
+        cols = con.execute(f"SELECT * FROM read_parquet('{pred_parquet.as_posix()}') LIMIT 1").df().columns.tolist()
+        con.close()
+        self.assertIn("p_M_intake", cols)
+        self.assertIn("p_M_intake_recal", cols)
+
+        # Check comparison table and triage monotonicity
+        comp_df = pd.read_csv(ROOT / "reports/tables/triage_intake_vs_post_comparison.csv")
+        test_in_tuned = comp_df[
+            (comp_df["split"] == "test_2020_2021")
+            & (comp_df["model"] == "M_intake_recal")
+            & (comp_df["threshold_policy"] == "m_intake_separately_tuned_validation_cost_optimal")
+        ].set_index("tier_id")
+
+        t1 = test_in_tuned.loc["Tier_1_Critical_Dispatch"]
+        t2 = test_in_tuned.loc["Tier_2_Priority_Response"]
+        t3 = test_in_tuned.loc["Tier_3_Systemic_Watchlist"]
+
+        # Triage monotonicity: precision decreases, alert rate and recall increase
+        self.assertGreater(t1["precision_pct"], t2["precision_pct"])
+        self.assertGreater(t2["precision_pct"], t3["precision_pct"])
+        self.assertLess(t1["alert_rate_pct"], t2["alert_rate_pct"])
+        self.assertLess(t2["alert_rate_pct"], t3["alert_rate_pct"])
+        self.assertLess(t1["recall_pct"], t2["recall_pct"])
+        self.assertLess(t2["recall_pct"], t3["recall_pct"])
+        self.assertGreater(t1["relative_risk_vs_routine"], t2["relative_risk_vs_routine"])
+        self.assertGreater(t2["relative_risk_vs_routine"], t3["relative_risk_vs_routine"])
+
+        # Verify exact validated drop: Tier 1 precision and recall deficit vs M_post
+        test_post = comp_df[
+            (comp_df["split"] == "test_2020_2021")
+            & (comp_df["model"] == "M_post_recal")
+        ].set_index("tier_id")
+        post_t1 = test_post.loc["Tier_1_Critical_Dispatch"]
+
+        # Tier 1 precision drops from 14.27% to ~10.43%
+        self.assertLess(t1["precision_pct"], post_t1["precision_pct"])
+        self.assertGreater(post_t1["precision_pct"] - t1["precision_pct"], 3.5)
+        # Tier 1 recall drops from 7.96% to ~2.88%
+        self.assertLess(t1["recall_pct"], post_t1["recall_pct"])
+        self.assertGreater(post_t1["recall_pct"] - t1["recall_pct"], 5.0)
+
     def test_rolling_calibration_cache_validity_and_disjoint_masks(self):
         """Verify calibration logic computes and caches distinct shifts when cal_year differs.
 

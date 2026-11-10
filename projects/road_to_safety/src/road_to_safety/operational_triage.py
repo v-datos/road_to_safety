@@ -29,7 +29,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.metrics import precision_recall_curve
+from sklearn.metrics import average_precision_score, precision_recall_curve, roc_auc_score
 
 from .explore import sha256
 from .fit_severity import validation_threshold
@@ -177,6 +177,7 @@ def render_figures(
     c_test = cost_df[cost_df["split"] == "test_2020_2021"]
     for m_name, m_lbl, m_col, ls in [
         ("M0_conditions_only", "M0 Conditions Only (Empirical Val Threshold)", "#6b7280", "--"),
+        ("M_intake_recal", "M_intake (Call Intake Recalibrated)", "#059669", ":"),
         ("M2_full_typology", "M2 Full Typology (Uncalibrated)", "#2563eb", "-."),
         ("M2_full_typology_recal", "M2 Full Typology (2019 Intercept Recalibrated)", "#dc2626", "-"),
     ]:
@@ -282,6 +283,8 @@ def run(root: Path | None = None) -> dict:
     cost_rows = []
     for model_col, model_name in [
         ("p_M0_conditions_only", "M0_conditions_only"),
+        ("p_M_intake", "M_intake"),
+        ("p_M_intake_recal", "M_intake_recal"),
         ("p_M2_full_typology", "M2_full_typology"),
         ("p_M2_full_typology_recal", "M2_full_typology_recal"),
     ]:
@@ -427,6 +430,127 @@ def run(root: Path | None = None) -> dict:
     tiers_df = pd.DataFrame(tier_rows)
     tiers_df.to_csv(tables_dir / "triage_tiered_operating_points.csv", index=False)
 
+    # 2b. Emergency Call Intake Model (M_intake) vs. Post-Investigation Model (M_post / M2_full_typology)
+    p_val_intake = val_df["p_M_intake_recal"].to_numpy(dtype=float)
+    p_test_intake = test_df["p_M_intake_recal"].to_numpy(dtype=float)
+
+    tau_intake_tier1 = optimize_validation_threshold_for_cost(y_val, p_val_intake, cost_ratio=10.0)
+    tau_intake_tier2 = optimize_validation_threshold_for_cost(y_val, p_val_intake, cost_ratio=25.0)
+    tau_intake_tier3 = optimize_validation_threshold_for_cost(y_val, p_val_intake, cost_ratio=50.0)
+
+    # Routine baseline rate definition (collisions below Tier 3 threshold)
+    def calc_routine_rate(y_arr: np.ndarray, p_arr: np.ndarray, tau: float) -> float:
+        mask = p_arr < tau
+        return float(y_arr[mask].mean()) if np.any(mask) else float(y_arr.mean())
+
+    rout_val_m2 = calc_routine_rate(y_val, p_val_m2, tau_tier3)
+    rout_test_m2 = calc_routine_rate(y_test, p_test_m2, tau_tier3)
+
+    rout_val_intake_fixed = calc_routine_rate(y_val, p_val_intake, tau_tier3)
+    rout_test_intake_fixed = calc_routine_rate(y_test, p_test_intake, tau_tier3)
+
+    rout_val_intake_tuned = calc_routine_rate(y_val, p_val_intake, tau_intake_tier3)
+    rout_test_intake_tuned = calc_routine_rate(y_test, p_test_intake, tau_intake_tier3)
+
+    intake_vs_post_rows = []
+    tiers_info = [
+        ("Tier_1_Critical_Dispatch", "Tier 1: Critical Triage (10:1)", 10.0, tau_tier1, tau_intake_tier1),
+        ("Tier_2_Priority_Response", "Tier 2: Priority Response (25:1)", 25.0, tau_tier2, tau_intake_tier2),
+        ("Tier_3_Systemic_Watchlist", "Tier 3: Systemic Watchlist (50:1)", 50.0, tau_tier3, tau_intake_tier3),
+    ]
+
+    for split_name, y_arr, p_m2_arr, p_in_arr, r_m2, r_if, r_it in [
+        ("validation_2017_2019", y_val, p_val_m2, p_val_intake, rout_val_m2, rout_val_intake_fixed, rout_val_intake_tuned),
+        ("test_2020_2021", y_test, p_test_m2, p_test_intake, rout_test_m2, rout_test_intake_fixed, rout_test_intake_tuned),
+    ]:
+        for tid, tlbl, cr, tau_post, tau_in_tuned in tiers_info:
+            m_post = threshold_metrics(y_arr, p_m2_arr, tau_post, cost_ratio=cr)
+            m_in_fixed = threshold_metrics(y_arr, p_in_arr, tau_post, cost_ratio=cr)
+            m_in_tuned = threshold_metrics(y_arr, p_in_arr, tau_in_tuned, cost_ratio=cr)
+
+            rr_post = round((m_post["precision_pct"] / 100.0) / r_m2, 2) if r_m2 > 0 else np.nan
+            rr_in_fixed = round((m_in_fixed["precision_pct"] / 100.0) / r_if, 2) if r_if > 0 else np.nan
+            rr_in_tuned = round((m_in_tuned["precision_pct"] / 100.0) / r_it, 2) if r_it > 0 else np.nan
+
+            intake_vs_post_rows.append({
+                "split": split_name,
+                "tier_id": tid,
+                "tier_label": tlbl,
+                "cost_ratio_fn_fp": cr,
+                "model": "M_post_recal",
+                "threshold_policy": "m_post_validation_cost_optimal",
+                "threshold": m_post["threshold"],
+                "alert_count": m_post["alert_count"],
+                "alert_rate_pct": m_post["alert_rate_pct"],
+                "tp": m_post["tp"],
+                "fp": m_post["fp"],
+                "fn": m_post["fn"],
+                "tn": m_post["tn"],
+                "precision_pct": m_post["precision_pct"],
+                "recall_pct": m_post["recall_pct"],
+                "f1_pct": m_post["f1_pct"],
+                "fp_per_tp": m_post["fp_per_tp"],
+                "relative_risk_vs_routine": rr_post,
+                "net_benefit_per_10k": m_post["net_benefit_per_10k"],
+                "delta_precision_vs_post_pp": 0.0,
+                "delta_recall_vs_post_pp": 0.0,
+                "delta_alert_rate_vs_post_pp": 0.0,
+                "alert_volume_ratio_vs_post": 1.0,
+            })
+            intake_vs_post_rows.append({
+                "split": split_name,
+                "tier_id": tid,
+                "tier_label": tlbl,
+                "cost_ratio_fn_fp": cr,
+                "model": "M_intake_recal",
+                "threshold_policy": "evaluated_at_m_post_cutoff",
+                "threshold": m_in_fixed["threshold"],
+                "alert_count": m_in_fixed["alert_count"],
+                "alert_rate_pct": m_in_fixed["alert_rate_pct"],
+                "tp": m_in_fixed["tp"],
+                "fp": m_in_fixed["fp"],
+                "fn": m_in_fixed["fn"],
+                "tn": m_in_fixed["tn"],
+                "precision_pct": m_in_fixed["precision_pct"],
+                "recall_pct": m_in_fixed["recall_pct"],
+                "f1_pct": m_in_fixed["f1_pct"],
+                "fp_per_tp": m_in_fixed["fp_per_tp"],
+                "relative_risk_vs_routine": rr_in_fixed,
+                "net_benefit_per_10k": m_in_fixed["net_benefit_per_10k"],
+                "delta_precision_vs_post_pp": round(m_in_fixed["precision_pct"] - m_post["precision_pct"], 3),
+                "delta_recall_vs_post_pp": round(m_in_fixed["recall_pct"] - m_post["recall_pct"], 3),
+                "delta_alert_rate_vs_post_pp": round(m_in_fixed["alert_rate_pct"] - m_post["alert_rate_pct"], 3),
+                "alert_volume_ratio_vs_post": round(m_in_fixed["alert_count"] / m_post["alert_count"], 3) if m_post["alert_count"] > 0 else np.nan,
+            })
+            intake_vs_post_rows.append({
+                "split": split_name,
+                "tier_id": tid,
+                "tier_label": tlbl,
+                "cost_ratio_fn_fp": cr,
+                "model": "M_intake_recal",
+                "threshold_policy": "m_intake_separately_tuned_validation_cost_optimal",
+                "threshold": m_in_tuned["threshold"],
+                "alert_count": m_in_tuned["alert_count"],
+                "alert_rate_pct": m_in_tuned["alert_rate_pct"],
+                "tp": m_in_tuned["tp"],
+                "fp": m_in_tuned["fp"],
+                "fn": m_in_tuned["fn"],
+                "tn": m_in_tuned["tn"],
+                "precision_pct": m_in_tuned["precision_pct"],
+                "recall_pct": m_in_tuned["recall_pct"],
+                "f1_pct": m_in_tuned["f1_pct"],
+                "fp_per_tp": m_in_tuned["fp_per_tp"],
+                "relative_risk_vs_routine": rr_in_tuned,
+                "net_benefit_per_10k": m_in_tuned["net_benefit_per_10k"],
+                "delta_precision_vs_post_pp": round(m_in_tuned["precision_pct"] - m_post["precision_pct"], 3),
+                "delta_recall_vs_post_pp": round(m_in_tuned["recall_pct"] - m_post["recall_pct"], 3),
+                "delta_alert_rate_vs_post_pp": round(m_in_tuned["alert_rate_pct"] - m_post["alert_rate_pct"], 3),
+                "alert_volume_ratio_vs_post": round(m_in_tuned["alert_count"] / m_post["alert_count"], 3) if m_post["alert_count"] > 0 else np.nan,
+            })
+
+    intake_vs_post_df = pd.DataFrame(intake_vs_post_rows)
+    intake_vs_post_df.to_csv(tables_dir / "triage_intake_vs_post_comparison.csv", index=False)
+
     # 3. Context-Specific Operating Curves:
     #    Context A: Non-Intersection Uncontrolled or Freight Scenario (Retrospective Research Scenario)
     #    Context B: Urban Intersection & Vulnerable Road User (VRU) Traffic Calming
@@ -477,11 +601,26 @@ def run(root: Path | None = None) -> dict:
 
     render_figures(cost_df, tiers_df, context_df, val_df, test_df, figures_dir)
 
+    roc_post = float(roc_auc_score(y_test, p_test_m2))
+    pr_post = float(average_precision_score(y_test, p_test_m2))
+    roc_intake = float(roc_auc_score(y_test, p_test_intake))
+    pr_intake = float(average_precision_score(y_test, p_test_intake))
+
     manifest = {
         "created_at_utc": datetime.now(timezone.utc).isoformat(),
         "phase": "Phase 3: Operational Threshold Tuning & Tiered Triage",
         "test_2020_2021_tiered_summary": tiers_df[tiers_df["split"] == "test_2020_2021"].to_dict(orient="records"),
         "mutually_exclusive_bands_test_2020_2021": band_rows,
+        "intake_vs_post_comparison": {
+            "test_2020_2021_discrimination": {
+                "m_post": {"roc_auc": round(roc_post, 4), "pr_auc": round(pr_post, 4)},
+                "m_intake": {"roc_auc": round(roc_intake, 4), "pr_auc": round(pr_intake, 4)},
+                "drop_roc_auc": round(roc_post - roc_intake, 4),
+                "drop_pr_auc_pp": round((pr_post - pr_intake) * 100.0, 2),
+                "relative_pr_auc_loss_pct": round(100.0 * (pr_post - pr_intake) / pr_post, 2),
+            },
+            "tiers_comparison": intake_vs_post_df[intake_vs_post_df["split"] == "test_2020_2021"].to_dict(orient="records"),
+        },
     }
     (out_dir / "triage_evaluation.json").write_text(json.dumps(manifest, indent=2) + "\n")
     print(json.dumps(band_rows, indent=2))

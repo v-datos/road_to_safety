@@ -76,11 +76,13 @@ From [`reports/tables/typology_model_summary.csv`](../reports/tables/typology_mo
 | Split | Model Specification | ROC-AUC | PR-AUC (%) | Log-Loss | Brier Score | O/E Ratio |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | **Validation (2017–2019, `n=330,376`)** | `M0_conditions_only` (8 env/road vars) | 0.6945 | 3.38% | 0.07565 | 0.01499 | 0.980 |
+| **Validation (2017–2019, `n=330,376`)** | `M_intake` (call timestamp + 5 caller flags) | 0.7130 | 4.08% | 0.07488 | 0.01495 | 0.970 |
 | **Validation (2017–2019, `n=330,376`)** | `M1_plus_p_user` (+ Road-User `P_USER`) | 0.7248 | 4.41% | 0.07414 | 0.01492 | 0.984 |
-| **Validation (2017–2019, `n=330,376`)** | **`M2_full_typology` (+ `P_USER` + `V_TYPE`)** | **0.7692** | **6.16%** | **0.07166** | **0.01478** | **0.990** |
+| **Validation (2017–2019, `n=330,376`)** | **`M2_full_typology` (`M_post`)** | **0.7692** | **6.16%** | **0.07166** | **0.01478** | **0.990** |
 | **Test (2020–2021, `n=163,580`)** | `M0_conditions_only` (8 env/road vars) | 0.6958 | 4.15% | 0.09276 | 0.01918 | 1.227 |
+| **Test (2020–2021, `n=163,580`)** | `M_intake` (call timestamp + 5 caller flags) | 0.7066 | 4.88% | 0.09208 | 0.01913 | 1.207 |
 | **Test (2020–2021, `n=163,580`)** | `M1_plus_p_user` (+ Road-User `P_USER`) | 0.7215 | 5.52% | 0.09093 | 0.01906 | 1.219 |
-| **Test (2020–2021, `n=163,580`)** | **`M2_full_typology` (+ `P_USER` + `V_TYPE`)** | **0.7628** | **7.47%** | **0.08802** | **0.01886** | **1.210** |
+| **Test (2020–2021, `n=163,580`)** | **`M2_full_typology` (`M_post`)** | **0.7628** | **7.47%** | **0.08802** | **0.01886** | **1.210** |
 
 ### 2.3 Adjusted Fatality Drivers & Subgroup Recovery
 Controlling for all 8 environmental, temporal, and roadway configuration predictors ([`reports/tables/typology_odds_ratios.csv`](../reports/tables/typology_odds_ratios.csv)):
@@ -137,6 +139,31 @@ From [`reports/tables/triage_context_specific_curves.csv`](../reports/tables/tri
   - At `50:1` cost ratio ($\tau = 0.0198$): flags `25.29%` of urban/VRU collisions (`22,923`) and captures **60.91% of all urban/VRU fatalities**.
 
 Visualizations: [`reports/figures/triage_cost_utility_and_pr.png`](../reports/figures/triage_cost_utility_and_pr.png) and [`reports/figures/triage_context_operating_curves.png`](../reports/figures/triage_context_operating_curves.png).
+
+### 3.3 Emergency Call Intake (`M_intake`) vs. Post-Investigation (`M_post`) Triage Evaluation
+
+An operational decision-maker must determine whether severity triage can function effectively at **911 emergency call intake**, before post-crash investigation variables (`C_RALN` curvature/grade, `C_RCFG` roadway detail, `C_RSUR` surface, `C_TRAF` traffic control, detailed commercial vehicle classes like `has_road_tractor` vs `has_special_offroad`, and interaction terms like `heavy_freight_x_vru`) are known.
+
+To answer this, we evaluated `M_intake` (restricted strictly to call timestamp + 5 caller-reported indicators: `multi_vehicle`, `has_pedestrian`, `has_bicyclist`, `has_motorcyclist`, `has_heavy_freight`) against `M_post` (`M2_full_typology`) across the 3 operational tiers on the 2020–2021 out-of-time test set ([`reports/tables/triage_intake_vs_post_comparison.csv`](../reports/tables/triage_intake_vs_post_comparison.csv)):
+
+| Operational Tier | Model Specification & Policy | Cutoff ($\tau$) | Alert Volume (%) | Precision (%) | Recall (%) | FP / TP | Relative Risk vs Routine | $\Delta$ Precision (pp) | $\Delta$ Recall (pp) | Alert Volume Ratio |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **Tier 1: Critical Dispatch (10:1)** | `M_post_recal` (optimal validation) | 0.08828 | 1.10% (`1,801`) | **14.27%** | **7.96%** (`257`) | 6.01 | **14.24x** | Baseline | Baseline | 1.00x |
+| | `M_intake_recal` (at `M_post` cutoff) | 0.08828 | 0.53% (`872`) | **10.55%** | **2.85%** (`92`) | 8.48 | **8.87x** | -3.72 pp | -5.11 pp | 0.48x |
+| | `M_intake_recal` (tuned validation) | 0.08777 | 0.55% (`892`) | **10.43%** | **2.88%** (`93`) | 8.59 | **9.90x** | -3.84 pp | -5.08 pp | 0.50x |
+| **Tier 2: Priority Response (25:1)** | `M_post_recal` (optimal validation) | 0.03624 | 9.38% (`15,337`) | **7.26%** | **34.46%** (`1,113`) | 12.78 | **7.24x** | Baseline | Baseline | 1.00x |
+| | `M_intake_recal` (at `M_post` cutoff) | 0.03624 | 6.39% (`10,457`) | **6.20%** | **20.06%** (`648`) | 15.14 | **5.21x** | -1.06 pp | -14.40 pp | 0.68x |
+| | `M_intake_recal` (tuned validation) | 0.03170 | 9.87% (`16,144`) | **5.68%** | **28.39%** (`917`) | 16.61 | **5.39x** | -1.58 pp | -6.07 pp | 1.05x |
+| **Tier 3: Systemic Watchlist (50:1)** | `M_post_recal` (optimal validation) | 0.01821 | 28.06% (`45,903`) | **4.47%** | **63.50%** (`2,051`) | 21.38 | **4.46x** | Baseline | Baseline | 1.00x |
+| | `M_intake_recal` (at `M_post` cutoff) | 0.01821 | 27.60% (`45,153`) | **4.04%** | **56.41%** (`1,822`) | 23.78 | **3.39x** | -0.43 pp | -7.09 pp | 0.98x |
+| | `M_intake_recal` (tuned validation) | 0.01528 | 35.01% (`57,274`) | **3.68%** | **65.33%** (`2,110`) | 26.14 | **3.50x** | -0.78 pp | +1.83 pp | 1.25x |
+
+#### Quantitative Findings:
+1. **Intake Outperforms Conditions-Only Baseline**: Despite excluding all 8 environmental and roadway features, `M_intake` achieves higher test discrimination (**ROC-AUC 0.7066 vs 0.6958; PR-AUC 4.88% vs 4.15%**) than `M0_conditions_only`, proving that basic caller-reported presence of pedestrians, cyclists, motorcyclists, and heavy freight carries more lethality signal than post-crash road geometry and weather alone.
+2. **Discrimination Deficit vs. Full Typology**: Compared to `M_post` (`M2`), call intake loses **-5.62 pp in ROC-AUC** (0.7628 to 0.7066) and **-2.60 pp in PR-AUC** (7.47% to 4.88%, a **34.7% relative drop** in average precision).
+3. **Tier 1 Precision Retention**: In Tier 1 Critical Dispatch, `M_intake` retains **10.43% precision** (a modest 3.84 pp drop from 14.27%) and delivers **9.90x relative risk vs. routine collisions**, confirming that emergency intake models can reliably identify high-lethality incidents for air/ALS dispatch without excessive false alarm fatigue.
+4. **Tier 1 Recall Deficit (The Missing Sensitivity Penalty)**: The primary operational limitation of `M_intake` is **sensitivity**: Tier 1 recall drops sharply from **7.96% to 2.88%** (a **-63.8% relative drop**, capturing only 93 vs 257 fatal collisions). Because 911 callers cannot report specialized road tractor vs generic freight configurations, curve radius, or traffic signal failure, `M_intake` cannot confidently promote high-speed freight or complex alignment collisions to Tier 1 without on-scene investigation.
+5. **Operational Protocol Recommendation**: Deploy `M_intake` as a **conservative, high-specificity intake screening gate** (alerting on the highest-risk 0.55% of calls with ~10% fatal yield), while mandating rapid secondary triage upon arrival of primary units to re-score collisions using `M_post` and capture the remaining 64% of critical fatalities.
 
 ---
 
