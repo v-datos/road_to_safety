@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import sys
 import unittest
 
 import duckdb
@@ -389,6 +390,22 @@ class TestPhase4MonitoringPipeline(unittest.TestCase):
         self.assertGreater(report_corrupt["error_counts"]["null_values"], 0)
         self.assertGreater(report_corrupt["error_counts"]["corrupted_keys"], 0)
         self.assertGreater(report_corrupt["error_counts"]["out_of_domain_codes"], 0)
+
+    def test_ingest_new_release_cli_script_exists_and_runs(self):
+        """Test that scripts/ingest_new_release.py exists, is executable, and runs."""
+        import subprocess
+
+        cli_path = ROOT.parent.parent / "scripts/ingest_new_release.py"
+        if not cli_path.exists():
+            cli_path = ROOT / "scripts/ingest_new_release.py"
+        self.assertTrue(cli_path.exists(), f"Missing CLI at {cli_path}")
+
+        # Run with --help
+        res = subprocess.run([sys.executable, str(cli_path), "--help"], capture_output=True, text=True)
+        self.assertEqual(res.returncode, 0)
+        self.assertIn("Prospective NCDB Microdata Ingestion", res.stdout)
+        self.assertIn("--simulate-synthetic", res.stdout)
+        self.assertIn("--input-file", res.stdout)
 
 
 if __name__ == "__main__":
