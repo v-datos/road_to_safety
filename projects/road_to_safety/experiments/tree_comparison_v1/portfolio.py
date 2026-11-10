@@ -319,17 +319,18 @@ def operational_panel(evidence):
         for r in op["monitoring_drift"]
     ]
     return (
-        '<h3>Phase 1 · Corridor-level spatial and exposure linkage (Crash / 100M VKT)</h3>'
+        '<h3>Phase 1 · Corridor-level spatial and exposure-proxy screening (Crash / 100M VKT)</h3>'
         f'<p>Linking {csum["total_ksi_collisions"]:,} City of Toronto Killed or Seriously Injured (KSI) collision events '
         f'(2006–2023; {csum["fatal_ksi_collisions"]:,} fatal) to {csum["total_road_segments"]:,} Centreline road segments '
         f'({csum["total_road_network_km"]:,.1f} km) and 45,043 AADT traffic count studies yields {csum["exposure_monitored_segments"]:,} '
-        f'exposure-monitored segments ({csum["exposure_monitored_km"]:,.1f} km; 104.44 billion VKT), alongside '
+        f'exposure-monitored segments ({csum["exposure_monitored_km"]:,.1f} km; 104.44 billion VKT exposure-proxy screening estimate), alongside '
         f'{csum["quebec_mtq_sections"]:,} Quebec MTQ highway sections. Overall, {csum["snapped_Within_50m_pct"]:.2f}% of valid-coordinate '
         f'collisions snap within 50 m (median distance {csum["median_snap_distance_m"]:.2f} m). The pooled rate is '
         f'<strong>{csum["pooled_ksi_per_100m_vkt"]:.3f} KSI per 100M VKT</strong> ({csum["pooled_fatal_per_100m_vkt"]:.3f} fatal per 100M VKT; '
         f'Negative Binomial overdispersion α = {csum["nb2_overdispersion_alpha"]:.4f}). Urban Major Arterials (5.352 KSI / 100M VKT; '
         'NB2 rate ratio 6.31x vs Local) carry more than 12 times the per-VKT KSI rate of Expressways (0.423 KSI / 100M VKT), '
-        'with Vulnerable Road Users accounting for 65.5% of Major Arterial KSI collisions.</p>'
+        'with Vulnerable Road Users accounting for 65.5% of Major Arterial KSI collisions. Subject to FHWA Traffic Monitoring Guide '
+        'short-duration count caveats (median 72h count duration), these rates serve as exposure screening proxies.</p>'
         + html_table(
             ["Road class", "Monitored segments", "Length (km)", "Mean AADT", "KSI crashes", "Fatal", "VRU KSI",
              "KSI / 100M VKT", "Fatal / 100M VKT", "VRU KSI / 100M VKT"],
@@ -370,10 +371,11 @@ def operational_panel(evidence):
         + '<h3>Phase 3 · Operational threshold tuning, cost-utility curves and 3-tier triage</h3>'
         + '<p>Moving beyond the flat 80% recall heuristic (which flags 55.94% of test collisions at 2.89% precision), '
         'Vickers–Elkin decision curve analysis defines a <strong>3-Tier Operational Triage Architecture</strong> calibrated on 2017–2019 '
-        'validation data and evaluated out-of-time on 2020–2021: <strong>Tier 1 Critical Dispatch (10:1 cost ratio)</strong> flags 1.10% '
+        'validation data and evaluated out-of-time on 2020–2021: <strong>Tier 1 Critical Triage (10:1 cost ratio)</strong> flags 1.10% '
         'of collisions at <strong>14.27% precision (14.24x relative risk vs routine)</strong>; <strong>Tier 2 Priority Response (25:1)</strong> '
         'flags 9.38% of collisions and captures 34.46% of all fatal crashes at 7.26% precision; and <strong>Tier 3 Systemic Watchlist (50:1)</strong> '
-        'flags 28.06% (half the legacy alert volume) while capturing 63.50% of all fatal collisions.</p>'
+        'flags 28.06% (half the legacy alert volume) while capturing 63.50% of all fatal collisions. '
+        '<em>Note: These thresholds are retrospective research scenarios based on post-crash investigation variables; they are not validated emergency call intake protocols.</em></p>'
         + html_table(
             ["Triage tier / policy", "Cutoff (τ)", "Flagged share (count)", "Precision (PPV)", "Fatal recall (TP)", "FP / TP", "Net benefit / 10k"],
             tier_rows,
@@ -385,11 +387,13 @@ def operational_panel(evidence):
             "Mutually exclusive risk stratification on 2020–2021 test collisions (n = 163,580; 3,230 fatal)",
         )
         + embedded_image("triage_cost_utility_and_pr.png", "Precision-recall operating points and Vickers-Elkin net benefit curves")
-        + embedded_image("triage_context_operating_curves.png", "Context-specific operating curves for rural high-speed dispatch vs urban VRU calming")
+        + embedded_image("triage_context_operating_curves.png", "Research scenario operating curves for non-intersection uncontrolled freight vs urban intersection VRU")
         + '<h3>Phase 4 · Prospective data monitoring pipeline (2022+ NCDB drift governance)</h3>'
-        + '<p>The automated CKAN catalog monitor (<code>1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a</code>) verifies all 24 pinned local artifacts '
-        'and screens incoming annual microdata releases using Population Stability Index (PSI), unknown-sentinel shifts, and '
-        'Observed-to-Expected (O/E) calibration ratios. Pre-pandemic releases (2017–2019) remain in the <strong>GREEN</strong> band '
+        + '<p>The automated CKAN catalog monitor (<code>1eb9eba7-71d1-4b30-9fb1-30cbdab7e63a</code>) verifies all 24 pinned local artifacts, '
+        'implements <code>validate_release_schema</code> for incoming microdata, and '
+        'screens annual microdata releases using Population Stability Index (PSI), unknown-sentinel shifts, and '
+        'Observed-to-Expected (O/E) calibration ratios (live ingestion of a published 2022+ release remains pending). '
+        'Pre-pandemic releases (2017–2019) remain in the <strong>GREEN</strong> band '
         '(O/E 0.96–1.01, max PSI ≤ 0.0022), whereas the 2020–2021 pandemic fatality surge (O/E 1.20–1.22) and simulated 2023 '
         'jurisdiction reporting outages (PSI = 0.297) automatically trigger <strong>RED</strong> recalibration and audit gates.</p>'
         + html_table(
@@ -447,7 +451,7 @@ def technical(evidence):
 Friday accounts for the most reported collisions with a known weekday. Sunday has the highest fatal share.
 Transport Canada separately reports {findings['fatalities']:,} people killed and {findings['total_injuries']:,} injured in 2024.</p>
 <p>The geographic comparison shows the 2024 national fatality rate of 4.9 per 100,000 residents alongside published jurisdiction rates.
-In our 4-phase Operational Decision-Support Action Plan, linking City of Toronto KSI collisions to Centreline road segments and AADT volumes yields a pooled rate of <strong>4.706 KSI per 100M VKT</strong> (with Major Arterials carrying 12.6x the rate of Expressways), reintroducing <code>P_USER</code> and <code>V_TYPE</code> typologies boosts out-of-time <strong>ROC-AUC from 0.6958 to 0.7628 (+6.70 pp)</strong> and <strong>PR-AUC from 4.15% to 7.47% (+80.0% lift)</strong>, and a <strong>3-Tier Operational Triage</strong> replaces the flat 80% recall heuristic with calibrated trauma dispatch (14.27% precision, 14.24x relative risk), priority field response, and VRU corridor screening.</p></section>
+In our 4-phase Operational Decision-Support Action Plan, linking City of Toronto KSI collisions to Centreline road segments and AADT short-duration counts yields a pooled exposure-proxy screening rate of <strong>4.706 KSI per 100M VKT</strong> (with Major Arterials carrying 12.6x the rate of Expressways), reintroducing <code>P_USER</code> and <code>V_TYPE</code> typologies boosts out-of-time <strong>ROC-AUC from 0.6958 to 0.7628 (+6.70 pp)</strong> and <strong>PR-AUC from 4.15% to 7.47% (+80.0% lift)</strong>, and a <strong>3-Tier Operational Triage</strong> replaces the flat 80% recall heuristic with calibrated critical triage (14.27% precision, 14.24x relative risk), priority response, and systemic watchlist screening (retrospective research scenarios).</p></section>
 <section id="timing"><div class="kicker">01 · Timing</div><h2>Late afternoon accounts for the largest volume</h2>
 <p>The 16:00 hour had the most recorded collisions. The fatal share was highest at 02:00 among known hours.
 The weekday and hour matrix counts both fatal and nonfatal injury collisions. Cells describe recorded events and their outcomes.</p>

@@ -113,7 +113,7 @@ def build(draft=False):
 <p class="note">The model estimates fatal severity among recorded collisions with casualties. Predicting whether a crash will happen requires traffic exposure and observations of uneventful travel. The tested years were previously examined.</p>
 <details><summary>Model results and reliability</summary>{model_panel(evidence)}</details></section>
 <section id="operational"><div class="kicker">06 · Operational Decision-Support Toolkit (Phases 1–4)</div><h2>Corridor exposure rates, road-user typologies, 3-tier triage and drift monitoring</h2>
-<p>Explore the four operational extensions: Toronto Centreline + AADT corridor safety performance functions (Crash / 100M VKT), person/vehicle typology severity drivers (<code>P_USER</code> and <code>V_TYPE</code>), cost-utility 3-tier operational triage, and prospective 2022+ NCDB drift monitoring.</p>
+<p>Explore the four operational extensions (retrospective research prototypes): Toronto Centreline + AADT corridor safety performance functions (exposure-proxy screening rates), person/vehicle typology severity drivers (<code>P_USER</code> and <code>V_TYPE</code>), cost-utility 3-tier operational triage, and prospective 2022+ NCDB drift monitoring (live ingestion pending).</p>
 <div class="controls"><label>Operational view <select id="operational-view">
 <option value="corridors">Phase 1 · Top Empirical Bayes Priority Corridors (Toronto KSI / 100M VKT)</option>
 <option value="road_classes">Phase 1 · Exposure-Normalized Rates by Functional Road Class</option>

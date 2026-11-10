@@ -9,9 +9,32 @@ from bicycle_collisions.corridor_exposure_link import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
+ROAD_TO_SAFETY_PARQUET = ROOT.parent / "road_to_safety/data/derived/corridor_pilot/segment_exposure_crashes.parquet"
+BICYCLE_BUILD_DB = ROOT / "data/derived/build.duckdb"
 
 
 class CorridorAndNotebooksTests(unittest.TestCase):
+    def test_synthetic_corridor_rate_and_tie_breaking_fixture(self):
+        """Pure-fixture test of rate arithmetic and deterministic tie-breaking logic without data dependencies."""
+        # Simulated segments
+        crashes_a = 5
+        vkt_100m_a = 2.0
+        rate_a = crashes_a / vkt_100m_a
+        self.assertAlmostEqual(rate_a, 2.5)
+
+        # Ties in crashes and rate should be ordered deterministically by name
+        items = [
+            {"name": "Spadina Ave", "crashes": 5, "rate": 2.5},
+            {"name": "Bloor St W", "crashes": 5, "rate": 2.5},
+        ]
+        sorted_items = sorted(items, key=lambda x: (-x["crashes"], -x["rate"], x["name"]))
+        self.assertEqual(sorted_items[0]["name"], "Bloor St W")
+        self.assertEqual(sorted_items[1]["name"], "Spadina Ave")
+
+    @unittest.skipUnless(
+        ROAD_TO_SAFETY_PARQUET.exists() and BICYCLE_BUILD_DB.exists(),
+        "Requires derived segment_exposure_crashes.parquet and build.duckdb",
+    )
     def test_corridor_exposure_tables_and_figure_exist_and_reconcile(self):
         summary = run_corridor_exposure_link(ROOT)
         class_csv = ROOT / "reports/tables/toronto_cyclist_corridor_exposure_by_class.csv"
@@ -72,6 +95,10 @@ class CorridorAndNotebooksTests(unittest.TestCase):
             summary["national_typology_model_bicyclist"]["test_2020_2021_m2_roc_auc"], 0.7576, places=4
         )
 
+    @unittest.skipUnless(
+        BICYCLE_BUILD_DB.exists(),
+        "Requires derived build.duckdb",
+    )
     def test_national_co_involved_lethality_multipliers(self):
         rows = compute_national_co_involved_lethality(ROOT)
         by_group = {r["vehicle_group"]: r for r in rows}
@@ -84,6 +111,10 @@ class CorridorAndNotebooksTests(unittest.TestCase):
         self.assertEqual(by_group["Road tractor"]["fatal_collisions"], 41)
         self.assertGreater(by_group["Road tractor"]["lethality_multiplier_vs_light_duty"], 18.0)
 
+    @unittest.skipUnless(
+        ROAD_TO_SAFETY_PARQUET.exists() and BICYCLE_BUILD_DB.exists(),
+        "Requires derived segment_exposure_crashes.parquet and build.duckdb",
+    )
     def test_corridor_exposure_deterministic_tie_breaking_and_order_stability(self):
         corridors_csv = ROOT / "reports/tables/toronto_top_cyclist_ksi_corridors.csv"
         class_csv = ROOT / "reports/tables/toronto_cyclist_corridor_exposure_by_class.csv"

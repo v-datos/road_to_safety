@@ -1,14 +1,25 @@
 # Canadian collision research
 
+<img src="readme_banner.png" alt="Collisions Canada banner" width="100%" />
+
 Independent analysis projects are organized under `projects/`.
 
 | Project | Scope | Status |
 | --- | --- | --- |
 | [Truck collisions](projects/trucks/README.md) | Canadian road-tractor collision trends, casualties, conditions, Table 10 modeled VKT sensitivity (2015–2021) and vehicle-age (`V_YEAR`) severity audit | Complete through Question 7 + 9 executed notebooks (36/36 tests passing) |
-| [Bicycle collisions](projects/bicycles/README.md) | Canadian bicycle-involved collisions, bicyclist casualties, heavy-freight lethality and Toronto corridor VKT exposure linkage | Descriptive report (2010–2023), corridor synthesis + 3 executed notebooks (10/10 tests passing) |
-| [Road to Safety](projects/road_to_safety/README.md) | All-road-user collision severity, risk factors, spatial/temporal patterns, corridor exposure SPFs and operational triage | Refreshed portfolio + 4-phase operational decision-support action plan complete (69/69 tests passing) |
+| [Bicycle collisions](projects/bicycles/README.md) | Canadian bicycle-involved collisions, bicyclist casualties, heavy-freight lethality and Toronto corridor VKT exposure-proxy linkage | Descriptive report (2010–2023), corridor synthesis + 3 executed notebooks (12/12 tests passing) |
+| [Road to Safety](projects/road_to_safety/README.md) | All-road-user collision severity, risk factors, spatial/temporal patterns, corridor exposure-proxy SPFs and operational triage scenarios | Validated corridor & typology release + refreshed portfolio complete (72/72 tests passing) |
 
 Each project owns its data, source code, tests, notebooks, reports and documentation. See [the project organization guide](projects/README.md) when adding another analysis.
+
+## Verification
+
+Run all test suites across the repository with one command:
+
+```bash
+make verify       # Runs test suites (clean checkout portable + derived data checks)
+make verify-full  # Explicitly verifies presence of all full derived datasets
+```
 
 ## Data sources
 

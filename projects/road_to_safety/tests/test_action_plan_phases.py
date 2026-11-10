@@ -52,6 +52,24 @@ class TestPhase1CorridorPilot(unittest.TestCase):
         self.assertEqual(int(events.iloc[0]["has_vru"]), 1)
         self.assertTrue(bool(events.iloc[0]["has_heavy_truck"]))
 
+    def test_ranking_sensitivity_fixture(self):
+        """Pure-fixture test of Spearman rank correlation on synthetic corridor rankings."""
+        from scipy.stats import spearmanr
+        # Perfect concordance
+        r1 = [1, 2, 3, 4, 5]
+        r2 = [1, 2, 3, 4, 5]
+        rho, pval = spearmanr(r1, r2)
+        self.assertAlmostEqual(rho, 1.0)
+        # Minor rank swap preserves high concordance
+        r3 = [1, 3, 2, 4, 5]
+        rho_swap, _ = spearmanr(r1, r3)
+        self.assertGreater(rho_swap, 0.85)
+
+    @unittest.skipUnless(
+        (ROOT / "data/derived/corridor_pilot/segment_exposure_crashes.parquet").exists()
+        and (ROOT / "data/derived/corridor_pilot/manifest.json").exists(),
+        "Requires derived corridor pilot dataset and manifest (run corridor_pilot.py)",
+    )
     def test_corridor_pilot_artifacts_and_conservation(self):
         manifest_path = ROOT / "data/derived/corridor_pilot/manifest.json"
         parquet_path = ROOT / "data/derived/corridor_pilot/segment_exposure_crashes.parquet"
@@ -102,6 +120,11 @@ class TestPhase1CorridorPilot(unittest.TestCase):
 
 
 class TestPhase2TypologySeverity(unittest.TestCase):
+    @unittest.skipUnless(
+        (ROOT / "data/derived/typology_severity/collision_typologies.parquet").exists()
+        and (ROOT / "data/derived/typology_severity/manifest.json").exists(),
+        "Requires derived typology dataset and manifest (run typology_severity.py)",
+    )
     def test_typology_reconciliation_and_discrimination_lift(self):
         manifest_path = ROOT / "data/derived/typology_severity/manifest.json"
         typ_parquet = ROOT / "data/derived/typology_severity/collision_typologies.parquet"
@@ -203,6 +226,11 @@ class TestPhase3OperationalTriage(unittest.TestCase):
         self.assertAlmostEqual(m["precision_pct"], 50.0)
         self.assertAlmostEqual(m["recall_pct"], 50.0)
 
+    @unittest.skipUnless(
+        (ROOT / "data/derived/operational_triage/triage_evaluation.json").exists()
+        and (ROOT / "reports/tables/triage_tiered_operating_points.csv").exists(),
+        "Requires operational triage derived evaluation and tables",
+    )
     def test_tiered_triage_monotonicity_and_band_conservation(self):
         eval_path = ROOT / "data/derived/operational_triage/triage_evaluation.json"
         self.assertTrue(eval_path.exists())
@@ -235,6 +263,11 @@ class TestPhase4MonitoringPipeline(unittest.TestCase):
         self.assertAlmostEqual(psi, 0.0, places=7)
         self.assertAlmostEqual(jsd, 0.0, places=7)
 
+    @unittest.skipUnless(
+        (ROOT / "data/derived/monitoring/prospective_monitor_report.json").exists()
+        and (ROOT / "reports/tables/monitoring_annual_drift_summary.csv").exists(),
+        "Requires prospective monitoring derived report and tables",
+    )
     def test_prospective_monitor_outputs_and_alerts(self):
         report_path = ROOT / "data/derived/monitoring/prospective_monitor_report.json"
         self.assertTrue(report_path.exists())
