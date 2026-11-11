@@ -1,10 +1,11 @@
-.PHONY: verify verify-full test report-rts clean help
+.PHONY: verify verify-full test report-rts report-trucks clean help
 
 help:
 	@echo "Available commands:"
 	@echo "  make verify        - Run portable tests across all three projects"
 	@echo "  make verify-full   - Run full tests including derived data assertions"
 	@echo "  make report-rts    - Rebuild Road to Safety public deliverables"
+	@echo "  make report-trucks - Rebuild Trucks interactive data app"
 	@echo "  make clean         - Remove pycache and temporary files"
 
 verify:
@@ -20,6 +21,10 @@ report-rts:
 	@MPLCONFIGDIR=/tmp/mpl projects/road_to_safety/experiments/tree_comparison_v1/.venv/bin/python projects/road_to_safety/experiments/tree_comparison_v1/portfolio.py
 	@MPLCONFIGDIR=/tmp/mpl projects/road_to_safety/experiments/tree_comparison_v1/.venv/bin/python projects/road_to_safety/experiments/tree_comparison_v1/build_brief.py
 	@MPLCONFIGDIR=/tmp/mpl projects/road_to_safety/experiments/tree_comparison_v1/.venv/bin/python projects/road_to_safety/experiments/tree_comparison_v1/build_story.py
+
+report-trucks:
+	@echo "Rebuilding Trucks interactive data app..."
+	@python3 projects/trucks/src/truck_collisions/build_data_app.py
 
 clean:
 	@find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true

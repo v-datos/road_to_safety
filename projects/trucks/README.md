@@ -4,6 +4,8 @@ This self-contained project lives in `projects/trucks/`. Run all commands below 
 
 Research question: Did collisions involving road tractors (the closest NCDB category to semis) increase over the latest comparable decade, and which measured factors are associated with changes?
 
+**Interactive Deliverable:** Open the [Truck Collision Interactive Data App](reports/index.html) or view [Live on GitHub Pages](https://v-datos.github.io/road_to_safety/projects/trucks/reports/index.html).
+
 This repository contains the validated historical analysis and its reproducible pipelines. The pre-existing `Collisions/` directory is a 4.3 GB legacy research archive. It remains in place and is excluded from Git because it contains large raw datasets and duplicate copies. See [the inventory](docs/data_inventory.md) before using any of its files.
 
 ## Project layout

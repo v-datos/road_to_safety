@@ -4,6 +4,8 @@
 /data/raw/
 /reports/*
 !/reports/.gitkeep
+!/reports/index.html
+!/reports/canada-truck-collisions-1999-2021.html
 !/reports/tables
 !/reports/tables/**
 !/reports/figures
