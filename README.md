@@ -64,6 +64,8 @@ Examines national bicycle-involved collisions, bicyclist casualties (**712 death
 
 ### 3. [Commercial Truck Collisions (1999–2021)](projects/trucks/README.md)
 Analyzes collisions involving commercial road tractors (semi-trucks) across Canada over two decades, examining event frequency, casualty distribution, environmental conditions, collision configurations, VKT exposure sensitivity, and tractor age.
+* **Interactive Deliverable**:
+  * **[Truck Collision Interactive Data App (Live Web App)](https://v-datos.github.io/road_to_safety/projects/trucks/reports/index.html)** · *([Repo HTML](projects/trucks/reports/index.html))*: Interactive telemetry dashboard, victim breakdown (71.7% other-vehicle fatalities), configuration decomposition, Table 10 VKT exposure sensitivity, and vehicle-age audit.
 * **Key Findings & Written Reports**:
   * **[Project Status & Executive Summary](projects/trucks/docs/project_status.md)**: Overview of all research questions, completed analyses, and key takeaways.
   * **[Descriptive Trend Findings (1999–2021)](projects/trucks/reports/trends/findings.md)**: Long-term trajectory of road-tractor collisions and fatal collision share compared against non-tractor benchmarks.
@@ -92,8 +94,9 @@ Each project manages its own Python environment via [`uv`](https://docs.astral.s
 From the repository root, you can run the full automated verification suite (120 tests across all three projects) or rebuild the portfolio deliverables:
 
 ```bash
-make verify       # Run portable test suites across all three projects
-make verify-full  # Run full test suites including local derived dataset assertions
-make report-rts   # Rebuild Road to Safety HTML reports, PDF policy brief, and portfolio ZIP
+make verify        # Run portable test suites across all three projects
+make verify-full   # Run full test suites including local derived dataset assertions
+make report-rts    # Rebuild Road to Safety HTML reports, PDF policy brief, and portfolio ZIP
+make report-trucks # Rebuild Trucks interactive telemetry data app
 ```
 
